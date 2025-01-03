@@ -1,0 +1,72 @@
+﻿@model IEnumerable<MantenanceProjetASPNET6.Models.Epreuves>
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+
+<div class="page-content-wrapper-inner" style="font-family:'Arial Rounded MT';">
+    <div class="content-viewport">
+        <div class="container-fluid">
+            <!-- USER DATA-->
+            <div class="user-data m-b-40">
+                <div class="row">
+
+                    <div class="col-md-8 offset-md-2 mb-5 text-center" style="min-height:500px">
+
+                        <h2 class="title-3 mb-4 mt-4 text-center text-warning font-weight-bold">
+                            <i class="mr-4 mdi mdi-file-multiple link-icon"></i>
+                            Les Anciens Epreuves
+                        </h2>
+
+                        <hr class="col-md-8 offset-md-2 mb-5" />
+
+
+                        <h6 class="font-weight-bold mb-5">Vous trouverez ici tous les anciens épreuves et vous pouvez les télécharger </h6>
+                        <h6 class="font-weight-bold mb-5">
+                            Bonne Révision !
+                            <i class="mdi mdi mdi-heart link-icon text-warning"></i>
+                        </h6>
+
+                        <div class="col-md-12">
+                            @if (TempData["download"] != null)
+                            {
+                                <div class="alert alert-danger">
+                                    <span>@TempData["download"]</span>
+                                </div>                                
+                            }
+                        </div>
+
+                        <table class="table table-success table-bordered ">
+
+                            <thead class="bg-light">
+                                <tr>
+                                    <th><h6 class="text-primary">Année</h6></th>
+                                    <th><h6 class="text-primary">Matiere</h6></th>
+                                    <th><h6 class="text-primary">Download</h6></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.Annee</td>
+                                        <td>@item.Matiere</td>
+                                        <td>
+                                            <a class="text-danger" href="../../epreuves/@item.NomFichier" target="_blank" download>
+                                                <i class="mdi mdi-download link-icon mr-3"></i>
+                                                Download
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <br /><br />
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+</div>

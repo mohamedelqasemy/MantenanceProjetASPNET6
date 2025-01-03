@@ -1,0 +1,259 @@
+﻿@model MantenanceProjetASPNET6.Models.DiplomeNote
+@{
+    
+    ViewBag.Title = "Step3";
+    Layout = null;
+}
+
+<!-- icon -->
+<link rel="shortcut icon" type="image/x-icon" href="~/images/ensa_logo.png" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+
+<style>
+    body {
+        background: #7db4f3;
+        background: -webkit-linear-gradient(-135deg, #7db4f3, #fdaee9dc);
+        background: -o-linear-gradient(-135deg, #7db4f3, #fdaee9dc);
+        background: -moz-linear-gradient(-135deg, #7db4f3, #fdaee9dc);
+        background: linear-gradient(-135deg, #7db4f3, #fdaee9dc);
+    }
+</style>
+
+<h2 class="text-center mt-3 font-weight-bold">Step 3 : Informations de Diplôme</h2>
+
+@using (Html.BeginForm("Step3", "Auth", FormMethod.Post))
+{
+    <hr class="col-md-7 offset-md-2 mb-4" />
+    <div class="row " style="padding-bottom: 40px">
+        <div class="col-md-7 offset-3">
+            <div class="form-group">
+                <h4 class="register-heading text-white">Diplome Obtenu</h4><br />
+
+                @if (ViewBag.Niveau == "3")
+                {
+
+                    @Html.DropDownListFor(model => model.Type,
+                    new List<SelectListItem>
+                    {
+                       new SelectListItem{Text="DUT", Value="DUT"},
+                       new SelectListItem{Text="DEUG", Value="DEUG"},
+                       new SelectListItem{Text="Liscence Professionnelle - DUT", Value="Lic.pro-DUT"},
+                       new SelectListItem{Text="Liscence Professionnelle - DEUG", Value="Lic.pro-DEUG"},
+                       new SelectListItem{Text="Liscence Fondamentale - DUT", Value="Lic.fnd-DUT"},
+                       new SelectListItem{Text="Liscence Fondamentale - DEUG", Value="Lic.fnd-DEUG"},
+                       new SelectListItem{Text="Liscence ST - DUT", Value="Lic.st-DUT"},
+                       new SelectListItem{Text="Liscence ST - DEUG", Value="Lic.st-DEUG"}
+                    }
+                    , "-- Choix de type du Diplôme --", htmlAttributes: new { @class = "form-control " })
+                }
+                else
+                {
+                    @Html.DropDownListFor(model => model.Type,
+                    new List<SelectListItem>
+                    {
+                       new SelectListItem{Text="Liscence Professionnelle", Value="Lic.pro"},
+                       new SelectListItem{Text="Liscence Fondamentale", Value="Lic.fnd"},
+                       new SelectListItem{Text="Liscence Sciences et Techniques", Value="Lic.st"}
+                    }
+                    , "-- Choix de type du Diplôme --", htmlAttributes: new { @class = "form-control " })
+                }
+
+                @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
+
+
+            </div>
+            <div class="form-group">
+                @Html.EditorFor(model => model.Specialite, "Specialité", new { htmlAttributes = new { @class = "form-control", @placeholder = "Specialité" } })
+                @Html.ValidationMessageFor(model => model.Specialite, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+
+                @Html.EditorFor(model => model.NoteDiplome, new { htmlAttributes = new { @class = "form-control", @placeholder = "Note diplome" } })
+                @Html.ValidationMessageFor(model => model.NoteDiplome, "", new { @class = "text-danger" })
+
+            </div>
+            <div class="form-group">
+
+                @Html.DropDownListFor(model => model.Etablissement,
+                    new List<SelectListItem>
+                    {
+                       new SelectListItem{Text="École Supérieure de Technologie EST", Value="EST"},
+                       new SelectListItem{Text="Faculté des Sciences et Techniques FST", Value="FST"},
+                       new SelectListItem{Text="Faculté Polydisciplinaire FP", Value="FP"},
+                       new SelectListItem{Text="Faculté des Sciences FS", Value="FS"}
+                    }
+                    , "-- Choix d'Etablissement --", htmlAttributes: new { @class = "form-control " })
+                @Html.ValidationMessageFor(model => model.Etablissement, "", new { @class = "text-danger" })
+
+            </div>
+            <div class="form-group">
+                @Html.EditorFor(model => model.VilleObtention, new { htmlAttributes = new { @class = "form-control", @placeholder = "Ville Obtention" } })
+                @Html.ValidationMessageFor(model => model.VilleObtention, "", new { @class = "text-danger" })
+                <br /><br />
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+
+        <h3 class="col-11 offset-1 mb-1 text-white">Notes semestrielle</h3>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 offset-sm-1 mt-3">
+
+            @Html.DropDownListFor(model => model.AnneUni1,
+                    new List<SelectListItem>
+                    {
+                       new SelectListItem{Text="2014/2015", Value="2014/2015"},
+                       new SelectListItem{Text="2015/2016", Value="2015/2016"},
+                       new SelectListItem{Text="2016/2017", Value="2016/2017"},
+                       new SelectListItem{Text="2017/2018", Value="2017/2018"},
+                       new SelectListItem{Text="2018/2019", Value="2018/2019"}
+                    }
+                    , "Année universitaire 1", htmlAttributes: new { @class = "form-control " })
+            @Html.ValidationMessageFor(model => model.AnneUni1, "", new { @class = "text-danger" })
+            <br />
+            @Html.DropDownListFor(model => model.AnneUni2,
+                    new List<SelectListItem>
+                    {
+                       new SelectListItem{Text="2015/2016", Value="2015/2016"},
+                       new SelectListItem{Text="2016/2017", Value="2016/2017"},
+                       new SelectListItem{Text="2017/2018", Value="2017/2018"},
+                       new SelectListItem{Text="2018/2019", Value="2018/2019"},
+                       new SelectListItem{Text="2019/2020", Value="2019/2020"}
+                    }
+                    , "Année universitaire 2", htmlAttributes: new { @class = "form-control " })
+            @Html.ValidationMessageFor(model => model.AnneUni2, "", new { @class = "text-danger" })
+            <br />
+            @Html.DropDownListFor(model => model.AnneUni3,
+                    new List<SelectListItem>
+                    {
+                       new SelectListItem{Text="2015/2016", Value="2015/2016"},
+                       new SelectListItem{Text="2016/2017", Value="2016/2017"},
+                       new SelectListItem{Text="2017/2018", Value="2017/2018"},
+                       new SelectListItem{Text="2018/2019", Value="2018/2019"},
+                       new SelectListItem{Text="2019/2020", Value="2019/2020"}
+                    }
+                    , "Année universitaire 3", htmlAttributes: new { @class = "form-control " })
+            @Html.ValidationMessageFor(model => model.AnneUni3, "", new { @class = "text-danger" })
+
+            <br />
+
+
+            <div class="dropDownSelect2"></div>
+        </div>
+        <div class="col-sm-3 mt-3">
+
+            @Html.DropDownListFor(model => model.Redoublant1,
+                    new List<SelectListItem>
+                    {
+                       new SelectListItem{Text="Oui", Value="Oui"},
+                       new SelectListItem{Text="Non", Value="Non"}
+                    }
+                    , "Redoublant", htmlAttributes: new { @class = "form-control " })
+            @Html.ValidationMessageFor(model => model.Redoublant1, "", new { @class = "text-danger" })
+            <br />
+
+            @Html.DropDownListFor(model => model.Redoublant2,
+                    new List<SelectListItem>
+                    {
+                       new SelectListItem{Text="Oui", Value="Oui"},
+                       new SelectListItem{Text="Non", Value="Non"}
+                    }
+                    , "Redoublant", htmlAttributes: new { @class = "form-control " })
+            @Html.ValidationMessageFor(model => model.Redoublant2, "", new { @class = "text-danger" })
+            <br />
+
+            @Html.DropDownListFor(model => model.Redoublant3,
+                    new List<SelectListItem>
+                    {
+                       new SelectListItem{Text="Oui", Value="Oui"},
+                       new SelectListItem{Text="Non", Value="Non"}
+                    }
+                    , "Redoublant", htmlAttributes: new { @class = "form-control " })
+            @Html.ValidationMessageFor(model => model.Redoublant3, "", new { @class = "text-danger" })
+
+
+        </div>
+
+        <div class="col-sm-2 mt-3">
+
+            <div>
+                @Html.EditorFor(model => model.Semestre1, new { htmlAttributes = new { @class = "form-control", @placeholder = "Note S1" } })
+                @Html.ValidationMessageFor(model => model.Semestre1, "", new { @class = "text-danger" })
+            </div>
+            <br />
+            <div>
+                @Html.EditorFor(model => model.Semestre3, new { htmlAttributes = new { @class = "form-control", @placeholder = "Note S3" } })
+                @Html.ValidationMessageFor(model => model.Semestre3, "", new { @class = "text-danger" })
+            </div>
+            <br />
+
+            <div>
+                @Html.EditorFor(model => model.Semestre5, new { htmlAttributes = new { @class = "form-control", @placeholder = "Note S5" } })
+                @Html.ValidationMessageFor(model => model.Semestre5, "", new { @class = "text-danger" })
+            </div>
+
+        </div>
+
+        <div class="col-sm-2 mt-3">
+
+            <div>
+                @Html.EditorFor(model => model.Semestre2, new { htmlAttributes = new { @class = "form-control", @placeholder = "Note S2" } })
+                @Html.ValidationMessageFor(model => model.Semestre2, "", new { @class = "text-danger" })
+            </div>
+            <br />
+            <div>
+                @Html.EditorFor(model => model.Semestre4, new { htmlAttributes = new { @class = "form-control", @placeholder = "Note S4" } })
+                @Html.ValidationMessageFor(model => model.Semestre4, "", new { @class = "text-danger" })
+            </div>
+            <br />
+
+            <div>
+                @Html.EditorFor(model => model.Semestre6, new { htmlAttributes = new { @class = "form-control", @placeholder = "Note S6" } })
+                @Html.ValidationMessageFor(model => model.Semestre6, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="form-group text-center offset-2">
+            <br /><br />
+            <div class="row">
+                <a class="btn btn-info px-5 mt-2" href="Step2">Previous</a>
+                <div class="offset-lg-8 offset-md-3"></div>
+                <input type="submit" class="btn btn-danger px-5 mt-2" id="maj" value="Finish" />
+            </div>
+
+        </div>
+    </div>
+    <br /><br />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function () {
+        traitement();
+        $("#Type").change(function () {
+            traitement();
+        });
+        function traitement() {
+            if (@ViewBag.niveau == "3") {
+                var select = $("#Type").children("option:selected").val();
+                if (select == "DUT" || select == "DEUG") {
+                    $("#Semestre6").hide();
+                    $("#Semestre5").hide();
+                    $("#AnneUni3").hide();
+                    $("#Redoublant3").hide();
+                }
+                else {
+                    $("#Semestre6").show();
+                    $("#Semestre5").show();
+                    $("#AnneUni3").show();
+                    $("#Redoublant3").show();
+                }
+            }
+        }
+    });
+    </script>
+
+}

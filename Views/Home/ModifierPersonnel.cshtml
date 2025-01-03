@@ -1,0 +1,252 @@
+﻿@model MantenanceProjetASPNET6.ViewModels.CandidatModel
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<div class="page-content-wrapper-inner" style="font-family:'Arial Rounded MT';">
+    <div class="content-viewport">
+        <div class="container-fluid">
+            <!-- USER DATA-->
+            <div class="user-data m-b-40">
+                <h2 class="title-3 mb-4 mt-4 text-center text-warning font-weight-bold">
+                    <i class="mdi mdi-account-circle link-icon mr-4"></i>
+                    Informations Personnelles
+                </h2>
+                <hr class="col-md-8 offset-md-2 mb-5" />
+                <div class="offset-5">
+                    <img src="../candidatImages/@ViewBag.photo" id="image" style="border-radius: 50%; width:150px; height:150px" />
+                </div>
+                <br />
+                <div class="offset-2">
+                    <div class="row">
+                        <div class="col-md-8 mb-3 showcase_content_area">
+                                <div class="custom-file">
+                                    <input type="file" class="form-control custom-file-input" id="input" name="imageUpload">
+                                    <label class="custom-file-label" for="customFile">Choisir une photo</label>
+                                </div>
+                            <br />
+                        </div>
+                        <br />
+
+                        <div class="col-xl-2 col-lg-3">
+                            <button class="btn btn-success px-4  btn-rounded" id="uploadButton">Upload Image</button>
+                        </div>
+                    </div>
+                </div><br />
+
+                <hr class="col-md-8 offset-md-2 mb-5" />
+
+                <div class="row d-flex justify-content-center m-b-30">
+                    <div class="col-md-10">
+                        <form asp-action="ModifierPersonnel">
+
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            @Html.HiddenFor(model => model.Cne)
+                            <div class="grid-body">
+                                <div class="item-wrapper">
+                                    <div class="form-group row showcase_row_area">
+                                        <div class="col-md-3 ">
+                                            @Html.LabelFor(model => model.Nom, "Nom :", htmlAttributes: new { @class = "control-label col-md-9 text-gray font-weight-bold" })
+                                        </div>
+                                        <div class="col-md-9 showcase_content_area">
+                                            @Html.EditorFor(model => model.Nom, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Nom, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row showcase_row_area">
+                                        <div class="col-md-3 ">
+                                            @Html.LabelFor(model => model.Prenom, "Prenom :", htmlAttributes: new { @class = "control-label col-md-9 text-gray font-weight-bold" })
+                                        </div>
+                                        <div class="col-md-9 showcase_content_area">
+                                            @Html.EditorFor(model => model.Prenom, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Prenom, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row showcase_row_area">
+                                        <div class="col-md-3 ">
+                                            @Html.LabelFor(model => model.Cin, "CIN :", htmlAttributes: new { @class = "control-label col-md-9 text-gray font-weight-bold" })
+                                        </div>
+                                        <div class="col-md-9 showcase_content_area">
+                                            @Html.EditorFor(model => model.Cin, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Cin, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row showcase_row_area">
+                                        <div class="col-md-3 ">
+                                            @Html.LabelFor(model => model.Sexe, "Sexe : ", htmlAttributes: new { @class = "control-label col-md-9 text-gray font-weight-bold" })
+                                        </div>
+                                        <div class="col-md-9 showcase_content_area">
+                                            <div class="form-inline">
+                                                <div class="radio mb-3">
+                                                    <label class="radio-label mr-4">
+                                                        <input asp-for="Sexe" type="radio" value="Femme">Femme<i class="input-frame"></i>
+                                                    </label>
+                                                </div>
+                                                <div class="radio mb-3">
+                                                    <label class="radio-label">
+                                                        <input asp-for="Sexe" type="radio" value="Homme">Homme<i class="input-frame"></i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            @Html.ValidationMessageFor(model => model.Sexe, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row showcase_row_area">
+                                        <div class="col-md-3 ">
+                                            @Html.LabelFor(model => model.DateNaissance, "Date de naissance :", htmlAttributes: new { @class = "control-label col-md-10 text-gray font-weight-bold" })
+                                        </div>
+                                        <div class="col-md-9 showcase_content_area">
+                                            @Html.EditorFor(model => model.DateNaissance, new { htmlAttributes = new { @class = "form-control datePicker" } })
+                                            @Html.ValidationMessageFor(model => model.DateNaissance, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row showcase_row_area">
+                                        <div class="col-md-3 ">
+                                            @Html.LabelFor(model => model.LieuNaissance, "Lieu de naissance :", htmlAttributes: new { @class = "control-label col-md-10 text-gray font-weight-bold" })
+                                        </div>
+                                        <div class="col-md-9 showcase_content_area">
+                                            @Html.EditorFor(model => model.LieuNaissance, new { htmlAttributes = new { @class = "form-control " } })
+                                            @Html.ValidationMessageFor(model => model.LieuNaissance, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group row showcase_row_area">
+                                        <div class="col-md-3 ">
+                                            @Html.LabelFor(model => model.Nationalite, "Nationalite :", htmlAttributes: new { @class = "control-label col-md-10 text-gray font-weight-bold" })
+                                        </div>
+                                        <div class="col-md-9 showcase_content_area">
+                                            <div class="form-inline">
+                                                <div class="radio mb-3">
+                                                    <label class="radio-label mr-4">
+                                                        <input asp-for="Nationalite" type="radio" value="Marocaine">Marocaine<i class="input-frame"></i>
+                                                    </label>
+                                                </div>
+                                                <div class="radio mb-3">
+                                                    <label class="radio-label">
+                                                        <input asp-for="Nationalite" type="radio" value="Etrangère">Etrangère<i class="input-frame"></i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            @Html.ValidationMessageFor(model => model.Nationalite, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row showcase_row_area">
+                                        <div class="col-md-3">
+                                            @Html.LabelFor(model => model.Gsm, "GSM :", htmlAttributes: new { @class = "control-label col-md-10 text-gray font-weight-bold" })
+                                        </div>
+                                        <div class="col-md-9 showcase_content_area">
+                                            @Html.EditorFor(model => model.Gsm, new { htmlAttributes = new { @class = "form-control " } })
+                                            @Html.ValidationMessageFor(model => model.Gsm, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row showcase_row_area">
+                                        <div class="col-md-3 ">
+                                            @Html.LabelFor(model => model.Telephone, "Tel :", htmlAttributes: new { @class = "control-label col-md-9 text-gray font-weight-bold" })
+                                        </div>
+                                        <div class="col-md-9 showcase_content_area">
+                                            @Html.EditorFor(model => model.Telephone, new { htmlAttributes = new { @class = "form-control " } })
+                                            @Html.ValidationMessageFor(model => model.Telephone, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row showcase_row_area">
+                                        <div class="col-md-3 ">
+                                            @Html.LabelFor(model => model.Adresse, "Adresse :", htmlAttributes: new { @class = "control-label col-md-9 text-gray font-weight-bold" })
+                                        </div>
+                                        <div class="col-md-9 showcase_content_area">
+                                            @Html.EditorFor(model => model.Adresse, new { htmlAttributes = new { @class = "form-control " } })
+                                            @Html.ValidationMessageFor(model => model.Adresse, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row showcase_row_area">
+                                        <div class="col-md-3 ">
+                                            @Html.LabelFor(model => model.Ville, "Ville :", htmlAttributes: new { @class = "control-label col-md-9 text-gray font-weight-bold" })
+                                        </div>
+                                        <div class="col-md-9 showcase_content_area">
+                                            @Html.EditorFor(model => model.Ville, new { htmlAttributes = new { @class = "form-control " } })
+                                            @Html.ValidationMessageFor(model => model.Ville, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row showcase_row_area">
+                                        <div class="col-md-3 ">
+                                            @Html.LabelFor(model => model.Password, "Password :", htmlAttributes: new { @class = "control-label col-md-9 text-gray font-weight-bold" })
+                                        </div>
+                                        <div class="col-md-9 showcase_content_area">
+                                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control " } })
+                                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row showcase_row_area">
+                                        <div class="col-md-3 ">
+                                            @Html.LabelFor(model => model.Email, "Email :", htmlAttributes: new { @class = "control-label col-md-10 text-gray font-weight-bold" })
+                                        </div>
+                                        <div class="col-md-9 showcase_content_area">
+                                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control " } })
+                                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <div class="p-0 my-4 col-md-offset-2 col-md-12 d-flex justify-content-end">
+                                        <input type="submit" value=" Enregistrer " class="btn btn-primary px-4 mt-2 btn-rounded" />
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </form>
+                    </div>
+
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#input').on('change', function () {
+            //get the file name
+            var fileName = $(this).val().split("\\").pop();
+            //replace the "Choose a file" label
+            $(this).next('.custom-file-label').html(fileName);
+        })
+        $("#uploadButton").click(function () {
+            var file = $("#input").get(0).files[0];
+            var formData = new FormData();
+            formData.set("file", file, file.name);
+
+            $.ajax({
+                url: "/Home/Image",
+                method: "post",
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    console.log(response);
+                    if (response != "icon.png") {
+                        $("#image").attr("src", "../../candidatImages/" + response);
+                        $("#frontImage").attr("src", "../../candidatImages/" + response);
+                    }
+                    else {
+                        alert("error");
+                    }
+                }
+            })
+            .then(function(result) {
+
+            });
+                });
+    })
+</script>

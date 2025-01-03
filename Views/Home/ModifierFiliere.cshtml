@@ -1,0 +1,66 @@
+﻿@model MantenanceProjetASPNET6.Models.Filiere
+@{
+    ViewData["Title"] = "ModifierFiliere";
+
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<div class="page-content-wrapper-inner" style="font-family:'Arial Rounded MT';">
+    <div class="content-viewport">
+        <div class="container-fluid">
+            <!-- USER DATA-->
+            <div class="user-data m-b-40">
+
+                <h2 class="title-3 mb-4 mt-4 text-center text-warning font-weight-bold">
+                    <i class="mdi mdi-function link-icon mr-4"></i>
+                    Modification de la Filière Choisie
+                </h2>
+
+                <hr class="col-md-8 offset-md-2 mb-5" />
+
+                @using (Html.BeginForm("ModifierFiliere", "Home", FormMethod.Post))
+                {
+                    <div class="row d-flex justify-content-center m-b-30">
+                        <div class="col-md-11">
+                            <div class="form-horizontal">
+                                <div class="alert alert-success">
+                                    <span>Vous avez choisi de postuler à @ViewData["filiere"] </span>
+                                </div>
+                            </div>
+                            <div class="form-horizontal">
+                                <div class="form-group offset-4">
+                                    <br />
+
+                                    <div class="custom-control custom-radio mt-2">
+                                        <input type="radio" asp-for="ID" class="custom-control-input" id="defaultGroupExample1" name="ID" value="1">
+                                        <label class="custom-control-label" for="defaultGroupExample1">Génie Informatique</label>
+                                    </div>
+                                    <div class="custom-control custom-radio mt-2">
+                                        <input type="radio" asp-for="ID" class="custom-control-input" id="defaultGroupExample2" name="ID" value="2">
+                                        <label class="custom-control-label" for="defaultGroupExample2">Génie Réseau et Télécom</label>
+                                    </div>
+                                    <div class="custom-control custom-radio mt-2">
+                                        <input type="radio" asp-for="ID" class="custom-control-input" id="defaultGroupExample3" name="ID" value="3">
+                                        <label class="custom-control-label" for="defaultGroupExample3">Génie Industriel</label>
+                                    </div>
+                                    <div class="custom-control custom-radio mt-2">
+                                        <input type="radio" asp-for="ID" class="custom-control-input" id="defaultGroupExample4" name="ID" value="4">
+                                        <label class="custom-control-label" for="defaultGroupExample4">Génie Procedès et M.C</label>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-10 d-flex justify-content-center">
+                                        <input type="submit" value=" Modifier la filière " class="btn btn-primary btn-rounded px-4 mt-5 mx-2"  />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+

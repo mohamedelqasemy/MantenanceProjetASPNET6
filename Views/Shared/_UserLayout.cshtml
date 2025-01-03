@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Label - Premium Responsive Bootstrap 4 Admin & Dashboard Template</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="~/content_user/vendors/iconfonts/mdi/css/materialdesignicons.css">
+    <!-- endinject -->
+    <!-- vendor css for this page -->
+    <!-- End vendor css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="~/content_user/css/shared/style.css">
+    <!-- endinject -->
+    <!-- Layout style -->
+    <link rel="stylesheet" href="~/content_user/css/demo_1/style.css">
+    <!-- Layout style -->
+    <link rel="shortcut icon" href="~/content_user/images/favicon.ico" />
+    <!-- icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/images/ensa_logo.png" />
+</head>
+<body class="header-fixed">
+    <!-- HEADER -->
+    <nav class="t-header" style="background-color:lavender">
+        <div class="t-header-brand-wrapper " style="background-color:lavender;">
+            <h6 class="font-weight-bold d-none d-lg-block"
+                style="font-family:'Arial Rounded MT';color:rgb(105,111,251);">
+                <img src="~/images/icon/ensa_2.jfif" class="rounded-circle mx-3" style="width:60px; height:50px;" />
+                ENSA SAFI
+            </h6>
+            <h6 class="font-weight-bold d-lg-none mx-5">
+                <img src="~/images/icon/ensa_2.jfif" class="rounded-circle ml-3" style="width:60px; height:50px;" />
+            </h6>
+        </div>
+
+        <div class="t-header-content-wrapper">
+            <button class="t-header-toggler t-header-mobile-toggler d-block d-lg-none">
+                <i class="mdi mdi-menu link-icon"></i>
+            </button>
+            <div class="t-header-content">
+                <h3 class="font-weight-bold" style="font-family:'Arial Rounded MT';color:rgb(105,111,251);">
+                    <i class=" mdi mdi-school mr-3"></i>
+                    Concours d'accès à l'ENSA de Safi
+
+                </h3>
+            </div>
+        </div>
+    </nav>
+    @using Microsoft.AspNetCore.Http
+    @inject IHttpContextAccessor HttpContextAccessor
+    <!-- partial -->
+    <div class="page-body">
+        <!-- ###############################  Side Bar ############################# -->
+        <div class="sidebar ">
+            <div>
+                <div class="user-profile">
+                    <div class="display-avatar animated-avatar">
+                        <img class="profile-img img-lg rounded-circle" src='~/candidatImages/@HttpContextAccessor.HttpContext.Session.GetString("photo")' alt="profile image">
+                    </div>
+                    <div class="info-wrapper">
+                        <p class="user-name">@HttpContextAccessor.HttpContext.Session.GetString("nom") @HttpContextAccessor.HttpContext.Session.GetString("prenom")</p>
+                    </div>
+                </div>
+                <ul class="navigation-menu">
+                    <li class="nav-category-divider py-2" style="background-color:lavender">MAIN</li>
+                    <li>
+                        <a asp-action="Accueil">
+                            <span class="link-title">Accueil</span>
+                            <i class="mdi mdi-home link-icon"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="ModifierPersonnel">
+                            <span class="link-title">Informations Personnelles</span>
+                            <i class="mdi mdi-account-circle link-icon"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#sample-pages" data-toggle="collapse" aria-expanded="false">
+                            <span class="link-title">Diplômes</span>
+                            <i class="mdi mdi-certificate link-icon"></i>
+                        </a>
+                        <ul class="collapse navigation-submenu" id="sample-pages">
+                            <li>
+                                <a asp-action="ModifierBac">Baccalauréat</a>
+                            </li>
+                            <li>
+                                <a asp-action="ModifierDiplome">Diplôme Universitaire</a>
+                            </li>
+                            <li>
+                                <a asp-action="FichierScanne">Fichier Scanné</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a asp-action="ModifierFiliere">
+                            <span class="link-title">Filière</span>
+                            <i class="mdi mdi-function link-icon"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a asp-action="Fiche">
+                            <span class="link-title">Fiche de Convocation</span>
+                            <i class="mdi mdi-file-pdf link-icon"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a asp-action="Epreuve">
+                            <span class="link-title">Anciens Epreuves</span>
+                            <i class="mdi mdi-file-multiple link-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-category-divider py-2" style="background-color:lavender">Autres</li>
+                    <li>
+                        <a asp-action="Deconnexion" asp-controller="Auth">
+                            <span class="link-title">Deconnexion</span>
+                            <i class="mdi mdi-logout link-icon"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="page-content-wrapper">
+            @RenderBody()
+            <!-- partial:partials/_footer.html -->
+            <footer class="footer">
+                <div class="row">
+
+                    <div class="col-sm-6 text-center text-sm-left mt-3 mt-sm-0">
+                        <small class="text-muted d-block">Copyright © 2020 <a asp-action="Index" asp-controller="Landing">Ecole Nationale des Sciences Appliquées</a>.</small>
+                        <small class="text-gray mt-2"> With <i class="mdi mdi-heart text-danger"></i></small>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- SCRIPT LOADING START FORM HERE /////////////-->
+    <!-- plugins:js -->
+    <script src="~/content_user/vendors/js/core.js"></script>
+    <!-- endinject -->
+    <!-- Vendor Js For This Page Ends-->
+    <script src="~/content_user/vendors/apexcharts/apexcharts.min.js"></script>
+    <script src="~/content_user/vendors/chartjs/Chart.min.js"></script>
+    <script src="~/content_user/js/charts/chartjs.addon.js"></script>
+    <!-- Vendor Js For This Page Ends-->
+    <!-- build:js -->
+    <script src="~/content_user/js/template.js"></script>
+    <script src="~/content_user/js/dashboard.js"></script>
+        
+    <script>
+        
+        document.querySelector("body > div.item-purchase-banner > span > i").click();
+      
+        
+    </script>
+
+    <!-- endbuild -->
+
+</body>
+</html>

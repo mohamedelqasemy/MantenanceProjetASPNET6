@@ -1,0 +1,126 @@
+﻿
+   @{
+     Layout = "~/Views/Shared/_UserLayout.cshtml";
+    ViewData["Title"] = "Fiche Convocation";
+    
+    }
+
+
+<style>
+    .myBody {
+        font-family: 'Arial Rounded MT';
+    }
+    td {
+        font-size: 20px;
+    }
+
+    th {
+        font-size: 18px;
+        color: white;
+    }
+
+    .myborder {
+        padding-top: 10px;
+        margin: 0 auto;
+    }
+
+    img {
+        padding: unset;
+    }
+
+    h1 {
+        margin: 10px 10px 10px 10px;
+        text-align: center;
+    }
+</style>
+
+<div class="page-content-wrapper-inner myBody" style="font-family:'Arial Rounded MT';">
+    <div class="content-viewport">
+        <div class="container-fluid">
+            <!-- USER DATA-->
+            <div class="user-data m-b-40">
+
+                <h2 class="title-3 mb-4 mt-4 pb-4 text-center text-warning font-weight-bold">
+                    <i class="mdi mdi-file-pdf link-icon mr-4"></i>
+                    Fiche de Convocation du Concours
+                </h2>
+
+                               
+                @using Microsoft.AspNetCore.Http
+                @inject IHttpContextAccessor HttpContextAccessor
+                    <div class="row myborder">
+
+                        <div class="col-lg-6 col-md-8 col-xs-8 col-sm-8">
+                            <table class="table table table-bordered table-primary">
+
+                                <tr>
+                                    <th class="bg-dark">  <img width="100" src="~/images/ENSA.jpg" /> </th>
+                                    <th class="bg-dark"> Ensa de Safi <br /> Concours d'accès en 3eme année </th>
+                                    <th rowspan="4">
+
+                                        <img class="profile-img img-lg rounded-circle" style="border-radius: 50%; width:250px; height:150px" id="image" src='~/candidatImages/@HttpContextAccessor.HttpContext.Session.GetString("photo")' alt="profile image">
+                                    </th>
+                                </tr>
+
+                                <tr>
+                                    <th class="bg-dark">  Matricule: </th>
+                                    <td style="font-size: 18px;"> @Model.Cne</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-dark"> CIN: </th>
+                                    <td style="font-size: 18px;"> @Model.Cin</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-dark"> N°dossier: </th>
+                                    <td style="font-size: 18px;"> @Model.Num_dossier</td>
+                                </tr>
+                            </table>
+
+                        </div>
+
+
+
+
+
+                    </div>
+
+                    <br />
+
+                    <table class="table table-bordered table-primary">
+                        <tr class="bg-dark">
+                            <th>Nom</th>
+                            <th>Prenom</th>
+                            <th>Filiere</th>
+                            <th>Diplome</th>
+                            <th>CNE</th>
+                            <th>Ville Dipl</th>
+                            <th>Convoqué</th>
+                            <th>Date inscription</th>
+                        </tr>
+
+                        <tr>
+                            <td style="font-size: 18px;">@Model.Nom</td>
+                            <td style="font-size: 18px;">@Model.Prenom</td>
+                            <td style="font-size: 18px;">@Model.Filiere.Nom</td>
+                            <td style="font-size: 18px;">@Model.Diplome.Type</td>
+                            <td style="font-size: 18px;">@Model.Cne</td>
+                            <td style="font-size: 18px;">@Model.Diplome.VilleObtention</td>
+                            <td style="font-size: 18px;">@Model.Convoque </td>
+
+
+                            <td style="font-size: 18px;">@Model.DateInscription</td>
+                        </tr>
+                    </table>
+
+                    <div class="my-5 text-center">
+                        <a href="ImprimerConvocation?cne=@Model.Cne" target="_blank">
+                            <input class="btn btn-success btn-rounded px-5 py-4 " style="font-size:medium;" type="text" value=" Imprimer la fiche " />
+                        </a>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\MantenanceProjetASPNET6.props" />
+</Project>

@@ -1,0 +1,285 @@
+﻿
+@{
+    ViewBag.Title = "Selection";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- End of Topbar -->
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <div class="align-content-center">
+        <h3 class="font-weight-bold text-center pt-3 pb-5" id="title">Sélection du 3ème année</h3>
+        <div class="row mb-4 justify-content-center">
+            <div class=" col-md-7">
+
+                <div class="form-horizontal ">
+
+                    <form id="#formConf">
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label">Filière : </label>
+                            <div class="col-md-8">
+                                <select class="form-control" name="Filiere" id="FiliereSelect" onchange="selected()">
+                                    <option selected value="0">Choix du Filiere</option>
+                                    <option value="Informatique">Génie Informatique</option>
+                                    <option value="Industriel">Génie Industriel</option>
+                                    <option value="GTR">GTR</option>
+                                    <option value="GPMC">GPMC</option>
+                                </select>
+                            </div>
+                        </div>
+                                                                     
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label">Coefficients de note Math : </label>
+                            <div class="col-md-8">
+                                <input type="number" id="CoeffMath" class="form-control" name="CoeffMath" />
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label">Coefficients de note Specialité: </label>
+                            <div class="col-md-8">
+                                <input type="number" id="CoeffSpecialite" name="CoeffSpecialite" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label">Nombre de places: </label>
+                            <div class="col-md-8">
+                                <input type="number" id="NbrPlace" class="form-control" name="NbrPlace" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label">Liste d'attente: </label>
+                            <div class="col-md-8">
+                                <input type="number" id="NbrPlaceListAtt" class="form-control" name="NbrPlaceListAtt" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label">Note minimale: </label>
+                            <div class="col-md-8">
+                                <input type="number" id="NoteMin" class="form-control" name="NoteMin" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label">Classement par : </label>
+                            <div class="col-md-8">
+                                <select class="form-control" name="TypeSelection" id="TypeSelection">
+                                    <option>Type Classement</option>
+                                    <option value="noteGlobal">Note globale</option>
+                                    <option value="noteMath">Note Mathematique</option>
+                                    <option value="noteBac">Note Bac</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                    </form>
+                    <div class="form-group row pt-5">
+                        <div class="col-md-5">
+                            <button class="btn btn-danger py-2 btn-block" onclick="exportTableToExcel('tableSelection')">Exporter la table des candidats</button>
+                        </div>
+                        <div class="col-md-5 offset-2">
+                            <button id="btn_selec" onclick="clicked()" class="btn btn-primary btn-block">Afficher la liste</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    
+
+    <div>
+
+        <table class="table table-bordered table-responsive" id="tableSelection">
+            <tr class="table-primary">
+                <th class="text-center">N°</th>
+                <th class="text-center">Titre</th>
+                <th class="text-center">Nom</th>
+                <th class="text-center">Prenom</th>
+                <th class="text-center">NoteBac</th>
+                <th class="text-center">Note1</th>
+                <th class="text-center">Note2</th>
+                <th class="text-center">Note3</th>
+                <th class="text-center">Note4</th>
+                <th class="text-center">Note5</th>
+                <th class="text-center">Note6</th>
+                <th class="text-center">Dossier</th>
+                <th class="text-center">DossierL</th>
+                <th class="text-center">Math</th>
+                <th class="text-center">Specialite</th>
+                <th class="text-center">NoteGlobal</th>
+                <th class="text-center">Class</th>
+                <th class="text-center">N.Dossier</th>
+                <th class="text-center">Filiere</th>
+                <th class="text-center">Diplome</th>
+                <th class="text-center">Admis</th>
+                <th class="text-center">Etablissement</th>
+                <th class="text-center">Ville.Dip</th>
+                <th class="text-center">Matricule</th>
+                <th class="text-center">Cin</th>
+
+            </tr>
+
+            <tbody id="tbody">
+
+            </tbody>
+          
+
+        </table>
+
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+<script>  
+
+
+    //######################################### Export to EXCELL
+    function exportTableToExcel(tableID) {
+        var downloadLink;
+        var dataType = 'application/vnd.ms-excel';
+        var tableSelect = document.getElementById(tableID);
+        var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+
+        // Specify file name
+        filename = "ListeCandidats_Selection_3A_" + $("#FiliereSelect :selected").val();
+        filename = filename ? filename + '.xls' : 'ListCandidatSelection_3A.xls';
+
+        // Create download link element
+        downloadLink = document.createElement("a");
+
+        document.body.appendChild(downloadLink);
+
+        if (navigator.msSaveOrOpenBlob) {
+            var blob = new Blob(['\ufeff', tableHTML], {
+                type: dataType
+            });
+            navigator.msSaveOrOpenBlob(blob, filename);
+        } else {
+            // Create a link to the file
+            downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+
+            // Setting the file name
+            downloadLink.download = filename;
+
+            //triggering the function
+            downloadLink.click();
+        }
+    }
+
+  
+    function selected() {
+
+
+        $("#CoeffMath").val(null);
+        $("#CoeffSpecialite").val(null);
+        $("#NbrPlace").val(null);
+        $("#NbrPlaceListAtt").val(null);
+        $("#NoteMin").val(null);
+        $("#TypeSelection").val(null);
+        
+        $.get("/Admin/GetConfigurationSelection", { filiere: $("#FiliereSelect").val(),nv:3 }, function (data) {
+           
+           
+            $("#CoeffMath").val(data.coeffMath);
+            $("#CoeffSpecialite").val(data.coeffSpecialite);
+            $("#NbrPlace").val(data.nbrPlace);
+            $("#NbrPlaceListAtt").val(data.nbrPlaceListAtt);
+            $("#NoteMin").val(data.noteMin);
+            $("#TypeSelection").val(data.typeClassement);
+
+        }).fail(function () {
+           
+        });
+
+       
+    }
+
+    function clicked() {
+        var cm = $("#CoeffMath").val();
+        var cs = $("#CoeffSpecialite").val();
+       var np =  $("#NbrPlace").val();
+       var la =  $("#NbrPlaceListAtt").val();
+        var nm = $("#NoteMin").val();
+        var f = $("#FiliereSelect").val();
+        var cl = $("#TypeSelection").val();
+
+      
+
+      
+        $.get("/Admin/SetConfigurationSelection", { f: f, cs: cs, np: np, la: la, nm: nm, cm: cm,cl:cl,nv:"3" }, function (data) {
+           
+           
+
+            var num = 0;
+            var admis = 0;
+            var attente = 0;
+            var classement = 0;
+            $('#tbody').empty();
+
+            console.log(data);
+
+
+            data.forEach(function (element) {
+                num++;
+                
+                
+                if (element.Admis == false) {
+                    attente++;
+                    classement = 0;
+                }
+                else {
+                    admis++;
+                    classement++;
+
+                }
+                $('#tbody').append(
+                    '<tr>'+
+                    '<td>' + num + '</td>' +
+                    '<td>' + element.sexe + '</td>' +
+                    '<td>' + element.nom  + '</td>' +
+                    '<td>' + element.prenom + '</td>' +
+                    '<td>' + element.noteBac + '</td>' +
+                    '<td>' + element.note1 + '</td>' +
+                    '<td>' + element.note2 + '</td>' +
+                    '<td>' + element.note3 + '</td>' +
+                    '<td>' + element.note4 + '</td>' +
+                    '<td>' + element.note5 + '</td>' +
+                    '<td>' + element.note6 + '</td>' +
+                    '<td>' + element.note_Diplome + '</td>' +
+                    '<td>' + 10.00 + '</td>' +
+                    '<td>' + element.math + '</td>' +
+                    '<td>' + element.specialite + '</td>' +
+                    '<td>' + element.globale + '</td>' +
+                    '<td>' + classement + '</td>' +
+                    '<td>' + element.dossier + '</td>' +
+                    '<td>' + element.filiere + '</td>' +
+                    '<td>' + element.type_dip + '</td>' +
+                    '<td>' + element.admis + '</td>' +
+                    '<td>' + element.etablissement + '</td>' +
+                    '<td>' + element.ville_dip + '</td>' +
+                    '<td>' + element.matricule + '</td>' +
+                    '<td>' + element.cin + '</td>' +
+                    + '</tr>'
+                );
+
+            });
+           
+            });
+
+       
+           
+    }
+
+</script>
+
+

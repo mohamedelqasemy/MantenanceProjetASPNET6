@@ -1,0 +1,96 @@
+﻿@model MantenanceProjetASPNET6.Models.UploadModel
+
+@{
+    ViewData["Title"] = "Epreuves";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <h3 class="font-weight-bold text-center pt-3 pb-5">Upload Documents</h3><br />
+    @if (TempData["error"] != null)
+    {
+        <div class='alert alert-danger'><span>@TempData["error"]</span></div>
+    }
+    @if (TempData["succes"] != null)
+    {
+        <div class='alert alert-success'><span>@TempData["succes"]</span></div>
+    }
+
+        <form enctype="multipart/form-data" asp-action="UploadEpreuve" asp-controller="Admin">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="col-6">
+                    <select asp-for="matiere" id="matiere" class="form-control">
+                        <option value="" selected>--- Séléctionner une matière ---</option>
+                        <option value="Math">Math</option>
+                        <option value="Programmation">Programmation</option>
+                        <option value="Physique">Physique</option>
+                    </select>
+                    <span asp-validation-for="matiere" class="text-danger"></span>
+                </div>
+                <div class="col-6">
+                    <input asp-for="annee" type="text" id="annee" class="form-control" placeholder="Année épreuve" />
+                    <span asp-validation-for="annee" class="text-danger"></span>
+                </div>
+            </div><br /><br />
+            <div class="row ">
+                <div class="col-6">
+                    <div class="custom-file">
+                        <input asp-for="fichier" class="form-control custom-file-input" id="file" />
+                        <label class="custom-file-label" asp-for="fichier">Choisir un document...</label>
+                    </div>
+                    <br />
+                    <span asp-validation-for="fichier" class="text-danger"></span>
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-info btn-block" id="upload_btn">Upload</button>
+                </div>
+            </div>
+        </form>
+    <div class="alert alert-warning mt-5">
+        <span>Veuillez enregistrer un fichier à la fois!</span>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+
+        $('#file').on('change', function () {
+            //get the file name
+            var fileName = $(this).val().split("\\").pop();
+            //replace the "Choose a file" label
+            $(this).next('.custom-file-label').html(fileName);
+        })
+
+        /*$("#upload_btn").click(function () {
+            $("#message").empty();
+            var file = $("#file").get(0).files[0];
+            var formData = new FormData();
+            formData.append("file", file);
+            formData.append("matiere", $("#matiere").val());
+            formData.append("annee", $("#annee").val());
+
+            $.ajax({
+                url: "/Admin/UploadEpreuve",
+                method: "post",
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    if (response == "1") {
+                        $("#message").append("<div class='alert alert-success'><span>Fichier enregistrer avec succes</span></div>")
+                    }
+                    else {
+                        $("#message").append("<div class='alert alert-danger'><span>Erreur lors d'enregistrement</span></div>")
+                    }
+                }
+            })
+            .then(function(result) {
+
+            });
+         });*/
+    })
+</script>

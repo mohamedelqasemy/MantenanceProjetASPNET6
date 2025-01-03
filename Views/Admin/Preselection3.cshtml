@@ -1,0 +1,448 @@
+﻿
+@{
+    ViewData["Title"] = "Présélection";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <div class="align-content-center">
+        <h4 class="font-weight-bold text-center pt-3 pb-5">Présélection du 3ème année</h4>
+        <p id="erreur" class="text-center" style="display:none; color:crimson;">Veuillez remplir tous les champs !</p>
+        <div class="row mb-4 justify-content-center">
+            <div class=" col-md-7">
+
+                <div class="form-horizontal ">
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label">Filière : </label>
+                        <div class="col-md-8">
+                            <select class="form-control" name="fil" id="fil">
+                                <option selected value="0">Choix du Filiere</option>
+                                <option value="Informatique">Génie Informatique</option>
+                                <option value="Industriel">Génie Industriel</option>
+                                <option value="GTR">GTR</option>
+                                <option value="GPMC">GPMC</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label">Type du Diplôme : </label>
+                        <div class="col-md-8">
+                            <select class="form-control" name="diplome" id="diplome">
+                                <option selected value="0">Choix du diplome</option>
+                                <option value="DUT">DUT</option>
+                                <option value="DEUG">DEUG</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label">Coefficients des semestres : </label>
+                        <div class="col-md-2">
+                            <select class="form-control" name="Cs1" id="Cs1">
+                                <option selected value="0">S1</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control" name="Cs2" id="Cs2">
+                                <option selected value="0">S2</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control" name="Cs3" id="Cs3">
+                                <option selected value="0">S3</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control" name="Cs4" id="Cs4">
+                                <option selected value="0">S4</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Coefficient de Bac : </label>
+                        <div class="col-md-2">
+                            <select class="form-control" name="Cbac" id="Cbac">
+                                <option selected value="0">Bac</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label">Note Seuil : </label>
+                        <div class="col-sm-2">
+                            <input type="number" name="seuil" id="seuil" class="form-control" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row pt-5">
+                        <div class="col-md-5">
+                            <button id="btn_table2" class="btn btn-info py-2 btn-block" style="display:none;">Afficher la liste des convoqués</button>
+                        </div>
+                        <div class="col-md-5 offset-2">
+                            <button id="btn_preselec" class="btn btn-primary py-2 btn-block">Lancer la présélection</button>
+                        </div>
+                        <div class="btn_export col-md-6 offset-3 mt-3 " id="btn_export" style="display:none;">
+                            <button class="btn btn-danger py-2 btn-block" onclick="exportTableToExcel('listPreselec')">Exporter la table des candidats</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="info" style="display:none;">
+        <hr class="info_hr" style="width:70%" />
+        <div class="align-content-center py-4">
+            <div class="row justify-content-center">
+                <h4 class="font-weight-bolder">
+                    Nombre :
+                    <span id="info_sum1"> </span>
+                    <span id="info_sum2"> </span>
+                </h4>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="table" style="display:none;">
+        <table class="table table-bordered table-responsive" id="listPreselec">
+            <tr class="table-warning">
+                <th class="text-center">N°</th>
+                <th class="text-center">Titre</th>
+                <th class="text-center">Nom</th>
+                <th class="text-center">Prénom</th>
+                <th class="text-center">Filière</th>
+                <th class="text-center">Note.Bac</th>
+                <th class="text-center">Note1</th>
+                <th class="text-center">Note2</th>
+                <th class="text-center">Note3</th>
+                <th class="text-center">Note4</th>
+                <th class="text-center">Note5</th>
+                <th class="text-center">Note6</th>
+                <th class="text-center">Dossier</th>
+                <th class="text-center">DossierL</th>
+                <th class="text-center">Diplôme</th>
+                <th class="text-center">Etablissement</th>
+                <th class="text-center">Ville.Dipl</th>
+                <th class="text-center">Matricule</th>
+                <th class="text-center">Année1</th>
+                <th class="text-center">Année2</th>
+                <th class="text-center">Année3</th>
+                <th class="text-center">Redouble1</th>
+                <th class="text-center">Redouble2</th>
+                <th class="text-center">Redouble3</th>
+                <th class="text-center">Date.Inscrip</th>
+                <!--<th class="text-center">Date.Impression</th>-->
+            </tr>
+            <tbody id="tbody"></tbody>
+        </table>
+        <a name="gototable"></a>
+    </div>
+
+    <div id="info2" style="display:none;">
+        <hr style="width:70%" />
+        <div class="align-content-center py-4">
+            <div class="row justify-content-center">
+                <h4 class="font-weight-bolder col-md-6 text-center">Liste des candidats convoqués au concours d'accès en 3ème année <span id="info2_fil"></span></h4>
+            </div>
+            <div class="row justify-content-center pt-2">
+                <h5 class="text-center">Année 2019/2020</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div id="tableConvoq" class="col-md-6 offset-md-3" style="display:none;">
+            <table class="table table-bordered ">
+                <tr class="table-info">
+                    <th class="text-center">N°</th>
+                    <th class="text-center">Nom</th>
+                    <th class="text-center">Prénom</th>
+                    <th class="text-center">Matricule</th>
+                    <th class="text-center">CIN</th>
+                </tr>
+                <tbody id="tbodyConvoq"></tbody>
+            </table>
+            <a name="gototable2"></a>
+        </div>
+
+    </div>
+
+
+</div>
+<!-- /.container-fluid -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="~/js/jquery-dateformat.min.js"></script>
+<script>
+
+    //######################################### Export to EXCELL
+    function exportTableToExcel(tableID) {
+        var downloadLink;
+        var dataType = 'application/vnd.ms-excel';
+        var tableSelect = document.getElementById(tableID);
+        var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+
+        // Specify file name
+        filename = "ListeCandidats_Preselection_3A_" + $("#fil :selected").val() + "_" + $("#diplome :selected").val();
+        filename = filename ? filename + '.xls' : 'ListCandidatPreselection_3A.xls';
+
+        // Create download link element
+        downloadLink = document.createElement("a");
+
+        document.body.appendChild(downloadLink);
+
+        if (navigator.msSaveOrOpenBlob) {
+            var blob = new Blob(['\ufeff', tableHTML], {
+                type: dataType
+            });
+            navigator.msSaveOrOpenBlob(blob, filename);
+        } else {
+            // Create a link to the file
+            downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+
+            // Setting the file name
+            downloadLink.download = filename;
+
+            //triggering the function
+            downloadLink.click();
+        }
+    }
+
+
+    $(document).ready(function () {
+
+        $("#info_sum2").css("color", "red");
+        $("#info2_fil").css("color", "darkslateblue");
+
+
+        //######################################## Ancienne Config
+        $("#diplome").change(function () {
+
+            if ($("#fil option:selected").val() != '0') {
+
+                loadingData();
+
+            }
+        });
+        $("#fil").change(function () {
+
+            if ($("#diplome option:selected").val() != '0') {
+
+                loadingData();
+
+            }
+        });
+
+        //######################################## Button Preselection
+        $("#btn_preselec").click(function () {
+
+            valider();
+            if (valider()) {
+
+                $("#info2_fil").text($("#fil").val());
+                $.get("/Admin/CalculerPreselec", { fil: $("#fil :selected").val(), diplome: $("#diplome :selected").val(), Cs1: $("#Cs1 :selected").val(), Cs2: $("#Cs2 :selected").val(), Cs3: $("#Cs3 :selected").val(), Cs4: $("#Cs4 :selected").val(), Cbac: $("#Cbac :selected").val(), seuil: $("#seuil").val(), niv: 3 }, function (data) {
+
+                    $("#tableConvoq").hide();
+                    $("#info2").hide();
+                    $("#btn_table2").show();
+                    $("#table").show();
+                    $("#btn_export").show();
+                    $("#tbody").empty();
+
+                    getPourcentage();
+                    scrollToAnchor('gototable');
+
+                    $.each(data, function (index, row) {
+
+                        remplirTable(index, row);
+                    });
+                });
+            }
+        });
+
+        //######################################## Button Convoqués
+        $("#btn_table2").click(function () {
+            $.get("/Admin/GetConvoquets", { fil: $("#fil :selected").val(), diplome: $("#diplome :selected").val(), niv: 3 }, function (data) {
+
+                $("#table").hide();
+                $("#btn_export").hide();
+                $("#info").hide();
+                $("#info2").show();
+                $("#tableConvoq").show();
+                $("#tbodyConvoq").empty();
+                $("#info2_fil").text($("#fil :selected").val());
+
+                $.each(data, function (index, row) {
+                    $("#tbodyConvoq").append(
+                        "<tr><td>" + (index + 1) + "</td><td>" + row.nom +
+                        "</td><td>" + row.prenom + "</td><td>" + row.matricule +
+                        "</td><td>" + row.cin + "</td></tr>");
+
+                });
+                scrollToAnchor('gototable2');
+
+            });
+        });
+        //################################### Loading Data
+        function loadingData() {
+
+            $("#Cs1").val(0);
+            $("#Cs2").val(0);
+            $("#Cs3").val(0);
+            $("#Cs4").val(0);
+            $("#Cs5").val(0);
+            $("#Cs6").val(0);
+            $("#Cbac").val(0);
+            $("#seuil").val(0);
+
+            $("#table").hide();
+            $("#btn_export").hide();
+            $("#tableConvoq").hide();
+            $("#info2").hide();
+            $("#btn_table2").hide();
+
+            // set Configuration
+            $.get("/Admin/GetConfig", { fil: $("#fil :selected").val(), diplome: $("#diplome :selected").val() }, function (data) {
+
+                $("#tableConvoq").hide();
+                $("#info2").hide();
+                $("#table").show();
+                $("#btn_export").show();
+                $("#btn_table2").show();
+
+                $("#Cs1").val(data.coeffS1);
+                $("#Cs2").val(data.coeffS2);
+                $("#Cs3").val(data.coeffS3);
+                $("#Cs4").val(data.coeffS4);
+                $("#Cs5").val(data.coeffS5);
+                $("#Cs6").val(data.coeffS6);
+                $("#Cbac").val(data.coeffBac);
+                $("#seuil").val(data.noteSeuil);
+            });
+
+
+            //loading data in table
+            $.get("/Admin/GetConvoquets", { fil: $("#fil :selected").val(), diplome: $("#diplome :selected").val(), niv: 3 }, function (data) {
+                if (data.length !== 0) {
+
+                    $("#tableConvoq").hide();
+                    $("#info2").hide();
+                    $("#table").show();
+                    $("#btn_export").show();
+                    $("#erreur").hide();
+                    $("#btn_table2").show();
+                }
+
+                $("#info2_fil").text($("#fil :selected").val());
+                getPourcentage();
+                $("#tbody").empty();
+
+                $.each(data, function (index, row) {
+                    remplirTable(index, row);
+                    scrollToAnchor('gototable');
+                });
+
+            });
+        }
+
+        //######################################## Remplir Table
+        function remplirTable(index, row) {
+            //Date
+            var milli = row.date_inscription.replace(/\/Date\((-?\d+)\)\//, '$1');
+            var date_inscrip = new Date(parseInt(milli)).toLocaleString();
+            //table
+            $("#tbody").append(
+                "<tr><td>" + (index + 1) + "</td><td>" + row.sexe + "</td><td>" + row.nom +
+                "</td><td>" + row.prenom + "</td><td>" + row.filiere +
+                "</td><td>" + row.noteBac + "</td><td>" + row.note1 +
+                "</td><td>" + row.note2 + "</td><td>" + row.note3 +
+                "</td><td>" + row.note4 + "</td><td>" + row.note5 +
+                "</td><td>" + row.note6 + "</td><td>" + row.noteDip +
+                "</td><td>" + row.noteLic + "</td><td>" + row.type_dip +
+                "</td><td>" + row.etablissement + "</td><td>" + row.ville_dip +
+                "</td><td>" + row.matricule + "</td><td>" + row.anneUni1 +
+                "</td><td>" + row.anneUni2 + "</td><td>" + row.anneUni3 +
+                "</td><td>" + row.redoublant1 + "</td><td>" + row.redoublant2 +
+                "</td><td>" + row.redoublant3 + "</td><td>" + date_inscrip +
+                "</td></tr>");
+        }
+
+        //####################################### Validation
+
+        function valider() {
+            if ($("#fil :selected").val() == 0 || $("#diplome :selected").val() == 0 || $("#Cs1 :selected").val() == 0 ||
+                $("#Cs2 :selected").val() == 0 || $("#Cs3 :selected").val() == 0 || $("#Cs4 :selected").val() == 0 ||
+                $("#Cbac :selected").val() == 0 || $("#seuil").val() == 0) {
+
+                $("#erreur").show();
+                return false;
+            }
+            else {
+
+                $("#erreur").hide();
+                return true;
+            }
+        }
+
+
+        //######################################## Pourcentage
+
+        function getPourcentage() {
+
+            $("#info").show();
+            $.get("/Admin/GetPourcentage", { fil: $("#fil :selected").val(), diplome: $("#diplome :selected").val(), niv: 3 }, function (data) {
+                $("#info_sum1").empty();
+                $("#info_sum2").empty();
+
+                $.each(data, function (index, row) {
+                    if (index == 0) {
+                        $("#info_sum1").append(row);
+                    } else {
+                        $("#info_sum2").append(row);
+                    }
+                });
+            });
+            if (!($("#btn_table2").is(":visible"))) {
+                $("#info").hide();
+            }
+        }
+
+        //######################################### Scroll
+        function scrollToAnchor(aid) {
+            var aTag = $("a[name='" + aid + "']");
+            $('html,body').animate({ scrollTop: aTag.offset().top }, 'slow');
+        }
+
+
+    });
+</script>
+<!-- End of Content Wrapper -->

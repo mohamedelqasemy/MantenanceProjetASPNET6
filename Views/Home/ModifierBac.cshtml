@@ -1,0 +1,89 @@
+﻿@model MantenanceProjetASPNET6.ViewModels.BaccalaureatModel
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<div class="page-content-wrapper-inner" style="font-family:'Arial Rounded MT';">
+    <div class="content-viewport">
+                
+        <div class="container-fluid">
+            <!-- USER DATA-->
+            <div class="user-data m-b-40 ">
+
+                <h2 class="title-3 mb-4 mt-4 text-center text-warning font-weight-bold">
+                    <i class="mdi mdi-certificate link-icon mr-4"></i>
+                    Informations sur Baccalauréat
+                </h2>
+
+                <hr class="col-md-8 offset-md-2 mb-5" />
+
+                <form asp-action="ModifierBac">
+
+                    <div class="row d-flex justify-content-center m-b-30">
+                        <div class="col-md-6">
+                            <div class="item-wrapper">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                @Html.HiddenFor(model => model.Cne)
+
+                                <div class="form-group">
+                                    <label asp-for="TypeBac" class="control-label col-md-12 text-gray font-weight-bold">Type du Bac :</label>
+                                    <div class="col-md-12">
+                                        <select asp-for="TypeBac" class="form-control">
+                                            <option value="" selected>--- Séléctionner un type ---</option>
+                                            <option value="SMA">SMA</option>
+                                            <option value="SMB">SMB</option>
+                                            <option value="PC">PC</option>
+                                            <option value="SVT">SVT</option>
+                                        </select>
+                                        <span asp-validation-for="TypeBac" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="DateObtentionBac" class="control-label col-md-12 text-gray font-weight-bold">Date d'obtention du Bac :</label>
+                                    <div class="col-md-12">
+                                        <input asp-for="DateObtentionBac" type="date" class="form-control" placeholder="YYYY/YYYY" />
+                                        <span asp-validation-for="DateObtentionBac" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="NoteBac" class="control-label col-md-12 text-gray font-weight-bold">Note du Bac :</label>
+                                    <div class="col-md-12">
+                                        <input asp-for="NoteBac" class="form-control" />
+                                        <span asp-validation-for="NoteBac" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="MentionBac" class="control-label col-md-12 text-gray font-weight-bold">Metion du Bac :</label>
+                                    <div class="col-md-12">
+                                        <select asp-for="MentionBac" class="form-control">
+                                            <option value="" selected>--- Séléctionner une mention ---</option>
+                                            <option value="Très Bien">Très Bien</option>
+                                            <option value="Bien">Bien</option>
+                                            <option value="Assez Bien">Assez Bien</option>
+                                            <option value="Passable">Passable</option>
+                                        </select>
+                                        <span asp-validation-for="MentionBac" class="text-danger"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-offset-2 col-md-12 d-flex justify-content-end">
+                                        <input type="submit" value=" Enregistrer " class="btn btn-primary btn-rounded px-4 mt-2" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>

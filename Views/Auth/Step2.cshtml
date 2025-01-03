@@ -1,0 +1,95 @@
+﻿@model MantenanceProjetASPNET6.Models.Baccalaureat
+@{
+    ViewBag.Title = "Step2";
+    Layout = null;
+}
+
+<!-- icon -->
+<link rel="shortcut icon" type="image/x-icon" href="~/images/ensa_logo.png" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+
+<style>
+    body {
+        background: #7db4f3;
+        background: -webkit-linear-gradient(-135deg, #7db4f3, #fdaee9dc);
+        background: -o-linear-gradient(-135deg, #7db4f3, #fdaee9dc);
+        background: -moz-linear-gradient(-135deg, #7db4f3, #fdaee9dc);
+        background: linear-gradient(-135deg, #7db4f3, #fdaee9dc);
+    }
+</style>
+
+<h2 class="text-center mt-3 font-weight-bold">Step 2 : Informations du Bac</h2>
+@using (Html.BeginForm("Step2", "Auth", FormMethod.Post))
+{
+
+    <hr class="col-md-7 offset-md-2 mb-5" />
+    <div class="row d-flex justify-content-center m-b-30 ">
+        <div class="offset-3"></div>
+        <div class="col-md-7">
+
+            <div class="form-horizontal ">
+
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.Cne)
+
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TypeBac, "Type du Bac :", htmlAttributes: new { @class = "control-label col-md-10 text-white font-weight-bold" })
+                    <div class="col-md-7">
+                        @Html.DropDownListFor(model => model.TypeBac,
+                       new List<SelectListItem>
+                       {
+                                    new SelectListItem{Text="SMA", Value="SMA"},
+                                    new SelectListItem{Text="SMB", Value="SMB"},
+                                    new SelectListItem{Text="SVT", Value="SVT"},
+                                    new SelectListItem{Text="PC", Value="PC"}
+                       }, "--- Séléctionner un type ---", htmlAttributes: new { @class = "form-control " })
+                        @Html.ValidationMessageFor(model => model.TypeBac, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DateObtentionBac, "Date d'obtention du Bac :", htmlAttributes: new { @class = "control-label col-md-10 text-white font-weight-bold" })
+                    <div class="col-md-7">
+                        @Html.EditorFor(model => model.DateObtentionBac, new { htmlAttributes = new { @class = "form-control", placeholder = "YYYY/YYYY " } })
+                        @Html.ValidationMessageFor(model => model.DateObtentionBac, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NoteBac, "Note du Bac :", htmlAttributes: new { @class = "control-label col-md-10 text-white font-weight-bold" })
+                    <div class="col-md-7">
+                        @Html.EditorFor(model => model.NoteBac, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.NoteBac, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MentionBac, "Metion du Bac :", htmlAttributes: new { @class = "control-label col-md-10 text-white font-weight-bold" })
+                    <div class="col-md-7">
+                        @Html.DropDownListFor(model => model.MentionBac,
+                       new List<SelectListItem>
+                        {
+                            new SelectListItem{Text="Très Bien", Value="Très Bien"},
+                            new SelectListItem{Text="Bien", Value="Bien"},
+                            new SelectListItem{Text="Assez Bien", Value="Assez Bien"},
+                            new SelectListItem{Text="Passable", Value="Passable"}
+                        }
+                       , "--- Séléctionner une mention ---", htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.MentionBac, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row mt-5">
+                        <a class="btn btn-info mt-2 px-5" href="Step1"> Previous </a>
+                        <div class="offset-4"></div>
+                        <input type="submit" value=" Next " class="btn btn-primary px-5 mt-2" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}

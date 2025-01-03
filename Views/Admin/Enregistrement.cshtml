@@ -1,0 +1,153 @@
+﻿@{
+    ViewData["Title"] = "Enregistrement";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    table.center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<!-- End of Topbar -->
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <div class="align-content-center">
+        <h3 class="font-weight-bold text-center pt-3 pb-5" id="title">Enregistrement des candidats</h3>
+        <div class="row mb-4 justify-content-center">
+            <div class=" col-md-7">
+
+                <div class="form-horizontal ">
+
+                    <form id="#formConf">
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label">Niveau : </label>
+                            <div class="col-md-8">
+                                <select class="form-control" name="Filiere" id="FiliereSelect" onchange="selected()">
+                                    <option selected value="0">Choisir le niveau</option>
+                                    <option value=3>3 eme Année</option>
+                                    <option value=4>4 ème Année</option>
+
+                                </select>
+                            </div>
+                        </div>
+
+
+
+                    </form>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <div>
+
+        <table  class="table table-bordered  center" id="tableSelection">
+            <tr class="table-primary">
+                <th class="text-center">N°</th>
+                <th class="text-center">Sexe</th>
+                <th class="text-center">Nom</th>
+                <th class="text-center">Prenom</th>
+
+                <th class="text-center">Filiere</th>
+                <th class="text-center">Cin</th>
+                <th class="text-center">Enregistrer</th>
+
+            </tr>
+
+            <tbody id="tbody"></tbody>
+
+
+        </table>
+
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+
+
+
+
+
+    function selected() {
+
+        var f = $("#FiliereSelect").val();
+        $.get("/Admin/getEtudiantByNiveau", { niveau: f }, function (data) {
+
+            var num = 0;
+
+            $('#tbody').empty();
+
+
+            console.log(data);
+            data.forEach(function (element) {
+                var filiere = "Filiere";
+                num++;
+
+                if (element.num_dossier == 0) {
+
+                    $('#tbody').append(
+                        '<tr>' +
+                        '<td>' + num + '</td>' +
+                        '<td>' + element.sexe + '</td>' +
+                        '<td>' + element.nom + '</td>' +
+                        '<td>' + element.prenom + '</td>' +
+
+                        '<td>' + element.filiere + '</td>' +
+                        '<td>' + element.cin + '</td>' +
+                        '<td align="center" valign="center" id="' + element.cin + '"> <input type="submit" value="Enregistrer" class="btn btn-danger" onclick="clicked(\'' + element.cin + '\')" /> </td>' +
+                        '</tr>')
+                }
+
+
+                else {
+
+                    $('#tbody').append(
+                        '<tr>' +
+                        '<td>' + num + '</td>' +
+                        '<td>' + element.sexe + '</td>' +
+                        
+                        '<td>' + element.nom + '</td>' +
+                        '<td>' + element.prenom + '</td>' +
+
+                        '<td>' + element.filiere + '</td>' +
+                        '<td>' + element.cin + '</td>' +
+                        '<td align="center" valign="center"> <p class="btn btn-success">Enregistré </p> </td>' +
+                        '</tr>')
+                }
+
+            });
+
+        });
+
+
+    }
+
+    function clicked(data) {
+
+        
+        $.get("/Admin/generateNumDossier", { cin: data }, function (daata) {
+
+        });
+
+        $('#' + data + '').empty();
+        $('#' + data + '').append('<p class="btn btn-success">Enregistré </p>')
+
+
+
+
+    }
+
+</script>
+
+

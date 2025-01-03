@@ -1,0 +1,55 @@
+﻿@model MantenanceProjetASPNET6.Models.FichierModel
+@{
+    ViewData["Title"] = "Fichier Scanné";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+
+<div class="page-content-wrapper-inner" style="font-family:'Arial Rounded MT';">
+    <div class="content-viewport">
+        <div class="container-fluid">
+            <!-- USER DATA-->
+            <div class="user-data m-b-40">
+                <h2 class="title-3 mb-4 mt-4 text-center text-warning font-weight-bold">
+                    <i class="mdi mdi-account-circle link-icon mr-4"></i>
+                    Fichiers Scannés
+                </h2>
+                <hr class="col-md-8 offset-md-2 mb-5" />
+                <div class="alert alert-danger">
+                    <span>Insérer tous vos diplômes une seule fois ! le reupload va supprimer les anciens uploads!</span>
+                </div>
+                <div class="offset-2">
+                    <div class="row">
+                        <div class="col-md-8 mb-3 showcase_content_area">
+                            @using (Html.BeginForm("FichierScanne", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                            {
+                                @Html.AntiForgeryToken()
+
+                                <div class="form-horizontal">
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.files, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                       @*@Html.TextBoxFor(model => model.files, "", new { @type = "file", @multiple = "multiple" })*@
+                                            @Html.ValidationMessageFor(model => model.files, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10">
+                                            <input type="submit" value="Upload" class="btn btn-primary" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-offset-2 col-md-10 text-success">
+                                            @ViewBag.UploadStatus
+                                        </div>
+                                    </div>
+
+                                </div>
+                            }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

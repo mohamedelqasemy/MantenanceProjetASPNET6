@@ -1,0 +1,97 @@
+﻿@model MantenanceProjetASPNET6.Models.Candidat
+
+@{
+    ViewData["Title"] = "Accueil";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+
+<div class="page-content-wrapper-inner" style="font-family:'Arial Rounded MT';">
+    <div class="content-viewport">
+        <div class="container-fluid">
+            <!-- USER DATA-->
+            <div class="user-data m-b-40">
+
+                <div class="row">
+                    <div class="col-12">
+                        @if (TempData["message"] != null)
+                        {
+                            <div class="form-group">
+                                <div class="alert alert-success ml-3 mr-3">
+                                    <span>@TempData["message"]</span>
+                                </div>
+                            </div>
+                        }
+                        @if (ViewBag.error != "")
+                        {
+                            <div class="form-group">
+                                <div class="alert alert-danger ml-3 mr-3">
+                                    <span>@ViewData["error"]</span>
+                                </div>
+                            </div>
+                        }<br>
+                        <h2 class="title-3 mb-3 mt-4 text-center text-warning font-weight-bold">
+                            <i class="mdi mdi-home link-icon mr-4"></i>
+                            Bienvenue Candidat
+                        </h2>
+                        @if (ViewBag.errorMessage != "")
+                        {
+                            <div class="form-group">
+                                <div class="alert alert-danger ml-3 mr-3">
+                                    <span>@ViewBag.errorMessage</span>
+                                </div>
+                            </div>
+                        }
+                        <hr class="col-md-8 offset-md-2 mb-5" />
+                        <h6 class="text-center text-gray pb-5">
+                            Vous êtes sur votre espace d'inscription au concours d'accès de l'ENSA de Safi
+                        </h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 offset-5 mb-2">
+
+                        <div>
+
+                            <p><span class="text-success">Nom &nbsp;: </span>&nbsp; @Model.Nom @Model.Prenom  </p>
+                            <p><span class="text-success"> CNE &nbsp;: </span>&nbsp; @Model.Cne</p>
+                            <p><span class="text-success"> CIN &nbsp;&nbsp; : </span>&nbsp; @Model.Cin  </p>
+                            <p><span class="text-success"> Email : </span>&nbsp; @Model.Email</p>
+                        </div>
+                        <br />
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8 offset-2">
+
+                        <div>
+                            <h4 class="my-3 text-gray"> Dates Critiques : </h4>
+
+                            <div class="row">
+                                <div class="col-lg-12 alert alert-danger" role="alert">
+                                    La date limite d'inscription est le 20/06/2020
+                                </div>
+                                <div class=" col-lg-12 alert alert-warning" role="alert">
+                                    Le concours aura lieu le 20/08/2020
+                                </div>
+                                <div class="col-lg-12 alert alert-info" role="alert">
+                                    Veuillez imprimer la fiche d'inscription et l'avoir le jour du concours !!
+                                </div>
+                                <div class=" col-lg-12 alert alert-success" role="alert">
+                                    Les résultats du concours seront prêts 3 jours après le passage du concours
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+                <br /><br />
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- content viewport ends -->

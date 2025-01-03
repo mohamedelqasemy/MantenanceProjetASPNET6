@@ -1,0 +1,150 @@
+﻿
+@{
+    ViewData["Title"] = "Recherche4";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+
+    <h4 class="font-weight-bold text-center pt-3 pb-5">Recherche du 4ème année</h4>
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <select class="form-control" name="choix" id="criteria">
+                <option value="Nom">Nom</option>
+                <option value="prenom">Prenom</option>
+                <option value="matricule">Matricule</option>
+                <option value="cin">Cin</option>
+                <option value="cne">Cne</option>
+                <option value="lieu_naiss">Lieu de naissance</option>
+                <option value="nationalite">Nationalité</option>
+                <option value="email">Email</option>
+                <option value="adress">Adress</option>
+                <option value="ville">Ville</option>
+                <option value="diplome">Diplome</option>
+                <option value="etablissement">Etablissement</option>
+                <option value="ville_dip">Ville diplome</option>
+                <option value="filiere">Filière choisi</option>
+                <option value="convoque">Convoqué</option>
+                <option value="admis">Admis</option>
+                <option value="date_inscription">Date de préinscription</option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <input type="text" class="form-control" id="key" />
+        </div>
+
+        <div class="col-md-3">
+            <select class="form-control" name="diplome" id="diplome">
+                <option selected value="0">Choix Diplome</option>
+                <option value="Lic.pro">Liscence Professionnelle</option>
+                <option value="Lic.fnd">Liscence Fondamentale</option>
+                <option value="Lic.st">Liscence Sciences et Techniques</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select class="form-control" name="filiere" id="filiere">
+                <option selected value="0">Choix Filiere</option>
+                <option value="Informatique">Informatique</option>
+                <option value="GTR">GTR</option>
+                <option value="Industriel">Industriel</option>
+                <option value="GPMC">Gpmc</option>
+            </select>
+        </div>
+
+        <div class="col-md-3 offset-2 mt-5 mb-4">
+            <button id="search" class="btn btn-primary btn-block  py-2">Rechercher</button>
+        </div>
+
+        <div class="col-md-3 offset-2 mt-5 mb-4 ">
+            <button id="export" onclick="exportTableToExcel('maTable')" class="btn btn-info btn-block py-2">Exporter vers Excel</button>
+        </div>
+    </div>
+    <table class="table table-bordered table-responsive" id="maTable">
+        <tr>
+            <th class="text-center">Delete</th>
+            <th class="text-center">Conforme</th>
+            <th class="text-center">Nom</th>
+            <th class="text-center">Prenom</th>
+            <th class="text-center">Sexe</th>
+            <th class="text-center">NoteBac</th>
+            <th class="text-center">TypeDiplôme </th>
+            <th class="text-center">Diplome 1</th>
+            <th class="text-center">Diplome 2</th>
+            <th class="text-center">Diplome 3</th>
+            <th class="text-center">Note1</th>
+            <th class="text-center">Note2</th>
+            <th class="text-center">Note3</th>
+            <th class="text-center">Note4</th>
+            <th class="text-center">Dossier</th>
+            <th class="text-center">Convoque</th>
+            <th class="text-center">Filiere</th>
+            <th class="text-center">Admis</th>
+            <th class="text-center">Non Conforme</th>
+        </tr>
+        <tbody id="tbody">
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td class="text-center"><button class="btn btn-danger deleteBtn" id="@x.Cne">Delete</button></td>
+                    <td class="text-center"><button class="btn btn-info conformBtn" id="@x.Cne">Conforme</button></td>
+                    <td class="text-center">@x.Nom</td>
+                    <td class="text-center">@x.Prenom</td>
+                    <td class="text-center">@x.Sexe</td>
+                    <td class="text-center">@x.NoteBac</td>
+                    <td class="text-center">@x.Type_dip</td>
+                    <td class="text-center"><a href="../../DiplomeScanné/@x.Diplome1" download>@x.Diplome1</a></td>
+                    <td class="text-center"><a href="../../DiplomeScanné/@x.Diplome2" download>@x.Diplome2</a></td>
+                    <td class="text-center"><a href="../../DiplomeScanné/@x.Diplome3" download>@x.Diplome3</a></td>
+                    <td class="text-center">@x.Note1</td>
+                    <td class="text-center">@x.Note2</td>
+                    <td class="text-center">@x.Note3</td>
+                    <td class="text-center">@x.Note4</td>
+                    <td class="text-center">@x.Dossier</td>
+                    <td class="text-center">@x.Convoque</td>
+                    <td class="text-center">@x.Filiere</td>
+                    <td class="text-center">@x.Admis</td>
+                    <td class="text-center">@x.NonConforme</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+<!-- /.container-fluid -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        //search button
+        $("#search").click(function () {
+            $.get("/Admin/SearchCriteria", { Criteria: $("#criteria").val(), Key: $("#key").val(), Diplome: $("#diplome").val(), Filiere: $("#filiere").val(), Niveau: 4 }, function (data) {
+                $("#tbody").empty();
+                $.each(data, function (index, row) {
+                    $("#tbody").append("<tr><td><button class='btn btn-danger deleteBtn' id=" + row.cne + ">Delete</button></td><td><button class='btn btn-info conformBtn' id=" + row.cne + ">Conforme</button></td><td>" + row.nom + "</td><td>" + row.prenom + "</td><td>" + row.sexe + "</td><td>" + row.noteBac + "</td><td>" + row.type_dip + "</td><td><a href=\"../../DiplomeScanné/" + row.diplome1 + "\" download>" + row.diplome1 + "</a></td><td><a href=\"../../DiplomeScanné/" + row.diplome2 + "\" download>" + row.diplome2 + "</a></td><td><a href=\"../../DiplomeScanné/" + row.diplome3 + "\" download>" + row.diplome3 + "</a></td><td>" + row.note1 + "</td><td>" + row.note2 + "</td><td>" + row.note3 + "</td><td>" + row.note4 + "</td><td>" + row.dossier + "</td><td>" + row.convoque + "</td><td>" + row.filiere + "</td><td>" + row.admis + "</td><td>" + row.nonConforme + "</td></tr>");
+                });
+            });
+        });
+        //delete button
+        $(document).on("click", ".deleteBtn", function () {
+            var id = $(this).attr("id");
+            $.get("/Admin/deleteStudent", { cne: id, Niveau: 4 }, function (data) {
+                $("#tbody").empty();
+                $.each(data, function (index, row) {
+                    $("#tbody").append("<tr><td><button class='btn btn-danger deleteBtn' id=" + row.cne + ">Delete</button></td><td><button class='btn btn-info conformBtn' id=" + row.cne + ">Conforme</button></td><td>" + row.nom + "</td><td>" + row.prenom + "</td><td>" + row.sexe + "</td><td>" + row.noteBac + "</td><td>" + row.type_dip + "</td><td><a href=\"../../DiplomeScanné/" + row.diplome1 + "\" download>" + row.diplome1 + "</a></td><td><a href=\"../../DiplomeScanné/" + row.diplome2 + "\" download>" + row.diplome2 + "</a></td><td><a href=\"../../DiplomeScanné/" + row.diplome3 + "\" download>" + row.diplome3 + "</a></td><td>" + row.note1 + "</td><td>" + row.note2 + "</td><td>" + row.note3 + "</td><td>" + row.note4 + "</td><td>" + row.dossier + "</td><td>" + row.convoque + "</td><td>" + row.filiere + "</td><td>" + row.admis + "</td><td>" + row.nonConforme + "</td></tr>");
+                });
+            });
+        });
+        //conform button
+        $(document).on("click", ".conformBtn", function () {
+            var id = $(this).attr("id");
+            $.get("/Admin/conformeStudent", { cne: id, Niveau: 4 }, function (data) {
+                $("#tbody").empty();
+                $.each(data, function (index, row) {
+                    $("#tbody").append("<tr><td><button class='btn btn-danger deleteBtn' id=" + row.cne + ">Delete</button></td><td><button class='btn btn-info conformBtn' id=" + row.cne + ">Conforme</button></td><td>" + row.nom + "</td><td>" + row.prenom + "</td><td>" + row.sexe + "</td><td>" + row.noteBac + "</td><td>" + row.type_dip + "</td><td><a href=\"../../DiplomeScanné/" + row.diplome1 + "\" download>" + row.diplome1 + "</a></td><td><a href=\"../../DiplomeScanné/" + row.diplome2 + "\" download>" + row.diplome2 + "</a></td><td><a href=\"../../DiplomeScanné/" + row.diplome3 + "\" download>" + row.diplome3 + "</a></td><td>" + row.note1 + "</td><td>" + row.note2 + "</td><td>" + row.note3 + "</td><td>" + row.note4 + "</td><td>" + row.dossier + "</td><td>" + row.convoque + "</td><td>" + row.filiere + "</td><td>" + row.admis + "</td><td>" + row.nonConforme + "</td></tr>");
+                });
+            });
+        });
+    });
+</script>
+

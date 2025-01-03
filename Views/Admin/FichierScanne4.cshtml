@@ -1,0 +1,46 @@
+﻿
+
+@{
+    ViewBag.Title = "Fichier Scanné 4 ème année";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+
+    <h4 class="font-weight-bold text-center pt-3 pb-5">Fichier des Diplomes 4 ème anné</h4>
+    <div class="row mb-4 offset-3">
+        <div class="col-md-6">
+            <input type="text" class="form-control" id="cne" placeholder="Entrer le cne de l'étudiant" />
+        </div>
+        <div class="col-md-2">
+            <button id="search" class="btn btn-primary btn-block">Search</button>
+        </div>
+    </div>
+    <table class="table table-bordered">
+        <tr>
+            <th class="text-center">ID</th>
+            <th class="text-center">Diplome 1</th>
+            <th class="text-center">Diplome 2</th>
+            <th class="text-center">Diplome 3</th>
+        </tr>
+        <tbody id="tbody"></tbody>
+    </table>
+
+</div>
+<!-- /.container-fluid -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        //search button
+        $("#search").click(function () {
+            $.get("/Admin/FichierScanne", { cne: $("#cne").val(), niveau: 4 }, function (data) {
+                $("#tbody").empty();
+                $.each(data, function (index, row) {
+                    $("#tbody").append("<tr><td>" + row.id + "</td><td><a href=\"../../DiplomeScanné/" + row.nom.split("|")[0] + "\" download>" + row.nom.split("|")[0] + "</a></td><td><a href=\"../../DiplomeScanné/" + row.nom.split("|")[1] + "\" download>" + row.nom.split("|")[1] + "</a></td><td><a href=\"../../DiplomeScanné/" + row.nom.split("|")[2] + "\" download>" + row.nom.split("|")[2] + "</a></td></tr>");
+                });
+            });
+        });
+    });
+</script>

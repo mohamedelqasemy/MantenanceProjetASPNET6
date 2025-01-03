@@ -1,0 +1,209 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ENSA Safi</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons-->
+    <link href="~/image/homePage/logo_ensa.png" rel="icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="~/homePage/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="~/homePage/font-awesome.min.css" rel="stylesheet">
+    <link href="~/homePage/animate.min.css" rel="stylesheet">
+    <link href="~/homePage/ionicons.min.css" rel="stylesheet">
+    <link href="~/homePage/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/homePage/lightbox.min.css" rel="stylesheet">
+
+    <!-- icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/images/ensa_logo.png" />
+
+    <!-- Main Stylesheet File -->
+    <link href="~/homePage/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+      Theme Name: Rapid
+      Theme URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
+      Author: BootstrapMade.com
+      License: https://bootstrapmade.com/license/
+    ======================================================= -->
+</head>
+
+<body>
+    <!--==========================
+    Header
+    ============================-->
+    <header id="header">
+
+        <div class="container">
+            <div>
+                <a href="#header" class="scrollto"><img src="~/images/homePage/ensa.png" alt="" class="img-fluid" style="position: absolute; top: 20px; left: 100px; width:230px; height:100px;"></a>
+            </div>
+
+            <nav class="main-nav float-right d-none d-lg-block" style="float:right;">
+
+                <ul>
+                    <!--<li>
+                        <a href="#header" class="scrollto"><img src="~/Pictures/homePage/ensa.png" alt="" class="img-fluid" style="width:200px; height:100px;"></a>
+                    </li>
+                        -->
+                    <li class="active"><a href="#intro">Acceuil</a></li>
+                    <li><a href="#about">ENSAS</a></li>
+                    <li><a href="#services">Informations</a></li>
+                    <li><a asp-action="Register" asp-controller="Auth">Pré-Inscription</a></li>
+                    <li><a asp-action="Login" asp-controller="Auth">LOG IN</a></li>
+                </ul>
+            </nav><!-- .main-nav -->
+
+        </div>
+    </header><!-- #header -->
+    <!--==========================
+      Intro Section
+    ============================-->
+    <section id="intro" class="clearfix">
+        <div class="container d-flex h-100">
+            <div class="row justify-content-center align-self-center">
+                <div class="col-md-6 intro-info order-md-first order-last " style="padding-top:180px;">
+                    <h2>Découvrez L'<span>E</span>cole <span>N</span>ationale des <span>S</span>ciences <span>A</span>ppliquées de<span> S</span>afi</h2>
+                    <div>
+                        <a href="#about" class="btn-get-started scrollto">Commencer</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 intro-img order-md-last order-first">
+                    <!-- <img src="img/intro-img.svg" alt="" class="img-fluid"> -->
+
+                </div>
+            </div>
+
+        </div>
+    </section><!-- #intro -->
+
+    <main id="main">
+
+        <!--==========================
+          About Us Section
+        ============================-->
+        <section id="about">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-5 col-md-6" style="padding-top:100px;">
+                        <div class="about-img">
+                            <img src="~/images/homePage/ensas.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 col-md-6">
+                        <div class="about-content">
+                            <h2 style="text-align: center;">ENSA Safi</h2>
+                            <p class="text-justify ">
+                                L'Ecole Nationale des Sciences Appliquées de SAFI (ENSA Safi) est un établissement universitaire relevant de l’université Cadi Ayyad et sous la tutelle du ministère de l’enseignement supérieur et de la recherche scientifique. Elle fait partie du réseau des écoles nationales des sciences appliquées réparties sur l’ensemble du territoire national au niveau des grandes villes universitaires du pays. L'ENSAS est spécialisée dans tout ce qui concerne l’enseignement supérieur, la recherche scientifique et technique et la formation d’ingénieurs et des cadres ainsi que la formation continue.
+                                L'ENSA Safi vise d’atteindre les objectifs suivants :
+                                La formation d’ingénieurs d’Etat sur les plans théorique et pratique en parfaite adéquation avec les besoins du développement industriel, économique et social aussi bien au niveau régional que national.
+                                La mise en place d’une coopération et d’un partenariat avec les opérateurs industriels, économiques et sociaux au niveau de la région et à l’échelle internationale.
+                                La dynamisation de la recherche scientifique et technique.
+                                La formation offerte se caractérise par l’application d'un système pédagogique moderne et développé, basé sur des modules d’enseignement organisés durant des sessions semestrielles. Elle adopte également l’ouverture sur le milieu industriel et économique à travers les stages et le parrainage ainsi que l'intégration de l’enseignement des langues étrangères, les techniques d’expression et de communication.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section><!-- #about -->
+        <!--==========================
+          Services Section
+        ============================-->
+        <section id="services" class="section-bg">
+            <div class="container">
+
+                <header class="section-header">
+                    <h3>Informations sur le concours</h3><br />
+                </header>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+                        <div class="box" style="height:240px;">
+                            <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
+                            <h4 class="title"><a href="">Date limite</a></h4>
+                            <p class="description"> La date limite de la préinscription est le 20/06/2020</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+                        <div class="box" style="height:240px;">
+                            <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+                            <h4 class="title"><a href="">Date du concours</a></h4>
+                            <p class="description">La date du concours est le 20/08/2020</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+                        <div class="box" style="height:240px;">
+                            <div class="icon" style="background: #fceef3;"><i class="ion-ios-paper" style="color: #ff689b;"></i></div>
+                            <h4 class="title"><a href="">Préinscription au concours</a></h4>
+                            <p class="description">Les résultats du concours seront annoncés une semaine après le passage du concours</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- #services -->
+        <!--==========================
+          Clients Section
+        ============================-->
+
+    </main>
+
+    <!--==========================
+      Footer
+    ============================-->
+    <footer id="footer" class="section-bg">
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong>ENSAS 2020</strong>
+            </div>
+
+        </div>
+    </footer><!-- #footer -->
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <!-- Uncomment below i you want to use a preloader -->
+    <!-- <div id="preloader"></div> -->
+    <!-- JavaScript Libraries -->
+    <script src="~/js/homePage/jquery.min.js" asp-append-version="true"></script>
+    <script src="~/js/homePage/jquery-migrate.min.js" asp-append-version="true"></script>
+
+    <script src="~/js/homePage/bootstrap.bundle.min.js" asp-append-version="true"></script>
+    <script src="~/js/homePage/easing.min.js" asp-append-version="true"></script>
+    <script src="~/js/homePage/mobile-nav.js" asp-append-version="true"></script>
+    <script src="~/js/homePage/wow.min.js" asp-append-version="true"></script>
+    <script src="~/js/homePage/waypoints.min.js" asp-append-version="true"></script>
+    <script src="~/js/homePage/counterup.min.js" asp-append-version="true"></script>
+    <script src="~/js/homePage/owl.carousel.min.js" asp-append-version="true"></script>
+    <script src="~/js/homePage/isotope.pkgd.min.js" asp-append-version="true"></script>
+    <script src="~/js/homePage/lightbox.min.js" asp-append-version="true"></script>
+
+    <!-- Contact Form JavaScript File -->
+    <script src="~/js/homePage/contactform.js" asp-append-version="true"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="~/js/homePage/main.js" asp-append-version="true"></script>
+
+</body>
+</html>
+

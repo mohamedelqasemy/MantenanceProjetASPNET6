@@ -1,0 +1,114 @@
+﻿@model MantenanceProjetASPNET6.Models.Candidat
+
+@{
+    ViewBag.Title = "Register";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="~/css/user_register.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Inscription</title>
+    <!-- icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/images/ensa_logo.png" />
+
+</head>
+
+<body>
+    <div class="container register" style="opacity:0.9;">
+        <div class="row">
+            <div class="col-md-4 register-left mt-5">
+                <img src="~/images/icons_user/graduation.svg" alt="" style="width:35%; height:35%" />
+                <h3>Bienvenue à l'ENSA</h3>
+                <p>Pour s'inscrire au concours d'accès à l'ENSA de SAFI en 3ème ou 4ème année</p>
+                <a href="Login">
+                    <input type="submit" name="" value="Login" /><br />
+                </a>
+            </div>
+
+            <div class="col-md-8 register-right">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Inscription Candidat</h3>
+                        @using (Html.BeginForm())
+                        {
+                            <div class="row register-form">
+                                <div class="col-md-8 offset-2">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Nom" value="" name="nom" />
+                                        @Html.ValidationMessage("Nom", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Prenom" value="" name="prenom" />
+                                        @Html.ValidationMessage("Prenom", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="CIN" value="" name="cin" />
+                                        @Html.ValidationMessage("Cin", new { @class = "text-danger" })
+                                        @Html.ValidationMessage("UniqueCin", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="CNE" value="" name="cne" />
+                                        @Html.ValidationMessage("Cne", new { @class = "text-danger" })
+                                        @Html.ValidationMessage("UniqueCne", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Email" value="" name="email" />
+                                        @Html.ValidationMessage("Email", new { @class = "text-danger" })
+                                        @Html.ValidationMessage("UniqueEmail", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="form-group">
+                                        <select name="niveau" class="form-control">
+                                            <option selected value="0">Choix de niveau</option>
+                                            <option value="3">3 ème année</option>
+                                            <option value="4">4 ème année</option>
+                                        </select>
+                                        @Html.ValidationMessage("selectNiveau", new { @class = "text-danger" })
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <h4>Choix de Filière</h4>
+                                    </div>
+
+
+
+                                    <div class="form-group">
+
+                                        <div class="custom-control custom-radio mt-2">
+                                            <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="ID" value="1" checked>
+                                            <label class="custom-control-label" for="defaultGroupExample1">Génie Informatique</label>
+                                        </div>
+                                        <div class="custom-control custom-radio mt-2">
+                                            <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="ID" value="2">
+                                            <label class="custom-control-label" for="defaultGroupExample2">Génie Réseau et Télécom</label>
+                                        </div>
+                                        <div class="custom-control custom-radio mt-2">
+                                            <input type="radio" class="custom-control-input" id="defaultGroupExample3" name="ID" value="3">
+                                            <label class="custom-control-label" for="defaultGroupExample3">Génie Industriel</label>
+                                        </div>
+                                        <div class="custom-control custom-radio mt-2">
+                                            <input type="radio" class="custom-control-input" id="defaultGroupExample4" name="ID" value="4">
+                                            <label class="custom-control-label" for="defaultGroupExample4">Génie Procedès et M.C</label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="submit" class="btnRegister" value="Register" />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+
+    </div>
+</body>
+</html>

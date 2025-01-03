@@ -1,0 +1,207 @@
+﻿
+@{
+    ViewData["Title"] = "Recherche3";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+
+    <h4 class="font-weight-bold text-center pt-3 pb-5">Recherche du 3ème année</h4>
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <select class="form-control" name="choix" id="criteria">
+                <option value="Nom">Nom</option>
+                <option value="prenom">Prenom</option>
+                <option value="matricule">Matricule</option>
+                <option value="cin">Cin</option>
+                <option value="cne">Cne</option>
+                <option value="lieu_naiss">Lieu de naissance</option>
+                <option value="nationalite">Nationalité</option>
+                <option value="email">Email</option>
+                <option value="adress">Adress</option>
+                <option value="ville">Ville</option>
+                <option value="diplome">Diplome</option>
+                <option value="etablissement">Etablissement</option>
+                <option value="ville_dip">Ville diplome</option>
+                <option value="filiere">Filière choisi</option>
+                <option value="convoque">Convoqué</option>
+                <option value="admis">Admis</option>
+                <option value="date_inscription">Date de préinscription</option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <input type="text" class="form-control" id="key" />
+        </div>
+
+        <div class="col-md-3">
+            <select class="form-control" name="diplome" id="diplome">
+                <option selected value="0">Choix Diplome</option>
+                <option value="DUT">Dut</option>
+                <option value="DEUG">Deug</option>
+                <option value="Lic.pro-DUT">Liscence Professionnelle - DUT</option>
+                <option value="Lic.pro-DEUG">Liscence Professionnelle - DEUG</option>
+                <option value="Lic.fnd-DUT">Liscence Fondamentale - DUT</option>
+                <option value="Lic.fnd-DEUG">Liscence Fondamentale - DEUG</option>
+                <option value="Lic.st-DUT">Liscence ST - DUT</option>
+                <option value="Lic.st-DEUG">Liscence ST - DEUG</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select class="form-control" name="filiere" id="filiere">
+                <option selected value="0">Choix Filiere</option>
+                <option value="Informatique">Informatique</option>
+                <option value="GTR">GTR</option>
+                <option value="Industriel">Industriel</option>
+                <option value="GPMC">Gpmc</option>
+            </select>
+        </div>
+
+        <div class="col-md-3 offset-2 mt-5 mb-4">
+            <button id="search" class="btn btn-primary btn-block  py-2">Rechercher</button>
+        </div>
+
+        <div class="col-md-3 offset-2 mt-5 mb-4 ">
+            <button id="export" onclick="exportTableToExcel('maTable')" class="btn btn-info btn-block py-2">Exporter vers Excel</button>
+        </div>
+
+    </div>
+    <table class="table table-bordered table-responsive" id="maTable">
+        <tr>
+            <th class="text-center">Delete</th>
+            <th class="text-center">Conforme</th>
+            <th class="text-center">Nom</th>
+            <th class="text-center">Prenom</th>
+               <th class="text-center">Photo</th>
+            <th class="text-center">Sexe</th>
+            <th class="text-center">NoteBac</th>
+            <th class="text-center">TypeDiplôme </th>
+            <th class="text-center">SpecialiteDiplome </th>
+            <th class="text-center">Diplome 1</th>
+            <!--<th class="text-center">Diplome 2</th>
+            <th class="text-center">Diplome 3</th>-->
+            <th class="text-center">Note1</th>
+            <th class="text-center">Note2</th>
+            <th class="text-center">Note3</th>
+            <th class="text-center">Note4</th>
+            <th class="text-center">Dossier</th>
+            <th class="text-center">Convoque</th>
+            <th class="text-center">Math</th>
+            <th class="text-center">Specialite</th>
+            <th class="text-center">Filiere</th>
+            <th class="text-center">Admis</th>
+            <th class="text-center">Non Conforme</th>
+        </tr>
+        <tbody id="tbody">
+            @foreach (var x in Model)
+            {
+                var u = @x.Cne + ".png";
+                <tr>
+                    <td class="text-center"><button class="btn btn-danger deleteBtn" id="@x.Cne">Delete</button></td>
+                    <td class="text-center"><button class="btn btn-info conformBtn" id="@x.Cne">Conforme</button></td>
+                    <td class="text-center">@x.Nom</td>
+                    <td class="text-center">@x.Prenom</td>
+                     <!-- <td class="text-center">
+                          <img src="~/candidatImages/@x.Photo" style="border-radius: 50%; width:150px; height:150px" /></td>-->
+                           <td class="text-center">
+                          <img src="https://localhost:44361/candidatImages/@x.Photo" style="border-radius: 50%; width:50px; height:50px" /></td>
+
+                    <td class="text-center">@x.Sexe</td>
+                    <td class="text-center">@x.NoteBac</td>
+                    <td class="text-center">@x.Type_dip</td>
+                     <td class="text-center">@x.speciali_dip</td>
+                   
+                  <!--  <td class="text-center"><a href="../../DiplomeScanne/@u">mon diplome</a></td>-->
+                     <td class="text-center"><a href="https://localhost:44361/DiplomeScanne/@u">2mon diplome</a></td><!--marche en excel-->
+                    <!--<td class="text-center"><a href="~/DiplomeScanne/@u">3mon diplome</a></td>-->
+                    <td class="text-center">@x.Note1</td>
+                    <td class="text-center">@x.Note2</td>
+                    <td class="text-center">@x.Note3</td>
+                    <td class="text-center">@x.Note4</td>
+                    <td class="text-center">@x.Dossier</td>
+                    <td class="text-center">@x.Convoque</td>
+                    <td class="text-center">@x.Math</td>
+                    <td class="text-center">@x.Specialite</td>
+                    <td class="text-center">@x.Filiere</td>
+                    <td class="text-center">@x.Admis</td>
+                    <td class="text-center">@x.NonConforme</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+<!-- /.container-fluid -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+    //######################## Export to EXCELL #########
+    function exportTableToExcel(tableID) {
+        var downloadLink;
+        var dataType = 'application/vnd.ms-excel';
+        var tableSelect = document.getElementById(tableID);
+        var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+        // Specify file name
+        filename = "ListeCandidats_Recherche_3A.xls";
+        // Create download link element
+        downloadLink = document.createElement("a");
+        document.body.appendChild(downloadLink);
+        if (navigator.msSaveOrOpenBlob) {
+            var blob = new Blob(['\ufeff', tableHTML], {
+                type: dataType
+            });
+            navigator.msSaveOrOpenBlob(blob, filename);
+        } else {
+            // Create a link to the file
+            downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+            // Setting the file name
+            downloadLink.download = filename;
+            //triggering the function
+            downloadLink.click();
+        }
+    }
+    //#########################################################
+    $(document).ready(function () {
+        //search button
+        $("#search").click(function () {
+            $.get("/Admin/SearchCriteria", { Criteria: $("#criteria").val(), Key: $("#key").val(), Diplome: $("#diplome").val(), Filiere: $("#filiere").val(), Niveau: 3 }, function (data) {
+                $("#tbody").empty();
+                $.each(data, function (index, row) {
+                    var w=row.cne+".png";var u=row.photo;
+                    var chemin="../../DiplomeScanne/+w";
+                    $("#tbody").append("<tr><td><button class='btn btn-danger deleteBtn' id=" + row.cne + ">Delete</button></td><td><button class='btn btn-info conformBtn' id=" + row.cne + ">Conforme</button></td><td>" + row.nom + "</td><td>" + row.prenom + "</td><td><img  style=\"border-radius: 50%; width:50px; height:50px\"  src=\"/candidatImages/" + row.photo + "\"></img></td><td>" + row.sexe + "</td><td>" + row.noteBac + "</td><td>"  + row.type_dip + "</td><td>"+ row.speciali_dip +"</td><td><a href=\"/DiplomeScanne/" + w + "\">" + row.cne + "</a></td><td>" + row.note1 + "</td><td>" + row.note2 + "</td><td>" + row.note3 + "</td><td>" + row.note4 + "</td><td>" + row.dossier + "</td><td>" + row.convoque + "</td><td>" + row.math + "</td><td>" + row.specialite + "</td><td>" + row.filiere + "</td><td>" + row.admis + "</td><td>" + row.nonConforme  + "</td></tr>");
+                });
+
+            });
+        });
+        //delete button
+        $(document).on("click", ".deleteBtn", function () {
+            var id = $(this).attr("id");
+            $.get("/Admin/deleteStudent", { cne: id, Niveau: 3 }, function (data) {
+                $("#tbody").empty();
+                $.each(data, function (index, row) {
+                    var w=row.cne+".png";var u=row.photo;
+                    var chemin="../../DiplomeScanne/+w";
+                    $("#tbody").append("<tr><td><button class='btn btn-danger deleteBtn' id=" + row.cne + ">Delete</button></td><td><button class='btn btn-info conformBtn' id=" + row.cne + ">Conforme</button></td><td>" + row.nom + "</td><td>" + row.prenom + "</td><td><img  style=\"border-radius: 50%; width:50px; height:50px\"  src=\"/candidatImages/" + row.photo + "\"></img></td><td>" + row.sexe + "</td><td>" + row.noteBac + "</td><td>"  + row.type_dip + "</td><td>"+ row.speciali_dip +"</td><td><a href=\"/DiplomeScanne/" + w + "\">" + row.cne + "</a></td><td>" + row.note1 + "</td><td>" + row.note2 + "</td><td>" + row.note3 + "</td><td>" + row.note4 + "</td><td>" + row.dossier + "</td><td>" + row.convoque + "</td><td>" + row.math + "</td><td>" + row.specialite + "</td><td>" + row.filiere + "</td><td>" + row.admis + "</td><td>" + row.nonConforme  + "</td></tr>");
+                });
+
+            });
+        });
+        //conform button
+        $(document).on("click", ".conformBtn", function () {
+            var id = $(this).attr("id");
+            $.get("/Admin/conformeStudent", { cne: id, Niveau: 3 }, function (data) {
+                $("#tbody").empty();
+                $.each(data, function (index, row) {
+                    var w=row.cne+".png";var u=row.photo;
+                    var chemin="../../DiplomeScanne/+w";
+                   $("#tbody").append("<tr><td><button class='btn btn-danger deleteBtn' id=" + row.cne + ">Delete</button></td><td><button class='btn btn-info conformBtn' id=" + row.cne + ">Conforme</button></td><td>" + row.nom + "</td><td>" + row.prenom + "</td><td><img  style=\"border-radius: 50%; width:50px; height:50px\"  src=\"/candidatImages/" + row.photo + "\"></img></td><td>" + row.sexe + "</td><td>" + row.noteBac + "</td><td>"  + row.type_dip + "</td><td>"+ row.speciali_dip +"</td><td><a href=\"/DiplomeScanne/" + w + "\">" + row.cne + "</a></td><td>" + row.note1 + "</td><td>" + row.note2 + "</td><td>" + row.note3 + "</td><td>" + row.note4 + "</td><td>" + row.dossier + "</td><td>" + row.convoque + "</td><td>" + row.math + "</td><td>" + row.specialite + "</td><td>" + row.filiere + "</td><td>" + row.admis + "</td><td>" + row.nonConforme  + "</td></tr>");
+                });
+
+            });
+        });
+ });
+</script>
+

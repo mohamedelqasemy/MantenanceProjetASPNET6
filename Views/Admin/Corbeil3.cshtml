@@ -1,0 +1,115 @@
+﻿
+@{
+    ViewData["Title"] = "Recherche4";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+
+    <h4 class="font-weight-bold text-center pt-3 pb-5">Corbeille du 3ème année</h4>
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <select class="form-control" name="choix" id="criteria">
+                <option value="Nom">Nom</option>
+                <option value="prenom">Prenom</option>
+                <option value="matricule">Matricule</option>
+                <option value="cin">Cin</option>
+                <option value="cne">Cne</option>
+                <option value="lieu_naiss">Lieu de naissance</option>
+                <option value="nationalite">Nationalité</option>
+                <option value="email">Email</option>
+                <option value="adress">Adress</option>
+                <option value="ville">Ville</option>
+                <option value="diplome">Diplome</option>
+                <option value="etablissement">Etablissement</option>
+                <option value="ville_dip">Ville diplome</option>
+                <option value="filiere">Filière choisi</option>
+                <option value="convoque">Convoqué</option>
+                <option value="admis">Admis</option>
+                <option value="date_inscription">Date de préinscription</option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <input type="text" class="form-control" id="key" />
+        </div>
+
+        <div class="col-md-3">
+            <select class="form-control" name="diplome" id="diplome">
+                <option selected value="0">Choix Diplome</option>
+                <option value="DUT">Dut</option>
+                <option value="DEUG">Deug</option>
+                <option value="Lic.pro-DUT">Liscence Professionnelle - DUT</option>
+                <option value="Lic.pro-DEUG">Liscence Professionnelle - DEUG</option>
+                <option value="Lic.fnd-DUT">Liscence Fondamentale - DUT</option>
+                <option value="Lic.fnd-DEUG">Liscence Fondamentale - DEUG</option>
+                <option value="Lic.st-DUT">Liscence ST - DUT</option>
+                <option value="Lic.st-DEUG">Liscence ST - DEUG</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select class="form-control" name="filiere" id="filiere">
+                <option selected value="0">Choix Filiere</option>
+                <option value="Informatique">Info</option>
+                <option value="Industriel">Indus</option>
+                <option value="GTR">Gtr</option>
+                <option value="GPMC">Gpmc</option>
+            </select>
+        </div>
+
+        <div class="col-md-3 offset-4 mt-5 mb-4">
+            <button id="search" class="btn btn-primary btn-block  py-2">Rechercher</button>
+        </div>
+    </div>
+
+    <table class="table table-bordered">
+        <tr>
+            <th class="text-center">Restore</th>
+            <th class="text-center">Cne</th>
+            <th class="text-center">Cin</th>
+            <th class="text-center">Nom</th>
+            <th class="text-center">Prenom</th>
+        </tr>
+        <tbody id="tbody">
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td class="text-center"><button class="btn btn-info restoreBtn" id="@x.Cne">Restore</button></td>
+                    <td class="text-center">@x.Cne</td>
+                    <td class="text-center">@x.Cin</td>
+                    <td class="text-center">@x.Nom</td>
+                    <td class="text-center">@x.Prenom</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+<!-- /.container-fluid -->
+>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        //search button
+        $("#search").click(function () {
+            $.get("/Admin/SearchCriteriaCorb", { Criteria: $("#criteria").val(), Key: $("#key").val(), Diplome: $("#diplome").val(), Filiere: $("#filiere").val(), Niveau: 3 }, function (data) {
+                $("#tbody").empty();
+                $.each(data, function (index, row) {
+                    $("#tbody").append("<tr><td class='text-center'><button class='btn btn-info restoreBtn' id=" + row.Cne + ">Restore</button></td><td>" + row.Cne + "</td><td>" + row.Cin + "</td><td>" + row.Nom + "</td><td>" + row.Prenom + "</td></tr>");
+                });
+            });
+        });
+        //restore button
+        $(document).on("click", ".restoreBtn", function () {
+            var id = $(this).attr("id");
+            $.get("/Admin/restoreStudent", { cne: id, Niveau: 3 }, function (data) {
+                $("#tbody").empty();
+                $.each(data, function (index, row) {
+                    $("#tbody").append("<tr><td class='text-center'><button class='btn btn-info restoreBtn' id=" + row.Cne + ">Restore</button></td><td>" + row.Cne + "</td><td>" + row.Cin + "</td><td>" + row.Nom + "</td><td>" + row.Prenom + "</td></tr>");
+                });
+            });
+        });
+    });
+</script>
+

@@ -1,0 +1,181 @@
+﻿
+
+@{
+    ViewBag.Title = "Statistiques des 3 Année après councours";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model MantenanceProjetASPNET6.ViewModels.Statistique
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <div class="align-content-center">
+        <h3 class="font-weight-bold text-center pt-3 pb-5">Statistiques des Presents au concour 3 ème année</h3>
+
+    </div>
+
+    <div>
+
+        <table class="table table-bordered">
+            <tr class="table-warning">
+                <th class="text-center"></th>
+                <th class="text-center">DUT</th>
+                <th class="text-center">DEUG</th>
+                <th class="text-center">License pro</th>
+                <th class="text-center">Licence ST</th>
+                <th class="text-center">Licence fnd</th>
+                <th class="text-center">Total</th>
+
+
+            </tr>
+            <tbody id="tbody">
+                @foreach (var r in ViewData["statistiquesPresent"] as List<MantenanceProjetASPNET6.ViewModels.Statistique>)
+                {
+                    <tr>
+
+                        <td class="text-center">@r.nomFiliere</td>
+                        <td class="text-center">@r.nbDut</td>
+                        <td class="text-center">@r.nbDeug</td>
+                        <td class="text-center">@r.nbLicencePro</td>
+                        <td class="text-center">@r.nbLicenceSt</td>
+                        <td class="text-center">@r.nbLicenceFnd</td>
+                        <td class="text-center">@r.getTotal()</td>
+
+                    </tr>
+                }
+                <tr></tr>
+                <tr>
+                    <td class="text-center">Total</td>
+                    <td class="text-center">@ViewBag.statPerDiplomPresent.nbDut</td>
+                    <td class="text-center">@ViewBag.statPerDiplomPresent.nbDeug</td>
+                    <td class="text-center">@ViewBag.statPerDiplomPresent.nbLicencePro</td>
+                    <td class="text-center">@ViewBag.statPerDiplomPresent.nbLicenceSt</td>
+                    <td class="text-center">@ViewBag.statPerDiplomPresent.nbLicenceFnd</td>
+                    <td class="text-center">@ViewBag.statPerDiplomPresent.getTotal()</td>
+
+
+                </tr>
+
+
+
+
+
+            </tbody>
+
+        </table>
+
+    </div>
+    <div class="align-content-center">
+        <h3 class="font-weight-bold text-center pt-3 pb-5">Statistiques des listes principales 3 ème année</h3>
+
+    </div>
+    <div>
+
+        <table class="table table-bordered ">
+            <tr class="table-info">
+                <th class="text-center"></th>
+                <th class="text-center">DUT</th>
+                <th class="text-center">DEUG</th>
+                <th class="text-center">License pro</th>
+                <th class="text-center">Licence ST</th>
+                <th class="text-center">Licence fnd</th>
+                <th class="text-center">Total</th>
+
+
+            </tr>
+            <tbody id="tbody">
+                @foreach (var r in ViewData["statistiquesPrincipal"] as List<MantenanceProjetASPNET6.ViewModels.Statistique>)
+                {
+                    <tr>
+
+                        <td class="text-center">@r.nomFiliere</td>
+                        <td class="text-center">@r.nbDut</td>
+                        <td class="text-center">@r.nbDeug</td>
+                        <td class="text-center">@r.nbLicencePro</td>
+                        <td class="text-center">@r.nbLicenceSt</td>
+                        <td class="text-center">@r.nbLicenceFnd</td>
+                        <td class="text-center">@r.getTotal()</td>
+
+                    </tr>
+                }
+                <tr></tr>
+                <tr>
+                    <td class="text-center">Total</td>
+                    <td class="text-center">@ViewBag.statPerDiplomPrincipale.nbDut</td>
+                    <td class="text-center">@ViewBag.statPerDiplomPrincipale.nbDeug</td>
+                    <td class="text-center">@ViewBag.statPerDiplomPrincipale.nbLicencePro</td>
+                    <td class="text-center">@ViewBag.statPerDiplomPrincipale.nbLicenceSt</td>
+                    <td class="text-center">@ViewBag.statPerDiplomPrincipale.nbLicenceFnd</td>
+                    <td class="text-center">@ViewBag.statPerDiplomPrincipale.getTotal()</td>
+
+
+                </tr>
+
+
+
+
+
+            </tbody>
+
+        </table>
+
+    </div>
+    <div class="align-content-center">
+        <h3 class="font-weight-bold text-center pt-3 pb-5">Statistiques des listes d'attente 3 ème année</h3>
+
+    </div>
+    <div>
+
+        <table class="table table-bordered ">
+            <tr class="table-danger">
+                <th class="text-center"></th>
+                <th class="text-center">DUT</th>
+                <th class="text-center">DEUG</th>
+                <th class="text-center">License pro</th>
+                <th class="text-center">Licence ST</th>
+                <th class="text-center">Licence fnd</th>
+                <th class="text-center">Total</th>
+
+
+            </tr>
+            <tbody id="tbody">
+                @foreach (var r in ViewData["statistiquesAttente"] as List<MantenanceProjetASPNET6.ViewModels.Statistique>)
+                {
+
+                    <tr>
+
+                        <td class="text-center">@r.nomFiliere</td>
+                        <td class="text-center">@r.nbDut</td>
+                        <td class="text-center">@r.nbDeug</td>
+                        <td class="text-center">@r.nbLicencePro</td>
+                        <td class="text-center">@r.nbLicenceSt</td>
+                        <td class="text-center">@r.nbLicenceFnd</td>
+                        <td class="text-center">@r.getTotal()</td>
+
+                    </tr>
+                }
+                <tr></tr>
+                <tr>
+                    <td class="text-center">Total</td>
+                    <td class="text-center">@ViewBag.statPerDiplomAtt.nbDut</td>
+                    <td class="text-center">@ViewBag.statPerDiplomAtt.nbDeug</td>
+                    <td class="text-center">@ViewBag.statPerDiplomAtt.nbLicencePro</td>
+                    <td class="text-center">@ViewBag.statPerDiplomAtt.nbLicenceSt</td>
+                    <td class="text-center">@ViewBag.statPerDiplomAtt.nbLicenceFnd</td>
+                    <td class="text-center">@ViewBag.statPerDiplomAtt.getTotal()</td>
+
+
+                </tr>
+
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+
+</div>
+<!-- /.container-fluid -->

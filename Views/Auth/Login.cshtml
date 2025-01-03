@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="~/css/user_register.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Login</title>
+    <!-- icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/images/ensa_logo.png" />
+
+</head>
+
+<body class=" parent" id="parent">
+    <div id="child" class="child">
+        <div class=" container register align-content-between" style="opacity:0.9;">
+            <div class="row">
+                <div class="col-md-5 register-left">
+                    <img src="~/images/icons_user/graduation.svg" alt="" style="width:32%; height:32%;" />
+                    <h3>Bienvenue à l'ENSA</h3>
+                    <p>Pour s'inscrire au concours d'accès à l'ENSA de SAFI en 3ème ou 4ème année</p>
+
+                </div>
+                <div class="col-md-7 register-right">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Login Portal</h3>
+                            @using (Html.BeginForm())
+                            {
+                                <div class="row register-form">
+                                    <div class="col-md-8 offset-2">
+                                        @if (TempData["message"] != null)
+                                        {
+                                            <div class="form-group">
+                                                <div class="alert alert-success">
+                                                    <span>@TempData["message"]</span>
+                                                </div>
+                                            </div>
+                                        }
+                                        @if (TempData["error"] != null)
+                                        {
+                                            <div class="form-group">
+                                                <div class="alert alert-danger">
+                                                    <span>@TempData["error"]</span>
+                                                </div>
+                                            </div>
+                                        }
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Cin" value="" name="cin" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Cne" value="" name="cne" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="Password" value="" name="password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" class="btnRegister" value="Login" /><br /><br>
+                                            <a href="Register">S'inscrire !</a><br />
+                                            <a href="PasswordOublie">Mot de passe oublié</a><br />
+                                            <a href="/Landing">Landing Page</a>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

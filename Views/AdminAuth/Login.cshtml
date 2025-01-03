@@ -1,0 +1,74 @@
+﻿@model MantenanceProjetASPNET6.Models.Admin
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_AdminAuthLayout.cshtml";
+}
+
+<body class="bg-gradient-primary">
+
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9 my_card">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0 ">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block my_img">
+                                <img src="~/images/admin_pic/admin2.svg" />
+                            </div>
+                            <div class="col-lg-6 my-auto">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back Admin!</h1>
+                                    </div>
+
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    <h6 class=text-danger>@ViewBag.error</h6>
+                                    @using (Html.BeginForm())
+                                    {
+                                        <div class="form-group">
+                                           
+                                            @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control form-control-user", placeholder = "Enter Username", id = "username" } })
+                                            @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+                                            
+                                        </div>
+                                        <div class="form-group">
+                                           
+                                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control form-control-user", placeholder = "Enter Password", id = "password" } })
+                                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox small">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck">
+                                                <label class="custom-control-label" for="customCheck">Remember Me</label>
+                                            </div>
+                                        </div>
+                                        <input type="submit" class="btn btn-primary btn-user btn-block" value="Login" />
+                                                                                
+                                    }
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+</body>
+
+
+
+

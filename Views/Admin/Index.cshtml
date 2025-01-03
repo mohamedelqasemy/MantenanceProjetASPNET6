@@ -1,0 +1,327 @@
+﻿@model MantenanceProjetASPNET6.Models.IndexModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">*@
+
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <h2 class="font-weight-bold text-center py-2">
+        <i class="fas fa-home fa-1x mr-3 "></i>
+        Bienvenue Admin !
+    </h2>
+
+    <hr class="offset-2 col-8 pb-1" />
+
+    <div class="row mb-5">
+        <div class="col-lg-5 offset-lg-1 mt-5 col-md-8 offset-md-2">
+            <div class=" col-lg-10 mt-5 ">
+
+                <div class="card border-left-warning shadow h-100 py-2">
+                    
+                        <div class="card-body pt-3">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="h6 font-weight-bold text-warning text-uppercase mb-3">Total des candidats</div>
+                                    <div class="h4 mb-0 font-weight-bold text-gray-800">
+                                        @Model.Total
+                                        <span class="small ">candidats</span>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-users fa-2x text-gray-500"></i>
+                                </div>
+                            </div>
+                        </div>
+                   
+                </div>
+            </div>
+        </div>
+        
+        <div class=" col-lg-6 offset-sm-2 offset-lg-0">
+            <img src="~/images/admin_pic/statistic3.svg" class=" ml-5" />
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- ###################################################  TOTAL INSCRITS 3 ###################################-->
+        <div class="col-lg-6">
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+                <div class="card-header py-3 d-flex flex-row align-items-center ">
+                    <i class="fas fa-dice-three fa-2x text-primary mr-3 "></i>
+                    <h5 class="m-0 font-weight-bold text-primary">
+                        Total des Inscrits en 3ème Année
+                        <i class="fas fa-arrow-right mx-2"></i>
+                        <span class="h4 font-weight-bold">
+                            @Model.Inscrit3
+                        </span>
+                    </h5>
+                </div>
+
+                <!-- INFO -->
+                <row class="d-lg-inline-flex px-2">
+                    <div class="col-lg-6 col-sm-10 offset-md-1 offset-lg-0 mt-4 ">
+                        <div class="card border-left-danger border-bottom-danger shadow h-100 py-2">
+                            <div class="card-body pt-3">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-danger text-uppercase mb-2">Informatique</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            @Model.Info3
+                                            <span class="small ">candidats</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-laptop-code fa-2x text-gray-400"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- GTR -->
+                    <div class="col-lg-6 col-sm-10 offset-md-1 offset-lg-0 mt-4">
+                        <div class="card border-left-warning border-bottom-warning shadow h-100 py-2">
+                            <div class="card-body pt-3">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-2">GTR</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            @Model.Gtr3
+                                            <span class="small ">candidats</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-network-wired fa-2x text-gray-400"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </row>
+                <!-- INDUS -->
+                <row class="d-lg-inline-flex mb-4 px-2">
+                    <div class="col-lg-6 col-sm-10 offset-md-1 offset-lg-0 mt-2">
+                        <div class="card border-left-success border-bottom-success shadow h-100 py-2">
+                            <div class="card-body pt-3">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-2">Industriel</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            @Model.Indus3
+                                            <span class="small ">candidats</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-industry fa-2x text-gray-400"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- GPMC -->
+                    <div class="col-lg-6 col-sm-10 offset-md-1 offset-lg-0 mt-2">
+                        <div class="card border-left-secondary border-bottom-secondary shadow h-100 py-2">
+                            <div class="card-body pt-3">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-secondary text-uppercase mb-2">GPMC</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            @Model.Gpmc3
+                                            <span class="small ">candidats</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-vials fa-2x text-gray-400"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </row>
+
+            </div>
+        </div>
+
+        <!-- ###################################################  TOTAL INSCRITS 4 ###################################-->
+
+        <div class="col-lg-6">
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+
+                <div class="card-header py-3 d-flex flex-row align-items-center">
+                    <i class="fas fa-dice-four fa-2x text-primary mr-3 "></i>
+                    <h5 class="m-0 font-weight-bold text-primary">
+                        Total des Inscrits en 4ème Année
+                        <i class="fas fa-arrow-right mx-2"></i>
+                        <span class="h4 font-weight-bold">
+                            @Model.Inscrit4
+                        </span>
+                    </h5>
+                </div>
+                <!-- INFO -->
+                <row class="d-lg-inline-flex px-2">
+                    <div class="col-lg-6 col-sm-10 offset-md-1 offset-lg-0 mt-4 ">
+                        <div class="card border-left-danger border-bottom-danger shadow h-100 py-2">
+                            <div class="card-body pt-3">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-danger text-uppercase mb-2">Informatique</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            @Model.Info4
+                                            <span class="small ">candidats</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-laptop-code fa-2x text-gray-400"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- GTR -->
+                    <div class="col-lg-6 col-sm-10 offset-md-1 offset-lg-0 mt-4">
+                        <div class="card border-left-warning border-bottom-warning shadow h-100 py-2">
+                            <div class="card-body pt-3">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-2">GTR</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            @Model.Gtr4
+                                            <span class="small ">candidats</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-network-wired fa-2x text-gray-400"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </row>
+                <!-- INDUS -->
+                <row class="d-lg-inline-flex mb-4 px-2">
+                    <div class="col-lg-6 col-sm-10 offset-md-1 offset-lg-0 mt-2">
+                        <div class="card border-left-success border-bottom-success shadow h-100 py-2">
+                            <div class="card-body pt-3">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-2">Industriel</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            @Model.Indus4
+                                            <span class="small ">candidats</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-industry fa-2x text-gray-400"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- GPMC -->
+                    <div class="col-lg-6 col-sm-10 offset-md-1 offset-lg-0 mt-2">
+                        <div class="card border-left-secondary border-bottom-secondary shadow h-100 py-2">
+                            <div class="card-body pt-3">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-secondary text-uppercase mb-2">GPMC</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            @Model.Gpmc4
+                                            <span class="small ">candidats</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-vials fa-2x text-gray-400"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </row>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ###################################################  TOTAL SUPPRIMES  ###################################-->
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3 ">
+            <div class="card shadow mb-4">
+                <!-- Card Header -->
+                <div class="card-header py-3 d-flex flex-row align-items-center">
+                    <i class="fas fa-trash-alt fa-2x text-danger mr-3 "></i>
+                    <h5 class="m-0 font-weight-bold text-danger">
+                        Total des Supprimés
+                        <i class="fas fa-arrow-right mx-2"></i>
+                        <span class="h4 font-weight-bold">
+                            @Model.Suprim
+                        </span>
+                    </h5>
+                </div>
+                <!-- 3e annee -->
+                <row class="d-lg-inline-flex">
+                    <div class="col-10 offset-1 mt-4">
+                        <div class="card border-left-success border-bottom-success shadow h-100 py-2">
+                            <div class="card-body pt-3">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-2">3ème Année</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            @Model.Suprim3
+                                            <span class="small ">candidats</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-dice-three fa-2x text-gray-400"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </row>
+                <row class="mb-4">
+                    <!-- 4e annee -->
+                    <div class="col-10 offset-1 mt-2">
+                        <div class="card border-left-warning border-bottom-warning shadow h-100 py-2">
+                            <div class="card-body pt-3">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-2">4ème Année</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            @Model.Suprim4
+                                            <span class="small ">candidats</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-dice-four fa-2x text-gray-400"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </row>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+</div>
+</div>

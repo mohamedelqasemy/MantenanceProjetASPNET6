@@ -1,0 +1,147 @@
+﻿@{
+    ViewBag.Title = "ListeFinal";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- End of Topbar -->
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <div class="align-content-center">
+        <h3 class="font-weight-bold text-center pt-3 pb-5" id="title"> List Final 4eme Année</h3>
+        <div class="row mb-4 justify-content-center">
+            <div class=" col-md-7">
+
+                <div class="form-horizontal ">
+
+
+                    <div class="form-group row">
+                        <label class="col-md-4 col-form-label">Filière : </label>
+                        <div class="col-md-8">
+                            <select class="form-control" name="Filiere" id="FiliereSelect" onchange="selected()">
+                                <option selected value="0">Choix du Filiere</option>
+                                <option value="Informatique">Génie Informatique</option>
+                                <option value="Industriel">Génie Industriel</option>
+                                <option value="GTR">GTR</option>
+                                <option value="GPMC">GPMC</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div>
+        <h4 style="text-align:center">Liste Principale</h4>
+        <table class="table table-bordered text-center" id="tableSelection">
+            <tr class="table-warning">
+                <th class="text-center">N°</th>
+                <th class="text-center">Nom</th>
+                <th class="text-center">Prenom</th>
+                <th class="text-center">Cin</th>
+                <th class="text-center">N.Dossier</th>
+                <th class="text-center">Matricule</th>
+
+            </tr>
+
+            <tbody id="tbody"></tbody>
+
+
+        </table>
+
+        <div style="margin-top:50px">
+            <h4 style="text-align:center">Liste Attente</h4>
+            <table class="table table-bordered text-center" id="tableSelection">
+                <tr class="table-primary">
+                    <th class="text-center">N°</th>
+                    <th class="text-center">Nom</th>
+                    <th class="text-center">Prenom</th>
+                    <th class="text-center">Cin</th>
+                    <th class="text-center">N.Dossier</th>
+                    <th class="text-center">Matricule</th>
+
+                </tr>
+
+                <tbody id="tbody2"></tbody>
+
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+
+
+<script>
+
+
+    function selected() {
+
+
+        $.get("/Admin/GetListePrincipalSup", { filiere: $("#FiliereSelect").val() }, function (data) {
+
+            var num = 0;
+            $('#tbody').empty();
+            data.forEach(function (element) {
+                num++;
+
+                $('#tbody').append(
+                    '<tr>' +
+                    '<td>' + num + '</td>' +
+
+                    '<td>' + element.nom + '</td>' +
+                    '<td>' + element.prenom + '</td>' +
+
+                    '<td>' + element.num_dossier + '</td>' +
+
+                    '<td>' + element.matricule + '</td>' +
+                    '<td>' + element.cin + '</td>' +
+                    + '</tr>'
+                );
+
+            });
+
+        });
+
+
+        $.get("/Admin/GetListeAttenteSup", { filiere: $("#FiliereSelect").val() }, function (data) {
+
+            var num = 0;
+            $('#tbody2').empty();
+            data.forEach(function (element) {
+                num++;
+
+                $('#tbody2').append(
+                    '<tr>' +
+                    '<td>' + num + '</td>' +
+
+                    '<td>' + element.nom + '</td>' +
+                    '<td>' + element.prenom + '</td>' +
+
+                    '<td>' + element.num_dossier + '</td>' +
+
+                    '<td>' + element.matricule + '</td>' +
+                    '<td>' + element.cin + '</td>' +
+                    + '</tr>'
+                );
+
+            });
+
+        });
+    }
+
+
+
+
+
+
+</script>
+
