@@ -136,6 +136,15 @@ namespace MantenanceProjetASPNET6.Services
 
         }
 
+        public IEnumerable<SearchModel3> convoqueStudent(string cne, int niveau)
+        {
+            var x = db.Candidats.Where(c => c.Cne == cne).SingleOrDefault();
+            x.Convoque = !x.Convoque;
+            db.SaveChanges();
+            var y = this.info(niveau);
+            return y;
+        }
+
         public IEnumerable<SearchModel3> deleteCandidat(string cne, int niveau)
         {
             Candidat cand = db.Candidats.Where(c => c.Cne == cne).SingleOrDefault();

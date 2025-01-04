@@ -1,38 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\",
+  "WorkspaceRootPath": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\New_projet_.NET6\\MantenanceProjetASPNET6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\ds2_charge\\mantenanceprojetaspnet6\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\new_projet_.net6\\mantenanceprojetaspnet6\\views\\admin\\recherche3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\recherche3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Migrations\\20250103112501_firstMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250103112501_firstMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\new_projet_.net6\\mantenanceprojetaspnet6\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\ds2_charge\\mantenanceprojetaspnet6\\data\\generercandidats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:data\\generercandidats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\ds2_charge\\mantenanceprojetaspnet6\\models\\candidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:models\\candidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\ds2_charge\\mantenanceprojetaspnet6\\models\\concouroral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:models\\concouroral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\ds2_charge\\mantenanceprojetaspnet6\\data\\gestionconcourcoredbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:data\\gestionconcourcoredbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\ds2_charge\\mantenanceprojetaspnet6\\models\\anneuniversitaire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:models\\anneuniversitaire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\ds2_charge\\mantenanceprojetaspnet6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\new_projet_.net6\\mantenanceprojetaspnet6\\services\\isearch3service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:services\\isearch3service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,108 +26,41 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ISearch3Service.cs",
+              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\New_projet_.NET6\\MantenanceProjetASPNET6\\Services\\ISearch3Service.cs",
+              "RelativeDocumentMoniker": "Services\\ISearch3Service.cs",
+              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\New_projet_.NET6\\MantenanceProjetASPNET6\\Services\\ISearch3Service.cs",
+              "RelativeToolTip": "Services\\ISearch3Service.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwA4AAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T10:52:35.954Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-01-04T12:22:01.581Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-03T10:52:37.334Z",
-              "IsPinned": true,
+              "Title": "Recherche3.cshtml",
+              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\New_projet_.NET6\\MantenanceProjetASPNET6\\Views\\Admin\\Recherche3.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Recherche3.cshtml",
+              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\New_projet_.NET6\\MantenanceProjetASPNET6\\Views\\Admin\\Recherche3.cshtml*",
+              "RelativeToolTip": "Views\\Admin\\Recherche3.cshtml*",
+              "ViewState": "AgIAALUAAAAAAAAAAADwv8UAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-04T11:49:54.615Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "20250103112501_firstMigration.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Migrations\\20250103112501_firstMigration.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250103112501_firstMigration.cs",
-              "ToolTip": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Migrations\\20250103112501_firstMigration.cs",
-              "RelativeToolTip": "Migrations\\20250103112501_firstMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\New_projet_.NET6\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\New_projet_.NET6\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAiwIMAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T11:25:01.628Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ConcourOral.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Models\\ConcourOral.cs",
-              "RelativeDocumentMoniker": "Models\\ConcourOral.cs",
-              "ToolTip": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Models\\ConcourOral.cs",
-              "RelativeToolTip": "Models\\ConcourOral.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T11:15:25.941Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Candidat.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Models\\Candidat.cs",
-              "RelativeDocumentMoniker": "Models\\Candidat.cs",
-              "ToolTip": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Models\\Candidat.cs",
-              "RelativeToolTip": "Models\\Candidat.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAQwDkAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T11:09:01.756Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GenererCandidats.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Data\\GenererCandidats.cs",
-              "RelativeDocumentMoniker": "Data\\GenererCandidats.cs",
-              "ToolTip": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Data\\GenererCandidats.cs",
-              "RelativeToolTip": "Data\\GenererCandidats.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAQwCsAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T10:57:21.017Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GestionConcourCoreDbContext.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Data\\GestionConcourCoreDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\GestionConcourCoreDbContext.cs",
-              "ToolTip": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Data\\GestionConcourCoreDbContext.cs",
-              "RelativeToolTip": "Data\\GestionConcourCoreDbContext.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAQwDgAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T10:56:47.671Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AnneUniversitaire.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Models\\AnneUniversitaire.cs",
-              "RelativeDocumentMoniker": "Models\\AnneUniversitaire.cs",
-              "ToolTip": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Models\\AnneUniversitaire.cs",
-              "RelativeToolTip": "Models\\AnneUniversitaire.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBoAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T11:03:53.676Z",
+              "WhenOpened": "2025-01-04T11:49:34.243Z",
               "EditorCaption": ""
             }
           ]

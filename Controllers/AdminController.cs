@@ -129,6 +129,12 @@ namespace MantenanceProjetASPNET6.Controllers
             return Json(x);
         }
 
+        public JsonResult convoqueStudent(string cne, int Niveau)
+        {
+            var x = search.convoqueStudent(cne, Niveau);
+            return Json(x);
+        }
+
         /*###################################################  FIN  RECHERCHE  ############################################# */
 
         /*#################################################  DEBUT  PRESELECTION  ############################################# */

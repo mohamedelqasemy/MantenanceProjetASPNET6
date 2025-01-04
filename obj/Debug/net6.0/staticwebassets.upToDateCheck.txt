@@ -3592,6 +3592,8 @@ wwwroot\content_user\vendors\tinymce\themes\modern\theme.min.js
 wwwroot\content_user\vendors\tinymce\tinymce.js
 wwwroot\content_user\vendors\tinymce\tinymce.min.js
 wwwroot\css\auth_background.css
+wwwroot\css\mvc-grid\fonts\grid-glyphs.woff
+wwwroot\css\mvc-grid\mvc-grid.css
 wwwroot\css\site.css
 wwwroot\css\site.min.css
 wwwroot\css\user_register.css
@@ -3718,6 +3720,7 @@ wwwroot\js\homePage\waypoints.min.js
 wwwroot\js\homePage\wow.js
 wwwroot\js\homePage\wow.min.js
 wwwroot\js\jquery-dateformat.min.js
+wwwroot\js\mvc-grid\mvc-grid.js
 wwwroot\js\site.js
 wwwroot\js\site.min.js
 wwwroot\lib\bootstrap\.bower.json
