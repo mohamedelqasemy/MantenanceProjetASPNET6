@@ -78,6 +78,26 @@ namespace MantenanceProjetASPNET6.Controllers
             return RedirectToAction("Login", "AdminAuth");
         }
 
+
+        public IActionResult Convoque3()
+        {
+            if (isAdmin())
+            {
+                var x = search.generalSearch(3);
+                return View(x);
+            }
+            return RedirectToAction("Login", "AdminAuth");
+        }
+        public IActionResult Convoque4()
+        {
+            if (isAdmin())
+            {
+                var x = search.generalSearch(4);
+                return View(x);
+            }
+            return RedirectToAction("Login", "AdminAuth");
+        }
+
         public IActionResult Corbeil3()
         {
             if (isAdmin())
@@ -129,6 +149,11 @@ namespace MantenanceProjetASPNET6.Controllers
             return Json(x);
         }
 
+        public JsonResult convoqueStudent(string cne, int Niveau)
+        {
+            var x = search.convoqueStudent(cne, Niveau);
+            return Json(x);
+        }
         /*###################################################  FIN  RECHERCHE  ############################################# */
 
         /*#################################################  DEBUT  PRESELECTION  ############################################# */

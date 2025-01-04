@@ -34,8 +34,6 @@
 
                 </div>
             </div>
-
-
         </div>
     </div>
 
@@ -78,12 +76,70 @@
         </div>
 
     </div>
-
+    <div class="col-md-3 offset-2 mt-5 mb-4 ">
+        <button id="exportPrincipale" onclick="exportTableToExcel('tbody')" class="btn btn-info btn-block py-2">Exporter la liste principale vers Excel </button>
+    </div>
+    <div class="col-md-3 offset-2 mt-5 mb-4 ">
+        <button id="exportPrincipale" onclick="exportTableToExcel('tbody2')" class="btn btn-info btn-block py-2">Exporter la liste d'attente vers Excel </button>
+    </div>
 </div>
 <!-- /.container-fluid -->
 
 
 <script>
+
+    //######################## Export to EXCELL #########
+        function exportTableToExcel(tableID) {
+        // Get the table
+        const table = document.getElementById(tableID);
+        let csvContent = [];
+
+        // Create CSV header row from table headers
+        const headerRow = [];
+        const headers = table.parentElement.querySelectorAll('th');
+        headers.forEach(header => {
+            headerRow.push(header.innerText.trim());
+        });
+        csvContent.push(headerRow.join('\t'));
+
+        // Get all rows from tbody
+        const rows = table.getElementsByTagName('tr');
+        for (let i = 0; i < rows.length; i++) {
+            const row = [];
+            const cells = rows[i].getElementsByTagName('td');
+
+            for (let j = 0; j < cells.length; j++) {
+                // Get only the text content, removing any HTML
+                row.push(cells[j].innerText.trim());
+            }
+
+            csvContent.push(row.join('\t'));
+        }
+
+        // Combine all rows with newlines
+        const csvString = csvContent.join('\n');
+
+        // Create the download
+        const filename = tableID === 'tbody' ? 'ListePrincipale.xls' : 'ListeAttente.xls';
+        const blob = new Blob([csvString], { type: 'application/vnd.ms-excel' });
+
+        if (navigator.msSaveOrOpenBlob) {
+            navigator.msSaveOrOpenBlob(blob, filename);
+        } else {
+            const link = document.createElement('a');
+            if (link.download !== undefined) {
+                const url = URL.createObjectURL(blob);
+                link.setAttribute('href', url);
+                link.setAttribute('download', filename);
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(url);
+            }
+        }
+    }
+    //#########################################################
 
 
     function selected() {

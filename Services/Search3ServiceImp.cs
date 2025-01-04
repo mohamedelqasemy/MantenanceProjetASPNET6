@@ -2,6 +2,7 @@
 using MantenanceProjetASPNET6.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
@@ -134,6 +135,31 @@ namespace MantenanceProjetASPNET6.Services
             var y = this.info(niveau);
             return y;
 
+        }
+
+        public IEnumerable<SearchModel3> convoqueStudent(string cne, int niveau)
+        {
+            var x = db.Candidats.Where(c => c.Cne == cne).SingleOrDefault();
+            x.Convoque = !x.Convoque;
+            if (x.Convoque == true)
+            {
+                Random random = new Random();
+                int generatedNumber = 0;
+                bool isUnique = false;
+                while (!isUnique)
+                {
+                    generatedNumber = random.Next(1000, 10000);
+                    isUnique = !db.Candidats.Any(x => x.Num_dossier == generatedNumber);
+                }
+                x.Num_dossier = generatedNumber;
+            }
+            else
+            {
+                x.Num_dossier = 0;
+            }
+            db.SaveChanges();
+            var y = this.info(niveau);
+            return y;
         }
 
         public IEnumerable<SearchModel3> deleteCandidat(string cne, int niveau)

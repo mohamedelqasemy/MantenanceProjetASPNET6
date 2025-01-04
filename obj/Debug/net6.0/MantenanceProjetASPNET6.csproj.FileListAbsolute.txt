@@ -1,3 +1,4 @@
+D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\MantenanceProjetASPNET6.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\appsettings.Development.json
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\appsettings.json
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\MantenanceProjetASPNET6.staticwebassets.runtime.json
@@ -5,7 +6,6 @@ D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\MantenancePr
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\MantenanceProjetASPNET6.exe
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\MantenanceProjetASPNET6.deps.json
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\MantenanceProjetASPNET6.runtimeconfig.json
-D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\MantenanceProjetASPNET6.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\MantenanceProjetASPNET6.pdb
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Antiforgery.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MantenanceProjetASPNET6")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+841d2138e18769212d81dcafcc282e718799410f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8223be0be357e08c1ebd20a55c3f00cff0a3ee68")]
 [assembly: System.Reflection.AssemblyProductAttribute("MantenanceProjetASPNET6")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MantenanceProjetASPNET6")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
