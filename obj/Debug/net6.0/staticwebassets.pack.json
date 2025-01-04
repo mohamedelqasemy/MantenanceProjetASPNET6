@@ -45,6 +45,14 @@
       "PackagePath": "staticwebassets\\candidatImages\\4390.png"
     },
     {
+      "Id": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\wwwroot\\candidatImages\\5364.png",
+      "PackagePath": "staticwebassets\\candidatImages\\5364.png"
+    },
+    {
+      "Id": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\wwwroot\\candidatImages\\7992.jpg",
+      "PackagePath": "staticwebassets\\candidatImages\\7992.jpg"
+    },
+    {
       "Id": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\wwwroot\\candidatImages\\icon.jpg",
       "PackagePath": "staticwebassets\\candidatImages\\icon.jpg"
     },
@@ -14413,6 +14421,14 @@
       "PackagePath": "staticwebassets\\css\\auth_background.css"
     },
     {
+      "Id": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\wwwroot\\css\\mvc-grid\\fonts\\grid-glyphs.woff",
+      "PackagePath": "staticwebassets\\css\\mvc-grid\\fonts\\grid-glyphs.woff"
+    },
+    {
+      "Id": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\wwwroot\\css\\mvc-grid\\mvc-grid.css",
+      "PackagePath": "staticwebassets\\css\\mvc-grid\\mvc-grid.css"
+    },
+    {
       "Id": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -14893,6 +14909,10 @@
       "PackagePath": "staticwebassets\\js\\jquery-dateformat.min.js"
     },
     {
+      "Id": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\wwwroot\\js\\mvc-grid\\mvc-grid.js",
+      "PackagePath": "staticwebassets\\js\\mvc-grid\\mvc-grid.js"
+    },
+    {
       "Id": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
@@ -15183,6 +15203,38 @@
     {
       "Id": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\wwwroot\\uploads\\baccalaureats\\2fd67e23-9de9-40f1-b9dd-6e080b82b76a_CIN_Internet.pdf",
+      "PackagePath": "staticwebassets\\uploads\\baccalaureats\\2fd67e23-9de9-40f1-b9dd-6e080b82b76a_CIN_Internet.pdf"
+    },
+    {
+      "Id": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\wwwroot\\uploads\\baccalaureats\\3df8bfd5-2cd7-46ce-af3e-f1f8453fe867_etapeProjet.pdf",
+      "PackagePath": "staticwebassets\\uploads\\baccalaureats\\3df8bfd5-2cd7-46ce-af3e-f1f8453fe867_etapeProjet.pdf"
+    },
+    {
+      "Id": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\wwwroot\\uploads\\baccalaureats\\483351c6-f036-400a-821f-ad052ba44b3f_CC-0FEAC8202C.pdf",
+      "PackagePath": "staticwebassets\\uploads\\baccalaureats\\483351c6-f036-400a-821f-ad052ba44b3f_CC-0FEAC8202C.pdf"
+    },
+    {
+      "Id": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\wwwroot\\uploads\\baccalaureats\\7b9c6cd0-9f72-46ca-b89a-b5d905ebf0ab_2021_ATEXO_Module_Redaction.pdf",
+      "PackagePath": "staticwebassets\\uploads\\baccalaureats\\7b9c6cd0-9f72-46ca-b89a-b5d905ebf0ab_2021_ATEXO_Module_Redaction.pdf"
+    },
+    {
+      "Id": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\wwwroot\\uploads\\baccalaureats\\a74e0534-d817-486b-b03e-f9032d95ec22_CIN_Internet.pdf",
+      "PackagePath": "staticwebassets\\uploads\\baccalaureats\\a74e0534-d817-486b-b03e-f9032d95ec22_CIN_Internet.pdf"
+    },
+    {
+      "Id": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\wwwroot\\uploads\\cin\\45897e68-1db9-4ce4-a0ae-a5e41cec9b84_CIN_Internet.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cin\\45897e68-1db9-4ce4-a0ae-a5e41cec9b84_CIN_Internet.pdf"
+    },
+    {
+      "Id": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\wwwroot\\uploads\\cin\\529e532d-791d-4ea8-b7b0-0d5fa9569c25_CIN_Internet.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cin\\529e532d-791d-4ea8-b7b0-0d5fa9569c25_CIN_Internet.pdf"
+    },
+    {
+      "Id": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\wwwroot\\uploads\\cin\\8f769b43-5fb7-46b5-a7b9-83c76f69b2c2_CIN_Internet.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cin\\8f769b43-5fb7-46b5-a7b9-83c76f69b2c2_CIN_Internet.pdf"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.MantenanceProjetASPNET6.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

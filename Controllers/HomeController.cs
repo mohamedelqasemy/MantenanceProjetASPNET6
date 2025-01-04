@@ -69,8 +69,8 @@ namespace MantenanceProjetASPNET6.Controllers
 
             string message = candidat_service.checkConformity(cne);
             string errorMessage = candidat_service.checkDiplome(cne);
-            ViewBag.errorMessage = errorMessage;
-            ViewBag.error = message;
+            //ViewBag.errorMessage = errorMessage;
+            //ViewBag.error = message;
 
             return View(candidat);
         }
@@ -91,23 +91,55 @@ namespace MantenanceProjetASPNET6.Controllers
             {
                 return RedirectToAction("Step1", "Auth");
             }
-            Debug.WriteLine("################################################ tttttttttttt " + HttpContext.Session.GetString("photo"));
+            //Debug.WriteLine("################################################ tttttttttttt " + HttpContext.Session.GetString("photo"));
             CandidatModel info = candidat_service.getInfoPersonnel(cne);
+            //Debug.WriteLine("################################################candidat_service.getInfoPersonnel " +info.Email);
             ViewBag.photo = info.Photo ;
 
             return View(info);
         }
 
         [HttpPost]
-        public IActionResult ModifierPersonnel(CandidatModel info)
+        public IActionResult ModifierPersonnel(CandidatModel candidat)
         {
-            if (ModelState.IsValid)
-            {
-                candidat_service.setInfoPersonnel(info);
-                TempData["message"] = "Profil Personel Modified succefully";
-                return RedirectToAction("Index");
-            }
-            return View(info);
+            Debug.WriteLine("################################################ http post modifie " + candidat.Nom);
+            string uploadsFolder = Path.Combine("wwwroot", "uploads", "cin");
+                Directory.CreateDirectory(uploadsFolder); // Créer le dossier si nécessaire
+
+                if (candidat.PhotoCin != null)
+                {
+                    // Générer un nom unique pour le fichier
+                    string uniqueFileName = Guid.NewGuid().ToString() + "_" + candidat.PhotoCin.FileName;
+                    string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                    // Sauvegarder le fichier
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        candidat.PhotoCin.CopyTo(fileStream);
+                    }
+
+                    // Supprimer l'ancien fichier si nécessaire
+                    if (!string.IsNullOrEmpty(candidat.ExistingPhotoCinPath))
+                    {
+                        string oldFilePath = Path.Combine("wwwroot", candidat.ExistingPhotoCinPath);
+                        if (System.IO.File.Exists(oldFilePath))
+                        {
+                            System.IO.File.Delete(oldFilePath);
+                        }
+                    }
+
+                    // Mettre à jour le chemin du fichier dans la base
+                    candidat.ExistingPhotoCinPath = Path.Combine("uploads", "cin", uniqueFileName);
+                }
+
+                // Appeler le service pour mettre à jour les informations du candidat
+                candidat_service.setInfoPersonnel(candidat);
+
+                TempData["message"] = "CIN Modified successfully";
+                return RedirectToAction("ModifierPersonnel");
+            
+
+            return View(candidat);
         }
 
         public JsonResult Image(IFormFile file)
@@ -163,13 +195,45 @@ namespace MantenanceProjetASPNET6.Controllers
 
         [HttpPost]
         public IActionResult ModifierBac(BaccalaureatModel bac)
-        {            
+        {
             if (ModelState.IsValid)
             {
+                string uploadsFolder = Path.Combine("wwwroot", "uploads", "baccalaureats");
+                Directory.CreateDirectory(uploadsFolder); // Créer le dossier si nécessaire
+
+                if (bac.PhotoBac != null)
+                {
+                    // Générer un nom unique pour le fichier
+                    string uniqueFileName = Guid.NewGuid().ToString() + "_" + bac.PhotoBac.FileName;
+                    string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                    // Sauvegarder le fichier
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        bac.PhotoBac.CopyTo(fileStream);
+                    }
+
+                    // Supprimer l ancien fichier si necessaire
+                    if (!string.IsNullOrEmpty(bac.ExistingPhotoBacPath))
+                    {
+                        string oldFilePath = Path.Combine("wwwroot", bac.ExistingPhotoBacPath);
+                        if (System.IO.File.Exists(oldFilePath))
+                        {
+                            System.IO.File.Delete(oldFilePath);
+                        }
+                    }
+
+                    // Mettre a jour le chemin du fichier dans la base
+                    bac.ExistingPhotoBacPath = Path.Combine("uploads", "baccalaureats", uniqueFileName);
+                }
+
+                // Appeler le service pour mettre a jour la base de donnees
                 candidat_service.setBaccalaureat(bac);
-                TempData["message"] = "Bac Modified succefully";
-                return RedirectToAction("Index");
+
+                TempData["message"] = "Bac Modified successfully";
+                return RedirectToAction("ModifierBac");
             }
+
             return View(bac);
         }
 

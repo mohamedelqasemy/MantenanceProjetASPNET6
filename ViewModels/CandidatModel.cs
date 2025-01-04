@@ -38,6 +38,10 @@ namespace MantenanceProjetASPNET6.ViewModels
             [Required]
             public DateTime DateNaissance { get; set; }
             public string Photo { get; set; }
-        
+
+            [Display(Name = "Photo du Cin (PDF)")]
+            public IFormFile? PhotoCin { get; set; }
+            public string? ExistingPhotoCinPath { get; set; }
+
     }
 }

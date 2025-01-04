@@ -8,7 +8,7 @@ namespace MantenanceProjetASPNET6.Models
     public class Filiere
     {
         public int ID { get; set; }
-        public string Nom { get; set; }
+        public string? Nom { get; set; }
 
         //relation manyToOne avec la classe Candidat 
         public virtual IList<Candidat> Candidats { get; set; }

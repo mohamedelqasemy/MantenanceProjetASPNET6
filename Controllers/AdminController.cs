@@ -218,6 +218,33 @@ namespace MantenanceProjetASPNET6.Controllers
 
         /*#################################################  FIN  PRESELECTION  ############################################# */
 
+        /*################################################# ListSatutConvoquer3 ############################################# */
+        public IActionResult ListSatutConvoquer3()
+        {
+            if (!isAdmin())
+            {
+                return RedirectToAction("Login", "AdminAuth");
+            }
+            var candidats = new List<Candidat>();
+            candidats = _context.Candidats.ToList();
+            return View(candidats);
+        }
+        /*################################################# FIN ListSatutConvoquer3 ############################################# */
+        /*################################################# ListSatutConvoquer4 ############################################# */
+        public IActionResult ListSatutConvoquer4()
+        {
+            if (!isAdmin())
+            {
+                return RedirectToAction("Login", "AdminAuth");
+            }
+            var candidats = new List<Candidat>();
+            candidats = _context.Candidats.ToList();
+            return View(candidats);
+        }
+        /*################################################# FIN ListSatutConvoquer4 ############################################# */
+
+
+
         public IActionResult Statistique3()
         {
             if (!isAdmin())

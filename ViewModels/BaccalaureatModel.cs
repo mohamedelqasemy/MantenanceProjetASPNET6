@@ -19,5 +19,9 @@ namespace MantenanceProjetASPNET6.ViewModels
         public double NoteBac { get; set; }
         [Required]
         public string MentionBac { get; set; }
+
+        [Display(Name = "Photo du Bac (PDF)")]
+        public IFormFile? PhotoBac { get; set; } 
+        public string? ExistingPhotoBacPath { get; set; }
     }
 }

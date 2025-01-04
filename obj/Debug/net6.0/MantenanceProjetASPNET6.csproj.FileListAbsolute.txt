@@ -1,13 +1,3 @@
-D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.csproj.AssemblyReference.cache
-D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.GeneratedMSBuildEditorConfig.editorconfig
-D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.AssemblyInfoInputs.cache
-D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.AssemblyInfo.cs
-D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.csproj.CoreCompileInputs.cache
-D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.MvcApplicationPartsAssemblyInfo.cs
-D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.MvcApplicationPartsAssemblyInfo.cache
-D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.RazorAssemblyInfo.cache
-D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.RazorAssemblyInfo.cs
-D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.sourcelink.json
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\appsettings.Development.json
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\appsettings.json
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\MantenanceProjetASPNET6.staticwebassets.runtime.json
@@ -300,7 +290,9 @@ D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Humanizer.dl
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Host.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -324,6 +316,7 @@ D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Ex
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Extensions.PlatformAbstractions.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
@@ -336,6 +329,8 @@ D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Id
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Mono.TextTemplating.dll
+D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Mvc.Grid.Core.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\Rotativa.AspNetCore.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\System.CodeDom.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
@@ -388,6 +383,16 @@ D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\runtimes\win
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.csproj.AssemblyReference.cache
+D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.AssemblyInfoInputs.cache
+D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.AssemblyInfo.cs
+D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.csproj.CoreCompileInputs.cache
+D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.MvcApplicationPartsAssemblyInfo.cs
+D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.MvcApplicationPartsAssemblyInfo.cache
+D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.RazorAssemblyInfo.cache
+D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.RazorAssemblyInfo.cs
+D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.sourcelink.json
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\scopedcss\bundle\MantenanceProjetASPNET6.styles.css
 D:\ProjetDotNet\DS2_charge\MantenanceProjetASPNET6\obj\Debug\net6.0\scopedcss\projectbundle\MantenanceProjetASPNET6.bundle.scp.css

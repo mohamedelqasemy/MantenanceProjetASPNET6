@@ -12,11 +12,11 @@ namespace MantenanceProjetASPNET6.Models
         [Key, ForeignKey("Candidat")]
         public string Cne { get; set; }
 
-        public string Type { get; set; }
-        public string Etablissement { get; set; }
-        public string VilleObtention { get; set; }
+        public string? Type { get; set; }
+        public string? Etablissement { get; set; }
+        public string? VilleObtention { get; set; }
         public double NoteDiplome { get; set; }
-        public string Specialite { get; set; }
+        public string? Specialite { get; set; }
 
 
         public virtual Candidat Candidat { get; set; }

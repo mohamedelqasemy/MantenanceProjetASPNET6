@@ -57,26 +57,21 @@ namespace MantenanceProjetASPNET6.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("AnneUni1")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnneUni2")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnneUni3")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Redoublant1")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Redoublant2")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Redoublant3")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Semestre1")
@@ -126,18 +121,18 @@ namespace MantenanceProjetASPNET6.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("DateObtentionBac")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MentionBac")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("NoteBac")
                         .HasColumnType("float");
 
+                    b.Property<string>("PhotoBacPath")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("TypeBac")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Cne");
@@ -193,15 +188,12 @@ namespace MantenanceProjetASPNET6.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("LieuNaissance")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Matricule")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nationalite")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Niveau")
@@ -218,11 +210,12 @@ namespace MantenanceProjetASPNET6.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Password")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Photo")
-                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhotoCinPath")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Prenom")
@@ -233,18 +226,15 @@ namespace MantenanceProjetASPNET6.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Sexe")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Telephone")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Verified")
                         .HasColumnType("int");
 
                     b.Property<string>("Ville")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("listDatt")
@@ -265,7 +255,7 @@ namespace MantenanceProjetASPNET6.Migrations
                             Cin = "test5",
                             Conforme = false,
                             Convoque = false,
-                            DateInscription = new DateTime(2025, 1, 3, 12, 25, 0, 950, DateTimeKind.Local).AddTicks(8406),
+                            DateInscription = new DateTime(2025, 1, 4, 12, 14, 17, 205, DateTimeKind.Local).AddTicks(6866),
                             DateNaissance = new DateTime(1995, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "xxxx@gmail.com",
                             Gsm = "0612345678",
@@ -367,7 +357,6 @@ namespace MantenanceProjetASPNET6.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Filiere")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("NoteJoker")
@@ -377,7 +366,6 @@ namespace MantenanceProjetASPNET6.Migrations
                         .HasColumnType("float");
 
                     b.Property<string>("TypeDiplome")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
@@ -400,7 +388,6 @@ namespace MantenanceProjetASPNET6.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Filiere")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("NbrPlace")
@@ -410,14 +397,12 @@ namespace MantenanceProjetASPNET6.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Niveau")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("NoteMin")
                         .HasColumnType("float");
 
                     b.Property<string>("TypeClassement")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
@@ -434,7 +419,6 @@ namespace MantenanceProjetASPNET6.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("CNE")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
@@ -448,22 +432,18 @@ namespace MantenanceProjetASPNET6.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Etablissement")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("NoteDiplome")
                         .HasColumnType("float");
 
                     b.Property<string>("Specialite")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Type")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("VilleObtention")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Cne");
@@ -516,11 +496,9 @@ namespace MantenanceProjetASPNET6.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("Cne")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("nom")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
@@ -537,7 +515,6 @@ namespace MantenanceProjetASPNET6.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("Nom")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");

@@ -19,7 +19,7 @@
 </style>
 
 <h2 class="text-center mt-3 font-weight-bold">Step 2 : Informations du Bac</h2>
-@using (Html.BeginForm("Step2", "Auth", FormMethod.Post))
+@using (Html.BeginForm("Step2", "Auth", FormMethod.Post, new { enctype = "multipart/form-data" } ))
 {
 
     <hr class="col-md-7 offset-md-2 mb-5" />
@@ -81,6 +81,15 @@
                     </div>
                 </div>
 
+                @* ajouter un champ pour uploader le bac pdf *@
+                <div class="form-group">
+                    <label for="BacPdfFile" class="control-label col-md-12 text-white font-weight-bold">Upload du Bac (PDF) :</label>
+                    <div class="col-md-7">
+                        <input type="file" name="BacPdfFile" class="form-control" accept=".pdf" />
+                        <span class="text-danger">@ViewBag.FileUploadError</span>
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <div class="row mt-5">
                         <a class="btn btn-info mt-2 px-5" href="Step1"> Previous </a>
@@ -92,4 +101,15 @@
         </div>
     </div>
 
+}
+@if (ViewBag.Errors != null && ViewBag.Errors.Count > 0)
+{
+    <div class="alert alert-danger">
+        <ul>
+            @foreach (var error in ViewBag.Errors)
+            {
+                <li>@error</li>
+            }
+        </ul>
+    </div>
 }

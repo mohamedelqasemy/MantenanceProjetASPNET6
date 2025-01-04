@@ -23,6 +23,7 @@ namespace MantenanceProjetASPNET6.Controllers
             _db = db;
         }
 
+        //######################################################## STEP1
         public ActionResult Step1()
         {
             if (HttpContext.Session.GetString("cne") != null)
@@ -49,27 +50,89 @@ namespace MantenanceProjetASPNET6.Controllers
         }
 
         [HttpPost]
-        public ActionResult Step1(InfoPersoModel candidat)
+        public ActionResult Step1(InfoPersoModel candidat, IFormFile CniPdfFile)
         {
             string cne = HttpContext.Session.GetString("cne");
-            if (ModelState.IsValid)
-            {
-                var originalCandiat = (from c in _db.Candidats where c.Cne == cne select c).First();
-                originalCandiat.DateNaissance = candidat.DateNaissance;
-                originalCandiat.LieuNaissance = candidat.LieuNaissance;
-                originalCandiat.Sexe = candidat.Sexe;
-                originalCandiat.Nationalite = candidat.Nationalite;
-                originalCandiat.Gsm = candidat.Gsm;
-                originalCandiat.Telephone = candidat.Telephone;
-                originalCandiat.Adresse = candidat.Adresse;
-                originalCandiat.Ville = candidat.Ville;
-                _db.SaveChanges();
+
+                var originalCandidat = _db.Candidats.FirstOrDefault(c => c.Cne == cne);
+                if (originalCandidat == null)
+                {
+                    ModelState.AddModelError("", "Le candidat n'a pas été trouvé.");
+                    return View(candidat);
+                }
+
+                // Mise à jour des informations personnelles
+                originalCandidat.DateNaissance = candidat.DateNaissance;
+                originalCandidat.LieuNaissance = candidat.LieuNaissance;
+                originalCandidat.Sexe = candidat.Sexe;
+                originalCandidat.Nationalite = candidat.Nationalite;
+                originalCandidat.Gsm = candidat.Gsm;
+                originalCandidat.Telephone = candidat.Telephone;
+                originalCandidat.Adresse = candidat.Adresse;
+                originalCandidat.Ville = candidat.Ville;
+
+                // Gestion du fichier PDF de la CNI
+                if (CniPdfFile != null)
+                {
+                    // Vérifier le type MIME
+                    if (CniPdfFile.ContentType != "application/pdf")
+                    {
+                        ModelState.AddModelError("", "Seuls les fichiers PDF sont autorisés.");
+                        return View(candidat);
+                    }
+
+                    // Chemin de destination
+                    var uploadsFolder = Path.Combine("wwwroot", "uploads", "cni");
+                    if (!Directory.Exists(uploadsFolder))
+                    {
+                        Directory.CreateDirectory(uploadsFolder);
+                    }
+
+                    // Nom unique pour éviter les conflits
+                    var uniqueFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(CniPdfFile.FileName);
+                    var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                    // Supprimer l'ancien fichier si nécessaire
+                    if (!string.IsNullOrEmpty(originalCandidat.PhotoCinPath))
+                    {
+                        var oldFilePath = Path.Combine("wwwroot", originalCandidat.PhotoCinPath.TrimStart('/').Replace("/", Path.DirectorySeparatorChar.ToString()));
+                        if (System.IO.File.Exists(oldFilePath))
+                        {
+                            System.IO.File.Delete(oldFilePath);
+                        }
+                    }
+
+                    // Enregistrer le fichier
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        CniPdfFile.CopyTo(stream);
+                    }
+
+                    // Enregistrer le chemin relatif dans le modèle
+                    originalCandidat.PhotoCinPath = Path.Combine("uploads", "cni", uniqueFileName).Replace("\\", "/");
+                }
+
+                // Enregistrer les modifications
+                try
+                {
+                    _db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError("", "Une erreur est survenue lors de la sauvegarde des données : " + ex.Message);
+                    return View(candidat);
+                }
+
+                // Passer à l'étape suivante
                 HttpContext.Session.SetInt32("steps", 2);
                 return RedirectToAction("Step2");
-            }
+            
+
             return View(candidat);
         }
 
+
+        //######################################################## STEP2
         public ActionResult Step2()
         {
             if (HttpContext.Session.GetString("cne") != null)
@@ -91,23 +154,93 @@ namespace MantenanceProjetASPNET6.Controllers
         }
 
         [HttpPost]
-        public ActionResult Step2(Baccalaureat bac)
+        public ActionResult Step2(Baccalaureat bac, IFormFile BacPdfFile)
         {
-            if (ModelState.IsValid)
+            string cne = HttpContext.Session.GetString("cne");
+            var candidat = _db.Baccalaureats.Include(b => b.Candidat).FirstOrDefault(b => b.Cne == cne);
+
+            if (candidat == null)
             {
-                string cne = HttpContext.Session.GetString("cne");
-                var candidat = _db.Baccalaureats.Find(cne);
-                candidat.TypeBac = bac.TypeBac;
-                candidat.DateObtentionBac = bac.DateObtentionBac;
-                candidat.NoteBac = bac.NoteBac;
-                candidat.MentionBac = bac.MentionBac;
-                _db.SaveChanges();
-                HttpContext.Session.SetInt32("steps", 3);
-                return RedirectToAction("Step3");
+                ModelState.AddModelError("", "Le Candidat n'a pas été trouvé.");
+                return View(bac);
             }
-            return View(bac);
+
+            // Gestion du fichier PDF
+            if (BacPdfFile != null)
+            {
+                // Vérifier le type MIME
+                if (BacPdfFile.ContentType != "application/pdf")
+                {
+                    ModelState.AddModelError("", "Seuls les fichiers PDF sont autorisés.");
+                    return View(bac);
+                }
+
+                // Chemin de destination
+                var uploadsFolder = Path.Combine("wwwroot", "uploads", "baccalaureats");
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
+
+                // Nom unique pour éviter les conflits
+                var uniqueFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(BacPdfFile.FileName);
+                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                // Supprimer l'ancien fichier si nécessaire
+                if (!string.IsNullOrEmpty(candidat.PhotoBacPath))
+                {
+                    var oldFilePath = Path.Combine("wwwroot", candidat.PhotoBacPath.TrimStart('/').Replace("/", Path.DirectorySeparatorChar.ToString()));
+                    if (System.IO.File.Exists(oldFilePath))
+                    {
+                        System.IO.File.Delete(oldFilePath);
+                    }
+                }
+
+                // Enregistrer le fichier
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    BacPdfFile.CopyTo(stream);
+                }
+
+                // Enregistrer le chemin relatif dans le modèle avec des barres obliques (/)
+                candidat.PhotoBacPath = Path.Combine("uploads", "baccalaureats", uniqueFileName).Replace("\\", "/");
+            }
+
+            // Mettre à jour les autres informations
+            if (!string.IsNullOrWhiteSpace(bac.TypeBac))
+            {
+                candidat.TypeBac = bac.TypeBac;
+            }
+            if (bac.DateObtentionBac != null)
+            {
+                candidat.DateObtentionBac = bac.DateObtentionBac;
+            }
+            if (bac.NoteBac > 0)
+            {
+                candidat.NoteBac = bac.NoteBac;
+            }
+            if (!string.IsNullOrWhiteSpace(bac.MentionBac))
+            {
+                candidat.MentionBac = bac.MentionBac;
+            }
+
+            try
+            {
+                _db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "Une erreur est survenue lors de la sauvegarde des données : " + ex.Message);
+                return View(bac);
+            }
+
+            // Avancer à l'étape suivante
+            HttpContext.Session.SetInt32("steps", 3);
+            return RedirectToAction("Step3");
         }
 
+
+        //########################################################STEP3
         public ActionResult Step3()
         {
             if (HttpContext.Session.GetString("cne") != null)
@@ -154,8 +287,7 @@ namespace MantenanceProjetASPNET6.Controllers
         public ActionResult Step3(DiplomeNote diplome)
         {
             string cne = HttpContext.Session.GetString("cne");
-            if (ModelState.IsValid)
-            {
+            
                 var x = _db.Diplomes.Where(c => c.Cne == cne).SingleOrDefault();
                 x.Type = diplome.Type;
                 x.Etablissement = diplome.Etablissement;
@@ -221,7 +353,7 @@ namespace MantenanceProjetASPNET6.Controllers
                     
                 }
                
-            }
+            
             return View(diplome);
         }
 
@@ -330,114 +462,144 @@ namespace MantenanceProjetASPNET6.Controllers
         [HttpPost]
         public ActionResult Register(Candidat candidat)
         {
-            if (candidat.Niveau == 0)
+            try
             {
-                ModelState.AddModelError("selectNiveau", "Selectionner un niveau");
-            }
-            var y = _db.Candidats.Where(c => c.Cne == candidat.Cne).SingleOrDefault();
-            if (y != null)
-            {
-                ModelState.AddModelError("UniqueCne", "Cne need to be unique");
-            }
-            var z = _db.Candidats.Where(c => c.Cin == candidat.Cin).SingleOrDefault();
-            if (z != null)
-            {
-                ModelState.AddModelError("UniqueCin", "Cin need to be unique");
-            }
-            var w = _db.Candidats.Where(c => c.Email == candidat.Email).SingleOrDefault();
-            if (w != null)
-            {
-                ModelState.AddModelError("UniqueEmail", "Email need to be unique");
-            }
-
-
-            if (ModelState.IsValid)
-            {
-                candidat.DateInscription = DateTime.Now;
-                candidat.DateNaissance = DateTime.Now;
-                Random random = new Random();
-                const string pool = "abcdefghijklmnopqrstuvwxyz0123456789";
-                var chars = Enumerable.Range(0, 7)
-                    .Select(x => pool[random.Next(0, pool.Length)]);
-                var charsMatricule = Enumerable.Range(0, 8)
-                    .Select(ww => pool[random.Next(0, pool.Length)]);
-                candidat.Matricule = new string(charsMatricule.ToArray()).ToUpper();
-                candidat.Password = new string(chars.ToArray());
-                candidat.Verified = 0;
-                candidat.Photo = "icon.jpg";
-                _db.Candidats.Add(candidat);
-                _db.SaveChanges();
-
-                Diplome dip = new Diplome();
-                AnneeUniversitaire annUn = new AnneeUniversitaire();
-                Baccalaureat bac = new Baccalaureat();
-                ConcourEcrit concE = new ConcourEcrit();
-                ConcourOral concO = new ConcourOral();
-
-
-                //add row in diplome
-                dip.Cne = candidat.Cne;
-                _db.Diplomes.Add(dip);
-                _db.SaveChanges();
-
-                //add row in anne
-                annUn.Cne = candidat.Cne;
-                _db.AnneeUniversitaires.Add(annUn);
-                _db.SaveChanges();
-
-                //add row in bac
-                bac.Cne = candidat.Cne;
-                //bac.DateObtentionBac = DateTime.Now;
-                _db.Baccalaureats.Add(bac);
-                _db.SaveChanges();
-
-                //add in concours ecrit
-                concE.Cne = candidat.Cne;
-                _db.CouncourEcrits.Add(concE);
-                _db.SaveChanges();
-
-                //add in concours oral
-                concO.Cne = candidat.Cne;
-                _db.CouncourOrals.Add(concO);
-                _db.SaveChanges();
-
-
-                var fromAddress = new MailAddress("admin@gmail.com", "From ENSAS");
-                var toAddress = new MailAddress(candidat.Email, "To Name");
-                const string fromPassword = "adminconcours125498";
-                const string subject = "Récupération du mot de passe";
-                //string body = "<a href=\"http://localhost:49969/Auth/Verify?cne="+candidat.Cne+" \">Link</a><br /><p> this is the password : "+candidat.Password+"</p>";
-                string body = "<div class=\"container\"><div class=\"row\"><img src=\"https://lh3.googleusercontent.com/proxy/g_QnANEsQGJPGvR4haGBTi-kr2n32DU-eArBRKuJWtpgPCHQbz-RINzL6FzIc1TQs0a80Vfkaew6umTHHPQgHTE4l_g \" /></div><div class=\"row text-center\"><h2>Vous avez créer un compte dans la platforme d'acces au cycle d'ingénieur a ENSAS .</h2></div><div class=\"alert alert-danger\"><strong><span style=\"color:'red'\">Vous trouverez votre mot de pass au dessouss</span></strong><br></div><div class=\"row\"><div class=\"card\" style=\"width: 18rem;\"><div class=\"card-body\"><strong>Nom :</strong><span>" + candidat.Nom + "</span><br /><strong>Prenom : </strong><span>" + candidat.Prenom + "</span><br /><strong>CNE : </strong><span>" + candidat.Cne + "</span><br /><strong>CIN : </strong><span>" + candidat.Cin + "</span><br /><strong>Password : </strong><span>" + candidat.Password + "</span><br /></div></div></div></div>";
-
-
-                var smtp = new SmtpClient
+                // Validation des champs uniques
+                if (candidat.Niveau == 0)
                 {
-                    Host = "smtp.gmail.com",
-                    Port = 587,
-                    EnableSsl = true,
-                    DeliveryMethod = SmtpDeliveryMethod.Network,
-                    Credentials = new NetworkCredential(fromAddress.Address, fromPassword),
-                    Timeout = 60000
-                };
-                using (var message = new MailMessage(fromAddress, toAddress)
+                    ModelState.AddModelError("selectNiveau", "Selectionner un niveau");
+                }
+
+                try
                 {
-                    Subject = subject,
-                    Body = body
-                })
-                {
-                    try
+                    if (_db.Candidats.Any(c => c.Cne == candidat.Cne))
                     {
-                        message.IsBodyHtml = true;
-                        smtp.Send(message);
+                        ModelState.AddModelError("UniqueCne", "Cne need to be unique");
                     }
-                    catch
+
+                    if (_db.Candidats.Any(c => c.Cin == candidat.Cin))
                     {
+                        ModelState.AddModelError("UniqueCin", "Cin need to be unique");
+                    }
+
+                    if (_db.Candidats.Any(c => c.Email == candidat.Email))
+                    {
+                        ModelState.AddModelError("UniqueEmail", "Email need to be unique");
                     }
                 }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError("", "Erreur lors de la vérification des doublons : " + ex.Message);
+                }
+
                 
-                TempData["message"] = "Votre mot de passe est : '" + candidat.Password + "'." + " Vous le trouverez sur votre email aussi.";
-                return Redirect("Login");
+                    try
+                    {
+                        // Ajout du candidat
+                        candidat.DateInscription = DateTime.Now;
+                        candidat.DateNaissance = DateTime.Now;
+                        Random random = new Random();
+                        const string pool = "abcdefghijklmnopqrstuvwxyz0123456789";
+
+                        candidat.Matricule = new string(Enumerable.Range(0, 8)
+                            .Select(x => pool[random.Next(pool.Length)])
+                            .ToArray()).ToUpper();
+
+                        candidat.Password = new string(Enumerable.Range(0, 7)
+                            .Select(x => pool[random.Next(pool.Length)])
+                            .ToArray());
+
+                        candidat.Verified = 0;
+                        candidat.Photo = "icon.jpg";
+
+                        _db.Candidats.Add(candidat);
+                        _db.SaveChanges();
+                    }
+                    catch (Exception ex)
+                    {
+                        ModelState.AddModelError("", "Erreur lors de l'ajout du candidat : " + ex.Message);
+                        return View(candidat);
+                    }
+
+                    // Ajout des enregistrements liés
+                    try
+                    {
+                        _db.Diplomes.Add(new Diplome { Cne = candidat.Cne, NoteDiplome = 0.0 });
+                        _db.AnneeUniversitaires.Add(new AnneeUniversitaire
+                        {
+                            Cne = candidat.Cne,
+                            Semestre1 = 0.0,
+                            Semestre2 = 0.0,
+                            Semestre3 = 0.0,
+                            Semestre4 = 0.0,
+                            Semestre5 = 0.0,
+                            Semestre6 = 0.0
+                        });
+                        _db.Baccalaureats.Add(new Baccalaureat { Cne = candidat.Cne, NoteBac = 0.0 });
+                        _db.CouncourEcrits.Add(new ConcourEcrit { Cne = candidat.Cne, NoteGenerale = 0.0, NoteSpecialite = 0.0 });
+                        _db.CouncourOrals.Add(new ConcourOral { Cne = candidat.Cne, Classement = 1 });
+
+                        _db.SaveChanges();
+                    }
+                    catch (Exception ex)
+                    {
+                        ModelState.AddModelError("", "Erreur lors de l'ajout des données liées : " + ex.Message);
+                        return View(candidat);
+                    }
+
+                    // Envoi de l'email
+                    try
+                    {
+                        var fromAddress = new MailAddress("admin@gmail.com", "From ENSAS");
+                        var toAddress = new MailAddress(candidat.Email, "To Name");
+                        const string fromPassword = "adminconcours125498";
+                        const string subject = "Récupération du mot de passe";
+
+                        string body = $@"
+                <div class='container'>
+                    <h2>Bienvenue sur la plateforme ENSAS</h2>
+                    <p>Vous trouverez vos informations ci-dessous :</p>
+                    <strong>Nom :</strong> {candidat.Nom}<br />
+                    <strong>Prénom :</strong> {candidat.Prenom}<br />
+                    <strong>CNE :</strong> {candidat.Cne}<br />
+                    <strong>CIN :</strong> {candidat.Cin}<br />
+                    <strong>Mot de passe :</strong> {candidat.Password}<br />
+                </div>";
+
+                        var smtp = new SmtpClient
+                        {
+                            Host = "smtp.gmail.com",
+                            Port = 587,
+                            EnableSsl = true,
+                            DeliveryMethod = SmtpDeliveryMethod.Network,
+                            Credentials = new NetworkCredential(fromAddress.Address, fromPassword),
+                            Timeout = 60000
+                        };
+
+                        using (var message = new MailMessage(fromAddress, toAddress)
+                        {
+                            Subject = subject,
+                            Body = body,
+                            IsBodyHtml = true
+                        })
+                        {
+                            smtp.Send(message);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        ModelState.AddModelError("", "Erreur lors de l'envoi de l'email : " + ex.Message);
+                    }
+
+                    TempData["message"] = $"Votre mot de passe est : '{candidat.Password}'. Vous le trouverez sur votre email aussi.";
+                    return Redirect("Login");
+                
             }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "Erreur inattendue : " + ex.Message);
+            }
+
             return View(candidat);
         }
 

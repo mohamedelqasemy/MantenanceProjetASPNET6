@@ -39,7 +39,7 @@
 
                 <div class="row d-flex justify-content-center m-b-30">
                     <div class="col-md-10">
-                        <form asp-action="ModifierPersonnel">
+                        <form asp-action="ModifierPersonnel" enctype="multipart/form-data">
 
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                             @Html.HiddenFor(model => model.Cne)
@@ -191,6 +191,25 @@
                                             @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                                         </div>
                                     </div>
+
+                                    @* ajout de champ pour upload cin pdf *@
+                                    <div class="form-group">
+                                        <label asp-for="PhotoCin" class="control-label col-md-12 text-gray font-weight-bold">Photo du Cin (PDF Recto_virso) :</label>
+                                        <div class="col-md-12">
+                                            <input asp-for="PhotoCin" type="file" class="form-control" accept="application/pdf" />
+                                            <span asp-validation-for="PhotoCin" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    @if (!string.IsNullOrEmpty(Model.ExistingPhotoCinPath))
+                                    {
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <a href="~/@Model.ExistingPhotoCinPath" target="_blank" class="btn btn-link">
+                                                    Voir le PDF du CIN
+                                                </a>
+                                            </div>
+                                        </div>
+                                    }
 
                                 </div>
                                 <div class="form-group">

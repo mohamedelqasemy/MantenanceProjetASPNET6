@@ -8,6 +8,6 @@ namespace MantenanceProjetASPNET6.Models
     public class Corbeille
     {
         public int ID { get; set; }
-        public string CNE { get; set; }
+        public string? CNE { get; set; }
     }
 }

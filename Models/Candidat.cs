@@ -21,27 +21,28 @@ namespace MantenanceProjetASPNET6.Models
         [Required]
         public string Email { get; set; }
         public string? Adresse { get; set; }
-        public string Ville { get; set; }
-        public string LieuNaissance { get; set; }
-        public string Telephone { get; set; }
-        public string Nationalite { get; set; }
+        public string? Ville { get; set; }
+        public string? LieuNaissance { get; set; }
+        public string? Telephone { get; set; }
+        public string? Nationalite { get; set; }
         public int Num_dossier { get; set; }
-        public string Sexe { get; set; }
+        public string? Sexe { get; set; }
         public string? Gsm { get; set; }
         public DateTime DateInscription { get; set; }
         public DateTime DateNaissance { get; set; }
-        public string Photo { get; set; }
+        public string? Photo { get; set; }
         public double NotePreselec { get; set; }
         public Boolean Convoque { get; set; }
         public Boolean Admis { get; set; }
         [Required]
         public int Niveau { get; set; }
         public int Verified { get; set; }
-        public string Password { get; set; }
-        public string Matricule { get; set; }
+        public string? Password { get; set; }
+        public string? Matricule { get; set; }
         public Boolean Presence { get; set; }
         public Boolean Conforme { get; set; }
         public Boolean listDatt { get; set; }
+        public string? PhotoCinPath { get; set; }
 
 
         //relation avec la classe annee universitaire oneToOne

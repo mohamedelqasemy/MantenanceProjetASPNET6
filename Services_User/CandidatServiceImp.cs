@@ -41,7 +41,8 @@ namespace MantenanceProjetASPNET6.Services_User
                            DateObtentionBac = b.DateObtentionBac,
                            MentionBac = b.MentionBac,
                            NoteBac = b.NoteBac,
-                           TypeBac = b.TypeBac
+                           TypeBac = b.TypeBac,
+                           ExistingPhotoBacPath = b.PhotoBacPath
                        }).SingleOrDefault();
 
             return bac;
@@ -50,13 +51,31 @@ namespace MantenanceProjetASPNET6.Services_User
         public void setBaccalaureat(BaccalaureatModel bac_saisi)
         {
             Baccalaureat bac = db.Baccalaureats.Find(bac_saisi.Cne);
-            bac.DateObtentionBac = bac_saisi.DateObtentionBac;
-            bac.MentionBac = bac_saisi.MentionBac;
-            bac.NoteBac = bac_saisi.NoteBac;
-            bac.TypeBac = bac_saisi.TypeBac;
+            if (bac != null)
+            {
+                bac.DateObtentionBac = bac_saisi.DateObtentionBac;
+                bac.MentionBac = bac_saisi.MentionBac;
+                bac.NoteBac = bac_saisi.NoteBac;
+                bac.TypeBac = bac_saisi.TypeBac;
 
-            db.Update(bac);
-            db.SaveChanges();
+                if (!string.IsNullOrEmpty(bac_saisi.ExistingPhotoBacPath))
+                {
+                    // Supprimer l'ancien fichier si nécessaire
+                    if (!string.IsNullOrEmpty(bac.PhotoBacPath) && bac.PhotoBacPath != bac_saisi.ExistingPhotoBacPath)
+                    {
+                        string oldFilePath = Path.Combine("wwwroot", bac.PhotoBacPath);
+                        if (System.IO.File.Exists(oldFilePath))
+                        {
+                            System.IO.File.Delete(oldFilePath);
+                        }
+                    }
+                    bac.PhotoBacPath = bac_saisi.ExistingPhotoBacPath;
+                }
+
+                // Mise à jour de la base de données
+                db.Update(bac);
+                db.SaveChanges();
+            }
         }
 
         //############################################ Informations Personnelles  #########################################
@@ -81,8 +100,9 @@ namespace MantenanceProjetASPNET6.Services_User
                            Telephone = c.Telephone,
                            DateNaissance = c.DateNaissance,
                            Nationalite = c.Nationalite,
-                           Photo = c.Photo
-                           
+                           Photo = c.Photo,
+                           ExistingPhotoCinPath = c.PhotoCinPath
+
                        }).SingleOrDefault();
 
             return info;
@@ -91,22 +111,30 @@ namespace MantenanceProjetASPNET6.Services_User
         public void setInfoPersonnel(CandidatModel saisi)
         {
             Candidat candidat = db.Candidats.Find(saisi.Cne);
-            candidat.Cin = saisi.Cin;
-            candidat.Nom = saisi.Nom;
-            candidat.Prenom = saisi.Prenom;
-            candidat.Email = saisi.Email;
-            candidat.Password = saisi.Password;
-            candidat.Sexe = saisi.Sexe;
-            candidat.Ville = saisi.Ville;
-            candidat.Adresse = saisi.Adresse;
-            candidat.LieuNaissance = saisi.LieuNaissance;
-            candidat.Gsm = saisi.Gsm;
-            candidat.Telephone = saisi.Telephone;
-            candidat.DateNaissance = saisi.DateNaissance;
-            candidat.Nationalite = saisi.Nationalite;
+            if (candidat != null)
+            {
+                candidat.Cin = saisi.Cin;
+                candidat.Nom = saisi.Nom;
+                candidat.Prenom = saisi.Prenom;
+                candidat.Email = saisi.Email;
+                candidat.Password = saisi.Password;
+                candidat.Sexe = saisi.Sexe;
+                candidat.Ville = saisi.Ville;
+                candidat.Adresse = saisi.Adresse;
+                candidat.LieuNaissance = saisi.LieuNaissance;
+                candidat.Gsm = saisi.Gsm;
+                candidat.Telephone = saisi.Telephone;
+                candidat.DateNaissance = saisi.DateNaissance;
+                candidat.Nationalite = saisi.Nationalite;
 
-            db.Update(candidat);
-            db.SaveChanges();
+                if (!string.IsNullOrEmpty(saisi.ExistingPhotoCinPath))
+                {
+                    candidat.PhotoCinPath = saisi.ExistingPhotoCinPath;
+                }
+
+                db.Update(candidat);
+                db.SaveChanges();
+            }
         }
 
         //#################################################  FILIERE  #########################################

@@ -21,7 +21,7 @@
 
 <h2 class="text-center mt-3 font-weight-bold">Step 1 : Informations Personnelles</h2>
 
-@using (Html.BeginForm("Step1", "Auth", FormMethod.Post))
+@using (Html.BeginForm("Step1", "Auth", FormMethod.Post, new { enctype = "multipart/form-data" } ))
 {
     <hr class="col-md-7 offset-md-2 mb-4" />
     <div class="row d-flex justify-content-center m-b-30 mt-5">
@@ -103,6 +103,16 @@
                         @Html.ValidationMessageFor(model => model.Ville, "", new { @class = "text-danger" })
                     </div>
                 </div>
+
+                @* ajouter un champ pour uploader le bac pdf *@
+                <div class="form-group">
+                    <label for="CinPdfFile" class="control-label col-md-12 text-white font-weight-bold">Upload du Cin (PDF) :</label>
+                    <div class="col-md-7">
+                        <input type="file" name="CinPdfFile" class="form-control" accept=".pdf" />
+                        <span class="text-danger">@ViewBag.FileUploadError</span>
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10 d-flex justify-content-end">
                         <input type="submit" value=" Next " class="btn btn-primary px-5 mt-2 " />
