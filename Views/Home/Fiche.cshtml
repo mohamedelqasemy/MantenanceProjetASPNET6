@@ -45,7 +45,8 @@
                     Fiche de Convocation du Concours
                 </h2>
 
-                               
+                @if (Model.Admis == true)
+                {
                 @using Microsoft.AspNetCore.Http
                 @inject IHttpContextAccessor HttpContextAccessor
                     <div class="row myborder">
@@ -117,7 +118,15 @@
                             <input class="btn btn-success btn-rounded px-5 py-4 " style="font-size:medium;" type="text" value=" Imprimer la fiche " />
                         </a>
                     </div>
-
+                }
+                else
+                {
+                    <div class="form-group">
+                        <div class="alert alert-danger ml-3 mr-3">
+                            <span>Vous n'êtes pas sélectionné(e) !</span>
+                        </div>
+                    </div>
+                }
                 </div>
         </div>
     </div>

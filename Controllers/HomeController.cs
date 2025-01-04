@@ -288,6 +288,7 @@ namespace MantenanceProjetASPNET6.Controllers
             {
                 return RedirectToAction("Index");
             }
+            //ViewBag.cdsConvocation = data.Admis;
             return View(data);
         }
 

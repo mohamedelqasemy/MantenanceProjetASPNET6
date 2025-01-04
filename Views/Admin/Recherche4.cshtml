@@ -80,10 +80,6 @@
                 Html.Raw($@"
         <button class='btn btn-info conformBtn' id='{model.Cne}'>Conforme</button>
         "));
-                columns.Add().Titled("Convoque").RenderedAs(model =>
-                Html.Raw($@"
-        <button class='btn btn-info convoquerBtn' id='{model.Cne}'>Convoquer</button>
-        "));
                 columns.Add(model => model.Nom).Titled("Nom").Sortable(true);
                 columns.Add(model => model.Prenom).Titled("Prenom").Sortable(true);
                 columns.Add(model => model.Photo).Titled("Photo").RenderedAs(model =>
@@ -97,8 +93,6 @@
                 columns.Add(model => model.Note2).Titled("Note2");
                 columns.Add(model => model.Note3).Titled("Note3");
                 columns.Add(model => model.Note4).Titled("Note4");
-                columns.Add(model => model.Dossier).Titled("Dossier");
-                columns.Add(model => model.Convoque).Titled("Convoque").Sortable(true);
                 columns.Add(model => model.Math).Titled("Math").Sortable(true);
                 columns.Add(model => model.Specialite).Titled("Specialite");
                 columns.Add(model => model.Filiere).Titled("Filiere").Sortable(true);
@@ -188,20 +182,6 @@
             });
 
         });
-
-        //convoquer button
-           $(document).on("click", ".convoquerBtn", function () {
-               var id = $(this).attr("id");
-                      // Appel AJAX pour mettre à jour les données
-                   $.get("/Admin/convoqueStudent", {cne: id,Niveau: 4 })
-                .done(function (data) {
-                    window.location.reload();
-                })
-                .fail(function(xhr, status, error) {
-                    console.error("Erreur lors de la mise à jour:", error);
-                    alert("Une erreur est survenue lors de la mise à jour.");
-                });
-           });
     });
 </script>
 

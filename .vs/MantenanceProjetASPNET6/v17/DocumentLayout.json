@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\New_projet_.NET6\\MantenanceProjetASPNET6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\new_projet_.net6\\mantenanceprojetaspnet6\\services\\selectionserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:services\\selectionserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\new_projet_.net6\\mantenanceprojetaspnet6\\views\\admin\\recherche4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\recherche4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\new_projet_.net6\\mantenanceprojetaspnet6\\views\\admin\\listfinale4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\listfinale4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\new_projet_.net6\\mantenanceprojetaspnet6\\views\\admin\\listefinale3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\listefinale3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\new_projet_.net6\\mantenanceprojetaspnet6\\views\\admin\\recherche3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\recherche3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ListFinale4.cshtml",
-              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\New_projet_.NET6\\MantenanceProjetASPNET6\\Views\\Admin\\ListFinale4.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\ListFinale4.cshtml",
-              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\New_projet_.NET6\\MantenanceProjetASPNET6\\Views\\Admin\\ListFinale4.cshtml",
-              "RelativeToolTip": "Views\\Admin\\ListFinale4.cshtml",
-              "ViewState": "AgIAABQAAAAAAAAAAAAgwFIAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-04T16:37:12.607Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ListeFinale3.cshtml",
-              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\New_projet_.NET6\\MantenanceProjetASPNET6\\Views\\Admin\\ListeFinale3.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\ListeFinale3.cshtml",
-              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\New_projet_.NET6\\MantenanceProjetASPNET6\\Views\\Admin\\ListeFinale3.cshtml",
-              "RelativeToolTip": "Views\\Admin\\ListeFinale3.cshtml",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAgwE4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-04T15:36:49.733Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SelectionServiceImp.cs",
-              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\New_projet_.NET6\\MantenanceProjetASPNET6\\Services\\SelectionServiceImp.cs",
-              "RelativeDocumentMoniker": "Services\\SelectionServiceImp.cs",
-              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\New_projet_.NET6\\MantenanceProjetASPNET6\\Services\\SelectionServiceImp.cs",
-              "RelativeToolTip": "Services\\SelectionServiceImp.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAApwHwAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T15:38:12.547Z",
+              "Title": "Recherche4.cshtml",
+              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\New_projet_.NET6\\MantenanceProjetASPNET6\\Views\\Admin\\Recherche4.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Recherche4.cshtml",
+              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\New_projet_.NET6\\MantenanceProjetASPNET6\\Views\\Admin\\Recherche4.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Recherche4.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFcAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-04T19:49:15.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Recherche3.cshtml",
+              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\New_projet_.NET6\\MantenanceProjetASPNET6\\Views\\Admin\\Recherche3.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Recherche3.cshtml",
+              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\New_projet_.NET6\\MantenanceProjetASPNET6\\Views\\Admin\\Recherche3.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Recherche3.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGEAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-04T19:49:14.653Z",
               "EditorCaption": ""
             }
           ]
