@@ -49,6 +49,7 @@
                 <option value="Lic.st-DEUG">Liscence ST - DEUG</option>
             </select>
         </div>
+
         <div class="col-md-3">
             <select class="form-control" name="filiere" id="filiere">
                 <option selected value="0">Choix Filiere</option>
@@ -58,8 +59,13 @@
                 <option value="GPMC">Gpmc</option>
             </select>
         </div>
+
         <div class="col-md-3 offset-2 mt-5 mb-4">
-            <button id="search" class="btn btn-primary btn-block py-2">Rechercher</button>
+            <button id="search" class="btn btn-primary btn-block  py-2">Rechercher</button>
+        </div>
+
+        <div class="col-md-3 offset-2 mt-5 mb-4 ">
+            <button id="export" onclick="exportTableToExcel('tbody')" class="btn btn-info btn-block py-2">Exporter vers Excel</button>
         </div>
     </div>
 
@@ -79,19 +85,28 @@
                     "));
                 columns.Add().Titled("Convoque").RenderedAs(model =>
                 Html.Raw($@"
-        <button class='btn btn-info convoquerBtn' id='{model.Cne}'>Convoquer</button>
+                    <button class='btn btn-info convoquerBtn' id='{model.Cne}'>Convoquer</button>
                     "));
                 columns.Add(model => model.Nom).Titled("Nom").Sortable(true);
                 columns.Add(model => model.Prenom).Titled("Prenom").Sortable(true);
-                columns.Add(model => model.Cne).Titled("CNE").Sortable(true);
-                columns.Add(model => model.NoteBac).Titled("Note Bac");
-                columns.Add(model => model.Type_dip).Titled("Type Diplôme");
-                columns.Add(model => model.Specialite).Titled("Spécialité");
-                columns.Add(model => model.Convoque).Titled("Convoqué");
-                columns.Add(model => model.NonConforme).Titled("Non Conforme");
-                columns.Add(model => model.Admis).Titled("Admis");
                 columns.Add(model => model.Photo).Titled("Photo").RenderedAs(model =>
                 Html.Raw($"<img src='/candidatImages/{model.Photo}' style='width:50px; height:50px; border-radius:50%;' />"));
+                columns.Add(model => model.Sexe).Titled("Sexe").Sortable(true);
+                columns.Add(model => model.NoteBac).Titled("NoteBac").Sortable(true);
+                columns.Add(model => model.Type_dip).Titled("Type de diplome").Sortable(true);
+                columns.Add(model => model.Specialite).Titled("Specialite Diplôme");
+                columns.Add(model => model.Diplome1).Titled("Diplome1");
+                columns.Add(model => model.Note1).Titled("Note1");
+                columns.Add(model => model.Note2).Titled("Note2");
+                columns.Add(model => model.Note3).Titled("Note3");
+                columns.Add(model => model.Note4).Titled("Note4");
+                columns.Add(model => model.Dossier).Titled("Dossier");
+                columns.Add(model => model.Convoque).Titled("Convoque").Sortable(true);
+                columns.Add(model => model.Math).Titled("Math").Sortable(true);
+                columns.Add(model => model.Specialite).Titled("Specialite");
+                columns.Add(model => model.Filiere).Titled("Filiere").Sortable(true);
+                columns.Add(model => model.Admis).Titled("Admis").Sortable(true);
+                columns.Add(model => model.NonConforme).Titled("Non Conforme").Sortable(true);
             })
             .Pageable(pager =>
             {

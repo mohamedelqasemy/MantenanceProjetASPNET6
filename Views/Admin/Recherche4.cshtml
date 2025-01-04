@@ -1,8 +1,13 @@
-﻿
+﻿@using NonFactors.Mvc.Grid;
+@model IEnumerable<MantenanceProjetASPNET6.Models.SearchModel3>;
 @{
     ViewData["Title"] = "Recherche4";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+
+<head>
+    <link href="~/css/mvc-grid/mvc-grid.css" rel="stylesheet" />
+</head>
 
 <div class="container-fluid">
 
@@ -57,64 +62,94 @@
         </div>
 
         <div class="col-md-3 offset-2 mt-5 mb-4 ">
-            <button id="export" onclick="exportTableToExcel('maTable')" class="btn btn-info btn-block py-2">Exporter vers Excel</button>
+            <button id="export" onclick="exportTableToExcel('tbody')" class="btn btn-info btn-block py-2">Exporter vers Excel</button>
         </div>
     </div>
-    <table class="table table-bordered table-responsive" id="maTable">
-        <tr>
-            <th class="text-center">Delete</th>
-            <th class="text-center">Conforme</th>
-            <th class="text-center">Nom</th>
-            <th class="text-center">Prenom</th>
-            <th class="text-center">Sexe</th>
-            <th class="text-center">NoteBac</th>
-            <th class="text-center">TypeDiplôme </th>
-            <th class="text-center">Diplome 1</th>
-            <th class="text-center">Diplome 2</th>
-            <th class="text-center">Diplome 3</th>
-            <th class="text-center">Note1</th>
-            <th class="text-center">Note2</th>
-            <th class="text-center">Note3</th>
-            <th class="text-center">Note4</th>
-            <th class="text-center">Dossier</th>
-            <th class="text-center">Convoque</th>
-            <th class="text-center">Filiere</th>
-            <th class="text-center">Admis</th>
-            <th class="text-center">Non Conforme</th>
-        </tr>
-        <tbody id="tbody">
-            @foreach (var x in Model)
+
+    <div class="grid-container">
+        @(Html.Grid(Model)
+            .Build(columns =>
             {
-                <tr>
-                    <td class="text-center"><button class="btn btn-danger deleteBtn" id="@x.Cne">Delete</button></td>
-                    <td class="text-center"><button class="btn btn-info conformBtn" id="@x.Cne">Conforme</button></td>
-                    <td class="text-center">@x.Nom</td>
-                    <td class="text-center">@x.Prenom</td>
-                    <td class="text-center">@x.Sexe</td>
-                    <td class="text-center">@x.NoteBac</td>
-                    <td class="text-center">@x.Type_dip</td>
-                    <td class="text-center"><a href="../../DiplomeScanné/@x.Diplome1" download>@x.Diplome1</a></td>
-                    <td class="text-center"><a href="../../DiplomeScanné/@x.Diplome2" download>@x.Diplome2</a></td>
-                    <td class="text-center"><a href="../../DiplomeScanné/@x.Diplome3" download>@x.Diplome3</a></td>
-                    <td class="text-center">@x.Note1</td>
-                    <td class="text-center">@x.Note2</td>
-                    <td class="text-center">@x.Note3</td>
-                    <td class="text-center">@x.Note4</td>
-                    <td class="text-center">@x.Dossier</td>
-                    <td class="text-center">@x.Convoque</td>
-                    <td class="text-center">@x.Filiere</td>
-                    <td class="text-center">@x.Admis</td>
-                    <td class="text-center">@x.NonConforme</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+                // Ajout de la colonne Actions avec les boutons
+                columns.Add().Titled("Delete").RenderedAs(model =>
+                Html.Raw($@"
+        <button class='btn btn-danger deleteBtn' id='{model.Cne}'>Delete</button>
+        "));
+                // Ajout de la colonne Actions avec les boutons
+                columns.Add().Titled("Conforme").RenderedAs(model =>
+                Html.Raw($@"
+        <button class='btn btn-info conformBtn' id='{model.Cne}'>Conforme</button>
+        "));
+                columns.Add().Titled("Convoque").RenderedAs(model =>
+                Html.Raw($@"
+        <button class='btn btn-info convoquerBtn' id='{model.Cne}'>Convoquer</button>
+        "));
+                columns.Add(model => model.Nom).Titled("Nom").Sortable(true);
+                columns.Add(model => model.Prenom).Titled("Prenom").Sortable(true);
+                columns.Add(model => model.Photo).Titled("Photo").RenderedAs(model =>
+                Html.Raw($"<img src='/candidatImages/{model.Photo}' style='width:50px; height:50px; border-radius:50%;' />"));
+                columns.Add(model => model.Sexe).Titled("Sexe").Sortable(true);
+                columns.Add(model => model.NoteBac).Titled("NoteBac").Sortable(true);
+                columns.Add(model => model.Type_dip).Titled("Type de diplome").Sortable(true);
+                columns.Add(model => model.Specialite).Titled("Specialite Diplôme");
+                columns.Add(model => model.Diplome1).Titled("Diplome1");
+                columns.Add(model => model.Note1).Titled("Note1");
+                columns.Add(model => model.Note2).Titled("Note2");
+                columns.Add(model => model.Note3).Titled("Note3");
+                columns.Add(model => model.Note4).Titled("Note4");
+                columns.Add(model => model.Dossier).Titled("Dossier");
+                columns.Add(model => model.Convoque).Titled("Convoque").Sortable(true);
+                columns.Add(model => model.Math).Titled("Math").Sortable(true);
+                columns.Add(model => model.Specialite).Titled("Specialite");
+                columns.Add(model => model.Filiere).Titled("Filiere").Sortable(true);
+                columns.Add(model => model.Admis).Titled("Admis").Sortable(true);
+                columns.Add(model => model.NonConforme).Titled("Non Conforme").Sortable(true);
+            })
+            .Pageable(pager =>
+            {
+                pager.RowsPerPage = 10;
+            })
+            .Filterable()
+            .Sortable()
+            .Id("tbody")
+            )
+    </div>
 
 </div>
 <!-- /.container-fluid -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="~/js/mvc-grid/mvc-grid.js"></script>
 <script>
+    document.querySelectorAll(".mvc-grid").forEach(Element => new MvcGrid(Element));
+
+    //######################## Export to EXCELL #########
+    function exportTableToExcel(tableID) {
+        var downloadLink;
+        var dataType = 'application/vnd.ms-excel';
+        var tableSelect = document.getElementById(tableID);
+        var tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+        // Specify file name
+        filename = "ListeCandidats_Recherche_3A.xls";
+        // Create download link element
+        downloadLink = document.createElement("a");
+        document.body.appendChild(downloadLink);
+        if (navigator.msSaveOrOpenBlob) {
+            var blob = new Blob(['\ufeff', tableHTML], {
+                type: dataType
+            });
+            navigator.msSaveOrOpenBlob(blob, filename);
+        } else {
+            // Create a link to the file
+            downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+            // Setting the file name
+            downloadLink.download = filename;
+            //triggering the function
+            downloadLink.click();
+        }
+    }
+    //#########################################################
+
     $(document).ready(function () {
         //search button
         $("#search").click(function () {
@@ -128,23 +163,45 @@
         //delete button
         $(document).on("click", ".deleteBtn", function () {
             var id = $(this).attr("id");
-            $.get("/Admin/deleteStudent", { cne: id, Niveau: 4 }, function (data) {
-                $("#tbody").empty();
-                $.each(data, function (index, row) {
-                    $("#tbody").append("<tr><td><button class='btn btn-danger deleteBtn' id=" + row.cne + ">Delete</button></td><td><button class='btn btn-info conformBtn' id=" + row.cne + ">Conforme</button></td><td>" + row.nom + "</td><td>" + row.prenom + "</td><td>" + row.sexe + "</td><td>" + row.noteBac + "</td><td>" + row.type_dip + "</td><td><a href=\"../../DiplomeScanné/" + row.diplome1 + "\" download>" + row.diplome1 + "</a></td><td><a href=\"../../DiplomeScanné/" + row.diplome2 + "\" download>" + row.diplome2 + "</a></td><td><a href=\"../../DiplomeScanné/" + row.diplome3 + "\" download>" + row.diplome3 + "</a></td><td>" + row.note1 + "</td><td>" + row.note2 + "</td><td>" + row.note3 + "</td><td>" + row.note4 + "</td><td>" + row.dossier + "</td><td>" + row.convoque + "</td><td>" + row.filiere + "</td><td>" + row.admis + "</td><td>" + row.nonConforme + "</td></tr>");
-                });
+            // Appel AJAX pour mettre à jour les données
+               $.get("/Admin/deleteStudent", {cne: id,Niveau: 4 })
+            .done(function (data) {
+                window.location.reload();
+            })
+            .fail(function(xhr, status, error) {
+                console.error("Erreur lors de la mise à jour:", error);
+                alert("Une erreur est survenue lors de la mise à jour.");
             });
+
         });
         //conform button
         $(document).on("click", ".conformBtn", function () {
             var id = $(this).attr("id");
-            $.get("/Admin/conformeStudent", { cne: id, Niveau: 4 }, function (data) {
-                $("#tbody").empty();
-                $.each(data, function (index, row) {
-                    $("#tbody").append("<tr><td><button class='btn btn-danger deleteBtn' id=" + row.cne + ">Delete</button></td><td><button class='btn btn-info conformBtn' id=" + row.cne + ">Conforme</button></td><td>" + row.nom + "</td><td>" + row.prenom + "</td><td>" + row.sexe + "</td><td>" + row.noteBac + "</td><td>" + row.type_dip + "</td><td><a href=\"../../DiplomeScanné/" + row.diplome1 + "\" download>" + row.diplome1 + "</a></td><td><a href=\"../../DiplomeScanné/" + row.diplome2 + "\" download>" + row.diplome2 + "</a></td><td><a href=\"../../DiplomeScanné/" + row.diplome3 + "\" download>" + row.diplome3 + "</a></td><td>" + row.note1 + "</td><td>" + row.note2 + "</td><td>" + row.note3 + "</td><td>" + row.note4 + "</td><td>" + row.dossier + "</td><td>" + row.convoque + "</td><td>" + row.filiere + "</td><td>" + row.admis + "</td><td>" + row.nonConforme + "</td></tr>");
-                });
+            // Appel AJAX pour mettre à jour les données
+               $.get("/Admin/conformeStudent", {cne: id,Niveau: 4 })
+            .done(function (data) {
+                window.location.reload();
+            })
+            .fail(function(xhr, status, error) {
+                console.error("Erreur lors de la mise à jour:", error);
+                alert("Une erreur est survenue lors de la mise à jour.");
             });
+
         });
+
+        //convoquer button
+           $(document).on("click", ".convoquerBtn", function () {
+               var id = $(this).attr("id");
+                      // Appel AJAX pour mettre à jour les données
+                   $.get("/Admin/convoqueStudent", {cne: id,Niveau: 4 })
+                .done(function (data) {
+                    window.location.reload();
+                })
+                .fail(function(xhr, status, error) {
+                    console.error("Erreur lors de la mise à jour:", error);
+                    alert("Une erreur est survenue lors de la mise à jour.");
+                });
+           });
     });
 </script>
 
