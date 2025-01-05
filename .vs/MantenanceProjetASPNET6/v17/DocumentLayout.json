@@ -1,42 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\",
+  "WorkspaceRootPath": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\ds2_charge\\mantenanceprojetaspnet6\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\convoque_test\\mantenanceprojetaspnet6\\views\\admin\\convoque4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\convoque4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\ds2_charge\\mantenanceprojetaspnet6\\views\\auth\\step2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\auth\\step2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\ds2_charge\\mantenanceprojetaspnet6\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\convoque_test\\mantenanceprojetaspnet6\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\ds2_charge\\mantenanceprojetaspnet6\\views\\auth\\step1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\auth\\step1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\ds2_charge\\mantenanceprojetaspnet6\\views\\admin\\listefinale3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\listefinale3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\ds2_charge\\mantenanceprojetaspnet6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\ds2_charge\\mantenanceprojetaspnet6\\services\\search3serviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\convoque_test\\mantenanceprojetaspnet6\\services\\search3serviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:services\\search3serviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\ds2_charge\\mantenanceprojetaspnet6\\views\\admin\\convoque3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\convoque3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\ds2_charge\\mantenanceprojetaspnet6\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,122 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAswDEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T10:52:35.954Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-03T10:52:37.334Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAN8AAAAAAAAAAAAlwO4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T21:38:26.855Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ListeFinale3.cshtml",
-              "DocumentMoniker": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Views\\Admin\\ListeFinale3.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\ListeFinale3.cshtml",
-              "ToolTip": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Views\\Admin\\ListeFinale3.cshtml",
-              "RelativeToolTip": "Views\\Admin\\ListeFinale3.cshtml",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
+              "Title": "Convoque4.cshtml",
+              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\Views\\Admin\\Convoque4.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Convoque4.cshtml",
+              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\Views\\Admin\\Convoque4.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Convoque4.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-04T22:12:15.141Z",
+              "WhenOpened": "2025-01-05T13:31:41.423Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Convoque3.cshtml",
-              "DocumentMoniker": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Views\\Admin\\Convoque3.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\Convoque3.cshtml",
-              "ToolTip": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Views\\Admin\\Convoque3.cshtml",
-              "RelativeToolTip": "Views\\Admin\\Convoque3.cshtml",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAEMAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-04T21:44:11.21Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Search3ServiceImp.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Services\\Search3ServiceImp.cs",
-              "RelativeDocumentMoniker": "Services\\Search3ServiceImp.cs",
-              "ToolTip": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Services\\Search3ServiceImp.cs",
-              "RelativeToolTip": "Services\\Search3ServiceImp.cs",
-              "ViewState": "AgIAAIsAAAAAAAAAAAAQwJsAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T21:40:00.179Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAIUAAAAAAAAAAAAQwJ4AAAAgAAAAAAAAAA==",
+              "Title": "Search3ServiceImp.cs",
+              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\Services\\Search3ServiceImp.cs",
+              "RelativeDocumentMoniker": "Services\\Search3ServiceImp.cs",
+              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\Services\\Search3ServiceImp.cs",
+              "RelativeToolTip": "Services\\Search3ServiceImp.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAAAKoAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T21:33:44.666Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Step1.cshtml",
-              "DocumentMoniker": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Views\\Auth\\Step1.cshtml",
-              "RelativeDocumentMoniker": "Views\\Auth\\Step1.cshtml",
-              "ToolTip": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Views\\Auth\\Step1.cshtml",
-              "RelativeToolTip": "Views\\Auth\\Step1.cshtml",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGoAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-04T20:14:23.934Z",
+              "WhenOpened": "2025-01-05T13:23:16.045Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Step2.cshtml",
-              "DocumentMoniker": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Views\\Auth\\Step2.cshtml",
-              "RelativeDocumentMoniker": "Views\\Auth\\Step2.cshtml",
-              "ToolTip": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\Views\\Auth\\Step2.cshtml",
-              "RelativeToolTip": "Views\\Auth\\Step2.cshtml",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFcAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-04T20:14:17.823Z",
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAQwFwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T21:33:44.666Z",
               "EditorCaption": ""
             }
           ]

@@ -3800,6 +3800,7 @@ wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 wwwroot\Rotativa\help-wkhtmltopdf.txt
 wwwroot\Rotativa\wkhtmltopdf.exe
+wwwroot\uploads\baccalaureats\2518630c-29a4-46a5-bdd3-f56f059e2144_etapeProjet.pdf
 wwwroot\uploads\baccalaureats\2fd67e23-9de9-40f1-b9dd-6e080b82b76a_CIN_Internet.pdf
 wwwroot\uploads\baccalaureats\3df8bfd5-2cd7-46ce-af3e-f1f8453fe867_etapeProjet.pdf
 wwwroot\uploads\baccalaureats\483351c6-f036-400a-821f-ad052ba44b3f_CC-0FEAC8202C.pdf
@@ -3811,4 +3812,6 @@ wwwroot\uploads\cin\439a2c36-04f4-4087-b080-9b46ca1fe04e_CIN_Internet.pdf
 wwwroot\uploads\cin\45897e68-1db9-4ce4-a0ae-a5e41cec9b84_CIN_Internet.pdf
 wwwroot\uploads\cin\529e532d-791d-4ea8-b7b0-0d5fa9569c25_CIN_Internet.pdf
 wwwroot\uploads\cin\8f769b43-5fb7-46b5-a7b9-83c76f69b2c2_CIN_Internet.pdf
+wwwroot\uploads\cin\a4f012c1-5af2-4356-88b6-6224d66633a9_CIN_Internet.pdf
 wwwroot\uploads\cin\e5541cec-365d-4360-87de-145822199e81_CIN_Internet.pdf
+wwwroot\uploads\cni\2b29f6c1-c45e-46e3-86b2-dee8c7c025ca_catgoMedicamrentas.pdf

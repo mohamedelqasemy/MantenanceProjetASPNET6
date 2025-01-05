@@ -83,7 +83,8 @@ namespace MantenanceProjetASPNET6.Controllers
         {
             if (isAdmin())
             {
-                var x = search.generalSearch(3);
+                var x = search.generalSearch(3)
+                      .Where(i => i.NonConforme == false);
                 return View(x);
             }
             return RedirectToAction("Login", "AdminAuth");
@@ -92,7 +93,8 @@ namespace MantenanceProjetASPNET6.Controllers
         {
             if (isAdmin())
             {
-                var x = search.generalSearch(4);
+                var x = search.generalSearch(4)
+                      .Where(i => i.NonConforme == false);
                 return View(x);
             }
             return RedirectToAction("Login", "AdminAuth");

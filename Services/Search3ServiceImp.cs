@@ -168,6 +168,7 @@ namespace MantenanceProjetASPNET6.Services
             Corbeille corb = new Corbeille();
             corb.CNE = cne;
             db.Corbeilles.Add(corb);
+            cand.Conforme = true;
             db.SaveChanges();
             var x = this.info(niveau);
             return x;
