@@ -50,7 +50,7 @@ namespace MantenanceProjetASPNET6.Controllers
         }
 
         [HttpPost]
-        public ActionResult Step1(InfoPersoModel candidat, IFormFile CniPdfFile)
+        public ActionResult Step1(InfoPersoModel candidat, IFormFile CinPdfFile)
         {
             string cne = HttpContext.Session.GetString("cne");
 
@@ -72,10 +72,10 @@ namespace MantenanceProjetASPNET6.Controllers
                 originalCandidat.Ville = candidat.Ville;
 
                 // Gestion du fichier PDF de la CNI
-                if (CniPdfFile != null)
+                if (CinPdfFile != null)
                 {
                     // Vérifier le type MIME
-                    if (CniPdfFile.ContentType != "application/pdf")
+                    if (CinPdfFile.ContentType != "application/pdf")
                     {
                         ModelState.AddModelError("", "Seuls les fichiers PDF sont autorisés.");
                         return View(candidat);
@@ -89,7 +89,7 @@ namespace MantenanceProjetASPNET6.Controllers
                     }
 
                     // Nom unique pour éviter les conflits
-                    var uniqueFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(CniPdfFile.FileName);
+                    var uniqueFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(CinPdfFile.FileName);
                     var filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
                     // Supprimer l'ancien fichier si nécessaire
@@ -105,7 +105,7 @@ namespace MantenanceProjetASPNET6.Controllers
                     // Enregistrer le fichier
                     using (var stream = new FileStream(filePath, FileMode.Create))
                     {
-                        CniPdfFile.CopyTo(stream);
+                        CinPdfFile.CopyTo(stream);
                     }
 
                     // Enregistrer le chemin relatif dans le modèle
@@ -126,9 +126,6 @@ namespace MantenanceProjetASPNET6.Controllers
                 // Passer à l'étape suivante
                 HttpContext.Session.SetInt32("steps", 2);
                 return RedirectToAction("Step2");
-            
-
-            return View(candidat);
         }
 
 
