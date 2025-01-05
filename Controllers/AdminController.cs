@@ -451,26 +451,26 @@ namespace MantenanceProjetASPNET6.Controllers
 
         public JsonResult GetListePrincipal(string filiere)
         {
-            var data = selection.getListPrincipale(filiere);
+            var data = selection.getListPrincipale3(filiere);
             return Json(data);
         }
 
 
         public JsonResult GetListeAttente(string filiere)
         {
-            var data = selection.getListAttente(filiere);
+            var data = selection.getListAttente3(filiere);
             return Json(data);
         }
 
         public JsonResult GetListePrincipalSup(string filiere)
         {
-            var data = selection.getListPrincipaleSup(filiere);
+            var data = selection.getListPrincipale4(filiere);
             return Json(data);
         }
 
         public JsonResult GetListeAttenteSup(string filiere)
         {
-            var data = selection.getListAttenteSup(filiere);
+            var data = selection.getListAttente4(filiere);
             return Json(data);
         }
 

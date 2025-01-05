@@ -261,7 +261,7 @@ namespace MantenanceProjetASPNET6.Migrations
                             Cin = "test5",
                             Conforme = false,
                             Convoque = false,
-                            DateInscription = new DateTime(2025, 1, 5, 21, 40, 58, 482, DateTimeKind.Local).AddTicks(6658),
+                            DateInscription = new DateTime(2025, 1, 5, 23, 36, 50, 140, DateTimeKind.Local).AddTicks(8006),
                             DateNaissance = new DateTime(1995, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "xxxx@gmail.com",
                             Gsm = "0612345678",

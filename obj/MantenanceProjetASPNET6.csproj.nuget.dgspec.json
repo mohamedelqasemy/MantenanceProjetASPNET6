@@ -1,28 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\NetProjet\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj": {}
+    "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj": {}
   },
   "projects": {
-    "D:\\NetProjet\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj": {
+    "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NetProjet\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj",
+        "projectUniqueName": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj",
         "projectName": "MantenanceProjetASPNET6",
-        "projectPath": "D:\\NetProjet\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj",
-        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "D:\\NetProjet\\MantenanceProjetASPNET6\\obj\\",
+        "projectPath": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\27.2.2\\ToolboxNuGetPackages",
-          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages"
+          "D:\\Download folders\\Telerik\\ToolboxNuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for WPF.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WPF.config"
         ],
         "originalTargetFrameworks": [
@@ -31,8 +29,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.telerik.com/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -48,7 +45,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -116,7 +113,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

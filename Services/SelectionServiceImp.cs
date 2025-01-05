@@ -49,6 +49,56 @@ namespace MantenanceProjetASPNET6.Services
             return null;
         }
 
+        public IEnumerable<ListFinal> getListAttente3(string filiere)
+        {
+            var x = (from c in db.Candidats
+
+                     join a in db.Filieres on c.ID equals a.ID
+                     join n in db.CouncourEcrits on c.Cne equals n.Cne
+                     join an in db.AnneeUniversitaires on c.Cne equals an.Cne
+                     where c.Niveau == 3
+                     where a.Nom == filiere
+                     where c.SelectionFinale == SelectionFinale.ListeAttente
+                     select new ListFinal
+                     {
+                         Nom = c.Nom,
+                         Prenom = c.Prenom,
+                         Matricule = c.Matricule,
+
+                         Num_dossier = c.Num_dossier,
+
+                         Cin = c.Cin,
+
+
+                     }).ToList();
+            return x;
+        }
+
+        public IEnumerable<ListFinal> getListAttente4(string filiere)
+        {
+            var x = (from c in db.Candidats
+
+                     join a in db.Filieres on c.ID equals a.ID
+                     join n in db.CouncourEcrits on c.Cne equals n.Cne
+                     join an in db.AnneeUniversitaires on c.Cne equals an.Cne
+                     where c.Niveau == 4
+                     where a.Nom == filiere
+                     where c.SelectionFinale == SelectionFinale.ListeAttente
+                     select new ListFinal
+                     {
+                         Nom = c.Nom,
+                         Prenom = c.Prenom,
+                         Matricule = c.Matricule,
+
+                         Num_dossier = c.Num_dossier,
+
+                         Cin = c.Cin,
+
+
+                     }).ToList();
+            return x;
+        }
+
         public IEnumerable<ListFinal> getListAttente(string filiere)
         {
             // var data = db.Candidats.ToList();//.Include("Filiere").Where(c => c.Admis==true && c.Filiere.Nom.Equals(filiere)).ToList();
@@ -132,6 +182,57 @@ namespace MantenanceProjetASPNET6.Services
                 return null;
             }
         }
+
+        public IEnumerable<ListFinal> getListPrincipale3(string filiere)
+        {
+            var x = (from c in db.Candidats
+
+                     join a in db.Filieres on c.ID equals a.ID
+                     join an in db.AnneeUniversitaires on c.Cne equals an.Cne
+
+                     where a.Nom == filiere
+                     where c.Niveau == 3
+                     where c.SelectionFinale == SelectionFinale.ListePrincipale
+                     select new ListFinal
+                     {
+                         Nom = c.Nom,
+                         Prenom = c.Prenom,
+                         Matricule = c.Matricule,
+
+                         Num_dossier = c.Num_dossier,
+
+                         Cin = c.Cin,
+
+
+                     }).ToList();
+            return x;
+        }
+        public IEnumerable<ListFinal> getListPrincipale4(string filiere)
+        {
+            var x = (from c in db.Candidats
+
+                     join a in db.Filieres on c.ID equals a.ID
+                     join an in db.AnneeUniversitaires on c.Cne equals an.Cne
+
+                     where a.Nom == filiere
+                     where c.Niveau == 4
+                     where c.SelectionFinale == SelectionFinale.ListePrincipale
+                     select new ListFinal
+                     {
+                         Nom = c.Nom,
+                         Prenom = c.Prenom,
+                         Matricule = c.Matricule,
+
+                         Num_dossier = c.Num_dossier,
+
+                         Cin = c.Cin,
+
+
+                     }).ToList();
+            return x;
+        }
+
+
 
         public IEnumerable<ListFinal> getListPrincipale(string filiere)
         {
