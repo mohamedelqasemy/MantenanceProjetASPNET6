@@ -1,17 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\",
+  "WorkspaceRootPath": "D:\\ProjetDotNet\\MantenanceProjetASPNET6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\convoque_test\\mantenanceprojetaspnet6\\views\\admin\\convoque4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\convoque4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\mantenanceprojetaspnet6\\views\\admin\\listsatutconvoquer4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\listsatutconvoquer4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\convoque_test\\mantenanceprojetaspnet6\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\mantenanceprojetaspnet6\\views\\admin\\listsatutconvoquer3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\listsatutconvoquer3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\mantenanceprojetaspnet6\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\convoque_test\\mantenanceprojetaspnet6\\services\\search3serviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\mantenanceprojetaspnet6\\views\\admin\\convoque4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\convoque4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\mantenanceprojetaspnet6\\services\\search3serviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:services\\search3serviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -27,38 +35,63 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ListSatutConvoquer4.cshtml",
+              "DocumentMoniker": "D:\\ProjetDotNet\\MantenanceProjetASPNET6\\Views\\Admin\\ListSatutConvoquer4.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\ListSatutConvoquer4.cshtml",
+              "ToolTip": "D:\\ProjetDotNet\\MantenanceProjetASPNET6\\Views\\Admin\\ListSatutConvoquer4.cshtml",
+              "RelativeToolTip": "Views\\Admin\\ListSatutConvoquer4.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T14:45:09.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ListSatutConvoquer3.cshtml",
+              "DocumentMoniker": "D:\\ProjetDotNet\\MantenanceProjetASPNET6\\Views\\Admin\\ListSatutConvoquer3.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\ListSatutConvoquer3.cshtml",
+              "ToolTip": "D:\\ProjetDotNet\\MantenanceProjetASPNET6\\Views\\Admin\\ListSatutConvoquer3.cshtml",
+              "RelativeToolTip": "Views\\Admin\\ListSatutConvoquer3.cshtml",
+              "ViewState": "AgIAACAAAAAAAAAAAAAuwDsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T14:44:41.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Convoque4.cshtml",
-              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\Views\\Admin\\Convoque4.cshtml",
+              "DocumentMoniker": "D:\\ProjetDotNet\\MantenanceProjetASPNET6\\Views\\Admin\\Convoque4.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\Convoque4.cshtml",
-              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\Views\\Admin\\Convoque4.cshtml",
+              "ToolTip": "D:\\ProjetDotNet\\MantenanceProjetASPNET6\\Views\\Admin\\Convoque4.cshtml",
               "RelativeToolTip": "Views\\Admin\\Convoque4.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-05T13:31:41.423Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Search3ServiceImp.cs",
-              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\Services\\Search3ServiceImp.cs",
+              "DocumentMoniker": "D:\\ProjetDotNet\\MantenanceProjetASPNET6\\Services\\Search3ServiceImp.cs",
               "RelativeDocumentMoniker": "Services\\Search3ServiceImp.cs",
-              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\Services\\Search3ServiceImp.cs",
+              "ToolTip": "D:\\ProjetDotNet\\MantenanceProjetASPNET6\\Services\\Search3ServiceImp.cs",
               "RelativeToolTip": "Services\\Search3ServiceImp.cs",
               "ViewState": "AgIAAJYAAAAAAAAAAAAAAKoAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T13:23:16.045Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T13:23:16.045Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
+              "DocumentMoniker": "D:\\ProjetDotNet\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\ProjetDotNet\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
               "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAQwFwAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAPcAAAAAAAAAAAAQwAsBAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-04T21:33:44.666Z",
               "EditorCaption": ""

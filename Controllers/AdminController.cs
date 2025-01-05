@@ -253,7 +253,7 @@ namespace MantenanceProjetASPNET6.Controllers
                 return RedirectToAction("Login", "AdminAuth");
             }
             var candidats = new List<Candidat>();
-            candidats = _context.Candidats.ToList();
+            candidats = _context.Candidats.Where(c => c.Niveau==3).ToList();
             return View(candidats);
         }
         /*################################################# FIN ListSatutConvoquer3 ############################################# */
@@ -265,7 +265,7 @@ namespace MantenanceProjetASPNET6.Controllers
                 return RedirectToAction("Login", "AdminAuth");
             }
             var candidats = new List<Candidat>();
-            candidats = _context.Candidats.ToList();
+            candidats = _context.Candidats.Where(c => c.Niveau == 4).ToList();
             return View(candidats);
         }
         /*################################################# FIN ListSatutConvoquer4 ############################################# */

@@ -48,6 +48,7 @@
         .Filterable()
         .Sortable()
         .Css("table table-striped table-bordered")
+        .Id("my-grid")
         )
 </div>
 
@@ -78,7 +79,7 @@
         var tableHTML = tableClone.outerHTML.replace(/ /g, '%20');
 
         // Nom du fichier Excel
-        var filename = "ListeCandidats_Recherche_3A.xls";
+        var filename = "ListeCandidats_ConsvoquerStatus_4A.xls";
 
         // Création d'un élément de lien de téléchargement
         downloadLink = document.createElement("a");
