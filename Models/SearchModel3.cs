@@ -22,6 +22,7 @@ namespace MantenanceProjetASPNET6.Models
         public double Note6 { get; set; }
         public int Dossier { get; set; }
         public Boolean Convoque { get; set; }
+        public Boolean Presence { get; set; }
         public double Math { get; set; }
         public double Specialite { get; set; }
         public string Type_dip { get; set; }

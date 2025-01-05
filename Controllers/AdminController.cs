@@ -156,6 +156,11 @@ namespace MantenanceProjetASPNET6.Controllers
             var x = search.convoqueStudent(cne, Niveau);
             return Json(x);
         }
+        public JsonResult MarquerPresence(string cne, int Niveau)
+        {
+            var x = search.marquerPresence(cne, Niveau);
+            return Json(x);
+        }
         /*###################################################  FIN  RECHERCHE  ############################################# */
 
         /*#################################################  DEBUT  PRESELECTION  ############################################# */
@@ -270,6 +275,32 @@ namespace MantenanceProjetASPNET6.Controllers
         }
         /*################################################# FIN ListSatutConvoquer4 ############################################# */
 
+        /*################################################# ListAbsence3 ############################################# */
+
+        public IActionResult ListAbsence3()
+        {
+            if (isAdmin())
+            {
+                var x = search.generalSearch(3)
+                      .Where(i => i.Convoque == true);
+                return View(x);
+            }
+            return RedirectToAction("Login", "AdminAuth");
+        }
+        /*################################################# FIN ListAbsence3 ############################################# */
+        /*################################################# ListAbsence4 ############################################# */
+
+        public IActionResult ListAbsence4()
+        {
+            if (isAdmin())
+            {
+                var x = search.generalSearch(4)
+                      .Where(i => i.Convoque == true);
+                return View(x);
+            }
+            return RedirectToAction("Login", "AdminAuth");
+        }
+        /*################################################# FIN ListAbsence4 ############################################# */
 
 
         public IActionResult Statistique3()

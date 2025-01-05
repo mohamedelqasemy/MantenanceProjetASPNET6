@@ -42,6 +42,7 @@ namespace MantenanceProjetASPNET6.Services
                          Note6 = a.Semestre6,
                          Dossier = c.Num_dossier,
                          Convoque = c.Convoque,
+                         Presence = c.Presence,
                          Math = concour.NoteMath,
                          Specialite = concour.NoteSpecialite,
                          Matricule = c.Matricule,
@@ -100,6 +101,7 @@ namespace MantenanceProjetASPNET6.Services
                              Note6 = v.Note6,
                              Dossier = v.Dossier,
                              Convoque = v.Convoque,
+                             Presence = v.Presence,
                              Math = v.Math,
                              Specialite = v.Specialite,
                              Matricule = v.Matricule,
@@ -157,6 +159,14 @@ namespace MantenanceProjetASPNET6.Services
             {
                 x.Num_dossier = 0;
             }
+            db.SaveChanges();
+            var y = this.info(niveau);
+            return y;
+        }
+        public IEnumerable<SearchModel3> marquerPresence(string cne, int niveau)
+        {
+            var x = db.Candidats.Where(c => c.Cne == cne).SingleOrDefault();
+            x.Presence = !x.Presence;
             db.SaveChanges();
             var y = this.info(niveau);
             return y;

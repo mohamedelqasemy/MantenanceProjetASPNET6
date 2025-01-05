@@ -1,0 +1,73 @@
+﻿@using NonFactors.Mvc.Grid;
+@model IEnumerable<MantenanceProjetASPNET6.Models.SearchModel3>;
+@{
+    ViewData["Title"] = "ListeAbsence3";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<head>
+    <link href="~/css/mvc-grid/mvc-grid.css" rel="stylesheet" />
+</head>
+
+<div class="container-fluid">
+    <div class="grid-container">
+        @(Html.Grid(Model)
+            .Build(columns =>
+            {
+                columns.Add().Titled("Marquer Presence").RenderedAs(model =>
+                Html.Raw($@"
+        <button class='btn btn-info PresenceBtn' id='{model.Cne}'>Marquer</button>
+        "));
+                columns.Add(model => model.Nom).Titled("Nom").Sortable(true);
+                columns.Add(model => model.Prenom).Titled("Prenom").Sortable(true);
+                columns.Add(model => model.Dossier).Titled("Dossier");
+                columns.Add(model => model.Presence).Titled("Presence").Sortable(true);
+                columns.Add(model => model.Photo).Titled("Photo").RenderedAs(model =>
+                Html.Raw($"<img src='/candidatImages/{model.Photo}' style='width:50px; height:50px; border-radius:50%;' />"));
+                columns.Add(model => model.Sexe).Titled("Sexe").Sortable(true);
+                columns.Add(model => model.NoteBac).Titled("NoteBac").Sortable(true);
+                columns.Add(model => model.Type_dip).Titled("Type de diplome").Sortable(true);
+                columns.Add(model => model.Specialite).Titled("Specialite Diplôme");
+                columns.Add(model => model.Diplome1).Titled("Diplome1");
+                columns.Add(model => model.Note1).Titled("Note1");
+                columns.Add(model => model.Note2).Titled("Note2");
+                columns.Add(model => model.Note3).Titled("Note3");
+                columns.Add(model => model.Note4).Titled("Note4");
+                columns.Add(model => model.Math).Titled("Math").Sortable(true);
+                columns.Add(model => model.Specialite).Titled("Specialite");
+                columns.Add(model => model.Filiere).Titled("Filiere").Sortable(true);
+                columns.Add(model => model.Admis).Titled("Admis").Sortable(true);
+            })
+            .Pageable(pager =>
+            {
+                pager.RowsPerPage = 10;
+            })
+            .Filterable()
+            .Sortable()
+            .Id("tbody")
+            )
+    </div>
+</div>
+
+<!-- /.container-fluid -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="~/js/mvc-grid/mvc-grid.js"></script>
+<script>
+    document.querySelectorAll(".mvc-grid").forEach(Element => new MvcGrid(Element));
+
+    $(document).ready(function () {
+    //convoquer button
+           $(document).on("click", ".PresenceBtn", function () {
+               var id = $(this).attr("id");
+                      // Appel AJAX pour mettre à jour les données
+                   $.get("/Admin/MarquerPresence", {cne: id,Niveau: 3 })
+                .done(function (data) {
+                    window.location.reload();
+                })
+                .fail(function(xhr, status, error) {
+                    console.error("Erreur lors de la mise à jour:", error);
+                    alert("Une erreur est survenue lors de la mise à jour.");
+                });
+           });
+    });
+</script>

@@ -13,5 +13,6 @@ namespace MantenanceProjetASPNET6.Services
         IEnumerable<SearchModel3> deleteCandidat(string cne, int niveau);
         IEnumerable<SearchModel3> conformCandidat(string cne, int niveau);
         IEnumerable<SearchModel3> convoqueStudent(string cne, int niveau);
+        IEnumerable<SearchModel3> marquerPresence(string cne, int niveau);
     }
 }
