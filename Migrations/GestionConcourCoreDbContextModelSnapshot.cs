@@ -203,6 +203,9 @@ namespace MantenanceProjetASPNET6.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double>("NoteFinale")
+                        .HasColumnType("float");
+
                     b.Property<double>("NotePreselec")
                         .HasColumnType("float");
 
@@ -224,6 +227,9 @@ namespace MantenanceProjetASPNET6.Migrations
 
                     b.Property<bool>("Presence")
                         .HasColumnType("bit");
+
+                    b.Property<int>("SelectionFinale")
+                        .HasColumnType("int");
 
                     b.Property<string>("Sexe")
                         .HasColumnType("nvarchar(max)");
@@ -255,7 +261,7 @@ namespace MantenanceProjetASPNET6.Migrations
                             Cin = "test5",
                             Conforme = false,
                             Convoque = false,
-                            DateInscription = new DateTime(2025, 1, 4, 12, 14, 17, 205, DateTimeKind.Local).AddTicks(6866),
+                            DateInscription = new DateTime(2025, 1, 5, 21, 40, 58, 482, DateTimeKind.Local).AddTicks(6658),
                             DateNaissance = new DateTime(1995, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "xxxx@gmail.com",
                             Gsm = "0612345678",
@@ -265,12 +271,14 @@ namespace MantenanceProjetASPNET6.Migrations
                             Nationalite = "Marocaine",
                             Niveau = 3,
                             Nom = "xxxx",
+                            NoteFinale = 0.0,
                             NotePreselec = 0.0,
                             Num_dossier = 0,
                             Password = "test",
                             Photo = "icon.jpg",
                             Prenom = "xxx",
                             Presence = false,
+                            SelectionFinale = 0,
                             Sexe = "Femme",
                             Telephone = "123-456-7890",
                             Verified = 1,

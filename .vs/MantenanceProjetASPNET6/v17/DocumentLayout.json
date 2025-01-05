@@ -3,32 +3,64 @@
   "WorkspaceRootPath": "D:\\NetProjet\\MantenanceProjetASPNET6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\models\\candidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:models\\candidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\views\\admin\\listabsence4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\listabsence4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\views\\admin\\selectionfinale4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\selectionfinale4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\views\\admin\\selectionfinale3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\selectionfinale3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\views\\admin\\recherche3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\recherche3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\views\\admin\\listabsence3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\listabsence3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\services\\search3serviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:services\\search3serviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\models\\candidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:models\\candidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\services\\isearch3service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:services\\isearch3service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\services\\search3serviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:services\\search3serviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\models\\searchmodel3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:models\\searchmodel3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\migrations\\20250104111417_addphotocinpathtocondidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:migrations\\20250104111417_addphotocinpathtocondidat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\migrations\\20250104103635_addphotobacpathtobaccalaureat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:migrations\\20250104103635_addphotobacpathtobaccalaureat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\migrations\\20250105204058_ajoute_selection_note_finals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:migrations\\20250105204058_ajoute_selection_note_finals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\views\\admin\\listsatutconvoquer4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\listsatutconvoquer4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\views\\admin\\listabsence4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\listabsence4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\services\\selectionserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -83,10 +115,6 @@
       "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\listsatutconvoquer3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\views\\admin\\convoque4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\convoque4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -97,10 +125,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\views\\admin\\enregistrement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\enregistrement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\views\\admin\\recherche3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\recherche3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\views\\admin\\statistique3a.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -129,10 +153,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\data\\generercandidats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:data\\generercandidats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\migrations\\20250105135131_mymig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:migrations\\20250105135131_mymig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\NetProjet\\MantenanceProjetASPNET6\\Migrations\\20250105131818_mymig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -177,7 +197,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 19,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -186,12 +206,11 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-03T10:52:35.954Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 45,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -204,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 42,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -218,51 +237,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ListAbsence4.cshtml",
-              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\ListAbsence4.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\ListAbsence4.cshtml",
-              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\ListAbsence4.cshtml",
-              "RelativeToolTip": "Views\\Admin\\ListAbsence4.cshtml",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAEAAAAAtAAAAAAAAAA==",
+              "Title": "SelectionFinale4.cshtml",
+              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\SelectionFinale4.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\SelectionFinale4.cshtml",
+              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\SelectionFinale4.cshtml",
+              "RelativeToolTip": "Views\\Admin\\SelectionFinale4.cshtml",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAAAFMAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T18:44:54.285Z",
+              "WhenOpened": "2025-01-05T22:17:43.893Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Candidat.cs",
-              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Models\\Candidat.cs",
-              "RelativeDocumentMoniker": "Models\\Candidat.cs",
-              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Models\\Candidat.cs",
-              "RelativeToolTip": "Models\\Candidat.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACwAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T15:44:28.36Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ListAbsence3.cshtml",
-              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\ListAbsence3.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\ListAbsence3.cshtml",
-              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\ListAbsence3.cshtml",
-              "RelativeToolTip": "Views\\Admin\\ListAbsence3.cshtml",
-              "ViewState": "AgIAACkAAAAAAAAAAAAwwEgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T15:48:45.463Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "AdminController.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
               "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
               "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAABMBAAAAAAAAAIAwwCgBAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAAAEwBAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-04T21:33:44.666Z",
               "EditorCaption": ""
@@ -273,46 +266,174 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Search3ServiceImp.cs",
-              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Services\\Search3ServiceImp.cs",
-              "RelativeDocumentMoniker": "Services\\Search3ServiceImp.cs",
-              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Services\\Search3ServiceImp.cs",
-              "RelativeToolTip": "Services\\Search3ServiceImp.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAwwKgAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T21:40:00.179Z",
+              "DocumentIndex": 3,
+              "Title": "Recherche3.cshtml",
+              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\Recherche3.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Recherche3.cshtml",
+              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\Recherche3.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Recherche3.cshtml",
+              "ViewState": "AgIAALEAAAAAAAAAAAAAAMMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T15:52:48.593Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
+              "Title": "SelectionFinale3.cshtml",
+              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\SelectionFinale3.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\SelectionFinale3.cshtml",
+              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\SelectionFinale3.cshtml",
+              "RelativeToolTip": "Views\\Admin\\SelectionFinale3.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T21:11:08.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ISearch3Service.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Services\\ISearch3Service.cs",
               "RelativeDocumentMoniker": "Services\\ISearch3Service.cs",
               "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Services\\ISearch3Service.cs",
               "RelativeToolTip": "Services\\ISearch3Service.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAYwA8AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-05T16:40:51.784Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Search3ServiceImp.cs",
+              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Services\\Search3ServiceImp.cs",
+              "RelativeDocumentMoniker": "Services\\Search3ServiceImp.cs",
+              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Services\\Search3ServiceImp.cs",
+              "RelativeToolTip": "Services\\Search3ServiceImp.cs",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAAALwAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T21:40:00.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ListAbsence3.cshtml",
+              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\ListAbsence3.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\ListAbsence3.cshtml",
+              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\ListAbsence3.cshtml",
+              "RelativeToolTip": "Views\\Admin\\ListAbsence3.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAcwEAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T15:48:45.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAD8AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T15:54:10.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "Candidat.cs",
+              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Models\\Candidat.cs",
+              "RelativeDocumentMoniker": "Models\\Candidat.cs",
+              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Models\\Candidat.cs",
+              "RelativeToolTip": "Models\\Candidat.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowC0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T15:44:28.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "SearchModel3.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Models\\SearchModel3.cs",
               "RelativeDocumentMoniker": "Models\\SearchModel3.cs",
               "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Models\\SearchModel3.cs",
               "RelativeToolTip": "Models\\SearchModel3.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAABgAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAC0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-05T16:19:19.616Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
+              "Title": "20250104111417_AddPhotoCinPathToCondidat.cs",
+              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Migrations\\20250104111417_AddPhotoCinPathToCondidat.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250104111417_AddPhotoCinPathToCondidat.cs",
+              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Migrations\\20250104111417_AddPhotoCinPathToCondidat.cs",
+              "RelativeToolTip": "Migrations\\20250104111417_AddPhotoCinPathToCondidat.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T21:02:27.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20250104103635_AddPhotoBacPathToBaccalaureat.cs",
+              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Migrations\\20250104103635_AddPhotoBacPathToBaccalaureat.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250104103635_AddPhotoBacPathToBaccalaureat.cs",
+              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Migrations\\20250104103635_AddPhotoBacPathToBaccalaureat.cs",
+              "RelativeToolTip": "Migrations\\20250104103635_AddPhotoBacPathToBaccalaureat.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T21:01:41.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20250105204058_ajoute_selection_note_finals.cs",
+              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Migrations\\20250105204058_ajoute_selection_note_finals.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250105204058_ajoute_selection_note_finals.cs",
+              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Migrations\\20250105204058_ajoute_selection_note_finals.cs",
+              "RelativeToolTip": "Migrations\\20250105204058_ajoute_selection_note_finals.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T20:40:58.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ListSatutConvoquer4.cshtml",
+              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\ListSatutConvoquer4.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\ListSatutConvoquer4.cshtml",
+              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\ListSatutConvoquer4.cshtml",
+              "RelativeToolTip": "Views\\Admin\\ListSatutConvoquer4.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T19:27:24.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ListAbsence4.cshtml",
+              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\ListAbsence4.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\ListAbsence4.cshtml",
+              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\ListAbsence4.cshtml",
+              "RelativeToolTip": "Views\\Admin\\ListAbsence4.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-05T18:44:54.285Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "SelectionServiceImp.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Services\\SelectionServiceImp.cs",
               "RelativeDocumentMoniker": "Services\\SelectionServiceImp.cs",
@@ -320,12 +441,11 @@
               "RelativeToolTip": "Services\\SelectionServiceImp.cs",
               "ViewState": "AgIAAEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T18:18:20.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T18:18:20.209Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "Convoque3.cshtml",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\Convoque3.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\Convoque3.cshtml",
@@ -333,12 +453,11 @@
               "RelativeToolTip": "Views\\Admin\\Convoque3.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-04T21:44:11.21Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T21:44:11.21Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "Fichier.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Models\\Fichier.cs",
               "RelativeDocumentMoniker": "Models\\Fichier.cs",
@@ -346,12 +465,11 @@
               "RelativeToolTip": "Models\\Fichier.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T18:07:11.931Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T18:07:11.931Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
               "Title": "FichierModel.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Models\\FichierModel.cs",
               "RelativeDocumentMoniker": "Models\\FichierModel.cs",
@@ -359,12 +477,11 @@
               "RelativeToolTip": "Models\\FichierModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T18:07:25.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T18:07:25.996Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 20,
               "Title": "Statistique.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\ViewModels\\Statistique.cs",
               "RelativeDocumentMoniker": "ViewModels\\Statistique.cs",
@@ -372,12 +489,11 @@
               "RelativeToolTip": "ViewModels\\Statistique.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T16:44:41.763Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T16:44:41.763Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 21,
               "Title": "FiliereModel.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\ViewModels\\FiliereModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\FiliereModel.cs",
@@ -385,12 +501,11 @@
               "RelativeToolTip": "ViewModels\\FiliereModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T16:44:37.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T16:44:37.186Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "DiplomeModel.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\ViewModels\\DiplomeModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\DiplomeModel.cs",
@@ -398,12 +513,11 @@
               "RelativeToolTip": "ViewModels\\DiplomeModel.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T16:44:33.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T16:44:33.8Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 23,
               "Title": "CandidatModel.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\ViewModels\\CandidatModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\CandidatModel.cs",
@@ -411,12 +525,11 @@
               "RelativeToolTip": "ViewModels\\CandidatModel.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T16:44:30.177Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T16:44:30.177Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 24,
               "Title": "BaccalaureatModel.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\ViewModels\\BaccalaureatModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\BaccalaureatModel.cs",
@@ -424,12 +537,11 @@
               "RelativeToolTip": "ViewModels\\BaccalaureatModel.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T15:47:07.33Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T15:47:07.33Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 25,
               "Title": "AdmisModel.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Models\\AdmisModel.cs",
               "RelativeDocumentMoniker": "Models\\AdmisModel.cs",
@@ -437,12 +549,11 @@
               "RelativeToolTip": "Models\\AdmisModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T12:29:46.95Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T12:29:46.95Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 26,
               "Title": "ISelectionService.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Services\\ISelectionService.cs",
               "RelativeDocumentMoniker": "Services\\ISelectionService.cs",
@@ -450,12 +561,11 @@
               "RelativeToolTip": "Services\\ISelectionService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T16:28:44.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T16:28:44.276Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 27,
               "Title": "ListSatutConvoquer3.cshtml",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\ListSatutConvoquer3.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\ListSatutConvoquer3.cshtml",
@@ -463,25 +573,11 @@
               "RelativeToolTip": "Views\\Admin\\ListSatutConvoquer3.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T15:50:13.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T15:50:13.547Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAFUAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T15:54:10.628Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "Convoque4.cshtml",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\Convoque4.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\Convoque4.cshtml",
@@ -489,12 +585,11 @@
               "RelativeToolTip": "Views\\Admin\\Convoque4.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T15:53:15.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T15:53:15.276Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "Enregistrement.cshtml",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\Enregistrement.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\Enregistrement.cshtml",
@@ -502,12 +597,11 @@
               "RelativeToolTip": "Views\\Admin\\Enregistrement.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T15:53:10.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T15:53:10.784Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "Corbeil3.cshtml",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\Corbeil3.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\Corbeil3.cshtml",
@@ -515,25 +609,11 @@
               "RelativeToolTip": "Views\\Admin\\Corbeil3.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T15:52:10.24Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T15:52:10.24Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Recherche3.cshtml",
-              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\Recherche3.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\Recherche3.cshtml",
-              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\Recherche3.cshtml",
-              "RelativeToolTip": "Views\\Admin\\Recherche3.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T15:52:48.593Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 31,
               "Title": "Statistique3A.cshtml",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\Statistique3A.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\Statistique3A.cshtml",
@@ -541,12 +621,11 @@
               "RelativeToolTip": "Views\\Admin\\Statistique3A.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T15:52:42.954Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T15:52:42.954Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 32,
               "Title": "Selection3.cshtml",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\Selection3.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\Selection3.cshtml",
@@ -554,12 +633,11 @@
               "RelativeToolTip": "Views\\Admin\\Selection3.cshtml",
               "ViewState": "AgIAAO0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T15:52:32.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T15:52:32.015Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 33,
               "Title": "Corbeil4.cshtml",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\Corbeil4.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\Corbeil4.cshtml",
@@ -567,12 +645,11 @@
               "RelativeToolTip": "Views\\Admin\\Corbeil4.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T15:52:12.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T15:52:12.8Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 35,
               "Title": "Preselection3.cshtml",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\Preselection3.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\Preselection3.cshtml",
@@ -580,12 +657,11 @@
               "RelativeToolTip": "Views\\Admin\\Preselection3.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T15:51:53.452Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T15:51:53.452Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 34,
               "Title": "ListeFinale3.cshtml",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\ListeFinale3.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\ListeFinale3.cshtml",
@@ -593,12 +669,11 @@
               "RelativeToolTip": "Views\\Admin\\ListeFinale3.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-04T22:12:15.141Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T22:12:15.141Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 36,
               "Title": "GestionConcourCoreDbContext.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Data\\GestionConcourCoreDbContext.cs",
               "RelativeDocumentMoniker": "Data\\GestionConcourCoreDbContext.cs",
@@ -606,12 +681,11 @@
               "RelativeToolTip": "Data\\GestionConcourCoreDbContext.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAAAB0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T14:07:11.769Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T14:07:11.769Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 37,
               "Title": "GenererCandidats.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Data\\GenererCandidats.cs",
               "RelativeDocumentMoniker": "Data\\GenererCandidats.cs",
@@ -619,25 +693,11 @@
               "RelativeToolTip": "Data\\GenererCandidats.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T14:07:30.735Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T14:07:30.735Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "20250105135131_mymig.cs",
-              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Migrations\\20250105135131_mymig.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250105135131_mymig.cs",
-              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Migrations\\20250105135131_mymig.cs",
-              "RelativeToolTip": "Migrations\\20250105135131_mymig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T13:51:31.387Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 38,
               "Title": "20250105131818_mymig.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Migrations\\20250105131818_mymig.cs",
               "RelativeDocumentMoniker": "Migrations\\20250105131818_mymig.cs",
@@ -649,7 +709,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 39,
               "Title": "dbo.__EFMigrationsHistory.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_PD512SN_SQLEXPRESS/bdconcours/True/SqlTable/dbo.__EFMigrationsHistory.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/DESKTOP_PD512SN_SQLEXPRESS/bdconcours/True/SqlTable/dbo.__EFMigrationsHistory.sql",
@@ -658,7 +718,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 40,
               "Title": "AnneUniversitaire.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Models\\AnneUniversitaire.cs",
               "RelativeDocumentMoniker": "Models\\AnneUniversitaire.cs",
@@ -670,7 +730,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 41,
               "Title": "Admin.cs",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Models\\Admin.cs",
               "RelativeDocumentMoniker": "Models\\Admin.cs",
@@ -682,7 +742,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 44,
               "Title": "Step1.cshtml",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Auth\\Step1.cshtml",
               "RelativeDocumentMoniker": "Views\\Auth\\Step1.cshtml",
@@ -694,7 +754,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 43,
               "Title": "Step2.cshtml",
               "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Auth\\Step2.cshtml",
               "RelativeDocumentMoniker": "Views\\Auth\\Step2.cshtml",

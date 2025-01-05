@@ -43,6 +43,8 @@ namespace MantenanceProjetASPNET6.Models
         public Boolean Conforme { get; set; }
         public Boolean listDatt { get; set; }
         public string? PhotoCinPath { get; set; }
+        public double NoteFinale { get; set; }
+        public SelectionFinale SelectionFinale { get; set; }
 
 
         //relation avec la classe annee universitaire oneToOne
@@ -59,5 +61,12 @@ namespace MantenanceProjetASPNET6.Models
         [ForeignKey("Filiere")]
         public int ID { get; set; }
         public virtual Filiere Filiere { get; set; }
+    }
+    //enum pour la selection final
+    public enum SelectionFinale
+    {
+        PasSelectionne,   
+        ListePrincipale,  
+        ListeAttente 
     }
 }

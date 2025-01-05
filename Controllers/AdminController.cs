@@ -161,6 +161,11 @@ namespace MantenanceProjetASPNET6.Controllers
             var x = search.marquerPresence(cne, Niveau);
             return Json(x);
         }
+        public JsonResult UpdateStatut(string cne, string statut, int Niveau)
+        {
+            var x = search.UpdateCandidatStatut(cne,statut ,Niveau);
+            return Json(x);
+        }
         /*###################################################  FIN  RECHERCHE  ############################################# */
 
         /*#################################################  DEBUT  PRESELECTION  ############################################# */
@@ -301,6 +306,33 @@ namespace MantenanceProjetASPNET6.Controllers
             return RedirectToAction("Login", "AdminAuth");
         }
         /*################################################# FIN ListAbsence4 ############################################# */
+        /*#################################################  selection Finale 3 ############################################# */
+        public IActionResult SelectionFinale3()
+        {
+            if (isAdmin())
+            {
+                var x = search.generalSearch(3)
+                      .Where(i => i.Convoque == true);
+                return View(x);
+            }
+            return RedirectToAction("Login", "AdminAuth");
+        }
+
+        /*################################################# FIN selection Finale 3 ############################################# */
+        /*################################################# selection Finale 4 ############################################# */
+        public IActionResult SelectionFinale4()
+        {
+            if (isAdmin())
+            {
+                var x = search.generalSearch(4)
+                      .Where(i => i.Convoque == true);
+                return View(x);
+            }
+            return RedirectToAction("Login", "AdminAuth");
+        }
+        /*################################################# FIN selection Finale 4 ############################################# */
+
+
 
 
         public IActionResult Statistique3()

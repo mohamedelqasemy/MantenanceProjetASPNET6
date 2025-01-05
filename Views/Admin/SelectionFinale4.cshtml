@@ -1,0 +1,94 @@
+﻿@using NonFactors.Mvc.Grid
+@model IEnumerable<MantenanceProjetASPNET6.Models.SearchModel3>
+@{
+    ViewData["Title"] = "Sélection des Candidats";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<head>
+    <link href="~/css/mvc-grid/mvc-grid.css" rel="stylesheet" />
+</head>
+
+<div class="container-fluid">
+    <h2>Sélection des Candidats</h2>
+    <div class="grid-container">
+        @(Html.Grid(Model)
+            .Build(columns =>
+            {
+                columns.Add().Titled("Photo").RenderedAs(model =>
+                Html.Raw($"<img src='/candidatImages/{model.Photo}' style='width:50px; height:50px; border-radius:50%;' />"));
+                columns.Add(model => model.Cne).Titled("CNE").Sortable(true);
+                columns.Add(model => model.Nom).Titled("Nom").Sortable(true);
+                columns.Add(model => model.Prenom).Titled("Prénom").Sortable(true);
+                columns.Add(model => model.Filiere).Titled("Filière").Sortable(true);
+                columns.Add(model => model.Statut).Titled("Statut").RenderedAs(model =>
+                Html.Raw($"<span id='status-{model.Cne}'>{model.Statut}</span>"));
+                columns.Add().Titled("Action").RenderedAs(model =>
+                Html.Raw($@"
+        <button class='btn btn-primary select-btn' data-cne='{model.Cne}' data-statut='{model.Statut}'>Sélectionner</button>
+        "));
+            })
+            .Pageable(pager => { pager.RowsPerPage = 6; })
+            .Sortable()
+            .Filterable()
+            )
+    </div>
+</div>
+
+<!-- popup pour choisir le statut -->
+<div id="statutModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Attribuer une decision</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="statutForm">
+                    <input type="hidden" id="cneInput" />
+                    <label for="statutSelect">Statut :</label>
+                    <select id="statutSelect" class="form-control">
+                        <option value="Sélectionné">Sélectionné</option>
+                        <option value="Liste d'attente">Liste d'attente</option>
+                        <option value="Non sélectionné">Non sélectionné</option>
+                    </select>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="saveStatut">Enregistrer</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="~/js/mvc-grid/mvc-grid.js"></script>
+<script>
+    $(document).ready(function () {
+        // Gestion du clic sur le bouton "Sélectionner"
+        $(document).on("click", ".select-btn", function () {
+            const cne = $(this).data("cne");
+            const statut = $(this).data("statut");
+            $("#cneInput").val(cne);
+            $("#statutSelect").val(statut);
+            $("#statutModal").modal("show");
+        });
+
+        $("#saveStatut").on("click", function () {
+            const cne = $("#cneInput").val();
+            const newStatut = $("#statutSelect").val();
+
+            $.post("/Admin/UpdateStatut", { cne: cne, statut: newStatut ,niveau:4})
+                .done(function () {
+                    $("#status-" + cne).text(newStatut);
+                    $("#statutModal").modal("hide");
+                })
+                .fail(function () {
+                    alert("Une erreur est survenue lors de la mise à jour du statut.");
+                });
+        });
+    });
+</script>

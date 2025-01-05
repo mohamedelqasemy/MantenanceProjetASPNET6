@@ -62,6 +62,7 @@ namespace MantenanceProjetASPNET6.Services
                          Cin = c.Cin,
                          Cne = c.Cne,
                          NonConforme = c.Conforme,
+                         Statut = TraduireSelection(c.SelectionFinale)
                      }).ToList().Select(v =>
                      {
                          var fichier = db.Fichiers.Where(f => f.Cne == v.Cne).SingleOrDefault();
@@ -120,13 +121,26 @@ namespace MantenanceProjetASPNET6.Services
                              Filiere = v.Filiere,
                              Cin = v.Cin,
                              Cne = v.Cne,
+
                              NonConforme = v.NonConforme,
                              Diplome1 = part1,
                              Diplome2 = part2,
-                             Diplome3 = part3
+                             Diplome3 = part3,
+
+                             Statut = v.Statut
                          };
                      }).ToList();
             return x;
+        }
+        public static string TraduireSelection(SelectionFinale selection)
+        {
+            return selection switch
+            {
+                SelectionFinale.PasSelectionne => "Non sélectionné",
+                SelectionFinale.ListePrincipale => "Sélectionné",
+                SelectionFinale.ListeAttente => "Liste d'attente",
+                _ => "Inconnu"
+            };
         }
 
         public IEnumerable<SearchModel3> conformCandidat(string cne, int niveau)
@@ -171,6 +185,33 @@ namespace MantenanceProjetASPNET6.Services
             var y = this.info(niveau);
             return y;
         }
+
+        public IEnumerable<SearchModel3> UpdateCandidatStatut(string cne, string statut, int niveau)
+        {
+            var candidat = db.Candidats.SingleOrDefault(c => c.Cne == cne);
+
+            if (candidat != null)
+            {
+                switch (statut)
+                {
+                    case "Sélectionné":
+                        candidat.SelectionFinale = SelectionFinale.ListePrincipale;
+                        break;
+                    case "Liste d'attente":
+                        candidat.SelectionFinale = SelectionFinale.ListeAttente;
+                        break;
+                    case "Non sélectionné":
+                        candidat.SelectionFinale = SelectionFinale.PasSelectionne;
+                        break;
+                    default:
+                        throw new ArgumentException("Statut invalide.");
+                }
+                db.SaveChanges();
+                return this.info(niveau);
+            }
+            throw new Exception("Candidat introuvable.");
+        }
+
 
         public IEnumerable<SearchModel3> deleteCandidat(string cne, int niveau)
         {
@@ -234,6 +275,7 @@ namespace MantenanceProjetASPNET6.Services
                          Cin = c.Cin,
                          Cne = c.Cne,
                          NonConforme = c.Conforme
+             
                      });
 
             if (!String.IsNullOrEmpty(Key))
