@@ -1,0 +1,87 @@
+﻿@model IEnumerable<MantenanceProjetASPNET6.Models.SearchModel3>
+
+@using NonFactors.Mvc.Grid;
+@{
+    ViewData["Title"] = "ListPrensent3eme";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<head>
+    <link href="~/css/mvc-grid/mvc-grid.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<div>
+    <!-- Tableau Grid MVC -->
+    @(
+        Html.Grid(Model).Build(columns =>
+        {
+            columns.Add(model => model.Cne).Titled("CNE").Css("text-center");
+            columns.Add(model => model.Cin).Titled("CNI").Css("text-center");
+            columns.Add(model => model.Nom).Titled("Nom").Css("text-center");
+            columns.Add(model => model.Prenom).Titled("Prenom").Css("text-center");
+            columns.Add(model => model.Matricule).Titled("Matricule").Css("text-center");
+
+            // Ajouter une colonne pour appliquer une classe CSS conditionnelle
+            columns.Add(model => model.Presence).Titled("PresenceStatus")
+            .RenderedAs(model => model.Presence ? "✔️ Oui" : "❌ Non")
+            .Css("text-center")
+            .Encoded(false);
+        })
+        .Empty("No data found")
+        .Pageable(pager =>
+        {
+            pager.RowsPerPage = 6;
+        })
+        .Filterable()
+        .Sortable()
+        .Css("table table-striped table-bordered")
+        )
+</div>
+
+<!-- Bouton pour exporter en Excel -->
+<div class="text-center mt-3">
+    <button class="btn btn-success" onclick="exportTableToExcel('my-grid')">Exporter en Excel</button>
+</div>
+
+<script src="~/js/mvc-grid/mvc-grid.js"></script>
+<script>
+    // Initialiser la grille MVC
+    document.querySelectorAll(".mvc-grid").forEach(element => new MvcGrid(element));
+
+    // Fonction pour exporter la grille en Excel
+    function exportTableToExcel(tableID) {
+        var downloadLink;
+        var dataType = 'application/vnd.ms-excel';
+        var tableSelect = document.getElementById(tableID);
+
+        // Créer une copie de la table pour exclure les lignes non désirées
+        var tableClone = tableSelect.cloneNode(true);
+
+        // Supprimer les lignes contenant les champs de filtres
+        var filterRows = tableClone.querySelectorAll('.mvc-grid-row-filter');
+        filterRows.forEach(row => row.parentNode.removeChild(row));
+
+        // Convertir la table en HTML
+        var tableHTML = tableClone.outerHTML.replace(/ /g, '%20');
+
+        // Nom du fichier Excel
+        var filename = "ListeCandidats_Recherche_3A.xls";
+
+        // Création d'un élément de lien de téléchargement
+        downloadLink = document.createElement("a");
+        document.body.appendChild(downloadLink);
+
+        if (navigator.msSaveOrOpenBlob) {
+            // Pour IE
+            var blob = new Blob(['\ufeff', tableHTML], { type: dataType });
+            navigator.msSaveOrOpenBlob(blob, filename);
+        } else {
+            // Autres navigateurs
+            downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
+            downloadLink.download = filename;
+            downloadLink.click();
+        }
+    }
+
+
+</script>

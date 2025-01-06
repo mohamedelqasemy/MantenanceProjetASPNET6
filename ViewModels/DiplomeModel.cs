@@ -19,6 +19,11 @@ namespace MantenanceProjetASPNET6.ViewModels
         public double NoteDiplome { get; set; }
         [Required]
         public string Specialite { get; set; }
+
+        public IFormFile? diplomeFile { get;  set; }
+
+        public string? ExistingFileDiplomePath { get; set; }
+
         [Required]
         public double Semestre1 { get; set; }
         [Required]

@@ -60,8 +60,17 @@
             <button id="export" onclick="exportTableToExcel('maTable')" class="btn btn-info btn-block py-2">Exporter vers Excel</button>
         </div>
     </div>
+    @if (TempData["fichier4"] != null)
+    {
+        <div class="form-group">
+            <div class="alert alert-danger">
+                <span>@TempData["fichier4"]</span>
+            </div>
+        </div>
+    }
     <table class="table table-bordered table-responsive" id="maTable">
         <tr>
+            <th class="text-center">See Files</th>
             <th class="text-center">Delete</th>
             <th class="text-center">Conforme</th>
             <th class="text-center">Nom</th>
@@ -86,6 +95,7 @@
             @foreach (var x in Model)
             {
                 <tr>
+                     <td class="text-center"><button class="btn btn-primary seeFilesBtn" id="@x.Cne">see</button></td>
                     <td class="text-center"><button class="btn btn-danger deleteBtn" id="@x.Cne">Delete</button></td>
                     <td class="text-center"><button class="btn btn-info conformBtn" id="@x.Cne">Conforme</button></td>
                     <td class="text-center">@x.Nom</td>
@@ -125,6 +135,20 @@
                 });
             });
         });
+        //see files button
+            $(document).on("click", ".seeFilesBtn", function () {
+        var cne = $(this).attr("id"); // Récupère l'identifiant (CNE)
+
+        // Appelle l'API pour afficher le fichier PDF fusionné
+        $.get("/Admin/GetStudentFiles", { cne: cne, Niveau: 4}, function (url) {
+            if (url) {
+                // Ouvre le fichier PDF dans un nouvel onglet
+                window.open(url, "_blank");
+            } else {
+                alert("Erreur : Impossible de trouver ou créer le fichier PDF.");
+            }
+        });
+    });
         //delete button
         $(document).on("click", ".deleteBtn", function () {
             var id = $(this).attr("id");

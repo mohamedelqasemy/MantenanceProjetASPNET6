@@ -11,6 +11,8 @@ using MantenanceProjetASPNET6.Services;
 using MantenanceProjetASPNET6.Data;
 using System.Diagnostics;
 using MantenanceProjetASPNET6.ViewModels;
+using PdfSharp.Pdf.IO;
+using PdfSharp.Pdf;
 
 namespace MantenanceProjetASPNET6.Controllers
 {
@@ -97,7 +99,26 @@ namespace MantenanceProjetASPNET6.Controllers
             }
             return RedirectToAction("Login", "AdminAuth");
         }
-
+      
+     
+        public IActionResult Presence3List()
+        {
+            if (isAdmin())
+            {
+                var x = search.presenceList(3);
+                return View(x);
+            }
+            return RedirectToAction("Login", "AdminAuth");
+        }
+        public IActionResult Presence4List()
+        {
+            if (isAdmin())
+            {
+                var x = search.presenceList(4);
+                return View(x);
+            }
+            return RedirectToAction("Login", "AdminAuth");
+        }
         public IActionResult Corbeil3()
         {
             if (isAdmin())
@@ -155,6 +176,125 @@ namespace MantenanceProjetASPNET6.Controllers
             return Json(x);
         }
         /*###################################################  FIN  RECHERCHE  ############################################# */
+
+        /*###################################################  debut see files  RECHERCHE  ############################################# */
+
+        [HttpGet]
+        public IActionResult GetStudentFiles(string cne,int Niveau)
+        {
+            // Chemin du dossier où les fichiers PDF sont stockés
+            var uploadFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "dossiers");
+            var mergedPdfPath = Path.Combine(uploadFolder, $"{cne}_fichieretudiant.pdf");
+
+            // Vérifie si le fichier PDF existe déjà
+            if (System.IO.File.Exists(mergedPdfPath))
+            {
+              System.IO.File.Delete(mergedPdfPath);
+            }
+
+            // Si le fichier n'existe pas, récupérer les fichiers à fusionner depuis la base de données
+
+            var student = _context.Candidats.FirstOrDefault(s => s.Cne == cne);
+            var bac = _context.Baccalaureats.FirstOrDefault(b => b.Cne == cne);
+            var diplome = _context.Diplomes.FirstOrDefault(d => d.Cne == cne);
+            if (student == null)
+            {
+                return NotFound("Étudiant introuvable.");
+            }
+
+            // Chemins des fichiers
+            var filesToMerge = new List<string>();
+
+            if (!string.IsNullOrEmpty(student.PhotoCinPath))
+            {
+                // S'assurer que le chemin est construit correctement
+                var cinFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "cni", Path.GetFileName(student.PhotoCinPath));
+
+                if (System.IO.File.Exists(cinFilePath))
+                {
+                   filesToMerge.Add(cinFilePath);
+                }
+
+             
+            }
+            if (bac != null && !string.IsNullOrEmpty(bac.PhotoBacPath))
+            {
+                var  bacFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "baccalaureats", Path.GetFileName(bac.PhotoBacPath));
+                if (System.IO.File.Exists(bacFilePath))
+                {
+                    filesToMerge.Add(bacFilePath);
+                }
+            }
+            if (diplome != null && !string.IsNullOrEmpty(diplome.PhotoDiplomePath))
+            {
+                var diplomeFilePath = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot", "uploads", "diplome", Path.GetFileName(diplome.PhotoDiplomePath));
+                if (System.IO.File.Exists(diplomeFilePath))
+                {
+                   filesToMerge.Add(diplomeFilePath);
+                }
+            }
+
+            // Vérifie s'il y a au moins un fichier à fusionner
+            if (!filesToMerge.Any())
+            {
+                if (Niveau == 3)
+                {
+                    TempData["fichier3"] = " aucun fichier trouver pour cet étudiant";
+                }
+                else
+                {
+                    TempData["fichier4"] = " aucun fichier trouver pour cet étudiant";
+                }
+            }
+
+            // Chemin du fichier fusionné
+            var uploadFolders = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads", "dossiers");
+            Directory.CreateDirectory(uploadFolder); // Crée le dossier si nécessaire
+            var mergedPdfPaths = Path.Combine(uploadFolder, $"{cne}_fichieretudiant.pdf");
+
+            // Fusion des fichiers disponibles
+            MergePdfFiles(filesToMerge, mergedPdfPath);
+
+            // Retourne l'URL du fichier fusionné
+            var mergedFileUrl = $"/uploads/dossiers/{cne}_fichieretudiant.pdf";
+            return Ok(mergedFileUrl);
+
+        }
+       
+        public void MergePdfFiles(List<string> sourceFiles, string outputFile)
+        {
+            // Crée un nouveau document PDF qui va contenir toutes les pages fusionnées
+            PdfDocument outputDocument = new PdfDocument();
+
+            foreach (var file in sourceFiles)
+            {
+                if (System.IO.File.Exists(file))
+                {
+                    // Ouvre chaque fichier source PDF
+                    PdfDocument inputDocument = PdfReader.Open(file, PdfDocumentOpenMode.Import);
+                    // Ajoute chaque page du document source au document de sortie
+                    for (int i = 0; i < inputDocument.PageCount; i++)
+                    {
+                        // Importation de la page du fichier source
+                        PdfPage page = inputDocument.Pages[i];
+
+                        // Ajoute la page importée au document de sortie
+                        outputDocument.AddPage(page);
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine($"Le fichier {file} n'existe pas.");
+                }
+            }
+
+            // Enregistre le fichier PDF fusionné
+            outputDocument.Save(outputFile);
+        }
+
+
+        /*###################################################  FIN  see files  ############################################# */
 
         /*#################################################  DEBUT  PRESELECTION  ############################################# */
 

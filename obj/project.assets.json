@@ -2044,6 +2044,60 @@
           "NonFactors.Grid.Core.Mvc6": "[6.2.1]"
         }
       },
+      "PDFsharp/6.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/PdfSharp.Charting.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net6.0/PdfSharp.Quality.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net6.0/PdfSharp.Snippets.dll": {
+            "related": ".pdb"
+          },
+          "lib/net6.0/PdfSharp.System.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net6.0/PdfSharp.WPFonts.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net6.0/PdfSharp.dll": {
+            "related": ".Charting.pdb;.Charting.xml;.pdb;.Quality.pdb;.Quality.xml;.Snippets.pdb;.System.pdb;.System.xml;.WPFonts.pdb;.WPFonts.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/PdfSharp.Charting.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net6.0/PdfSharp.Quality.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net6.0/PdfSharp.Snippets.dll": {
+            "related": ".pdb"
+          },
+          "lib/net6.0/PdfSharp.System.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net6.0/PdfSharp.WPFonts.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net6.0/PdfSharp.dll": {
+            "related": ".Charting.pdb;.Charting.xml;.pdb;.Quality.pdb;.Quality.xml;.Snippets.pdb;.System.pdb;.System.xml;.WPFonts.pdb;.WPFonts.xml;.xml"
+          }
+        },
+        "resource": {
+          "lib/net6.0/de/PdfSharp.Charting.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0/de/PdfSharp.resources.dll": {
+            "locale": "de"
+          }
+        }
+      },
       "Rotativa.AspNetCore/1.3.2": {
         "type": "package",
         "compile": {
@@ -5990,6 +6044,57 @@
         "content/js/mvc-grid/mvc-grid.js",
         "nonfactors.grid.mvc6.6.2.1.nupkg.sha512",
         "nonfactors.grid.mvc6.nuspec"
+      ]
+    },
+    "PDFsharp/6.1.1": {
+      "sha512": "wxBLG2f713s2Fp2rYxTCReNOcXT/4YX4h4TJW6y75xAEq2iaEjLDjZRgtXW1/IgadzyluIVmw4RqHz1rL4BYKg==",
+      "type": "package",
+      "path": "pdfsharp/6.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "images/PDFsharp-128x128.png",
+        "lib/net6.0/PdfSharp.Charting.dll",
+        "lib/net6.0/PdfSharp.Charting.pdb",
+        "lib/net6.0/PdfSharp.Charting.xml",
+        "lib/net6.0/PdfSharp.Quality.dll",
+        "lib/net6.0/PdfSharp.Quality.pdb",
+        "lib/net6.0/PdfSharp.Quality.xml",
+        "lib/net6.0/PdfSharp.Snippets.dll",
+        "lib/net6.0/PdfSharp.Snippets.pdb",
+        "lib/net6.0/PdfSharp.System.dll",
+        "lib/net6.0/PdfSharp.System.pdb",
+        "lib/net6.0/PdfSharp.System.xml",
+        "lib/net6.0/PdfSharp.WPFonts.dll",
+        "lib/net6.0/PdfSharp.WPFonts.pdb",
+        "lib/net6.0/PdfSharp.WPFonts.xml",
+        "lib/net6.0/PdfSharp.dll",
+        "lib/net6.0/PdfSharp.pdb",
+        "lib/net6.0/PdfSharp.xml",
+        "lib/net6.0/de/PdfSharp.Charting.resources.dll",
+        "lib/net6.0/de/PdfSharp.resources.dll",
+        "lib/netstandard2.0/PdfSharp.Charting.dll",
+        "lib/netstandard2.0/PdfSharp.Charting.pdb",
+        "lib/netstandard2.0/PdfSharp.Charting.xml",
+        "lib/netstandard2.0/PdfSharp.Quality.dll",
+        "lib/netstandard2.0/PdfSharp.Quality.pdb",
+        "lib/netstandard2.0/PdfSharp.Quality.xml",
+        "lib/netstandard2.0/PdfSharp.Snippets.dll",
+        "lib/netstandard2.0/PdfSharp.Snippets.pdb",
+        "lib/netstandard2.0/PdfSharp.System.dll",
+        "lib/netstandard2.0/PdfSharp.System.pdb",
+        "lib/netstandard2.0/PdfSharp.System.xml",
+        "lib/netstandard2.0/PdfSharp.WPFonts.dll",
+        "lib/netstandard2.0/PdfSharp.WPFonts.pdb",
+        "lib/netstandard2.0/PdfSharp.WPFonts.xml",
+        "lib/netstandard2.0/PdfSharp.dll",
+        "lib/netstandard2.0/PdfSharp.pdb",
+        "lib/netstandard2.0/PdfSharp.xml",
+        "lib/netstandard2.0/de/PdfSharp.Charting.resources.dll",
+        "lib/netstandard2.0/de/PdfSharp.resources.dll",
+        "pdfsharp.6.1.1.nupkg.sha512",
+        "pdfsharp.nuspec"
       ]
     },
     "Rotativa.AspNetCore/1.3.2": {
@@ -10744,35 +10849,33 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.9",
       "NonFactors.Grid.Mvc6 >= 6.2.1",
+      "PDFsharp >= 6.1.1",
       "Rotativa.AspNetCore >= 1.3.2",
       "Wkhtmltopdf.NetCore >= 3.0.2"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hp\\.nuget\\packages\\": {},
+    "C:\\Users\\h\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\27.2.2\\ToolboxNuGetPackages": {},
     "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj",
+      "projectUniqueName": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj",
       "projectName": "MantenanceProjetASPNET6",
-      "projectPath": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj",
-      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "D:\\ProjetDotNet\\DS2_charge\\MantenanceProjetASPNET6\\obj\\",
+      "projectPath": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj",
+      "packagesPath": "C:\\Users\\h\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\27.2.2\\ToolboxNuGetPackages",
         "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\h\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for WPF.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WPF.config"
       ],
       "originalTargetFrameworks": [
@@ -10832,6 +10935,10 @@
           "NonFactors.Grid.Mvc6": {
             "target": "Package",
             "version": "[6.2.1, )"
+          },
+          "PDFsharp": {
+            "target": "Package",
+            "version": "[6.1.1, )"
           },
           "Rotativa.AspNetCore": {
             "target": "Package",

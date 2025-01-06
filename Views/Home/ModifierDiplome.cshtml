@@ -24,6 +24,14 @@
                                             Informations sur Diplômes et Notes
                                         </h2>
                                         <hr class="col-md-12  mb-5" />
+                                        @if (TempData["diplome"] != null)
+                                        {
+                                            <div class="form-group">
+                                                <div class="alert alert-success">
+                                                    <span>@TempData["diplome"]</span>
+                                                </div>
+                                            </div>
+                                        }
                                         <div class="form-group">
                                             <h4 class="register-heading text-success">Diplome obtenu</h4><br />
 
@@ -89,6 +97,23 @@
                                             @Html.ValidationMessageFor(model => model.VilleObtention, "", new { @class = "text-danger" })
                                             <br /><br />
                                         </div>
+                                        <div class="form-group">
+                                            <label asp-for="diplomeFile" class="control-label col-md-12 text-gray font-weight-bold">fichier du diplome (PDF Recto_virso) :</label>
+                                            <div class="col-md-12">
+                                                <input asp-for="diplomeFile" type="file" class="form-control" accept="application/pdf" />
+                                                <span asp-validation-for="diplomeFile" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        @if (!string.IsNullOrEmpty(Model.ExistingFileDiplomePath))
+                                       {
+                                            <div class="form-group">
+                                                <div class="col-md-12">
+                                                    <a href="~/@Model.ExistingFileDiplomePath" target="_blank" class="btn btn-link">
+                                                        Voir le PDF du diplome
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        }
 
                                     </div>
                                 </div>
