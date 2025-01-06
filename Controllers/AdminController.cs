@@ -312,7 +312,7 @@ namespace MantenanceProjetASPNET6.Controllers
             if (isAdmin())
             {
                 var x = search.generalSearch(3)
-                      .Where(i => i.Convoque == true);
+                      .Where(i => i.Presence == true);
                 return View(x);
             }
             return RedirectToAction("Login", "AdminAuth");
@@ -325,7 +325,7 @@ namespace MantenanceProjetASPNET6.Controllers
             if (isAdmin())
             {
                 var x = search.generalSearch(4)
-                      .Where(i => i.Convoque == true);
+                      .Where(i => i.Presence == true);
                 return View(x);
             }
             return RedirectToAction("Login", "AdminAuth");

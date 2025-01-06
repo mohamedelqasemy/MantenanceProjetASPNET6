@@ -1,13 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\",
+  "WorkspaceRootPath": "D:\\NetProjet\\MantenanceProjetASPNET6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\convoque_test\\mantenanceprojetaspnet6\\services\\selectionserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\services\\selectionserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:services\\selectionserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\convoque_test\\mantenanceprojetaspnet6\\views\\admin\\listfinale4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\netprojet\\mantenanceprojetaspnet6\\views\\admin\\listfinale4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\listfinale4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -18,33 +22,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAC8BAAAAAAAAAAAAADoBAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T17:34:03.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "SelectionServiceImp.cs",
-              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\Services\\SelectionServiceImp.cs",
+              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Services\\SelectionServiceImp.cs",
               "RelativeDocumentMoniker": "Services\\SelectionServiceImp.cs",
-              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\Services\\SelectionServiceImp.cs",
+              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Services\\SelectionServiceImp.cs",
               "RelativeToolTip": "Services\\SelectionServiceImp.cs",
-              "ViewState": "AgIAALoAAAAAAAAAAAAAAMAAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAO0AAAAAAAAAAAAAAMAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-05T23:22:15.298Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ListFinale4.cshtml",
-              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\Views\\Admin\\ListFinale4.cshtml",
+              "DocumentMoniker": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\ListFinale4.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\ListFinale4.cshtml",
-              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\convoque_test\\MantenanceProjetASPNET6\\Views\\Admin\\ListFinale4.cshtml",
+              "ToolTip": "D:\\NetProjet\\MantenanceProjetASPNET6\\Views\\Admin\\ListFinale4.cshtml",
               "RelativeToolTip": "Views\\Admin\\ListFinale4.cshtml",
               "ViewState": "AgIAAIgAAAAAAAAAAAAAAJIAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T23:16:15.986Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T23:16:15.986Z"
             }
           ]
         }
