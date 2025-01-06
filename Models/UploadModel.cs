@@ -9,11 +9,12 @@ namespace MantenanceProjetASPNET6.Models
 {
     public class UploadModel
     {
-        [Required]
+        [Required(ErrorMessage = "La matière est obligatoire.")]
         public string matiere { get; set; }
-        [Required]
+        [Required(ErrorMessage = "L'année est obligatoire.")]
+        [Range(1900, 2100, ErrorMessage = "Veuillez saisir une année valide.")]
         public string annee { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Veuillez sélectionner un fichier.")]
         public IFormFile fichier { get; set; }
     }
 }

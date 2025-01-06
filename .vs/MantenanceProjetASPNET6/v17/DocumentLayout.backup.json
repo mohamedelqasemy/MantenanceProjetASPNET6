@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc6_1.0\\mantenanceprojetaspnet6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc6_1.0\\mantenanceprojetaspnet6\\views\\home\\epreuve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\home\\epreuve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc6_1.0\\mantenanceprojetaspnet6\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc6_1.0\\mantenanceprojetaspnet6\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc6_1.0\\mantenanceprojetaspnet6\\models\\uploadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:models\\uploadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc6_1.0\\mantenanceprojetaspnet6\\models\\epreuves.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:models\\epreuves.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc6_1.0\\mantenanceprojetaspnet6\\views\\admin\\uploadepreuve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\uploadepreuve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc6_1.0\\mantenanceprojetaspnet6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc6_1.0\\mantenanceprojetaspnet6\\services\\selectionserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,37 +46,105 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T22:18:47.806Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAC8BAAAAAAAAAAAAAD0BAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T17:34:03.14Z",
+              "DocumentIndex": 5,
+              "Title": "UploadEpreuve.cshtml",
+              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Views\\Admin\\UploadEpreuve.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\UploadEpreuve.cshtml",
+              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Views\\Admin\\UploadEpreuve.cshtml",
+              "RelativeToolTip": "Views\\Admin\\UploadEpreuve.cshtml",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAuwF8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-06T22:41:13.66Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAEcCAAAAAAAAAAAhwFkCAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T17:34:03.14Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T22:18:47.806Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAL4BAAAAAAAAAAAQwMkBAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T23:04:12.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Epreuve.cshtml",
+              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Views\\Home\\Epreuve.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Epreuve.cshtml",
+              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Views\\Home\\Epreuve.cshtml",
+              "RelativeToolTip": "Views\\Home\\Epreuve.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAD4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-06T23:02:50.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Epreuves.cs",
+              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Models\\Epreuves.cs",
+              "RelativeDocumentMoniker": "Models\\Epreuves.cs",
+              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Models\\Epreuves.cs",
+              "RelativeToolTip": "Models\\Epreuves.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T22:52:14.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UploadModel.cs",
+              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Models\\UploadModel.cs",
+              "RelativeDocumentMoniker": "Models\\UploadModel.cs",
+              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Models\\UploadModel.cs",
+              "RelativeToolTip": "Models\\UploadModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T22:44:15.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "SelectionServiceImp.cs",
               "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Services\\SelectionServiceImp.cs",
               "RelativeDocumentMoniker": "Services\\SelectionServiceImp.cs",
@@ -64,12 +152,11 @@
               "RelativeToolTip": "Services\\SelectionServiceImp.cs",
               "ViewState": "AgIAAOsAAAAAAAAAAABBwMAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T23:22:15.298Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T23:22:15.298Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "ListFinale4.cshtml",
               "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\Views\\Admin\\ListFinale4.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\ListFinale4.cshtml",
@@ -77,8 +164,7 @@
               "RelativeToolTip": "Views\\Admin\\ListFinale4.cshtml",
               "ViewState": "AgIAAIYAAAAAAAAAAABBwJIAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T23:16:15.986Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-05T23:16:15.986Z"
             }
           ]
         }

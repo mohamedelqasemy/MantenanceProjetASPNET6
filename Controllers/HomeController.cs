@@ -389,54 +389,75 @@ namespace MantenanceProjetASPNET6.Controllers
             return View(epreuve.getEpreuves().ToList());
         }
 
-        public IActionResult Download(string filename)
-        {
-            if (!isCandidat())
-            {
-                return RedirectToAction("Login", "Auth");
-            }
+        //public IActionResult Download(string filename)
+        //{
+        //    if (!isCandidat())
+        //    {
+        //        return RedirectToAction("Login", "Auth");
+        //    }
 
-            string cne = HttpContext.Session.GetString("cne");
-            int? verified = HttpContext.Session.GetInt32("verified");
+        //    string cne = HttpContext.Session.GetString("cne");
+        //    int? verified = HttpContext.Session.GetInt32("verified");
 
-            if (verified == 0)
-            {
-                return RedirectToAction("Step1", "Auth");
-            }
+        //    if (verified == 0)
+        //    {
+        //        return RedirectToAction("Step1", "Auth");
+        //    }
 
-            if (filename == null)
-                return null;
+        //    if (filename == null)
+        //        return null;
 
-            var path0 = Path.Combine(hostingEnvironment.WebRootPath, "epreuves");
-            var path = Path.Combine(path0, filename);
+        //    var path0 = Path.Combine(hostingEnvironment.WebRootPath, "epreuves");
+        //    var path = Path.Combine(path0, filename);
 
-            var ext = Path.GetExtension(filename).ToLowerInvariant();
-            try
-            {
-                if (ext == ".pdf")
-                {
-                    /*var stream = new FileStream(path, FileMode.Open);
-                    return File(stream, "application/pdf");*/
-                    byte[] fileBytes = System.IO.File.ReadAllBytes(path);
-                    string mimeType = "application/pdf";
-                    Response.Headers.Append("Content-Disposition", "inline; filename=" + filename);
-                    return File(fileBytes, mimeType);
-                }
-                else
-                {
-                    byte[] fileBytes = System.IO.File.ReadAllBytes(path);
-                    return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, filename);
-                }
-            }
-            catch (Exception ex)
-            {
-                TempData["download"] = "Une erreur a été rencontrée lors du téléchargement";
-                return RedirectToAction(nameof(Epreuve));
-            }
+        //    var ext = Path.GetExtension(filename).ToLowerInvariant();
+        //    try
+        //    {
+        //        if (ext == ".pdf")
+        //        {
+        //            /*var stream = new FileStream(path, FileMode.Open);
+        //            return File(stream, "application/pdf");*/
+        //            byte[] fileBytes = System.IO.File.ReadAllBytes(path);
+        //            string mimeType = "application/pdf";
+        //            Response.Headers.Append("Content-Disposition", "inline; filename=" + filename);
+        //            return File(fileBytes, mimeType);
+        //        }
+        //        else
+        //        {
+        //            byte[] fileBytes = System.IO.File.ReadAllBytes(path);
+        //            return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, filename);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        TempData["download"] = "Une erreur a été rencontrée lors du téléchargement";
+        //        return RedirectToAction(nameof(Epreuve));
+        //    }
             
                         
-        }
+        //}
 
+        public IActionResult TelechargerEpreuve(int id)
+        {
+            var epreuve = _context.Epreuves.FirstOrDefault(e => e.ID == id);
+
+            if (epreuve == null)
+            {
+                TempData["download"] = "Épreuve introuvable.";
+                return RedirectToAction("ListeEpreuves");
+            }
+
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/Epreuves", epreuve.NomFichier);
+
+            if (!System.IO.File.Exists(filePath))
+            {
+                TempData["download"] = "Fichier non disponible.";
+                return RedirectToAction("ListeEpreuves");
+            }
+
+            byte[] fileBytes = System.IO.File.ReadAllBytes(filePath);
+            return File(fileBytes, "application/pdf", epreuve.NomFichier);
+        }
 
         //##############################################  FONCTIONS  ##################################################
 

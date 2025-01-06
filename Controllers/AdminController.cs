@@ -552,22 +552,69 @@ namespace MantenanceProjetASPNET6.Controllers
             return View();            
         }
 
-        [HttpPost]
-        public IActionResult UploadEpreuve(UploadModel model)
-        {            
-            if (ModelState.IsValid)
-            {
-                int msg = epreuve.Upload(model);
-                if (msg == 1)
-                {   TempData["succes"] = "Fichier enregistré avec succes";  }
-                else
-                {   TempData["error"] = "Erreur lors d'enregistrement !!!";  }
+        //[HttpPost]
+        //public IActionResult UploadEpreuve(UploadModel model)
+        //{            
+        //    if (ModelState.IsValid)
+        //    {
+        //        int msg = epreuve.Upload(model);
+        //        if (msg == 1)
+        //        {   TempData["succes"] = "Fichier enregistré avec succes";  }
+        //        else
+        //        {   TempData["error"] = "Erreur lors d'enregistrement !!!";  }
 
-                return View();
+        //        return View();
+        //    }
+
+        //    return View(model);
+        //}
+        [HttpPost]
+        public async Task<IActionResult> UploadEpreuve(UploadModel model)
+        {
+            // Valider le modèle
+            if (!ModelState.IsValid)
+            {
+                TempData["error"] = "Veuillez remplir tous les champs correctement.";
+                return RedirectToAction("UploadEpreuve");
             }
 
-            return View(model);
+            try
+            {
+                // Créer le répertoire d'upload s'il n'existe pas
+                var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads/Epreuves");
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
+
+                // Construire le chemin complet pour le fichier
+                var filePath = Path.Combine(uploadsFolder, model.fichier.FileName);
+
+                // Enregistrer le fichier
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await model.fichier.CopyToAsync(stream);
+                }
+                // Enregistrer les détails dans la base de données
+                var epreuve = new Epreuves
+                {
+                    Matiere = model.matiere,
+                    Annee = model.annee,
+                    NomFichier = model.fichier.FileName
+                };
+                _context.Epreuves.Add(epreuve);
+                await _context.SaveChangesAsync();
+
+                TempData["succes"] = "Fichier enregistré avec succès !";
+            }
+            catch (Exception ex)
+            {
+                TempData["error"] = $"Erreur lors de l'enregistrement : {ex.Message}";
+            }
+
+            return RedirectToAction("UploadEpreuve");
         }
+
 
         /*###################################################  FIN  EPREUVE  ############################################# */
 

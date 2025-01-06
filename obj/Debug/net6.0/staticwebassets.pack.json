@@ -57,6 +57,10 @@
       "PackagePath": "staticwebassets\\candidatImages\\6660.jpg"
     },
     {
+      "Id": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\wwwroot\\candidatImages\\6742.jpg",
+      "PackagePath": "staticwebassets\\candidatImages\\6742.jpg"
+    },
+    {
       "Id": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\wwwroot\\candidatImages\\7992.jpg",
       "PackagePath": "staticwebassets\\candidatImages\\7992.jpg"
     },
@@ -15211,6 +15215,10 @@
     {
       "Id": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\wwwroot\\uploads\\Epreuves\\Planning_Annuel_2024_2025.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Epreuves\\Planning_Annuel_2024_2025.pdf"
     },
     {
       "Id": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\wwwroot\\uploads\\baccalaureats\\2518630c-29a4-46a5-bdd3-f56f059e2144_etapeProjet.pdf",

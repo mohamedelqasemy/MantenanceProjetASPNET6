@@ -1,31 +1,29 @@
 ﻿@model IEnumerable<MantenanceProjetASPNET6.Models.Epreuves>
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Anciens Épreuves";
     Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
 
-
-<div class="page-content-wrapper-inner" style="font-family:'Arial Rounded MT';">
+<div class="page-content-wrapper-inner" style="font-family: 'Arial Rounded MT';">
     <div class="content-viewport">
         <div class="container-fluid">
-            <!-- USER DATA-->
+            <!-- USER DATA -->
             <div class="user-data m-b-40">
                 <div class="row">
-
-                    <div class="col-md-8 offset-md-2 mb-5 text-center" style="min-height:500px">
-
+                    <div class="col-md-8 offset-md-2 mb-5 text-center" style="min-height: 500px;">
                         <h2 class="title-3 mb-4 mt-4 text-center text-warning font-weight-bold">
                             <i class="mr-4 mdi mdi-file-multiple link-icon"></i>
-                            Les Anciens Epreuves
+                            Les Anciens Épreuves
                         </h2>
 
                         <hr class="col-md-8 offset-md-2 mb-5" />
 
-
-                        <h6 class="font-weight-bold mb-5">Vous trouverez ici tous les anciens épreuves et vous pouvez les télécharger </h6>
+                        <h6 class="font-weight-bold mb-5">
+                            Vous trouverez ici tous les anciens épreuves et vous pouvez les télécharger.
+                        </h6>
                         <h6 class="font-weight-bold mb-5">
                             Bonne Révision !
-                            <i class="mdi mdi mdi-heart link-icon text-warning"></i>
+                            <i class="mdi mdi-heart link-icon text-warning"></i>
                         </h6>
 
                         <div class="col-md-12">
@@ -33,40 +31,55 @@
                             {
                                 <div class="alert alert-danger">
                                     <span>@TempData["download"]</span>
-                                </div>                                
+                                </div>
                             }
                         </div>
 
-                        <table class="table table-success table-bordered ">
-
-                            <thead class="bg-light">
-                                <tr>
-                                    <th><h6 class="text-primary">Année</h6></th>
-                                    <th><h6 class="text-primary">Matiere</h6></th>
-                                    <th><h6 class="text-primary">Download</h6></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var item in Model)
-                                {
+                        @if (Model.Any())
+                        {
+                            <table class="table table-success table-bordered">
+                                <thead class="bg-light">
                                     <tr>
-                                        <td>@item.Annee</td>
-                                        <td>@item.Matiere</td>
-                                        <td>
-                                            <a class="text-danger" href="../../epreuves/@item.NomFichier" target="_blank" download>
-                                                <i class="mdi mdi-download link-icon mr-3"></i>
-                                                Download
-                                            </a>
-                                        </td>
+                                        <th>
+                                            <h6 class="text-primary">Année</h6>
+                                        </th>
+                                        <th>
+                                            <h6 class="text-primary">Matière</h6>
+                                        </th>
+                                        <th>
+                                            <h6 class="text-primary">Télécharger</h6>
+                                        </th>
                                     </tr>
-                                }
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.Annee</td>
+                                            <td>@item.Matiere</td>
+                                            <td>
+                                                <a class="btn btn-sm btn-primary"
+                                                   href="@Url.Action("TelechargerEpreuve", "Home", new { id = item.ID })">
+                                                    <i class="mdi mdi-download link-icon mr-2"></i>
+                                                    Télécharger
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        }
+                        else
+                        {
+                            <div class="alert alert-warning">
+                                <h6>Aucun épreuve disponible pour le moment.</h6>
+                            </div>
+                        }
+
                         <br /><br />
                     </div>
-
-
                 </div>
             </div>
         </div>
+    </div>
 </div>
