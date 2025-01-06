@@ -3,6 +3,7 @@ using MantenanceProjetASPNET6.Services;
 using MantenanceProjetASPNET6.Services_User;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.Design;
+using Wkhtmltopdf.NetCore;
 
 namespace MantenanceProjetASPNET6
 {
@@ -39,6 +40,7 @@ namespace MantenanceProjetASPNET6
             builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             builder.Services.AddSession();
+            builder.Services.AddWkhtmltopdf();
 
             var app = builder.Build();
 
@@ -65,7 +67,9 @@ namespace MantenanceProjetASPNET6
                 name: "default",
                 pattern: "{controller=Landing}/{action=Index}/{id?}");
 
-            //Rotativa.AspNetCore.RotativaConfiguration.Setup(app.Environment);
+            IWebHostEnvironment env = app.Environment;
+
+            Rotativa.AspNetCore.RotativaConfiguration.Setup(env.WebRootPath,"../wwwroot/Rotativa");
 
             app.Run();
         }

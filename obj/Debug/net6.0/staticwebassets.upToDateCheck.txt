@@ -3810,6 +3810,7 @@ wwwroot\uploads\baccalaureats\7256bfd4-8fb2-450a-81c5-fbb83933ecb6_karym-cv.pdf
 wwwroot\uploads\baccalaureats\7b9c6cd0-9f72-46ca-b89a-b5d905ebf0ab_2021_ATEXO_Module_Redaction.pdf
 wwwroot\uploads\baccalaureats\a74e0534-d817-486b-b03e-f9032d95ec22_CIN_Internet.pdf
 wwwroot\uploads\baccalaureats\a7aad0d0-871c-4322-a56b-8d59bb1ad53f_ismail.pdf
+wwwroot\uploads\baccalaureats\f8ab466e-4e53-4103-92c3-e696501d4eb6_CIN_Internet.pdf
 wwwroot\uploads\cin\439a2c36-04f4-4087-b080-9b46ca1fe04e_CIN_Internet.pdf
 wwwroot\uploads\cin\45897e68-1db9-4ce4-a0ae-a5e41cec9b84_CIN_Internet.pdf
 wwwroot\uploads\cin\529e532d-791d-4ea8-b7b0-0d5fa9569c25_CIN_Internet.pdf
@@ -3818,4 +3819,5 @@ wwwroot\uploads\cin\a4f012c1-5af2-4356-88b6-6224d66633a9_CIN_Internet.pdf
 wwwroot\uploads\cin\e5541cec-365d-4360-87de-145822199e81_CIN_Internet.pdf
 wwwroot\uploads\cni\2b29f6c1-c45e-46e3-86b2-dee8c7c025ca_catgoMedicamrentas.pdf
 wwwroot\uploads\cni\344b441c-356b-4d14-a266-a1c50717aa01_otmane.pdf
+wwwroot\uploads\cni\3c865837-8cd8-45f5-bd96-d64ddd0e3da8_CIN_Internet.pdf
 wwwroot\uploads\cni\83c277d1-f43d-4156-9cb0-027b3dc1124c_export.php.pdf

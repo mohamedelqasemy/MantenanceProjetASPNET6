@@ -678,42 +678,112 @@
       "MessagePackAnalyzer/2.1.152": {
         "type": "package"
       },
-      "Microsoft.AspNetCore.Antiforgery/1.1.3": {
+      "Microsoft.AspNetCore.Antiforgery/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.DataProtection": "1.1.3",
-          "Microsoft.AspNetCore.Http.Abstractions": "1.1.2",
-          "Microsoft.AspNetCore.Http.Extensions": "1.1.2",
-          "Microsoft.AspNetCore.WebUtilities": "1.1.2",
-          "Microsoft.Extensions.ObjectPool": "1.1.1",
-          "NETStandard.Library": "1.6.1"
+          "Microsoft.AspNetCore.DataProtection": "2.0.1",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.0.1",
+          "Microsoft.AspNetCore.Http.Extensions": "2.0.1",
+          "Microsoft.AspNetCore.WebUtilities": "2.0.1",
+          "Microsoft.Extensions.ObjectPool": "2.0.0"
         },
         "compile": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Antiforgery.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Antiforgery.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Antiforgery.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Antiforgery.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Authorization/1.1.3": {
+      "Microsoft.AspNetCore.Authentication.Abstractions/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Logging.Abstractions": "1.1.2",
-          "Microsoft.Extensions.Options": "1.1.2",
-          "NETStandard.Library": "1.6.1",
-          "System.Security.Claims": "4.3.0"
+          "Microsoft.AspNetCore.Http.Abstractions": "2.0.1",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Options": "2.0.0"
         },
         "compile": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Authorization.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Authorization.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Core/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Abstractions": "2.0.1",
+          "Microsoft.AspNetCore.Http": "2.0.1",
+          "Microsoft.AspNetCore.Http.Extensions": "2.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authorization/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Options": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authorization.Policy/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Abstractions": "2.0.1",
+          "Microsoft.AspNetCore.Authorization": "2.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.Policy.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.Policy.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Cors/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Extensions": "2.0.1",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Options": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Cors.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Cors.dll": {
             "related": ".xml"
           }
         }
@@ -747,201 +817,178 @@
           }
         }
       },
-      "Microsoft.AspNetCore.DataProtection/1.1.3": {
+      "Microsoft.AspNetCore.DataProtection/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Cryptography.Internal": "1.1.3",
-          "Microsoft.AspNetCore.DataProtection.Abstractions": "1.1.3",
-          "Microsoft.AspNetCore.Hosting.Abstractions": "1.1.3",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.1",
-          "Microsoft.Extensions.Logging.Abstractions": "1.1.2",
-          "Microsoft.Extensions.Options": "1.1.2",
-          "Microsoft.Win32.Registry": "4.3.0",
-          "NETStandard.Library": "1.6.1",
-          "System.Security.Claims": "4.3.0",
-          "System.Security.Principal.Windows": "4.3.0"
+          "Microsoft.AspNetCore.Cryptography.Internal": "2.0.1",
+          "Microsoft.AspNetCore.DataProtection.Abstractions": "2.0.1",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Options": "2.0.0",
+          "Microsoft.Win32.Registry": "4.4.0",
+          "System.Security.Cryptography.Xml": "4.4.0"
         },
         "compile": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.DataProtection.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.DataProtection.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.DataProtection.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.DataProtection.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.DataProtection.Abstractions/1.1.3": {
+      "Microsoft.AspNetCore.DataProtection.Abstractions/2.0.1": {
         "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "System.ComponentModel": "4.3.0"
-        },
         "compile": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.DataProtection.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.DataProtection.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.DataProtection.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.DataProtection.Abstractions.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Diagnostics.Abstractions/1.1.6": {
+      "Microsoft.AspNetCore.Diagnostics.Abstractions/2.0.1": {
         "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
         "compile": {
-          "lib/netstandard1.0/Microsoft.AspNetCore.Diagnostics.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Diagnostics.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.0/Microsoft.AspNetCore.Diagnostics.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Diagnostics.Abstractions.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Hosting.Abstractions/1.1.3": {
+      "Microsoft.AspNetCore.Hosting.Abstractions/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Hosting.Server.Abstractions": "1.1.3",
-          "Microsoft.AspNetCore.Http.Abstractions": "1.1.2",
-          "Microsoft.Extensions.Configuration.Abstractions": "1.1.2",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.1",
-          "Microsoft.Extensions.FileProviders.Abstractions": "1.1.1",
-          "Microsoft.Extensions.Logging.Abstractions": "1.1.2",
-          "NETStandard.Library": "1.6.1"
+          "Microsoft.AspNetCore.Hosting.Server.Abstractions": "2.0.1",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.0.1",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.FileProviders.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Hosting.Abstractions": "2.0.1",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.0"
         },
         "compile": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Hosting.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Hosting.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Abstractions.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Hosting.Server.Abstractions/1.1.3": {
+      "Microsoft.AspNetCore.Hosting.Server.Abstractions/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "1.1.2",
-          "Microsoft.Extensions.Configuration.Abstractions": "1.1.2",
-          "NETStandard.Library": "1.6.1"
+          "Microsoft.AspNetCore.Http.Features": "2.0.1",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.0"
         },
         "compile": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Hosting.Server.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Server.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Hosting.Server.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Server.Abstractions.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Html.Abstractions/1.1.2": {
+      "Microsoft.AspNetCore.Html.Abstractions/2.0.0": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "System.Text.Encodings.Web": "4.3.1"
+          "System.Text.Encodings.Web": "4.4.0"
         },
         "compile": {
-          "lib/netstandard1.0/Microsoft.AspNetCore.Html.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Html.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.0/Microsoft.AspNetCore.Html.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Html.Abstractions.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Http/1.1.2": {
+      "Microsoft.AspNetCore.Http/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Abstractions": "1.1.2",
-          "Microsoft.AspNetCore.WebUtilities": "1.1.2",
-          "Microsoft.Extensions.ObjectPool": "1.1.1",
-          "Microsoft.Extensions.Options": "1.1.2",
-          "Microsoft.Net.Http.Headers": "1.1.2",
-          "NETStandard.Library": "1.6.1",
-          "System.Buffers": "4.3.0"
+          "Microsoft.AspNetCore.Http.Abstractions": "2.0.1",
+          "Microsoft.AspNetCore.WebUtilities": "2.0.1",
+          "Microsoft.Extensions.ObjectPool": "2.0.0",
+          "Microsoft.Extensions.Options": "2.0.0",
+          "Microsoft.Net.Http.Headers": "2.0.1"
         },
         "compile": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Http.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Http.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Http.Abstractions/1.1.2": {
+      "Microsoft.AspNetCore.Http.Abstractions/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "1.1.2",
-          "Microsoft.Extensions.Primitives": "1.1.1",
-          "NETStandard.Library": "1.6.1",
-          "System.Globalization.Extensions": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
-          "System.Text.Encodings.Web": "4.3.1"
+          "Microsoft.AspNetCore.Http.Features": "2.0.1",
+          "System.Text.Encodings.Web": "4.4.0"
         },
         "compile": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Http.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Http.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Http.Extensions/1.1.2": {
+      "Microsoft.AspNetCore.Http.Extensions/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Abstractions": "1.1.2",
-          "Microsoft.Extensions.FileProviders.Abstractions": "1.1.1",
-          "Microsoft.Net.Http.Headers": "1.1.2",
-          "NETStandard.Library": "1.6.1",
-          "System.Buffers": "4.3.0"
+          "Microsoft.AspNetCore.Http.Abstractions": "2.0.1",
+          "Microsoft.Extensions.FileProviders.Abstractions": "2.0.0",
+          "Microsoft.Net.Http.Headers": "2.0.1",
+          "System.Buffers": "4.4.0"
         },
         "compile": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Http.Extensions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Extensions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Http.Extensions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Extensions.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Http.Features/1.1.2": {
+      "Microsoft.AspNetCore.Http.Features/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "1.1.1",
-          "NETStandard.Library": "1.6.1",
-          "System.ComponentModel": "4.3.0",
-          "System.Net.WebSockets": "4.3.0",
-          "System.Security.Claims": "4.3.0",
-          "System.Security.Principal": "4.3.0"
+          "Microsoft.Extensions.Primitives": "2.0.0"
         },
         "compile": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Http.Features.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Http.Features.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
             "related": ".xml"
           }
         }
@@ -963,127 +1010,215 @@
           }
         }
       },
-      "Microsoft.AspNetCore.JsonPatch/1.1.2": {
+      "Microsoft.AspNetCore.JsonPatch/2.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.CSharp": "4.3.0",
-          "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "9.0.1",
-          "System.Reflection.TypeExtensions": "4.3.0"
+          "Microsoft.CSharp": "4.4.0",
+          "Newtonsoft.Json": "10.0.1"
         },
         "compile": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.JsonPatch.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.JsonPatch.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Mvc.Abstractions/1.1.8": {
+      "Microsoft.AspNetCore.Localization/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Routing.Abstractions": "1.1.2",
-          "Microsoft.CSharp": "4.3.0",
-          "Microsoft.Net.Http.Headers": "1.1.2",
-          "NETStandard.Library": "1.6.1",
-          "System.ComponentModel.TypeConverter": "4.3.0"
+          "Microsoft.AspNetCore.Http.Extensions": "2.0.1",
+          "Microsoft.Extensions.Localization.Abstractions": "2.0.1",
+          "Microsoft.Extensions.Options": "2.0.0"
         },
         "compile": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Mvc.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Localization.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Mvc.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Localization.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Mvc.Core/1.1.8": {
+      "Microsoft.AspNetCore.Mvc/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Authorization": "1.1.3",
-          "Microsoft.AspNetCore.Hosting.Abstractions": "1.1.3",
-          "Microsoft.AspNetCore.Http": "1.1.2",
-          "Microsoft.AspNetCore.Mvc.Abstractions": "1.1.8",
-          "Microsoft.AspNetCore.ResponseCaching.Abstractions": "1.1.3",
-          "Microsoft.AspNetCore.Routing": "1.1.2",
-          "Microsoft.Extensions.DependencyModel": "1.1.9",
-          "Microsoft.Extensions.FileProviders.Abstractions": "1.1.1",
-          "Microsoft.Extensions.Logging.Abstractions": "1.1.2",
-          "Microsoft.Extensions.PlatformAbstractions": "1.1.0",
-          "NETStandard.Library": "1.6.1",
-          "System.Buffers": "4.3.0",
-          "System.Diagnostics.DiagnosticSource": "4.3.1"
+          "Microsoft.AspNetCore.Mvc.ApiExplorer": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.Cors": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.DataAnnotations": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.Localization": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.RazorPages": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.TagHelpers": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.0.1",
+          "Microsoft.Extensions.Caching.Memory": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection": "2.0.0"
         },
         "compile": {
-          "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Core.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Core.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Mvc.DataAnnotations/1.1.8": {
+      "Microsoft.AspNetCore.Mvc.Abstractions/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Core": "1.1.8",
-          "Microsoft.Extensions.Localization": "1.1.3",
-          "NETStandard.Library": "1.6.1",
-          "System.ComponentModel.Annotations": "4.3.0"
+          "Microsoft.AspNetCore.Routing.Abstractions": "2.0.1",
+          "Microsoft.Net.Http.Headers": "2.0.1"
         },
         "compile": {
-          "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.DataAnnotations.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.DataAnnotations.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Abstractions.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Mvc.Formatters.Json/1.1.8": {
+      "Microsoft.AspNetCore.Mvc.ApiExplorer/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.JsonPatch": "1.1.2",
-          "Microsoft.AspNetCore.Mvc.Core": "1.1.8",
-          "NETStandard.Library": "1.6.1"
+          "Microsoft.AspNetCore.Mvc.Core": "2.0.1"
         },
         "compile": {
-          "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Formatters.Json.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.ApiExplorer.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Formatters.Json.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.ApiExplorer.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Mvc.Razor/1.1.8": {
+      "Microsoft.AspNetCore.Mvc.Core/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Razor.Host": "1.1.8",
-          "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.1.8",
-          "Microsoft.CodeAnalysis.CSharp": "1.3.0",
-          "Microsoft.Extensions.FileProviders.Composite": "1.1.1",
-          "NETStandard.Library": "1.6.1",
-          "System.Runtime.Loader": "4.3.0"
+          "Microsoft.AspNetCore.Authentication.Core": "2.0.1",
+          "Microsoft.AspNetCore.Authorization.Policy": "2.0.1",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.0.1",
+          "Microsoft.AspNetCore.Http": "2.0.1",
+          "Microsoft.AspNetCore.Http.Extensions": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.0.1",
+          "Microsoft.AspNetCore.ResponseCaching.Abstractions": "2.0.1",
+          "Microsoft.AspNetCore.Routing": "2.0.1",
+          "Microsoft.Extensions.DependencyModel": "2.0.3",
+          "Microsoft.Extensions.FileProviders.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
+          "System.Diagnostics.DiagnosticSource": "4.4.1"
         },
         "compile": {
-          "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Razor.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Core.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Razor.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.Cors/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Cors": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.Core": "2.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Cors.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Cors.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.DataAnnotations/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.0.1",
+          "Microsoft.Extensions.Localization": "2.0.1",
+          "System.ComponentModel.Annotations": "4.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.DataAnnotations.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.DataAnnotations.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.Formatters.Json/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.JsonPatch": "2.0.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Formatters.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Formatters.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.Localization/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Localization": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.Razor": "2.0.1",
+          "Microsoft.Extensions.DependencyInjection": "2.0.0",
+          "Microsoft.Extensions.Localization": "2.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Localization.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Localization.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.Razor/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Razor.Extensions": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.0.1",
+          "Microsoft.AspNetCore.Razor.Runtime": "2.0.1",
+          "Microsoft.CodeAnalysis.CSharp": "2.3.1",
+          "Microsoft.CodeAnalysis.Razor": "2.0.1",
+          "Microsoft.Extensions.Caching.Memory": "2.0.0",
+          "Microsoft.Extensions.FileProviders.Composite": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.dll": {
             "related": ".xml"
           }
         }
@@ -1101,26 +1236,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.Mvc.Razor.Host/1.1.8": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Razor.Runtime": "1.1.2",
-          "Microsoft.Extensions.Caching.Memory": "1.1.2",
-          "Microsoft.Extensions.FileProviders.Physical": "1.1.1",
-          "NETStandard.Library": "1.6.1",
-          "System.ComponentModel.TypeConverter": "4.3.0"
-        },
-        "compile": {
-          "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Razor.Host.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Razor.Host.dll": {
             "related": ".xml"
           }
         }
@@ -1149,66 +1264,75 @@
           "build/netcoreapp3.0/_._": {}
         }
       },
-      "Microsoft.AspNetCore.Mvc.TagHelpers/1.1.8": {
+      "Microsoft.AspNetCore.Mvc.RazorPages/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Razor": "1.1.8",
-          "Microsoft.AspNetCore.Routing.Abstractions": "1.1.2",
-          "Microsoft.Extensions.Caching.Memory": "1.1.2",
-          "Microsoft.Extensions.FileSystemGlobbing": "1.1.1",
-          "Microsoft.Extensions.Primitives": "1.1.1",
-          "NETStandard.Library": "1.6.1"
+          "Microsoft.AspNetCore.Mvc.Razor": "2.0.1"
         },
         "compile": {
-          "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.TagHelpers.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.RazorPages.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.TagHelpers.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.RazorPages.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Mvc.ViewFeatures/1.1.8": {
+      "Microsoft.AspNetCore.Mvc.TagHelpers/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Antiforgery": "1.1.3",
-          "Microsoft.AspNetCore.Diagnostics.Abstractions": "1.1.6",
-          "Microsoft.AspNetCore.Html.Abstractions": "1.1.2",
-          "Microsoft.AspNetCore.Mvc.Core": "1.1.8",
-          "Microsoft.AspNetCore.Mvc.DataAnnotations": "1.1.8",
-          "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.1.8",
-          "Microsoft.Extensions.WebEncoders": "1.1.2",
-          "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "9.0.1",
-          "System.Buffers": "4.3.0",
-          "System.Runtime.Serialization.Primitives": "4.3.0"
+          "Microsoft.AspNetCore.Mvc.Razor": "2.0.1",
+          "Microsoft.AspNetCore.Razor.Runtime": "2.0.1",
+          "Microsoft.AspNetCore.Routing.Abstractions": "2.0.1",
+          "Microsoft.Extensions.Caching.Memory": "2.0.0",
+          "Microsoft.Extensions.FileSystemGlobbing": "2.0.0",
+          "Microsoft.Extensions.Primitives": "2.0.0"
         },
         "compile": {
-          "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.ViewFeatures.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.TagHelpers.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.ViewFeatures.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.TagHelpers.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Razor/1.1.2": {
+      "Microsoft.AspNetCore.Mvc.ViewFeatures/2.0.1": {
         "type": "package",
         "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "System.Threading.Thread": "4.3.0"
+          "Microsoft.AspNetCore.Antiforgery": "2.0.1",
+          "Microsoft.AspNetCore.Diagnostics.Abstractions": "2.0.1",
+          "Microsoft.AspNetCore.Html.Abstractions": "2.0.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.DataAnnotations": "2.0.1",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "2.0.1",
+          "Microsoft.Extensions.WebEncoders": "2.0.0",
+          "Newtonsoft.Json.Bson": "1.0.1"
         },
         "compile": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Razor.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.ViewFeatures.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Razor.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.ViewFeatures.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Razor/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Razor.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Razor.dll": {
             "related": ".xml"
           }
         }
@@ -1222,96 +1346,88 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Razor.Language.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Razor.Runtime/1.1.2": {
+      "Microsoft.AspNetCore.Razor.Runtime/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Html.Abstractions": "1.1.2",
-          "Microsoft.AspNetCore.Razor": "1.1.2",
-          "NETStandard.Library": "1.6.1",
-          "System.Reflection.TypeExtensions": "4.3.0"
+          "Microsoft.AspNetCore.Html.Abstractions": "2.0.0",
+          "Microsoft.AspNetCore.Razor": "2.0.1"
         },
         "compile": {
-          "lib/netstandard1.5/Microsoft.AspNetCore.Razor.Runtime.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Razor.Runtime.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.5/Microsoft.AspNetCore.Razor.Runtime.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Razor.Runtime.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.ResponseCaching.Abstractions/1.1.3": {
+      "Microsoft.AspNetCore.ResponseCaching.Abstractions/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "1.1.1",
-          "NETStandard.Library": "1.6.1"
+          "Microsoft.Extensions.Primitives": "2.0.0"
         },
         "compile": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.ResponseCaching.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.ResponseCaching.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.ResponseCaching.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.ResponseCaching.Abstractions.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Routing/1.1.2": {
+      "Microsoft.AspNetCore.Routing/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Extensions": "1.1.2",
-          "Microsoft.AspNetCore.Routing.Abstractions": "1.1.2",
-          "Microsoft.Extensions.Logging.Abstractions": "1.1.2",
-          "Microsoft.Extensions.ObjectPool": "1.1.1",
-          "Microsoft.Extensions.Options": "1.1.2",
-          "NETStandard.Library": "1.6.1"
+          "Microsoft.AspNetCore.Http.Extensions": "2.0.1",
+          "Microsoft.AspNetCore.Routing.Abstractions": "2.0.1",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
+          "Microsoft.Extensions.ObjectPool": "2.0.0",
+          "Microsoft.Extensions.Options": "2.0.0"
         },
         "compile": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Routing.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Routing.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Routing.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Routing.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.Routing.Abstractions/1.1.2": {
+      "Microsoft.AspNetCore.Routing.Abstractions/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Abstractions": "1.1.2",
-          "NETStandard.Library": "1.6.1"
+          "Microsoft.AspNetCore.Http.Abstractions": "2.0.1"
         },
         "compile": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Routing.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Routing.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.Routing.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Routing.Abstractions.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.AspNetCore.WebUtilities/1.1.2": {
+      "Microsoft.AspNetCore.WebUtilities/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "1.1.1",
-          "Microsoft.Net.Http.Headers": "1.1.2",
-          "NETStandard.Library": "1.6.1",
-          "System.Buffers": "4.3.0",
-          "System.Text.Encodings.Web": "4.3.1"
+          "Microsoft.Net.Http.Headers": "2.0.1",
+          "System.Text.Encodings.Web": "4.4.0"
         },
         "compile": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.WebUtilities.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.AspNetCore.WebUtilities.dll": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {
             "related": ".xml"
           }
         }
@@ -2255,19 +2371,18 @@
           }
         }
       },
-      "Microsoft.Extensions.FileProviders.Composite/1.1.1": {
+      "Microsoft.Extensions.FileProviders.Composite/2.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.FileProviders.Abstractions": "1.1.1",
-          "NETStandard.Library": "1.6.1"
+          "Microsoft.Extensions.FileProviders.Abstractions": "2.0.0"
         },
         "compile": {
-          "lib/netstandard1.0/Microsoft.Extensions.FileProviders.Composite.dll": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.0/Microsoft.Extensions.FileProviders.Composite.dll": {
+          "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.dll": {
             "related": ".xml"
           }
         }
@@ -2384,40 +2499,34 @@
           }
         }
       },
-      "Microsoft.Extensions.Localization/1.1.3": {
+      "Microsoft.Extensions.Localization/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Hosting.Abstractions": "1.1.3",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.1",
-          "Microsoft.Extensions.Localization.Abstractions": "1.1.3",
-          "Microsoft.Extensions.Options": "1.1.2",
-          "NETStandard.Library": "1.6.1",
-          "System.Resources.Reader": "4.3.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Localization.Abstractions": "2.0.1",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Options": "2.0.0"
         },
         "compile": {
-          "lib/netstandard1.3/Microsoft.Extensions.Localization.dll": {
+          "lib/netstandard2.0/Microsoft.Extensions.Localization.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.Extensions.Localization.dll": {
+          "lib/netstandard2.0/Microsoft.Extensions.Localization.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.Extensions.Localization.Abstractions/1.1.3": {
+      "Microsoft.Extensions.Localization.Abstractions/2.0.1": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.CSharp": "4.3.0",
-          "NETStandard.Library": "1.6.1"
-        },
         "compile": {
-          "lib/netstandard1.0/Microsoft.Extensions.Localization.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.0/Microsoft.Extensions.Localization.Abstractions.dll": {
+          "lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.dll": {
             "related": ".xml"
           }
         }
@@ -2544,18 +2653,15 @@
           }
         }
       },
-      "Microsoft.Extensions.ObjectPool/1.1.1": {
+      "Microsoft.Extensions.ObjectPool/2.0.0": {
         "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
         "compile": {
-          "lib/netstandard1.3/Microsoft.Extensions.ObjectPool.dll": {
+          "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.3/Microsoft.Extensions.ObjectPool.dll": {
+          "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.dll": {
             "related": ".xml"
           }
         }
@@ -2599,23 +2705,6 @@
           }
         }
       },
-      "Microsoft.Extensions.PlatformAbstractions/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "System.Reflection.TypeExtensions": "4.3.0"
-        },
-        "compile": {
-          "lib/netstandard1.3/Microsoft.Extensions.PlatformAbstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.3/Microsoft.Extensions.PlatformAbstractions.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Extensions.Primitives/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -2635,21 +2724,20 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Microsoft.Extensions.WebEncoders/1.1.2": {
+      "Microsoft.Extensions.WebEncoders/2.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.1",
-          "Microsoft.Extensions.Options": "1.1.2",
-          "NETStandard.Library": "1.6.1",
-          "System.Text.Encodings.Web": "4.3.1"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Options": "2.0.0",
+          "System.Text.Encodings.Web": "4.4.0"
         },
         "compile": {
-          "lib/netstandard1.0/Microsoft.Extensions.WebEncoders.dll": {
+          "lib/netstandard2.0/Microsoft.Extensions.WebEncoders.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.0/Microsoft.Extensions.WebEncoders.dll": {
+          "lib/netstandard2.0/Microsoft.Extensions.WebEncoders.dll": {
             "related": ".xml"
           }
         }
@@ -2784,21 +2872,19 @@
           }
         }
       },
-      "Microsoft.Net.Http.Headers/1.1.2": {
+      "Microsoft.Net.Http.Headers/2.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "1.1.1",
-          "NETStandard.Library": "1.6.1",
-          "System.Buffers": "4.3.0",
-          "System.Diagnostics.Contracts": "4.3.0"
+          "Microsoft.Extensions.Primitives": "2.0.0",
+          "System.Buffers": "4.4.0"
         },
         "compile": {
-          "lib/netstandard1.1/Microsoft.Net.Http.Headers.dll": {
+          "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard1.1/Microsoft.Net.Http.Headers.dll": {
+          "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {
             "related": ".xml"
           }
         }
@@ -3108,6 +3194,23 @@
           }
         }
       },
+      "Newtonsoft.Json.Bson/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "10.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "NonFactors.Grid.Core.Mvc6/6.2.1": {
         "type": "package",
         "dependencies": {
@@ -3236,17 +3339,17 @@
           "lib/netstandard2.0/NuGet.Versioning.dll": {}
         }
       },
-      "Rotativa.AspNetCore/1.3.2": {
+      "Rotativa.AspNetCore/1.2.0": {
         "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc": "2.0.1"
+        },
         "compile": {
-          "lib/net6.0/Rotativa.AspNetCore.dll": {}
+          "lib/netstandard2.0/Rotativa.AspNetCore.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Rotativa.AspNetCore.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+          "lib/netstandard2.0/Rotativa.AspNetCore.dll": {}
+        }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
@@ -3502,125 +3605,13 @@
           }
         }
       },
-      "System.Collections.NonGeneric/4.3.0": {
+      "System.ComponentModel.Annotations/4.4.0": {
         "type": "package",
-        "dependencies": {
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Threading": "4.3.0"
-        },
         "compile": {
-          "ref/netstandard1.3/System.Collections.NonGeneric.dll": {
-            "related": ".xml"
-          }
+          "ref/netcoreapp2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/System.Collections.NonGeneric.dll": {}
-        }
-      },
-      "System.Collections.Specialized/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Collections.NonGeneric": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.Globalization.Extensions": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Threading": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.3/_._": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.3/System.Collections.Specialized.dll": {}
-        }
-      },
-      "System.ComponentModel/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Runtime": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.0/System.ComponentModel.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.3/System.ComponentModel.dll": {}
-        }
-      },
-      "System.ComponentModel.Annotations/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.ComponentModel": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.Linq": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Extensions": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Text.RegularExpressions": "4.3.0",
-          "System.Threading": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.4/System.ComponentModel.Annotations.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.4/System.ComponentModel.Annotations.dll": {}
-        }
-      },
-      "System.ComponentModel.Primitives/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.ComponentModel": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.0/System.ComponentModel.Primitives.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.0/System.ComponentModel.Primitives.dll": {}
-        }
-      },
-      "System.ComponentModel.TypeConverter/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Collections.NonGeneric": "4.3.0",
-          "System.Collections.Specialized": "4.3.0",
-          "System.ComponentModel": "4.3.0",
-          "System.ComponentModel.Primitives": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.Linq": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Extensions": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Threading": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.5/System.ComponentModel.TypeConverter.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.5/System.ComponentModel.TypeConverter.dll": {}
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Composition/1.0.31": {
@@ -3767,20 +3758,6 @@
           "ref/netstandard1.3/System.Console.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "System.Diagnostics.Contracts/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Runtime": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.0/System.Diagnostics.Contracts.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.0/System.Diagnostics.Contracts.dll": {}
         }
       },
       "System.Diagnostics.Debug/4.3.0": {
@@ -3939,7 +3916,7 @@
           "System.Runtime.InteropServices": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/System.Globalization.Extensions.dll": {
+          "ref/netstandard1.3/_._": {
             "related": ".xml"
           }
         },
@@ -4238,23 +4215,6 @@
           }
         }
       },
-      "System.Net.WebSockets/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Win32.Primitives": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Threading.Tasks": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.3/System.Net.WebSockets.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.3/System.Net.WebSockets.dll": {}
-        }
-      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -4378,28 +4338,12 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.5/System.Reflection.TypeExtensions.dll": {
+          "ref/netstandard1.5/_._": {
             "related": ".xml"
           }
         },
         "runtime": {
           "lib/netstandard1.5/System.Reflection.TypeExtensions.dll": {}
-        }
-      },
-      "System.Resources.Reader/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.IO": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Text.Encoding": "4.3.0",
-          "System.Threading": "4.3.0"
-        },
-        "compile": {
-          "lib/netstandard1.0/System.Resources.Reader.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/System.Resources.Reader.dll": {}
         }
       },
       "System.Resources.ResourceManager/4.3.0": {
@@ -4535,22 +4479,6 @@
           }
         }
       },
-      "System.Runtime.Loader/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.IO": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.5/System.Runtime.Loader.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.5/System.Runtime.Loader.dll": {}
-        }
-      },
       "System.Runtime.Numerics/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -4566,21 +4494,6 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Runtime.Numerics.dll": {}
-        }
-      },
-      "System.Runtime.Serialization.Primitives/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.3/System.Runtime.Serialization.Primitives.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.3/System.Runtime.Serialization.Primitives.dll": {}
         }
       },
       "System.Security.AccessControl/5.0.0": {
@@ -4604,26 +4517,6 @@
             "assetType": "runtime",
             "rid": "win"
           }
-        }
-      },
-      "System.Security.Claims/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.IO": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Security.Principal": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.3/System.Security.Claims.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.3/System.Security.Claims.dll": {}
         }
       },
       "System.Security.Cryptography.Algorithms/4.3.0": {
@@ -4884,6 +4777,17 @@
           }
         }
       },
+      "System.Security.Cryptography.Xml/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Security.Cryptography.Xml.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.Xml.dll": {}
+        }
+      },
       "System.Security.Permissions/5.0.0": {
         "type": "package",
         "dependencies": {
@@ -4899,20 +4803,6 @@
           "lib/net5.0/System.Security.Permissions.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "System.Security.Principal/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Runtime": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.0/System.Security.Principal.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.0/System.Security.Principal.dll": {}
         }
       },
       "System.Security.Principal.Windows/5.0.0": {
@@ -5079,20 +4969,6 @@
         },
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
-        }
-      },
-      "System.Threading.Thread/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Runtime": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.3/System.Threading.Thread.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard1.3/System.Threading.Thread.dll": {}
         }
       },
       "System.Threading.Timer/4.3.0": {
@@ -6038,34 +5914,82 @@
         "tools/uninstall.ps1"
       ]
     },
-    "Microsoft.AspNetCore.Antiforgery/1.1.3": {
-      "sha512": "0hk0kU+5YdZ2XwVJiyIqiiFMxvR8VXGnrJp5VI+EeYOSMl3sOBZdmA10whN1n11h7TfF4WxlDaIMUfspY1qDJw==",
+    "Microsoft.AspNetCore.Antiforgery/2.0.1": {
+      "sha512": "WJdyrhYlggFY5VfFCvrcfPjc5zp3TiwbldFeDZ0xhRESEnT0icus8rq86Qyc82gMb8YNtOBGkvOv6rfXSKhFwA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.antiforgery/1.1.3",
+      "path": "microsoft.aspnetcore.antiforgery/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Antiforgery.dll",
-        "lib/net451/Microsoft.AspNetCore.Antiforgery.xml",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Antiforgery.dll",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Antiforgery.xml",
-        "microsoft.aspnetcore.antiforgery.1.1.3.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Antiforgery.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Antiforgery.xml",
+        "microsoft.aspnetcore.antiforgery.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.antiforgery.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Authorization/1.1.3": {
-      "sha512": "iGpTBKyOmjXtRBwk3MoUReP1zKVMtGI3O4LSGfja6MNU8rVK1qAycR5TP+PQKeDC8V0+wcejEstIQtBI30QsWg==",
+    "Microsoft.AspNetCore.Authentication.Abstractions/2.0.1": {
+      "sha512": "7PHMl0nVjaYCrypBSsS2MYZmmOm8UqJmkFRuGzfcEpkYKT/2TjEZ8z2F0QBkU7YOfDmeupanrD5vcnJvupdWJg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authorization/1.1.3",
+      "path": "microsoft.aspnetcore.authentication.abstractions/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Authorization.dll",
-        "lib/net451/Microsoft.AspNetCore.Authorization.xml",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Authorization.dll",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Authorization.xml",
-        "microsoft.aspnetcore.authorization.1.1.3.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Abstractions.xml",
+        "microsoft.aspnetcore.authentication.abstractions.2.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Authentication.Core/2.0.1": {
+      "sha512": "iYr/rnoafq+pl9p4O+6GitU1iXh4FJYFsRt6oi1fcITWy7FHy5eA4N7T5ypNImsyY/MFTiIpH0g7XXUeDUVgww==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.core/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Core.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.Core.xml",
+        "microsoft.aspnetcore.authentication.core.2.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.core.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Authorization/2.0.1": {
+      "sha512": "0nZ5slZMwvtEgoR5b/T/MB4uM5qPQqVhPxbtrWb9W0QsIktB0gkAmpD6ciNj4ltZ+zRaY3rWZSS09SaFrsUTIQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authorization/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.xml",
+        "microsoft.aspnetcore.authorization.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.authorization.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Authorization.Policy/2.0.1": {
+      "sha512": "AJEJjYkN3L9VyHuKnUsQNp4nbH2ABBePWi+5soA+9L1NHGexP5S1TnMksOef1I+4fiVhp8OhlG+Ensz56ucBcw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authorization.policy/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.Policy.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.Policy.xml",
+        "microsoft.aspnetcore.authorization.policy.2.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.authorization.policy.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Cors/2.0.1": {
+      "sha512": "9CkzhCVdqV4lYDuf6jNqjUfQQ0lbnxg1npGIu8Wl7G9xsghSERgfrj7ddCmzparqZ1igD16gcTY3KyjwZczXEQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.cors/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cors.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Cors.xml",
+        "microsoft.aspnetcore.cors.2.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.cors.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Cryptography.Internal/6.0.20": {
@@ -6106,149 +6030,133 @@
         "microsoft.aspnetcore.cryptography.keyderivation.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.DataProtection/1.1.3": {
-      "sha512": "4am4PmrTDYexofUWxGdnyUItxPDLkhFUoY8JzPb4Cp3l8RCNs9e4WqLOynPLU/FZ3fJRdr+EJ6ub60LukHO7TA==",
+    "Microsoft.AspNetCore.DataProtection/2.0.1": {
+      "sha512": "wQbnO+4xEalM/80V27UqAoRe0Hxo13W2lNNnJ3816zwDv1404tiLwE7YLPM68b6H+QYOaqvQFGqKkj4FBrN4mw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.dataprotection/1.1.3",
+      "path": "microsoft.aspnetcore.dataprotection/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.DataProtection.dll",
-        "lib/net451/Microsoft.AspNetCore.DataProtection.xml",
-        "lib/netstandard1.3/Microsoft.AspNetCore.DataProtection.dll",
-        "lib/netstandard1.3/Microsoft.AspNetCore.DataProtection.xml",
-        "microsoft.aspnetcore.dataprotection.1.1.3.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.DataProtection.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.DataProtection.xml",
+        "microsoft.aspnetcore.dataprotection.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.dataprotection.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.DataProtection.Abstractions/1.1.3": {
-      "sha512": "bl3RN1XQcgx46mOzRaHA+pB+J35eH/P+SrCs5lG4vbk+B2TF1EeUvvRYPMr3QZpu32VyksKRDuF9HxmULFdV7A==",
+    "Microsoft.AspNetCore.DataProtection.Abstractions/2.0.1": {
+      "sha512": "2sXEwqRIdQsbdfuGr0G5N0G+No2ormNyAkAudtVgoFzbjdf6zbCtbLK9skoNb4bg3/ZyE0qa1iOJELfEM4GUjA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.dataprotection.abstractions/1.1.3",
+      "path": "microsoft.aspnetcore.dataprotection.abstractions/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.DataProtection.Abstractions.dll",
-        "lib/net451/Microsoft.AspNetCore.DataProtection.Abstractions.xml",
-        "lib/netstandard1.3/Microsoft.AspNetCore.DataProtection.Abstractions.dll",
-        "lib/netstandard1.3/Microsoft.AspNetCore.DataProtection.Abstractions.xml",
-        "microsoft.aspnetcore.dataprotection.abstractions.1.1.3.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.DataProtection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.DataProtection.Abstractions.xml",
+        "microsoft.aspnetcore.dataprotection.abstractions.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.dataprotection.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Diagnostics.Abstractions/1.1.6": {
-      "sha512": "AGNydxkCRXLGYdNCOnE/x9cuHSB6t2rPquU9Dw46QICn6ABBoPoOF2vtC6dCkWjiI2MI6/Qx+S+epH3QZqPGKQ==",
+    "Microsoft.AspNetCore.Diagnostics.Abstractions/2.0.1": {
+      "sha512": "NHBnnQYuBxcqHNoOw0+uTkHrAHAp7xA2G3P1j3oFUSGd/RhIJ2A9xE2+CAWPRGIGwsa+zY3zfogx5lUzwhFgcA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.diagnostics.abstractions/1.1.6",
+      "path": "microsoft.aspnetcore.diagnostics.abstractions/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netstandard1.0/Microsoft.AspNetCore.Diagnostics.Abstractions.dll",
-        "lib/netstandard1.0/Microsoft.AspNetCore.Diagnostics.Abstractions.xml",
-        "microsoft.aspnetcore.diagnostics.abstractions.1.1.6.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Diagnostics.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Diagnostics.Abstractions.xml",
+        "microsoft.aspnetcore.diagnostics.abstractions.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.diagnostics.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Hosting.Abstractions/1.1.3": {
-      "sha512": "PW/WRPMLkzMGOAgC5Wfyh+eKOeQvdVHbIvEEbpOQoRBd1FmUE41n0v/0nhxN50jER94SmnHlSrXRzKwr3EJpUg==",
+    "Microsoft.AspNetCore.Hosting.Abstractions/2.0.1": {
+      "sha512": "1/Pifm1al6wA12UkAGpro2vsF31oF8Zw2ZCi9PphxTFGreTsJbqPzd39YcTlw3Knb9n/8F9/lTZ3l1m2RjWGXg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.hosting.abstractions/1.1.3",
+      "path": "microsoft.aspnetcore.hosting.abstractions/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Hosting.Abstractions.dll",
-        "lib/net451/Microsoft.AspNetCore.Hosting.Abstractions.xml",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Hosting.Abstractions.dll",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Hosting.Abstractions.xml",
-        "microsoft.aspnetcore.hosting.abstractions.1.1.3.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Abstractions.xml",
+        "microsoft.aspnetcore.hosting.abstractions.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.hosting.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Hosting.Server.Abstractions/1.1.3": {
-      "sha512": "RxJzm3vIoEjlyrnVkZGQynQL/TCDmZwwuPajaVE22C1qv9CdXvdMj9LPGVG9a9qIAoRHTxmReeDv/koD0DscUg==",
+    "Microsoft.AspNetCore.Hosting.Server.Abstractions/2.0.1": {
+      "sha512": "uVOdxjpxJdwR5C3RdByht/cm9FwyqeTEm58NnPwOxMAUPE9nqbXdVnq1Hff2VjtSlvVtPVT0NiJjHM6pDkEeKA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.hosting.server.abstractions/1.1.3",
+      "path": "microsoft.aspnetcore.hosting.server.abstractions/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Hosting.Server.Abstractions.dll",
-        "lib/net451/Microsoft.AspNetCore.Hosting.Server.Abstractions.xml",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Hosting.Server.Abstractions.dll",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Hosting.Server.Abstractions.xml",
-        "microsoft.aspnetcore.hosting.server.abstractions.1.1.3.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Server.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Hosting.Server.Abstractions.xml",
+        "microsoft.aspnetcore.hosting.server.abstractions.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.hosting.server.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Html.Abstractions/1.1.2": {
-      "sha512": "CUnhx2HWVnTTdOYFYMgz61EG73IUZlH0zML0ztFqUCmGB/n10GwskZbXjSPHoVqLqn6t4BybhFXqjigElsdJBw==",
+    "Microsoft.AspNetCore.Html.Abstractions/2.0.0": {
+      "sha512": "Tdy0VkAnSeynmnbqF1JLchyPg5iQwmxTTG16byenoD2SXn/W8DR6HagZOZxvDb7gc4IerjdhIwuY8aV8nm7FAA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.html.abstractions/1.1.2",
+      "path": "microsoft.aspnetcore.html.abstractions/2.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netstandard1.0/Microsoft.AspNetCore.Html.Abstractions.dll",
-        "lib/netstandard1.0/Microsoft.AspNetCore.Html.Abstractions.xml",
-        "microsoft.aspnetcore.html.abstractions.1.1.2.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Html.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Html.Abstractions.xml",
+        "microsoft.aspnetcore.html.abstractions.2.0.0.nupkg.sha512",
         "microsoft.aspnetcore.html.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http/1.1.2": {
-      "sha512": "Vn62+hBlhNIz4+lskY06KGvlXE88QtB70v2y1/J28tsUsS6a82aKsaK0CWHXf7WakpMBgzQ2hmLMu5jcraGCBg==",
+    "Microsoft.AspNetCore.Http/2.0.1": {
+      "sha512": "mTXDCNF83pV6qe+IzJ166p1re2or25Xj0vjdqj5JDakz9ClNZHncSkyAk63vSpBZbgFXGHiz+PuVyYcfurs5ew==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http/1.1.2",
+      "path": "microsoft.aspnetcore.http/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Http.dll",
-        "lib/net451/Microsoft.AspNetCore.Http.xml",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Http.dll",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Http.xml",
-        "microsoft.aspnetcore.http.1.1.2.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.xml",
+        "microsoft.aspnetcore.http.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.http.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http.Abstractions/1.1.2": {
-      "sha512": "Ab4xz9u7Ih4PtnoRB5CCSKEop2GydEzcuqkjaWrbs2wTHBg0xI+UBQQQKs7V1lDAfBxak4Wme3mG2UUCJilO9w==",
+    "Microsoft.AspNetCore.Http.Abstractions/2.0.1": {
+      "sha512": "i3mGpHEGnMq/x9eDxdWVP4e+VdPD8DuhdVYR4sH0wxWiM6oa0tNAhwDGoOrDop548PSwLM8Qs7DGPvrZqIqjmQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http.abstractions/1.1.2",
+      "path": "microsoft.aspnetcore.http.abstractions/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Http.Abstractions.dll",
-        "lib/net451/Microsoft.AspNetCore.Http.Abstractions.xml",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Http.Abstractions.dll",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Http.Abstractions.xml",
-        "microsoft.aspnetcore.http.abstractions.1.1.2.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.xml",
+        "microsoft.aspnetcore.http.abstractions.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.http.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http.Extensions/1.1.2": {
-      "sha512": "Z+yvYvnCXEJt9e67dClOOlzvRf/JGLRo/Krk8UCvcCmk8qJRjg1DY4zcMvLN9lgxZRKjXOmT1pxf4UsrjIF6/w==",
+    "Microsoft.AspNetCore.Http.Extensions/2.0.1": {
+      "sha512": "iG6FtbPQI3AOb3LskrY23AUiaZUGSfXWxMf1cJh9lB/h309qiMTPM6Du4stGwwSvw3yR2EKNaV+O4aZWmuvfog==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http.extensions/1.1.2",
+      "path": "microsoft.aspnetcore.http.extensions/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Http.Extensions.dll",
-        "lib/net451/Microsoft.AspNetCore.Http.Extensions.xml",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Http.Extensions.dll",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Http.Extensions.xml",
-        "microsoft.aspnetcore.http.extensions.1.1.2.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Extensions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Extensions.xml",
+        "microsoft.aspnetcore.http.extensions.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.http.extensions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http.Features/1.1.2": {
-      "sha512": "Ib0ofcH4zkmGwoUOIMVwRd1iU2HrATiL3ozuqzAZgEqVBVbp6W7k0O72uQ3pkw3o/zS4S0Gyt5SQksxDBSDmcw==",
+    "Microsoft.AspNetCore.Http.Features/2.0.1": {
+      "sha512": "J9JvFF7gC2SDJTV/4XWXQaKX4zdjR2ixlGy/KUD7Og+dkeHleD7f8+wtRUthuQV1yCU3t/gz/IrmbpmQj+Tlzg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http.features/1.1.2",
+      "path": "microsoft.aspnetcore.http.features/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Http.Features.dll",
-        "lib/net451/Microsoft.AspNetCore.Http.Features.xml",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Http.Features.dll",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Http.Features.xml",
-        "microsoft.aspnetcore.http.features.1.1.2.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
+        "microsoft.aspnetcore.http.features.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
@@ -6267,93 +6175,146 @@
         "microsoft.aspnetcore.identity.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.JsonPatch/1.1.2": {
-      "sha512": "PToSDCNLfVgE++zXjGA6lYc977IMvJSGfj5SoAttWHQ9lgCxxlw1ZyNUZNmmPvGdlbR6n8t1Sge7217oHD/Tew==",
+    "Microsoft.AspNetCore.JsonPatch/2.0.0": {
+      "sha512": "US78cfi7nrPTXeONgcSWbgrUBLs1Aca4kCJTieWXDLg0G0gwmdfPbd6S3c5TdJRQdA69K3UhPAs9r9ZAMjIFAA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.jsonpatch/1.1.2",
+      "path": "microsoft.aspnetcore.jsonpatch/2.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.JsonPatch.dll",
-        "lib/net451/Microsoft.AspNetCore.JsonPatch.xml",
-        "lib/netstandard1.3/Microsoft.AspNetCore.JsonPatch.dll",
-        "lib/netstandard1.3/Microsoft.AspNetCore.JsonPatch.xml",
-        "microsoft.aspnetcore.jsonpatch.1.1.2.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.xml",
+        "microsoft.aspnetcore.jsonpatch.2.0.0.nupkg.sha512",
         "microsoft.aspnetcore.jsonpatch.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Mvc.Abstractions/1.1.8": {
-      "sha512": "3DoC8ukbNlpIXJkyB6F9DFlBLgcV414t1z9NagDEIYPyyEIlRfvja2TNXxXk2cJG/MbhHMPUmj7p7G3ELQD48w==",
+    "Microsoft.AspNetCore.Localization/2.0.1": {
+      "sha512": "c2u/AU2CscYYmH1nMbkYyJp5Zy2elVuZYryEEV+M0cL/aKGFfDRnQ5iTGoa4HPNELjpqhFWTGwIneeUlpJWUDg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.mvc.abstractions/1.1.8",
+      "path": "microsoft.aspnetcore.localization/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Mvc.Abstractions.dll",
-        "lib/net451/Microsoft.AspNetCore.Mvc.Abstractions.xml",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Mvc.Abstractions.dll",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Mvc.Abstractions.xml",
-        "microsoft.aspnetcore.mvc.abstractions.1.1.8.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Localization.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Localization.xml",
+        "microsoft.aspnetcore.localization.2.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.localization.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Mvc/2.0.1": {
+      "sha512": "NyREVR8T77lyf5pn6FqMZky7qG/dLTbSas1EO3Cy+zLDsKhD6OrtgDJtzMDfRIfBysCoFo4bFcC38MTzKEdmtA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.mvc/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.xml",
+        "microsoft.aspnetcore.mvc.2.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.mvc.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Mvc.Abstractions/2.0.1": {
+      "sha512": "lmtZdHN/dHREWo9rGoxY646wUhdr1Wt9rXl8SYYPjA80VcGDKqgSwvb0SOt9f/7fYzOHPZGZuDPCf9lED2stsA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.mvc.abstractions/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Abstractions.xml",
+        "microsoft.aspnetcore.mvc.abstractions.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.mvc.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Mvc.Core/1.1.8": {
-      "sha512": "DBWJN/uLktnBzg9ZQrb7UoSthHvkPKTPvotqB+9JiXwgVXqSNrKtDTA4APo1yP0tItgQU2VBT/ne2Ye7yEC2aQ==",
+    "Microsoft.AspNetCore.Mvc.ApiExplorer/2.0.1": {
+      "sha512": "WaY906DkCyG7C/BZBLecVxNGTsXADxiv0cyaK9newWOGkIfQ0rp4UvLIijed8Tb2eJsfT99iLUBj5GvBWLxRwA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.mvc.core/1.1.8",
+      "path": "microsoft.aspnetcore.mvc.apiexplorer/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Mvc.Core.dll",
-        "lib/net451/Microsoft.AspNetCore.Mvc.Core.xml",
-        "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Core.dll",
-        "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Core.xml",
-        "microsoft.aspnetcore.mvc.core.1.1.8.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.ApiExplorer.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.ApiExplorer.xml",
+        "microsoft.aspnetcore.mvc.apiexplorer.2.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.mvc.apiexplorer.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Mvc.Core/2.0.1": {
+      "sha512": "JFd2hCLx5wdbIVtURpGUq1dNcuhGW7RaoTwVghI5QxwZU3Dh65ymgdaoKVhB8OS20DhZaNwVPXYHfVlViMbnDw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.mvc.core/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Core.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Core.xml",
+        "microsoft.aspnetcore.mvc.core.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.mvc.core.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Mvc.DataAnnotations/1.1.8": {
-      "sha512": "jumNnhrSbZVT0VOeJipQUQc1UuBPmOM+H7CYFYwWlN8naLsb2l3jVcnPJMaRm4XIUQvWbgB2Ku8zhbVD4LSIwA==",
+    "Microsoft.AspNetCore.Mvc.Cors/2.0.1": {
+      "sha512": "eL/FDFflChBeKLiWCDj/Cui5LUpT7bDOmjcOh5zis6bVZUmX343jpuLebItWOkONTrodngeUToJ3xTVQhSDtVQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.mvc.dataannotations/1.1.8",
+      "path": "microsoft.aspnetcore.mvc.cors/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Mvc.DataAnnotations.dll",
-        "lib/net451/Microsoft.AspNetCore.Mvc.DataAnnotations.xml",
-        "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.DataAnnotations.dll",
-        "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.DataAnnotations.xml",
-        "microsoft.aspnetcore.mvc.dataannotations.1.1.8.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Cors.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Cors.xml",
+        "microsoft.aspnetcore.mvc.cors.2.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.mvc.cors.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Mvc.DataAnnotations/2.0.1": {
+      "sha512": "7Dyl9bwmSbKkGGH9gS9u12xPmn8awkYhX8tDk2dSkSgza6gSm1cWjHG2BGIg4Lw6GD9MNr6xTTYfO1DJflPYYQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.mvc.dataannotations/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.DataAnnotations.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.DataAnnotations.xml",
+        "microsoft.aspnetcore.mvc.dataannotations.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.mvc.dataannotations.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Mvc.Formatters.Json/1.1.8": {
-      "sha512": "6vwh/a0sSgZieBV/u32vi96aMbvs7u5XzXPQiBhp89oT9VF1wEPGNIPu1O/Ys6ql7+JfO3pEHkf3pme6QEkt9g==",
+    "Microsoft.AspNetCore.Mvc.Formatters.Json/2.0.1": {
+      "sha512": "OZDI91AhXZfpY9YqVMoklGdK20OfB5D7wZISv3LegLL6W6u81XMY6tOlfjkZaXVm/BSX8Cg7BzeFr37reyE6/w==",
       "type": "package",
-      "path": "microsoft.aspnetcore.mvc.formatters.json/1.1.8",
+      "path": "microsoft.aspnetcore.mvc.formatters.json/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Mvc.Formatters.Json.dll",
-        "lib/net451/Microsoft.AspNetCore.Mvc.Formatters.Json.xml",
-        "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Formatters.Json.dll",
-        "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Formatters.Json.xml",
-        "microsoft.aspnetcore.mvc.formatters.json.1.1.8.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Formatters.Json.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Formatters.Json.xml",
+        "microsoft.aspnetcore.mvc.formatters.json.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.mvc.formatters.json.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Mvc.Razor/1.1.8": {
-      "sha512": "di/bAJEOkqoheRohJ4p9DZgX3KggWnyFatUvuMrTBUzAA4ZZ7Z7WIHvc8eDu04WyClq0EGuUAT/37roReDqaug==",
+    "Microsoft.AspNetCore.Mvc.Localization/2.0.1": {
+      "sha512": "sZppxMkA1ARIUuCX3AYMslZsUScxHDNheVoVJtcW2E0HJfqAPNPg1BNTG2kH/OeDnQy/ldlHeOkFE645liDFVA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.mvc.razor/1.1.8",
+      "path": "microsoft.aspnetcore.mvc.localization/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Mvc.Razor.dll",
-        "lib/net451/Microsoft.AspNetCore.Mvc.Razor.xml",
-        "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Razor.dll",
-        "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Razor.xml",
-        "microsoft.aspnetcore.mvc.razor.1.1.8.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Localization.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Localization.xml",
+        "microsoft.aspnetcore.mvc.localization.2.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.mvc.localization.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Mvc.Razor/2.0.1": {
+      "sha512": "Z03KbgHYWaVd5+c/nO3ncPCSc165momK+xldJus15h+cJiVl5hzb5nFRNdA2vF4JjvcH3hW/DyC8oEtFofVAlw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.mvc.razor/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.xml",
+        "microsoft.aspnetcore.mvc.razor.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.mvc.razor.nuspec"
       ]
     },
@@ -6370,21 +6331,6 @@
         "microsoft.aspnetcore.mvc.razor.extensions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Mvc.Razor.Host/1.1.8": {
-      "sha512": "0bIYJcM4ahQRH8lSthmiOuMEQOl1MkwVACnyP6BNwLGDmaLbNOUq1gDApx7OR1EvelHqZxR9jlDotyNJqJwB8w==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.mvc.razor.host/1.1.8",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Mvc.Razor.Host.dll",
-        "lib/net451/Microsoft.AspNetCore.Mvc.Razor.Host.xml",
-        "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Razor.Host.dll",
-        "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Razor.Host.xml",
-        "microsoft.aspnetcore.mvc.razor.host.1.1.8.nupkg.sha512",
-        "microsoft.aspnetcore.mvc.razor.host.nuspec"
-      ]
-    },
     "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/3.0.0": {
       "sha512": "Vu3LUiQ72Pn4BV7DKpL59Wx6+4gwOzm8td50jYOjovJv5umEGFwpU6mdn2U2Nq7PFZC0nSTbfnUFbsYDS2Ajjw==",
       "type": "package",
@@ -6399,48 +6345,55 @@
         "microsoft.aspnetcore.mvc.razor.runtimecompilation.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Mvc.TagHelpers/1.1.8": {
-      "sha512": "pvD9A+63mAsqZH1nUc7EKmkMNpeLIoN9NGwXtytAxLFW1j+nqpe2Gcp0F2YnvXxC2iUgAdribe1QeKoSLp/KiA==",
+    "Microsoft.AspNetCore.Mvc.RazorPages/2.0.1": {
+      "sha512": "lfRWvvJ63LdOPGt7wx+I9LvUr94ADoiJj8bMXdN3SNgYr+7yolsK6llqLG7UD9vFJC2/kSs/5uWUgGTI9JXxkA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.mvc.taghelpers/1.1.8",
+      "path": "microsoft.aspnetcore.mvc.razorpages/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Mvc.TagHelpers.dll",
-        "lib/net451/Microsoft.AspNetCore.Mvc.TagHelpers.xml",
-        "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.TagHelpers.dll",
-        "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.TagHelpers.xml",
-        "microsoft.aspnetcore.mvc.taghelpers.1.1.8.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.RazorPages.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.RazorPages.xml",
+        "microsoft.aspnetcore.mvc.razorpages.2.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.mvc.razorpages.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Mvc.TagHelpers/2.0.1": {
+      "sha512": "nuBEw70GCe9Lr8bGgWnsZhdmyI6awR6H6I8ECgYjXejcRlrBcgVEriRLtu1mrGHMkdW0wWh7z9CFePihUlSfOg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.mvc.taghelpers/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.TagHelpers.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.TagHelpers.xml",
+        "microsoft.aspnetcore.mvc.taghelpers.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.mvc.taghelpers.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Mvc.ViewFeatures/1.1.8": {
-      "sha512": "8QmzzWnay8bYOsNVDEWNQ5zzxzsS2rb/Zi+HdfHQYlFthD8YPqICgOKlxqkdxV7YQfKu+xypA+ksuDDSo+DbTg==",
+    "Microsoft.AspNetCore.Mvc.ViewFeatures/2.0.1": {
+      "sha512": "8FDzO3Uur7cVlvazOauQJcnLnbShUEt1XRvWKKZJCttLf5xtoLNVJGIg4hjrxkwEGsCZdlf60gVT4ya1UN5Ibw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.mvc.viewfeatures/1.1.8",
+      "path": "microsoft.aspnetcore.mvc.viewfeatures/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Mvc.ViewFeatures.dll",
-        "lib/net451/Microsoft.AspNetCore.Mvc.ViewFeatures.xml",
-        "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.ViewFeatures.dll",
-        "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.ViewFeatures.xml",
-        "microsoft.aspnetcore.mvc.viewfeatures.1.1.8.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.ViewFeatures.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.ViewFeatures.xml",
+        "microsoft.aspnetcore.mvc.viewfeatures.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.mvc.viewfeatures.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Razor/1.1.2": {
-      "sha512": "C4+SxFz84XqaMxHatuQAqPi8BHhbxLcW1ReiXcE7GcHFAMaWb3RsARkEnJA7b68fdYr1j+t+ZdQ4ETiussGzHg==",
+    "Microsoft.AspNetCore.Razor/2.0.1": {
+      "sha512": "IGtreZEfTOSKndAZcAaMEGwTa7rLnuqSRbCS3l3Mn2D68Ba9c4enuVOMACivDowMAsfAUqZju3vhiuCUAMvGHg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.razor/1.1.2",
+      "path": "microsoft.aspnetcore.razor/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Razor.dll",
-        "lib/net451/Microsoft.AspNetCore.Razor.xml",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Razor.dll",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Razor.xml",
-        "microsoft.aspnetcore.razor.1.1.2.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Razor.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Razor.xml",
+        "microsoft.aspnetcore.razor.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.razor.nuspec"
       ]
     },
@@ -6458,78 +6411,68 @@
         "microsoft.aspnetcore.razor.language.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Razor.Runtime/1.1.2": {
-      "sha512": "eM6fHiwoK09N8dMQY4vEkkY8T/fAYytMie9Z5Gpu8E1OKulGXNsQoAHoPKT3COVdztV20683y7pE3RQGTeb09Q==",
+    "Microsoft.AspNetCore.Razor.Runtime/2.0.1": {
+      "sha512": "CMxOywYKmMe7knPXXaKSTvsPRtM88PHieFCf74KjWnbq7Oz9d5TuNwlQuC+V+Y65tBUpGicfTDM9IfG8engyzQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.razor.runtime/1.1.2",
+      "path": "microsoft.aspnetcore.razor.runtime/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Razor.Runtime.dll",
-        "lib/net451/Microsoft.AspNetCore.Razor.Runtime.xml",
-        "lib/netstandard1.5/Microsoft.AspNetCore.Razor.Runtime.dll",
-        "lib/netstandard1.5/Microsoft.AspNetCore.Razor.Runtime.xml",
-        "microsoft.aspnetcore.razor.runtime.1.1.2.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Razor.Runtime.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Razor.Runtime.xml",
+        "microsoft.aspnetcore.razor.runtime.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.razor.runtime.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.ResponseCaching.Abstractions/1.1.3": {
-      "sha512": "rLSiilcXfHOHT1xJ5c5U5Op5J918L/6KQfQNrM5KkTeLFS9ttwNgA2L7UgRQwwMxH9GquxN7wD0jbORs8KuAIw==",
+    "Microsoft.AspNetCore.ResponseCaching.Abstractions/2.0.1": {
+      "sha512": "ZIwA+KjQRd1bF5MlNA3HhvpZR4e0SMqQHyMlaTXArmTXwS86AoOR22v3xvJXrjIbyEPUC+WHeKBNa+AbReMf3w==",
       "type": "package",
-      "path": "microsoft.aspnetcore.responsecaching.abstractions/1.1.3",
+      "path": "microsoft.aspnetcore.responsecaching.abstractions/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.ResponseCaching.Abstractions.dll",
-        "lib/net451/Microsoft.AspNetCore.ResponseCaching.Abstractions.xml",
-        "lib/netstandard1.3/Microsoft.AspNetCore.ResponseCaching.Abstractions.dll",
-        "lib/netstandard1.3/Microsoft.AspNetCore.ResponseCaching.Abstractions.xml",
-        "microsoft.aspnetcore.responsecaching.abstractions.1.1.3.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.ResponseCaching.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.ResponseCaching.Abstractions.xml",
+        "microsoft.aspnetcore.responsecaching.abstractions.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.responsecaching.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Routing/1.1.2": {
-      "sha512": "SZ5g1Evk9vZXCxzdpa8W1WVih9VSo3wUfET5FvHKotVJiXX+Q7MN1QtE+OeE+xZ242ivf0X3dVcPp3yF5izskg==",
+    "Microsoft.AspNetCore.Routing/2.0.1": {
+      "sha512": "jfvgBuVu4qbNALj+EQJzGFz5aP/pqBdPowif1Oyube2EkmrIx1JDmCQ+LeLUygflLYdV2gYffPEeB7ifYegz0g==",
       "type": "package",
-      "path": "microsoft.aspnetcore.routing/1.1.2",
+      "path": "microsoft.aspnetcore.routing/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Routing.dll",
-        "lib/net451/Microsoft.AspNetCore.Routing.xml",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Routing.dll",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Routing.xml",
-        "microsoft.aspnetcore.routing.1.1.2.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Routing.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Routing.xml",
+        "microsoft.aspnetcore.routing.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.routing.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Routing.Abstractions/1.1.2": {
-      "sha512": "YDEJbSzjnt3z3uhifjWZko/2JXguTsasHTNeBWqTugJ1GKovzHCCdewqQuYIgwnrRs9hbxlgE8c6obbtPJCxlw==",
+    "Microsoft.AspNetCore.Routing.Abstractions/2.0.1": {
+      "sha512": "ZJJj11f1oClXp11KAoT2p2I/6rUrPtnKoXQBwnCa3NhpI0/WfsyXo4MvJJB87H1GWCCHNFYylAoxhhie25pC7Q==",
       "type": "package",
-      "path": "microsoft.aspnetcore.routing.abstractions/1.1.2",
+      "path": "microsoft.aspnetcore.routing.abstractions/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.Routing.Abstractions.dll",
-        "lib/net451/Microsoft.AspNetCore.Routing.Abstractions.xml",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Routing.Abstractions.dll",
-        "lib/netstandard1.3/Microsoft.AspNetCore.Routing.Abstractions.xml",
-        "microsoft.aspnetcore.routing.abstractions.1.1.2.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Routing.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Routing.Abstractions.xml",
+        "microsoft.aspnetcore.routing.abstractions.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.routing.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.WebUtilities/1.1.2": {
-      "sha512": "8j+1rkTQ47lzUKpH3O2Odt3f6YdYcfnY8hpVG14riZaqEfuO+n+CjZPTYh/3mbQ0+ZhT/3JqUD9gHP3gIGZ0PQ==",
+    "Microsoft.AspNetCore.WebUtilities/2.0.1": {
+      "sha512": "shzRZs574ir2Im5hJBSKnLlNbf8SKA2d5Mkcto5fv6LUcYqu0ravmVHfuRAqnAeo2Z0GpcpFW2DKmNbFjvzWRg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.webutilities/1.1.2",
+      "path": "microsoft.aspnetcore.webutilities/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.AspNetCore.WebUtilities.dll",
-        "lib/net451/Microsoft.AspNetCore.WebUtilities.xml",
-        "lib/netstandard1.3/Microsoft.AspNetCore.WebUtilities.dll",
-        "lib/netstandard1.3/Microsoft.AspNetCore.WebUtilities.xml",
-        "microsoft.aspnetcore.webutilities.1.1.2.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.xml",
+        "microsoft.aspnetcore.webutilities.2.0.1.nupkg.sha512",
         "microsoft.aspnetcore.webutilities.nuspec"
       ]
     },
@@ -7589,16 +7532,16 @@
         "microsoft.extensions.fileproviders.abstractions.nuspec"
       ]
     },
-    "Microsoft.Extensions.FileProviders.Composite/1.1.1": {
-      "sha512": "nHGefPrdDsv0nUKAX+oox8njOCEoaQsq1WQdor9jZu+d24Uihj7O9gWKlPezbJq3K1HOLCBFFaVRVXBSHlggWQ==",
+    "Microsoft.Extensions.FileProviders.Composite/2.0.0": {
+      "sha512": "/Q95H1pFJuss7np9Pp6mKxg4ornSrBnrYwNkgHnW+YRqhjfaQLVgL+X+LN95M9YeGPNA4QHJDkbrqQ/n+jYc9g==",
       "type": "package",
-      "path": "microsoft.extensions.fileproviders.composite/1.1.1",
+      "path": "microsoft.extensions.fileproviders.composite/2.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netstandard1.0/Microsoft.Extensions.FileProviders.Composite.dll",
-        "lib/netstandard1.0/Microsoft.Extensions.FileProviders.Composite.xml",
-        "microsoft.extensions.fileproviders.composite.1.1.1.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.FileProviders.Composite.xml",
+        "microsoft.extensions.fileproviders.composite.2.0.0.nupkg.sha512",
         "microsoft.extensions.fileproviders.composite.nuspec"
       ]
     },
@@ -7698,31 +7641,29 @@
         "microsoft.extensions.identity.stores.nuspec"
       ]
     },
-    "Microsoft.Extensions.Localization/1.1.3": {
-      "sha512": "/PRlUaTjI0d38B/Ce/WV0xxkiYKVGm5fSq5RwcaKjsSKjm95CnDeXWF+hGzsR9tGk6W3P96F03bqOu1rMicB+w==",
+    "Microsoft.Extensions.Localization/2.0.1": {
+      "sha512": "47oTU1KBYU4xzJZlhQPJRbDCmjokjEtq5Iroy59nAGbPOfUrhBTgp7ALsoba/PVR/gURnosCg0YjHORyijhzUA==",
       "type": "package",
-      "path": "microsoft.extensions.localization/1.1.3",
+      "path": "microsoft.extensions.localization/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.Extensions.Localization.dll",
-        "lib/net451/Microsoft.Extensions.Localization.xml",
-        "lib/netstandard1.3/Microsoft.Extensions.Localization.dll",
-        "lib/netstandard1.3/Microsoft.Extensions.Localization.xml",
-        "microsoft.extensions.localization.1.1.3.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.Extensions.Localization.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Localization.xml",
+        "microsoft.extensions.localization.2.0.1.nupkg.sha512",
         "microsoft.extensions.localization.nuspec"
       ]
     },
-    "Microsoft.Extensions.Localization.Abstractions/1.1.3": {
-      "sha512": "3m44G6tYxQCrIDLcrNOPtdoCW/N/fHZfLt+Zx3++DJwJ2oPJi/07Tatz9Z93pCUevteBo6Y5GoZyPVfCpRyQdw==",
+    "Microsoft.Extensions.Localization.Abstractions/2.0.1": {
+      "sha512": "A5uClthpWrEtqiK9tqwm8LIW449FLhSPIBs4hU/pINGXGgxqQC4dr2ZW0JmbGe/xL3riU7Me3jYJDR4uznzN7g==",
       "type": "package",
-      "path": "microsoft.extensions.localization.abstractions/1.1.3",
+      "path": "microsoft.extensions.localization.abstractions/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netstandard1.0/Microsoft.Extensions.Localization.Abstractions.dll",
-        "lib/netstandard1.0/Microsoft.Extensions.Localization.Abstractions.xml",
-        "microsoft.extensions.localization.abstractions.1.1.3.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Localization.Abstractions.xml",
+        "microsoft.extensions.localization.abstractions.2.0.1.nupkg.sha512",
         "microsoft.extensions.localization.abstractions.nuspec"
       ]
     },
@@ -7902,18 +7843,16 @@
         "microsoft.extensions.logging.eventsource.nuspec"
       ]
     },
-    "Microsoft.Extensions.ObjectPool/1.1.1": {
-      "sha512": "Ex+iePf5X9XFCqm7u1hYAnZU/PJZp16Z6ve5EOY1doJQy3fHRvaO1cMpZf41TP71e0jMcfsNUSXX+PmlciWuJA==",
+    "Microsoft.Extensions.ObjectPool/2.0.0": {
+      "sha512": "drOmgNZCJiNEqFM/TvyqwtogS8wqoWGQCW5KB/CVGKL6VXHw8OOMdaHyspp8HPstP9UDnrnuq+8eaCaAcQg6tA==",
       "type": "package",
-      "path": "microsoft.extensions.objectpool/1.1.1",
+      "path": "microsoft.extensions.objectpool/2.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net451/Microsoft.Extensions.ObjectPool.dll",
-        "lib/net451/Microsoft.Extensions.ObjectPool.xml",
-        "lib/netstandard1.3/Microsoft.Extensions.ObjectPool.dll",
-        "lib/netstandard1.3/Microsoft.Extensions.ObjectPool.xml",
-        "microsoft.extensions.objectpool.1.1.1.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.xml",
+        "microsoft.extensions.objectpool.2.0.0.nupkg.sha512",
         "microsoft.extensions.objectpool.nuspec"
       ]
     },
@@ -7961,21 +7900,6 @@
         "microsoft.extensions.options.configurationextensions.nuspec"
       ]
     },
-    "Microsoft.Extensions.PlatformAbstractions/1.1.0": {
-      "sha512": "H6ZsQzxYw/6k2DfEQRXdC+vQ6obd6Uba3uGJrnJ2vG4PRXjQZ7seB13JdCfE72abp8E6Fk3gGgDzfJiLZi5ZpQ==",
-      "type": "package",
-      "path": "microsoft.extensions.platformabstractions/1.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net451/Microsoft.Extensions.PlatformAbstractions.dll",
-        "lib/net451/Microsoft.Extensions.PlatformAbstractions.xml",
-        "lib/netstandard1.3/Microsoft.Extensions.PlatformAbstractions.dll",
-        "lib/netstandard1.3/Microsoft.Extensions.PlatformAbstractions.xml",
-        "microsoft.extensions.platformabstractions.1.1.0.nupkg.sha512",
-        "microsoft.extensions.platformabstractions.nuspec"
-      ]
-    },
     "Microsoft.Extensions.Primitives/7.0.0": {
       "sha512": "um1KU5kxcRp3CNuI8o/GrZtD4AIOXDk+RLsytjZ9QPok3ttLUelLKpilVPuaFT3TFjOhSibUAso0odbOaCDj3Q==",
       "type": "package",
@@ -8003,16 +7927,16 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.WebEncoders/1.1.2": {
-      "sha512": "ra3BKA+pkMsc2FFAKEZHp18r0N5PGxidn0ujTsfiN3GP16eFRPaiKrXU3xRUHOJtV/zK8HE0GMcOKLNK6XLYqw==",
+    "Microsoft.Extensions.WebEncoders/2.0.0": {
+      "sha512": "5lXmAmfMaVssZwruaPM5hgk7QfzL1dfAaPEw9Ex24wt/D3EPRt7kOqsZoJP3IhVBoccjsTj8DsFJHtQ8bZIFkA==",
       "type": "package",
-      "path": "microsoft.extensions.webencoders/1.1.2",
+      "path": "microsoft.extensions.webencoders/2.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netstandard1.0/Microsoft.Extensions.WebEncoders.dll",
-        "lib/netstandard1.0/Microsoft.Extensions.WebEncoders.xml",
-        "microsoft.extensions.webencoders.1.1.2.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.Extensions.WebEncoders.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.WebEncoders.xml",
+        "microsoft.extensions.webencoders.2.0.0.nupkg.sha512",
         "microsoft.extensions.webencoders.nuspec"
       ]
     },
@@ -8191,16 +8115,16 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
-    "Microsoft.Net.Http.Headers/1.1.2": {
-      "sha512": "DWJdBZ40yFaDvpIcTzEARzybWyuUB2V9CbrNpIq0GaD0Tx9EHXx2rZcpG034PbAZXBp//CR+cmftwGOkZieP0g==",
+    "Microsoft.Net.Http.Headers/2.0.1": {
+      "sha512": "A61ddihPbPy9764AtCysy73oj/PA/9hsv21mXLX5QJYp9lkeyygTufTSGUmh9hz/SiZKy5GBreSlgD2Tm2ab9w==",
       "type": "package",
-      "path": "microsoft.net.http.headers/1.1.2",
+      "path": "microsoft.net.http.headers/2.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netstandard1.1/Microsoft.Net.Http.Headers.dll",
-        "lib/netstandard1.1/Microsoft.Net.Http.Headers.xml",
-        "microsoft.net.http.headers.1.1.2.nupkg.sha512",
+        "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll",
+        "lib/netstandard2.0/Microsoft.Net.Http.Headers.xml",
+        "microsoft.net.http.headers.2.0.1.nupkg.sha512",
         "microsoft.net.http.headers.nuspec"
       ]
     },
@@ -8867,6 +8791,21 @@
         "packageIcon.png"
       ]
     },
+    "Newtonsoft.Json.Bson/1.0.1": {
+      "sha512": "5PYT/IqQ+UK31AmZiSS102R6EsTo+LGTSI8bp7WAUqDKaF4wHXD8U9u4WxTI1vc64tYi++8p3dk3WWNqPFgldw==",
+      "type": "package",
+      "path": "newtonsoft.json.bson/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Newtonsoft.Json.Bson.dll",
+        "lib/net45/Newtonsoft.Json.Bson.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.Bson.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
+        "newtonsoft.json.bson.1.0.1.nupkg.sha512",
+        "newtonsoft.json.bson.nuspec"
+      ]
+    },
     "NonFactors.Grid.Core.Mvc6/6.2.1": {
       "sha512": "jxrYfcuIJmXN86n/Mbid9IuOnmL6lszvAh/DOarWIEc02mar4b+PCb0ad1HPtmPYPRCbfkGBhMA3wm5uNd34MQ==",
       "type": "package",
@@ -9034,20 +8973,15 @@
         "nuget.versioning.nuspec"
       ]
     },
-    "Rotativa.AspNetCore/1.3.2": {
-      "sha512": "bzhSTu7OB9mDpoV+9YP61ABnQl50nXoUOjbkgMmmNnypb5fvuY7S75ANz/fObdA3Z6wBGSKUNzfGQH0zhIRGqg==",
+    "Rotativa.AspNetCore/1.2.0": {
+      "sha512": "ORQwDaHPCtnk+i0sSaaN05+m+xBcQTwrV5GkhWTadE8xkQiy6ixy4KqY6ixjHAcWppaBjnlHsSLtxRFI23FOKg==",
       "type": "package",
-      "path": "rotativa.aspnetcore/1.3.2",
+      "path": "rotativa.aspnetcore/1.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
-        "lib/net5.0/Rotativa.AspNetCore.dll",
-        "lib/net6.0/Rotativa.AspNetCore.dll",
-        "lib/net7.0/Rotativa.AspNetCore.dll",
-        "lib/netcoreapp3.1/Rotativa.AspNetCore.dll",
         "lib/netstandard2.0/Rotativa.AspNetCore.dll",
-        "rotativa.aspnetcore.1.3.2.nupkg.sha512",
+        "rotativa.aspnetcore.1.2.0.nupkg.sha512",
         "rotativa.aspnetcore.nuspec"
       ]
     },
@@ -9544,158 +9478,23 @@
         "version.txt"
       ]
     },
-    "System.Collections.NonGeneric/4.3.0": {
-      "sha512": "prtjIEMhGUnQq6RnPEYLpFt8AtLbp9yq2zxOSrY7KJJZrw25Fi97IzBqY7iqssbM61Ek5b8f3MG/sG1N2sN5KA==",
+    "System.ComponentModel.Annotations/4.4.0": {
+      "sha512": "29K3DQ+IGU7LBaMjTo7SI7T7X/tsMtLvz1p56LJ556Iu0Dw3pKZw5g8yCYCWMRxrOF0Hr0FU0FwW0o42y2sb3A==",
       "type": "package",
-      "path": "system.collections.nongeneric/4.3.0",
+      "path": "system.componentmodel.annotations/4.4.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Collections.NonGeneric.dll",
-        "lib/netstandard1.3/System.Collections.NonGeneric.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net46/System.Collections.NonGeneric.dll",
-        "ref/netstandard1.3/System.Collections.NonGeneric.dll",
-        "ref/netstandard1.3/System.Collections.NonGeneric.xml",
-        "ref/netstandard1.3/de/System.Collections.NonGeneric.xml",
-        "ref/netstandard1.3/es/System.Collections.NonGeneric.xml",
-        "ref/netstandard1.3/fr/System.Collections.NonGeneric.xml",
-        "ref/netstandard1.3/it/System.Collections.NonGeneric.xml",
-        "ref/netstandard1.3/ja/System.Collections.NonGeneric.xml",
-        "ref/netstandard1.3/ko/System.Collections.NonGeneric.xml",
-        "ref/netstandard1.3/ru/System.Collections.NonGeneric.xml",
-        "ref/netstandard1.3/zh-hans/System.Collections.NonGeneric.xml",
-        "ref/netstandard1.3/zh-hant/System.Collections.NonGeneric.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.collections.nongeneric.4.3.0.nupkg.sha512",
-        "system.collections.nongeneric.nuspec"
-      ]
-    },
-    "System.Collections.Specialized/4.3.0": {
-      "sha512": "Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
-      "type": "package",
-      "path": "system.collections.specialized/4.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Collections.Specialized.dll",
-        "lib/netstandard1.3/System.Collections.Specialized.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net46/System.Collections.Specialized.dll",
-        "ref/netstandard1.3/System.Collections.Specialized.dll",
-        "ref/netstandard1.3/System.Collections.Specialized.xml",
-        "ref/netstandard1.3/de/System.Collections.Specialized.xml",
-        "ref/netstandard1.3/es/System.Collections.Specialized.xml",
-        "ref/netstandard1.3/fr/System.Collections.Specialized.xml",
-        "ref/netstandard1.3/it/System.Collections.Specialized.xml",
-        "ref/netstandard1.3/ja/System.Collections.Specialized.xml",
-        "ref/netstandard1.3/ko/System.Collections.Specialized.xml",
-        "ref/netstandard1.3/ru/System.Collections.Specialized.xml",
-        "ref/netstandard1.3/zh-hans/System.Collections.Specialized.xml",
-        "ref/netstandard1.3/zh-hant/System.Collections.Specialized.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.collections.specialized.4.3.0.nupkg.sha512",
-        "system.collections.specialized.nuspec"
-      ]
-    },
-    "System.ComponentModel/4.3.0": {
-      "sha512": "VyGn1jGRZVfxnh8EdvDCi71v3bMXrsu8aYJOwoV7SNDLVhiEqwP86pPMyRGsDsxhXAm2b3o9OIqeETfN5qfezw==",
-      "type": "package",
-      "path": "system.componentmodel/4.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net45/_._",
-        "lib/netcore50/System.ComponentModel.dll",
-        "lib/netstandard1.3/System.ComponentModel.dll",
-        "lib/portable-net45+win8+wp8+wpa81/_._",
-        "lib/win8/_._",
-        "lib/wp80/_._",
-        "lib/wpa81/_._",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net45/_._",
-        "ref/netcore50/System.ComponentModel.dll",
-        "ref/netcore50/System.ComponentModel.xml",
-        "ref/netcore50/de/System.ComponentModel.xml",
-        "ref/netcore50/es/System.ComponentModel.xml",
-        "ref/netcore50/fr/System.ComponentModel.xml",
-        "ref/netcore50/it/System.ComponentModel.xml",
-        "ref/netcore50/ja/System.ComponentModel.xml",
-        "ref/netcore50/ko/System.ComponentModel.xml",
-        "ref/netcore50/ru/System.ComponentModel.xml",
-        "ref/netcore50/zh-hans/System.ComponentModel.xml",
-        "ref/netcore50/zh-hant/System.ComponentModel.xml",
-        "ref/netstandard1.0/System.ComponentModel.dll",
-        "ref/netstandard1.0/System.ComponentModel.xml",
-        "ref/netstandard1.0/de/System.ComponentModel.xml",
-        "ref/netstandard1.0/es/System.ComponentModel.xml",
-        "ref/netstandard1.0/fr/System.ComponentModel.xml",
-        "ref/netstandard1.0/it/System.ComponentModel.xml",
-        "ref/netstandard1.0/ja/System.ComponentModel.xml",
-        "ref/netstandard1.0/ko/System.ComponentModel.xml",
-        "ref/netstandard1.0/ru/System.ComponentModel.xml",
-        "ref/netstandard1.0/zh-hans/System.ComponentModel.xml",
-        "ref/netstandard1.0/zh-hant/System.ComponentModel.xml",
-        "ref/portable-net45+win8+wp8+wpa81/_._",
-        "ref/win8/_._",
-        "ref/wp80/_._",
-        "ref/wpa81/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.componentmodel.4.3.0.nupkg.sha512",
-        "system.componentmodel.nuspec"
-      ]
-    },
-    "System.ComponentModel.Annotations/4.3.0": {
-      "sha512": "SY2RLItHt43rd8J9D8M8e8NM4m+9WLN2uUd9G0n1I4hj/7w+v3pzK6ZBjexlG1/2xvLKQsqir3UGVSyBTXMLWA==",
-      "type": "package",
-      "path": "system.componentmodel.annotations/4.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net45/_._",
         "lib/net461/System.ComponentModel.Annotations.dll",
         "lib/netcore50/System.ComponentModel.Annotations.dll",
+        "lib/netcoreapp2.0/_._",
         "lib/netstandard1.4/System.ComponentModel.Annotations.dll",
+        "lib/netstandard2.0/System.ComponentModel.Annotations.dll",
         "lib/portable-net45+win8/_._",
         "lib/win8/_._",
         "lib/xamarinios10/_._",
@@ -9706,6 +9505,7 @@
         "ref/MonoTouch10/_._",
         "ref/net45/_._",
         "ref/net461/System.ComponentModel.Annotations.dll",
+        "ref/net461/System.ComponentModel.Annotations.xml",
         "ref/netcore50/System.ComponentModel.Annotations.dll",
         "ref/netcore50/System.ComponentModel.Annotations.xml",
         "ref/netcore50/de/System.ComponentModel.Annotations.xml",
@@ -9717,6 +9517,7 @@
         "ref/netcore50/ru/System.ComponentModel.Annotations.xml",
         "ref/netcore50/zh-hans/System.ComponentModel.Annotations.xml",
         "ref/netcore50/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netcoreapp2.0/_._",
         "ref/netstandard1.1/System.ComponentModel.Annotations.dll",
         "ref/netstandard1.1/System.ComponentModel.Annotations.xml",
         "ref/netstandard1.1/de/System.ComponentModel.Annotations.xml",
@@ -9750,106 +9551,18 @@
         "ref/netstandard1.4/ru/System.ComponentModel.Annotations.xml",
         "ref/netstandard1.4/zh-hans/System.ComponentModel.Annotations.xml",
         "ref/netstandard1.4/zh-hant/System.ComponentModel.Annotations.xml",
+        "ref/netstandard2.0/System.ComponentModel.Annotations.dll",
+        "ref/netstandard2.0/System.ComponentModel.Annotations.xml",
         "ref/portable-net45+win8/_._",
         "ref/win8/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.componentmodel.annotations.4.3.0.nupkg.sha512",
-        "system.componentmodel.annotations.nuspec"
-      ]
-    },
-    "System.ComponentModel.Primitives/4.3.0": {
-      "sha512": "j8GUkCpM8V4d4vhLIIoBLGey2Z5bCkMVNjEZseyAlm4n5arcsJOeI3zkUP+zvZgzsbLTYh4lYeP/ZD/gdIAPrw==",
-      "type": "package",
-      "path": "system.componentmodel.primitives/4.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net45/System.ComponentModel.Primitives.dll",
-        "lib/netstandard1.0/System.ComponentModel.Primitives.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net45/System.ComponentModel.Primitives.dll",
-        "ref/netstandard1.0/System.ComponentModel.Primitives.dll",
-        "ref/netstandard1.0/System.ComponentModel.Primitives.xml",
-        "ref/netstandard1.0/de/System.ComponentModel.Primitives.xml",
-        "ref/netstandard1.0/es/System.ComponentModel.Primitives.xml",
-        "ref/netstandard1.0/fr/System.ComponentModel.Primitives.xml",
-        "ref/netstandard1.0/it/System.ComponentModel.Primitives.xml",
-        "ref/netstandard1.0/ja/System.ComponentModel.Primitives.xml",
-        "ref/netstandard1.0/ko/System.ComponentModel.Primitives.xml",
-        "ref/netstandard1.0/ru/System.ComponentModel.Primitives.xml",
-        "ref/netstandard1.0/zh-hans/System.ComponentModel.Primitives.xml",
-        "ref/netstandard1.0/zh-hant/System.ComponentModel.Primitives.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.componentmodel.primitives.4.3.0.nupkg.sha512",
-        "system.componentmodel.primitives.nuspec"
-      ]
-    },
-    "System.ComponentModel.TypeConverter/4.3.0": {
-      "sha512": "16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
-      "type": "package",
-      "path": "system.componentmodel.typeconverter/4.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net45/System.ComponentModel.TypeConverter.dll",
-        "lib/net462/System.ComponentModel.TypeConverter.dll",
-        "lib/netstandard1.0/System.ComponentModel.TypeConverter.dll",
-        "lib/netstandard1.5/System.ComponentModel.TypeConverter.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net45/System.ComponentModel.TypeConverter.dll",
-        "ref/net462/System.ComponentModel.TypeConverter.dll",
-        "ref/netstandard1.0/System.ComponentModel.TypeConverter.dll",
-        "ref/netstandard1.0/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.0/de/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.0/es/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.0/fr/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.0/it/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.0/ja/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.0/ko/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.0/ru/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.0/zh-hans/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.0/zh-hant/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/System.ComponentModel.TypeConverter.dll",
-        "ref/netstandard1.5/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/de/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/es/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/fr/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/it/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/ja/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/ko/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/ru/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/zh-hans/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/zh-hant/System.ComponentModel.TypeConverter.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.componentmodel.typeconverter.4.3.0.nupkg.sha512",
-        "system.componentmodel.typeconverter.nuspec"
+        "system.componentmodel.annotations.4.4.0.nupkg.sha512",
+        "system.componentmodel.annotations.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Composition/1.0.31": {
@@ -10000,66 +9713,6 @@
         "ref/xamarinwatchos10/_._",
         "system.console.4.3.0.nupkg.sha512",
         "system.console.nuspec"
-      ]
-    },
-    "System.Diagnostics.Contracts/4.3.0": {
-      "sha512": "eelRRbnm+OloiQvp9CXS0ixjNQldjjkHO4iIkR5XH2VIP8sUB/SIpa1TdUW6/+HDcQ+MlhP3pNa1u5SbzYuWGA==",
-      "type": "package",
-      "path": "system.diagnostics.contracts/4.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net45/_._",
-        "lib/netcore50/System.Diagnostics.Contracts.dll",
-        "lib/netstandard1.0/System.Diagnostics.Contracts.dll",
-        "lib/portable-net45+win8+wp8+wpa81/_._",
-        "lib/win8/_._",
-        "lib/wp80/_._",
-        "lib/wpa81/_._",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net45/_._",
-        "ref/netcore50/System.Diagnostics.Contracts.dll",
-        "ref/netcore50/System.Diagnostics.Contracts.xml",
-        "ref/netcore50/de/System.Diagnostics.Contracts.xml",
-        "ref/netcore50/es/System.Diagnostics.Contracts.xml",
-        "ref/netcore50/fr/System.Diagnostics.Contracts.xml",
-        "ref/netcore50/it/System.Diagnostics.Contracts.xml",
-        "ref/netcore50/ja/System.Diagnostics.Contracts.xml",
-        "ref/netcore50/ko/System.Diagnostics.Contracts.xml",
-        "ref/netcore50/ru/System.Diagnostics.Contracts.xml",
-        "ref/netcore50/zh-hans/System.Diagnostics.Contracts.xml",
-        "ref/netcore50/zh-hant/System.Diagnostics.Contracts.xml",
-        "ref/netstandard1.0/System.Diagnostics.Contracts.dll",
-        "ref/netstandard1.0/System.Diagnostics.Contracts.xml",
-        "ref/netstandard1.0/de/System.Diagnostics.Contracts.xml",
-        "ref/netstandard1.0/es/System.Diagnostics.Contracts.xml",
-        "ref/netstandard1.0/fr/System.Diagnostics.Contracts.xml",
-        "ref/netstandard1.0/it/System.Diagnostics.Contracts.xml",
-        "ref/netstandard1.0/ja/System.Diagnostics.Contracts.xml",
-        "ref/netstandard1.0/ko/System.Diagnostics.Contracts.xml",
-        "ref/netstandard1.0/ru/System.Diagnostics.Contracts.xml",
-        "ref/netstandard1.0/zh-hans/System.Diagnostics.Contracts.xml",
-        "ref/netstandard1.0/zh-hant/System.Diagnostics.Contracts.xml",
-        "ref/portable-net45+win8+wp8+wpa81/_._",
-        "ref/win8/_._",
-        "ref/wp80/_._",
-        "ref/wpa81/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/aot/lib/netcore50/System.Diagnostics.Contracts.dll",
-        "system.diagnostics.contracts.4.3.0.nupkg.sha512",
-        "system.diagnostics.contracts.nuspec"
       ]
     },
     "System.Diagnostics.Debug/4.3.0": {
@@ -11255,45 +10908,6 @@
         "system.net.sockets.nuspec"
       ]
     },
-    "System.Net.WebSockets/4.3.0": {
-      "sha512": "u6fFNY5q4T8KerUAVbya7bR6b7muBuSTAersyrihkcmE5QhEOiH3t5rh4il15SexbVlpXFHGuMwr/m8fDrnkQg==",
-      "type": "package",
-      "path": "system.net.websockets/4.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Net.WebSockets.dll",
-        "lib/netstandard1.3/System.Net.WebSockets.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net46/System.Net.WebSockets.dll",
-        "ref/netstandard1.3/System.Net.WebSockets.dll",
-        "ref/netstandard1.3/System.Net.WebSockets.xml",
-        "ref/netstandard1.3/de/System.Net.WebSockets.xml",
-        "ref/netstandard1.3/es/System.Net.WebSockets.xml",
-        "ref/netstandard1.3/fr/System.Net.WebSockets.xml",
-        "ref/netstandard1.3/it/System.Net.WebSockets.xml",
-        "ref/netstandard1.3/ja/System.Net.WebSockets.xml",
-        "ref/netstandard1.3/ko/System.Net.WebSockets.xml",
-        "ref/netstandard1.3/ru/System.Net.WebSockets.xml",
-        "ref/netstandard1.3/zh-hans/System.Net.WebSockets.xml",
-        "ref/netstandard1.3/zh-hant/System.Net.WebSockets.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.net.websockets.4.3.0.nupkg.sha512",
-        "system.net.websockets.nuspec"
-      ]
-    },
     "System.Numerics.Vectors/4.5.0": {
       "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "type": "package",
@@ -11833,20 +11447,6 @@
         "system.reflection.typeextensions.nuspec"
       ]
     },
-    "System.Resources.Reader/4.3.0": {
-      "sha512": "AeSwdrdgsRnGRJDofYEJPlotJm6gDDg6WJ1/1lX2Yq8bPwicba7lanPi7adK0SE58zgN5PcGg/h0tuZS+IRAdw==",
-      "type": "package",
-      "path": "system.resources.reader/4.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/netstandard1.0/System.Resources.Reader.dll",
-        "system.resources.reader.4.3.0.nupkg.sha512",
-        "system.resources.reader.nuspec"
-      ]
-    },
     "System.Resources.ResourceManager/4.3.0": {
       "sha512": "/zrcPkkWdZmI4F92gL/TPumP98AVDu/Wxr3CSJGQQ+XN6wbRZcyfSKVoPo17ilb3iOr0cCRqJInGwNMolqhS8A==",
       "type": "package",
@@ -12305,38 +11905,6 @@
         "system.runtime.interopservices.runtimeinformation.nuspec"
       ]
     },
-    "System.Runtime.Loader/4.3.0": {
-      "sha512": "DHMaRn8D8YCK2GG2pw+UzNxn/OHVfaWx7OTLBD/hPegHZZgcZh3H6seWegrC4BYwsfuGrywIuT+MQs+rPqRLTQ==",
-      "type": "package",
-      "path": "system.runtime.loader/4.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net462/_._",
-        "lib/netstandard1.5/System.Runtime.Loader.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/netstandard1.5/System.Runtime.Loader.dll",
-        "ref/netstandard1.5/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/de/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/es/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/fr/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/it/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/ja/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/ko/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/ru/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/zh-hans/System.Runtime.Loader.xml",
-        "ref/netstandard1.5/zh-hant/System.Runtime.Loader.xml",
-        "system.runtime.loader.4.3.0.nupkg.sha512",
-        "system.runtime.loader.nuspec"
-      ]
-    },
     "System.Runtime.Numerics/4.3.0": {
       "sha512": "yMH+MfdzHjy17l2KESnPiF2dwq7T+xLnSJar7slyimAkUh/gTrS9/UQOtv7xarskJ2/XDSNvfLGOBQPjL7PaHQ==",
       "type": "package",
@@ -12394,79 +11962,6 @@
         "system.runtime.numerics.nuspec"
       ]
     },
-    "System.Runtime.Serialization.Primitives/4.3.0": {
-      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
-      "type": "package",
-      "path": "system.runtime.serialization.primitives/4.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net45/_._",
-        "lib/net46/System.Runtime.Serialization.Primitives.dll",
-        "lib/netcore50/System.Runtime.Serialization.Primitives.dll",
-        "lib/netstandard1.3/System.Runtime.Serialization.Primitives.dll",
-        "lib/portable-net45+win8+wp8+wpa81/_._",
-        "lib/win8/_._",
-        "lib/wp80/_._",
-        "lib/wpa81/_._",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net45/_._",
-        "ref/net46/System.Runtime.Serialization.Primitives.dll",
-        "ref/netcore50/System.Runtime.Serialization.Primitives.dll",
-        "ref/netcore50/System.Runtime.Serialization.Primitives.xml",
-        "ref/netcore50/de/System.Runtime.Serialization.Primitives.xml",
-        "ref/netcore50/es/System.Runtime.Serialization.Primitives.xml",
-        "ref/netcore50/fr/System.Runtime.Serialization.Primitives.xml",
-        "ref/netcore50/it/System.Runtime.Serialization.Primitives.xml",
-        "ref/netcore50/ja/System.Runtime.Serialization.Primitives.xml",
-        "ref/netcore50/ko/System.Runtime.Serialization.Primitives.xml",
-        "ref/netcore50/ru/System.Runtime.Serialization.Primitives.xml",
-        "ref/netcore50/zh-hans/System.Runtime.Serialization.Primitives.xml",
-        "ref/netcore50/zh-hant/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/System.Runtime.Serialization.Primitives.dll",
-        "ref/netstandard1.0/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/de/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/es/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/fr/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/it/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/ja/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/ko/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/ru/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/zh-hans/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.0/zh-hant/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/System.Runtime.Serialization.Primitives.dll",
-        "ref/netstandard1.3/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/de/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/es/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/fr/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/it/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/ja/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/ko/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/ru/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/zh-hans/System.Runtime.Serialization.Primitives.xml",
-        "ref/netstandard1.3/zh-hant/System.Runtime.Serialization.Primitives.xml",
-        "ref/portable-net45+win8+wp8+wpa81/_._",
-        "ref/win8/_._",
-        "ref/wp80/_._",
-        "ref/wpa81/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/aot/lib/netcore50/System.Runtime.Serialization.Primitives.dll",
-        "system.runtime.serialization.primitives.4.3.0.nupkg.sha512",
-        "system.runtime.serialization.primitives.nuspec"
-      ]
-    },
     "System.Security.AccessControl/5.0.0": {
       "sha512": "dagJ1mHZO3Ani8GH0PHpPEe/oYO+rVdbQjvjJkBRNQkX4t0r1iaeGn8+/ybkSLEan3/slM0t59SVdHzuHf2jmw==",
       "type": "package",
@@ -12512,45 +12007,6 @@
         "system.security.accesscontrol.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
-      ]
-    },
-    "System.Security.Claims/4.3.0": {
-      "sha512": "P/+BR/2lnc4PNDHt/TPBAWHVMLMRHsyYZbU1NphW4HIWzCggz8mJbTQQ3MKljFE7LS3WagmVFuBgoLcFzYXlkA==",
-      "type": "package",
-      "path": "system.security.claims/4.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Security.Claims.dll",
-        "lib/netstandard1.3/System.Security.Claims.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net46/System.Security.Claims.dll",
-        "ref/netstandard1.3/System.Security.Claims.dll",
-        "ref/netstandard1.3/System.Security.Claims.xml",
-        "ref/netstandard1.3/de/System.Security.Claims.xml",
-        "ref/netstandard1.3/es/System.Security.Claims.xml",
-        "ref/netstandard1.3/fr/System.Security.Claims.xml",
-        "ref/netstandard1.3/it/System.Security.Claims.xml",
-        "ref/netstandard1.3/ja/System.Security.Claims.xml",
-        "ref/netstandard1.3/ko/System.Security.Claims.xml",
-        "ref/netstandard1.3/ru/System.Security.Claims.xml",
-        "ref/netstandard1.3/zh-hans/System.Security.Claims.xml",
-        "ref/netstandard1.3/zh-hant/System.Security.Claims.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.security.claims.4.3.0.nupkg.sha512",
-        "system.security.claims.nuspec"
       ]
     },
     "System.Security.Cryptography.Algorithms/4.3.0": {
@@ -12932,6 +12388,27 @@
         "system.security.cryptography.x509certificates.nuspec"
       ]
     },
+    "System.Security.Cryptography.Xml/4.4.0": {
+      "sha512": "1Xubvo4i+K+DO6YzVh6vBKmCl5xx/cAoiJEze6VQ+XwVQU25KQC9pPrmniz2EbbJnmoQ5Rm2FFjHsfQAi0Rs+Q==",
+      "type": "package",
+      "path": "system.security.cryptography.xml/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Security.Cryptography.Xml.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.Xml.dll",
+        "ref/net461/System.Security.Cryptography.Xml.dll",
+        "ref/net461/System.Security.Cryptography.Xml.xml",
+        "ref/netstandard2.0/System.Security.Cryptography.Xml.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.Xml.xml",
+        "system.security.cryptography.xml.4.4.0.nupkg.sha512",
+        "system.security.cryptography.xml.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Security.Permissions/5.0.0": {
       "sha512": "uE8juAhEkp7KDBCdjDIE3H9R1HJuEHqeqX8nLX9gmYKWwsqk3T5qZlPx8qle5DPKimC/Fy3AFTdV7HamgCh9qQ==",
       "type": "package",
@@ -12962,65 +12439,6 @@
         "system.security.permissions.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
-      ]
-    },
-    "System.Security.Principal/4.3.0": {
-      "sha512": "I1tkfQlAoMM2URscUtpcRo/hX0jinXx6a/KUtEQoz3owaYwl3qwsO8cbzYVVnjxrzxjHo3nJC+62uolgeGIS9A==",
-      "type": "package",
-      "path": "system.security.principal/4.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net45/_._",
-        "lib/netcore50/System.Security.Principal.dll",
-        "lib/netstandard1.0/System.Security.Principal.dll",
-        "lib/portable-net45+win8+wp8+wpa81/_._",
-        "lib/win8/_._",
-        "lib/wp80/_._",
-        "lib/wpa81/_._",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net45/_._",
-        "ref/netcore50/System.Security.Principal.dll",
-        "ref/netcore50/System.Security.Principal.xml",
-        "ref/netcore50/de/System.Security.Principal.xml",
-        "ref/netcore50/es/System.Security.Principal.xml",
-        "ref/netcore50/fr/System.Security.Principal.xml",
-        "ref/netcore50/it/System.Security.Principal.xml",
-        "ref/netcore50/ja/System.Security.Principal.xml",
-        "ref/netcore50/ko/System.Security.Principal.xml",
-        "ref/netcore50/ru/System.Security.Principal.xml",
-        "ref/netcore50/zh-hans/System.Security.Principal.xml",
-        "ref/netcore50/zh-hant/System.Security.Principal.xml",
-        "ref/netstandard1.0/System.Security.Principal.dll",
-        "ref/netstandard1.0/System.Security.Principal.xml",
-        "ref/netstandard1.0/de/System.Security.Principal.xml",
-        "ref/netstandard1.0/es/System.Security.Principal.xml",
-        "ref/netstandard1.0/fr/System.Security.Principal.xml",
-        "ref/netstandard1.0/it/System.Security.Principal.xml",
-        "ref/netstandard1.0/ja/System.Security.Principal.xml",
-        "ref/netstandard1.0/ko/System.Security.Principal.xml",
-        "ref/netstandard1.0/ru/System.Security.Principal.xml",
-        "ref/netstandard1.0/zh-hans/System.Security.Principal.xml",
-        "ref/netstandard1.0/zh-hant/System.Security.Principal.xml",
-        "ref/portable-net45+win8+wp8+wpa81/_._",
-        "ref/win8/_._",
-        "ref/wp80/_._",
-        "ref/wpa81/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.security.principal.4.3.0.nupkg.sha512",
-        "system.security.principal.nuspec"
       ]
     },
     "System.Security.Principal.Windows/5.0.0": {
@@ -13617,46 +13035,6 @@
         "version.txt"
       ]
     },
-    "System.Threading.Thread/4.3.0": {
-      "sha512": "OHmbT+Zz065NKII/ZHcH9XO1dEuLGI1L2k7uYss+9C1jLxTC9kTZZuzUOyXHayRk+dft9CiDf3I/QZ0t8JKyBQ==",
-      "type": "package",
-      "path": "system.threading.thread/4.3.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Threading.Thread.dll",
-        "lib/netcore50/_._",
-        "lib/netstandard1.3/System.Threading.Thread.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net46/System.Threading.Thread.dll",
-        "ref/netstandard1.3/System.Threading.Thread.dll",
-        "ref/netstandard1.3/System.Threading.Thread.xml",
-        "ref/netstandard1.3/de/System.Threading.Thread.xml",
-        "ref/netstandard1.3/es/System.Threading.Thread.xml",
-        "ref/netstandard1.3/fr/System.Threading.Thread.xml",
-        "ref/netstandard1.3/it/System.Threading.Thread.xml",
-        "ref/netstandard1.3/ja/System.Threading.Thread.xml",
-        "ref/netstandard1.3/ko/System.Threading.Thread.xml",
-        "ref/netstandard1.3/ru/System.Threading.Thread.xml",
-        "ref/netstandard1.3/zh-hans/System.Threading.Thread.xml",
-        "ref/netstandard1.3/zh-hant/System.Threading.Thread.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.threading.thread.4.3.0.nupkg.sha512",
-        "system.threading.thread.nuspec"
-      ]
-    },
     "System.Threading.Timer/4.3.0": {
       "sha512": "Z6YfyYTCg7lOZjJzBjONJTFKGN9/NIYKSxhU5GRd+DTwHSZyvWp1xuI5aR+dLg+ayyC5Xv57KiY4oJ0tMO89fQ==",
       "type": "package",
@@ -13899,7 +13277,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.9",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.18",
       "NonFactors.Grid.Mvc6 >= 6.2.1",
-      "Rotativa.AspNetCore >= 1.3.2",
+      "Rotativa.AspNetCore >= 1.2.0",
       "Wkhtmltopdf.NetCore >= 3.0.2"
     ]
   },
@@ -13912,11 +13290,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\NetProjet\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj",
+      "projectUniqueName": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj",
       "projectName": "MantenanceProjetASPNET6",
-      "projectPath": "D:\\NetProjet\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj",
+      "projectPath": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "D:\\NetProjet\\MantenanceProjetASPNET6\\obj\\",
+      "outputPath": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -13936,8 +13314,7 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.telerik.com/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -13995,7 +13372,7 @@
           },
           "Rotativa.AspNetCore": {
             "target": "Package",
-            "version": "[1.3.2, )"
+            "version": "[1.2.0, )"
           },
           "Wkhtmltopdf.NetCore": {
             "target": "Package",
