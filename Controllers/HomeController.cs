@@ -61,6 +61,23 @@ namespace MantenanceProjetASPNET6.Controllers
                 return RedirectToAction("Step1", "Auth");
             }
 
+            var oraleDate = _context.CriticalDates.FirstOrDefault(i => i.Id == 2).Date.ToString("dd/MM/yyyy");
+            var inscriptionDate = _context.CriticalDates.FirstOrDefault(i => i.Id == 3).Date.ToString("dd/MM/yyyy");
+            ViewBag.CncourtOraleDate = oraleDate;
+            ViewBag.InscriptionDate = inscriptionDate;
+
+            var criticalDate = _context.CriticalDates.FirstOrDefault(i => i.Id == 1);
+
+            if (criticalDate != null)
+            {
+                ViewBag.ConcourtEcritDate = criticalDate.Date.ToString("dd/MM/yyyy");
+                HttpContext.Session.SetString("IsBeforeCurrentDate", (criticalDate.Date > DateTime.Now).ToString());
+            }
+            else
+            {
+                HttpContext.Session.SetString("IsBeforeCurrentDate", "null");
+            }
+
             Candidat candidat = candidat_service.getTotalCandidat(cne);
             HttpContext.Session.SetString("photo", candidat.Photo);
             HttpContext.Session.SetString("prenom", candidat.Prenom);
@@ -91,6 +108,23 @@ namespace MantenanceProjetASPNET6.Controllers
             {
                 return RedirectToAction("Step1", "Auth");
             }
+
+            //##################### Session de IsBeforeCurrentDate ################################ //
+            var isBeforeCurrentDate = HttpContext.Session.GetString("IsBeforeCurrentDate");
+            if (isBeforeCurrentDate == "True")
+            {
+                ViewBag.IsBeforeCurrentDate = true;
+            }
+            else if (isBeforeCurrentDate == "False")
+            {
+                ViewBag.IsBeforeCurrentDate = false;
+            }
+            else
+            {
+                ViewBag.IsBeforeCurrentDate = false;
+            }
+            //##################### Session de IsBeforeCurrentDate ################################ //
+
             //Debug.WriteLine("################################################ tttttttttttt " + HttpContext.Session.GetString("photo"));
             CandidatModel info = candidat_service.getInfoPersonnel(cne);
             //Debug.WriteLine("################################################candidat_service.getInfoPersonnel " +info.Email);
@@ -188,6 +222,22 @@ namespace MantenanceProjetASPNET6.Controllers
                 return RedirectToAction("Step1", "Auth");
             }
 
+            //##################### Session de IsBeforeCurrentDate ################################ //
+            var isBeforeCurrentDate = HttpContext.Session.GetString("IsBeforeCurrentDate");
+            if (isBeforeCurrentDate == "True")
+            {
+                ViewBag.IsBeforeCurrentDate = true;
+            }
+            else if (isBeforeCurrentDate == "False")
+            {
+                ViewBag.IsBeforeCurrentDate = false;
+            }
+            else
+            {
+                ViewBag.IsBeforeCurrentDate = false;
+            }
+            //##################### Session de IsBeforeCurrentDate ################################ //
+
             BaccalaureatModel bac = candidat_service.getBaccalaureat(cne);      
 
             return View(bac);
@@ -253,8 +303,23 @@ namespace MantenanceProjetASPNET6.Controllers
             {
                 return RedirectToAction("Step1", "Auth");
             }
-           
-            
+
+            //##################### Session de IsBeforeCurrentDate ################################ //
+            var isBeforeCurrentDate = HttpContext.Session.GetString("IsBeforeCurrentDate");
+            if (isBeforeCurrentDate == "True")
+            {
+                ViewBag.IsBeforeCurrentDate = true;
+            }
+            else if (isBeforeCurrentDate == "False")
+            {
+                ViewBag.IsBeforeCurrentDate = false;
+            }
+            else
+            {
+                ViewBag.IsBeforeCurrentDate = false;
+            }
+            //##################### Session de IsBeforeCurrentDate ################################ //
+
             var filiere = candidat_service.getFiliere(cne);
             ViewData["filiere"] = filiere.Nom;
 
@@ -292,6 +357,23 @@ namespace MantenanceProjetASPNET6.Controllers
             {
                 return RedirectToAction("Step1", "Auth");
             }
+
+            //##################### Session de IsBeforeCurrentDate ################################ //
+            var isBeforeCurrentDate = HttpContext.Session.GetString("IsBeforeCurrentDate");
+            if (isBeforeCurrentDate == "True")
+            {
+                ViewBag.IsBeforeCurrentDate = true;
+            }
+            else if (isBeforeCurrentDate == "False")
+            {
+                ViewBag.IsBeforeCurrentDate = false;
+            }
+            else
+            {
+                ViewBag.IsBeforeCurrentDate = false;
+            }
+            //##################### Session de IsBeforeCurrentDate ################################ //
+
             ViewBag.niveau = HttpContext.Session.GetInt32("niveau");
             Debug.WriteLine("============================ " + HttpContext.Session.GetInt32("niveau"));
             DiplomeModel diplome = candidat_service.getDiplome(cne);
@@ -326,6 +408,22 @@ namespace MantenanceProjetASPNET6.Controllers
                 return RedirectToAction("Step1", "Auth");
             }
 
+            //##################### Session de IsBeforeCurrentDate ################################ //
+            var isBeforeCurrentDate = HttpContext.Session.GetString("IsBeforeCurrentDate");
+            if (isBeforeCurrentDate == "True")
+            {
+                ViewBag.IsBeforeCurrentDate = true;
+            }
+            else if (isBeforeCurrentDate == "False")
+            {
+                ViewBag.IsBeforeCurrentDate = false;
+            }
+            else
+            {
+                ViewBag.IsBeforeCurrentDate = false;
+            }
+            //##################### Session de IsBeforeCurrentDate ################################ //
+
             return View();
         }
 
@@ -352,6 +450,23 @@ namespace MantenanceProjetASPNET6.Controllers
             {
                 return RedirectToAction("Index");
             }
+
+            //##################### Session de IsBeforeCurrentDate ################################ //
+            var isBeforeCurrentDate = HttpContext.Session.GetString("IsBeforeCurrentDate");
+            if (isBeforeCurrentDate == "True")
+            {
+                ViewBag.IsBeforeCurrentDate = true;
+            }
+            else if (isBeforeCurrentDate == "False")
+            {
+                ViewBag.IsBeforeCurrentDate = false;
+            }
+            else
+            {
+                ViewBag.IsBeforeCurrentDate = false;
+            }
+            //##################### Session de IsBeforeCurrentDate ################################ //
+
             return View(data);
         }
 

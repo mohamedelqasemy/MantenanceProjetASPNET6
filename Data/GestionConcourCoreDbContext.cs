@@ -26,9 +26,31 @@ namespace MantenanceProjetASPNET6.Data
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Epreuves> Epreuves { get; set; }
         public DbSet<Fichier> Fichiers { get; set; }
+        public DbSet<CriticalDate> CriticalDates { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<CriticalDate>().HasData(
+                new CriticalDate
+                {
+                    Id = 1,
+                    Nom = "Concours ecrit",
+                    Date = new DateTime(2025, 1, 8)
+                },
+                new CriticalDate
+                {
+                    Id = 2,
+                    Nom = "Concours Orale",
+                    Date = new DateTime(2025, 1, 20)
+                },
+                new CriticalDate
+                {
+                    Id = 3,
+                    Nom = "Inscription",
+                    Date = new DateTime(2024, 12, 28)
+                }
+                );
+
             modelBuilder.Entity<Filiere>().HasData(
                 new Filiere
                 {

@@ -8,6 +8,8 @@
 <div class="page-content-wrapper-inner" style="font-family:'Arial Rounded MT';">
     <div class="content-viewport">
         <div class="container-fluid">
+            @if (ViewBag.IsBeforeCurrentDate == true)
+    {
             <!-- USER DATA-->
             <div class="user-data m-b-40">
                 <div class="col-md-12 register-right">
@@ -230,6 +232,15 @@
                 </div>
 
             </div>
+            }
+            else
+            {
+                <div class="form-group">
+                    <div class="alert alert-danger ml-3 mr-3">
+                        <span>Vous ne pouvez pas modifier vos donnes!</span>
+                    </div>
+                </div>
+            }
         </div>
     </div>
 </div>

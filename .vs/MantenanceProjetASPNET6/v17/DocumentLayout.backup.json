@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\mohamed\\mantenanceprojetaspnet6\\views\\auth\\step1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\auth\\step1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\mohamed\\mantenanceprojetaspnet6\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\mohamed\\mantenanceprojetaspnet6\\models\\infopersomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:models\\infopersomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\mohamed\\mantenanceprojetaspnet6\\data\\gestionconcourcoredbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:data\\gestionconcourcoredbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\mohamed\\mantenanceprojetaspnet6\\models\\criticaldates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:models\\criticaldates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Step1.cshtml",
-              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Views\\Auth\\Step1.cshtml",
-              "RelativeDocumentMoniker": "Views\\Auth\\Step1.cshtml",
-              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Views\\Auth\\Step1.cshtml*",
-              "RelativeToolTip": "Views\\Auth\\Step1.cshtml*",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAYwKMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-07T19:28:07.373Z",
+              "DocumentIndex": 1,
+              "Title": "GestionConcourCoreDbContext.cs",
+              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Data\\GestionConcourCoreDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\GestionConcourCoreDbContext.cs",
+              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Data\\GestionConcourCoreDbContext.cs",
+              "RelativeToolTip": "Data\\GestionConcourCoreDbContext.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAqwDMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T19:38:49.945Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "InfoPersoModel.cs",
-              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Models\\InfoPersoModel.cs",
-              "RelativeDocumentMoniker": "Models\\InfoPersoModel.cs",
-              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Models\\InfoPersoModel.cs",
-              "RelativeToolTip": "Models\\InfoPersoModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "CriticalDates.cs",
+              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Models\\CriticalDates.cs",
+              "RelativeDocumentMoniker": "Models\\CriticalDates.cs",
+              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Models\\CriticalDates.cs",
+              "RelativeToolTip": "Models\\CriticalDates.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T19:27:05.23Z",
+              "WhenOpened": "2025-01-07T19:38:21.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAiwD8AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T19:36:35.295Z",
               "EditorCaption": ""
             }
           ]

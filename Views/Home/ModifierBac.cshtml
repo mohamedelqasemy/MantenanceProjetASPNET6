@@ -8,6 +8,8 @@
     <div class="content-viewport">
                 
         <div class="container-fluid">
+            @if (ViewBag.IsBeforeCurrentDate == true)
+    {
             <!-- USER DATA-->
             <div class="user-data m-b-40 ">
 
@@ -102,6 +104,15 @@
 
 
             </div>
+            }
+            else
+            {
+                <div class="form-group">
+                    <div class="alert alert-danger ml-3 mr-3">
+                        <span>Vous ne pouvez pas modifier vos donnes!</span>
+                    </div>
+                </div>
+            }
         </div>
 
     </div>
