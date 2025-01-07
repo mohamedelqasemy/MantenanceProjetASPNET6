@@ -82,7 +82,7 @@ namespace MantenanceProjetASPNET6.Controllers
                     }
 
                     // Chemin de destination
-                    var uploadsFolder = Path.Combine("wwwroot", "uploads", "cni");
+                    var uploadsFolder = Path.Combine("wwwroot", "uploads", "cin");
                     if (!Directory.Exists(uploadsFolder))
                     {
                         Directory.CreateDirectory(uploadsFolder);
@@ -109,7 +109,7 @@ namespace MantenanceProjetASPNET6.Controllers
                     }
 
                     // Enregistrer le chemin relatif dans le modèle
-                    originalCandidat.PhotoCinPath = Path.Combine("uploads", "cni", uniqueFileName).Replace("\\", "/");
+                    originalCandidat.PhotoCinPath = Path.Combine("uploads", "cin", uniqueFileName).Replace("\\", "/");
                 }
 
                 // Enregistrer les modifications
