@@ -3806,6 +3806,7 @@ wwwroot\uploads\baccalaureats\2fd67e23-9de9-40f1-b9dd-6e080b82b76a_CIN_Internet.
 wwwroot\uploads\baccalaureats\3df8bfd5-2cd7-46ce-af3e-f1f8453fe867_etapeProjet.pdf
 wwwroot\uploads\baccalaureats\483351c6-f036-400a-821f-ad052ba44b3f_CC-0FEAC8202C.pdf
 wwwroot\uploads\baccalaureats\59662535-28a5-42e9-a38d-fb8e54fb8a7a_CIN_Internet.pdf
+wwwroot\uploads\baccalaureats\6386aaa5-8e81-44bf-8919-f4008b831125_Diplome.pdf
 wwwroot\uploads\baccalaureats\664d4781-0a51-458e-8132-bdde13cd0d28_CIN_Internet.pdf
 wwwroot\uploads\baccalaureats\6d41726b-d9a3-4c0f-a1e0-81b6461ea10c_TD_Corrige_PLSQL.pdf
 wwwroot\uploads\baccalaureats\7256bfd4-8fb2-450a-81c5-fbb83933ecb6_karym-cv.pdf
@@ -3824,6 +3825,7 @@ wwwroot\uploads\cin\88242ef2-6c70-4ff5-ba4f-d7498f47ad69_CIN_Internet.pdf
 wwwroot\uploads\cin\886b885e-2eff-405a-b90c-df607c3f5efe_CIN_Internet.pdf
 wwwroot\uploads\cin\8f769b43-5fb7-46b5-a7b9-83c76f69b2c2_CIN_Internet.pdf
 wwwroot\uploads\cin\a4f012c1-5af2-4356-88b6-6224d66633a9_CIN_Internet.pdf
+wwwroot\uploads\cin\bb065f75-43d0-4c47-bc27-e666d60753b7_CIN_Internet.pdf
 wwwroot\uploads\cin\e5541cec-365d-4360-87de-145822199e81_CIN_Internet.pdf
 wwwroot\uploads\Epreuves\ClassementGIIA.pdf
 wwwroot\uploads\Epreuves\Planning_Annuel_2024_2025.pdf

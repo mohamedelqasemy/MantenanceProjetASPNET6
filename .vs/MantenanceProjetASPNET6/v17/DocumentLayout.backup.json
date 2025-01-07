@@ -1,18 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\",
+  "WorkspaceRootPath": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\mohamed\\mantenanceprojetaspnet6\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\views\\home\\fiche.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\home\\fiche.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\mohamed\\mantenanceprojetaspnet6\\data\\gestionconcourcoredbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:data\\gestionconcourcoredbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\mohamed\\mantenanceprojetaspnet6\\models\\criticaldates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\views\\admin\\criticaldates.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\criticaldates.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\views\\admin\\uploadepreuve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\uploadepreuve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\models\\criticaldates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:models\\criticaldates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\views\\home\\accueil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\home\\accueil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\views\\home\\modifierfiliere.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\home\\modifierfiliere.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\views\\home\\fichierscanne.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\home\\fichierscanne.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\views\\home\\modifierdiplome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\home\\modifierdiplome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\views\\home\\modifierbac.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\home\\modifierbac.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\views\\home\\modifierpersonnel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\home\\modifierpersonnel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,46 +58,158 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GestionConcourCoreDbContext.cs",
-              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Data\\GestionConcourCoreDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\GestionConcourCoreDbContext.cs",
-              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Data\\GestionConcourCoreDbContext.cs",
-              "RelativeToolTip": "Data\\GestionConcourCoreDbContext.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAqwDMAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T19:38:49.945Z",
+              "DocumentIndex": 3,
+              "Title": "criticaldates.cshtml",
+              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Admin\\criticaldates.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\criticaldates.cshtml",
+              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Admin\\criticaldates.cshtml",
+              "RelativeToolTip": "Views\\Admin\\criticaldates.cshtml",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAABoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-07T20:31:03.674Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CriticalDates.cs",
-              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Models\\CriticalDates.cs",
-              "RelativeDocumentMoniker": "Models\\CriticalDates.cs",
-              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Models\\CriticalDates.cs",
-              "RelativeToolTip": "Models\\CriticalDates.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAALEFAAAAAAAAAAAAAMgFAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T19:38:21.173Z",
+              "WhenOpened": "2025-01-07T20:22:59.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CriticalDates.cs",
+              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Models\\CriticalDates.cs",
+              "RelativeDocumentMoniker": "Models\\CriticalDates.cs",
+              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Models\\CriticalDates.cs",
+              "RelativeToolTip": "Models\\CriticalDates.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-07T20:20:47.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UploadEpreuve.cshtml",
+              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Admin\\UploadEpreuve.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\UploadEpreuve.cshtml",
+              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Admin\\UploadEpreuve.cshtml",
+              "RelativeToolTip": "Views\\Admin\\UploadEpreuve.cshtml",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAuwFAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-07T20:20:16.475Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAiwD8AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T19:36:35.295Z",
+              "Title": "Fiche.cshtml",
+              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\Fiche.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Fiche.cshtml",
+              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\Fiche.cshtml",
+              "RelativeToolTip": "Views\\Home\\Fiche.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAIMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-07T19:52:40.252Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAI4AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-07T20:35:00.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FichierScanne.cshtml",
+              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\FichierScanne.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\FichierScanne.cshtml",
+              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\FichierScanne.cshtml",
+              "RelativeToolTip": "Views\\Home\\FichierScanne.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-07T19:51:57.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ModifierDiplome.cshtml",
+              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\ModifierDiplome.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\ModifierDiplome.cshtml",
+              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\ModifierDiplome.cshtml",
+              "RelativeToolTip": "Views\\Home\\ModifierDiplome.cshtml",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAAAPIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-07T19:51:25.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ModifierBac.cshtml",
+              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\ModifierBac.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\ModifierBac.cshtml",
+              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\ModifierBac.cshtml",
+              "RelativeToolTip": "Views\\Home\\ModifierBac.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAHIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-07T19:50:44.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ModifierPersonnel.cshtml",
+              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\ModifierPersonnel.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\ModifierPersonnel.cshtml",
+              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\ModifierPersonnel.cshtml",
+              "RelativeToolTip": "Views\\Home\\ModifierPersonnel.cshtml",
+              "ViewState": "AgIAANsAAAAAAAAAAAAAAO8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-07T19:50:04.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Accueil.cshtml",
+              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\Accueil.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Accueil.cshtml",
+              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\Accueil.cshtml",
+              "RelativeToolTip": "Views\\Home\\Accueil.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAE8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-07T19:49:02.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ModifierFiliere.cshtml",
+              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\ModifierFiliere.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\ModifierFiliere.cshtml",
+              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\ModifierFiliere.cshtml",
+              "RelativeToolTip": "Views\\Home\\ModifierFiliere.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-07T19:52:20.089Z"
             }
           ]
         }

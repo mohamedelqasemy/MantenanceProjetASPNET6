@@ -1,0 +1,49 @@
+﻿@model List<MantenanceProjetASPNET6.Models.CriticalDate>
+
+@{
+    ViewData["Title"] = "Gestion des Dates Importantes";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <h3 class="font-weight-bold text-center pt-3 pb-5">Gestion des Dates Importantes</h3>
+
+    @if (TempData["success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["success"]
+        </div>
+    }
+    @if (TempData["error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["error"]
+        </div>
+    }
+
+    <form asp-action="criticaldates" method="post">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var date in Model)
+                {
+                    <tr>
+                        <td>
+                            <input type="hidden" name="dates[@Model.IndexOf(date)].Id" value="@date.Id" />
+                            <input type="text" name="dates[@Model.IndexOf(date)].Nom" class="form-control" value="@date.Nom" />
+                        </td>
+                        <td>
+                            <input type="date" name="dates[@Model.IndexOf(date)].Date" class="form-control" value="@date.Date.ToString("yyyy-MM-dd")" />
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <button type="submit" class="btn btn-primary">Mettre à jour</button>
+    </form>
+</div>

@@ -1451,6 +1451,37 @@ namespace MantenanceProjetASPNET6.Controllers
             return RedirectToAction("Login", "AdminAuth");
         }
 
+        //###########################partie pour changer les dates critique par l'admin######
+        // Action pour retourner la vue avec les dates
+        public IActionResult criticaldates()
+        {
+            var dates = _context.CriticalDates.ToList();
+            return View(dates); // La vue recevra la liste des dates
+        }
+
+        // Action pour modifier les dates importantes
+        [HttpPost]
+        public IActionResult criticaldates(List<CriticalDate> dates)
+        {
+            if (ModelState.IsValid)
+            {
+                foreach (var date in dates)
+                {
+                    var existingDate = _context.CriticalDates.Find(date.Id);
+                    if (existingDate != null)
+                    {
+                        existingDate.Nom = date.Nom;
+                        existingDate.Date = date.Date;
+                    }
+                }
+                _context.SaveChanges();
+                TempData["success"] = "Dates mises à jour avec succès !";
+                return RedirectToAction("criticaldates");
+            }
+
+            TempData["error"] = "Une erreur est survenue lors de la mise à jour.";
+            return RedirectToAction("criticaldates");
+        }
 
     }
 }
