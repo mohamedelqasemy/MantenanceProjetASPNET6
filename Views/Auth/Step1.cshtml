@@ -21,7 +21,7 @@
 
 <h2 class="text-center mt-3 font-weight-bold">Step 1 : Informations Personnelles</h2>
 
-@using (Html.BeginForm("Step1", "Auth", FormMethod.Post, new { enctype = "multipart/form-data" } ))
+@using (Html.BeginForm("Step1", "Auth", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <hr class="col-md-7 offset-md-2 mb-4" />
     <div class="row d-flex justify-content-center m-b-30 mt-5">
@@ -45,12 +45,12 @@
                     @Html.LabelFor(model => model.Sexe, "Sexe : ", htmlAttributes: new { @class = "text-white control-label col-md-10  font-weight-bold" })
                     <div class="col-md-7">
                         @Html.DropDownListFor(model => model.Sexe,
-                                new List<SelectListItem>
-                                {
-                                   new SelectListItem{Text="Femme", Value="Femme"},
-                                   new SelectListItem{Text="Homme", Value="Homme"},
-                                }
-                                , "-- Choix de Sexe --", htmlAttributes: new { @class = "form-control " })
+                                 new List<SelectListItem>
+                    {
+                    new SelectListItem{Text="Femme", Value="Femme"},
+                    new SelectListItem{Text="Homme", Value="Homme"},
+                    }
+                                 , "-- Choix de Sexe --", htmlAttributes: new { @class = "form-control " })
                         @Html.ValidationMessageFor(model => model.Sexe, "", new { @class = "text-danger" })
                     </div>
                 </div>
@@ -66,12 +66,12 @@
                     @Html.LabelFor(model => model.Nationalite, "Nationalité : ", htmlAttributes: new { @class = "text-white control-label col-md-10  font-weight-bold" })
                     <div class="col-md-7">
                         @Html.DropDownListFor(model => model.Nationalite,
-                                new List<SelectListItem>
-                                {
-                                   new SelectListItem{Text="Marocaine", Value="Marocaine"},
-                                   new SelectListItem{Text="Etrangère", Value="Etrangère"},
-                                }
-                                , "-- Choix de Nationalité --", htmlAttributes: new { @class = "form-control " })
+                                 new List<SelectListItem>
+                    {
+                    new SelectListItem{Text="Marocaine", Value="Marocaine"},
+                    new SelectListItem{Text="Etrangère", Value="Etrangère"},
+                    }
+                                 , "-- Choix de Nationalité --", htmlAttributes: new { @class = "form-control " })
                         @Html.ValidationMessageFor(model => model.Nationalite, "", new { @class = "text-danger" })
                     </div>
                 </div>
@@ -122,6 +122,12 @@
         </div>
     </div>
 
+    <!-- Validation script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.13/jquery.validate.unobtrusive.min.js"></script>
+
+
     <!-- Main JS-->
     <script src="https://code.jquery.com/jquery-3.5.1.js"
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
@@ -137,5 +143,22 @@
                 yearRange: "1993:2002"
             });
         });
+
+        $(document).ready(function () {
+            $('form').submit(function (e) {
+                const fileInput = $('input[name="CinPdfFile"]');
+                const file = fileInput[0].files[0];
+
+                if (file) {
+                    const fileType = file.type;
+                    if (fileType !== "application/pdf") {
+                        alert("Seuls les fichiers PDF sont autorisés.");
+                        e.preventDefault();
+                        return false;
+                    }
+                }
+            });
+        });
+
     </script>
 }

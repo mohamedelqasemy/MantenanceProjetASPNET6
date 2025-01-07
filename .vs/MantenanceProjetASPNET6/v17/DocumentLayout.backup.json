@@ -1,82 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\",
+  "WorkspaceRootPath": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\views\\home\\modifierbac.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\home\\modifierbac.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\mohamed\\mantenanceprojetaspnet6\\views\\auth\\step1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\auth\\step1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\viewmodels\\baccalaureatmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:viewmodels\\baccalaureatmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\views\\admin\\uploadepreuve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\uploadepreuve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\views\\home\\modifierpersonnel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\home\\modifierpersonnel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\views\\home\\epreuve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\home\\epreuve.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\views\\admin\\corbeil3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\corbeil3.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\views\\admin\\corbeil4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\corbeil4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\services\\corbeil3serviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:services\\corbeil3serviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\services\\isearch3service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:services\\isearch3service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\services\\search3serviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:services\\search3serviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\models\\epreuves.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:models\\epreuves.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\models\\uploadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:models\\uploadmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\services\\selectionserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:services\\selectionserviceimp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\projetdotnet\\aspnetcoremvc_last\\mantenanceprojetaspnet6\\views\\admin\\listfinale4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:views\\admin\\listfinale4.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|d:\\4-ginfo\\.net\\poject\\projetasp.net\\mohamed\\mantenanceprojetaspnet6\\models\\infopersomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{162FBB9D-470A-4E2D-9587-954C937B07A0}|MantenanceProjetASPNET6.csproj|solutionrelative:models\\infopersomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,248 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UploadEpreuve.cshtml",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Admin\\UploadEpreuve.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\UploadEpreuve.cshtml",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Admin\\UploadEpreuve.cshtml",
-              "RelativeToolTip": "Views\\Admin\\UploadEpreuve.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF8AAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Step1.cshtml",
+              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Views\\Auth\\Step1.cshtml",
+              "RelativeDocumentMoniker": "Views\\Auth\\Step1.cshtml",
+              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Views\\Auth\\Step1.cshtml*",
+              "RelativeToolTip": "Views\\Auth\\Step1.cshtml*",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAYwKMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-06T22:41:13.66Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAwwG0AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T17:34:03.14Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T22:18:47.806Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-01-07T19:28:07.373Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BaccalaureatModel.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\ViewModels\\BaccalaureatModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\BaccalaureatModel.cs",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\ViewModels\\BaccalaureatModel.cs",
-              "RelativeToolTip": "ViewModels\\BaccalaureatModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAhwA8AAAAVAAAAAAAAAA==",
+              "Title": "InfoPersoModel.cs",
+              "DocumentMoniker": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Models\\InfoPersoModel.cs",
+              "RelativeDocumentMoniker": "Models\\InfoPersoModel.cs",
+              "ToolTip": "D:\\4-GINFO\\.NET\\Poject\\ProjetAsp.NET\\mohamed\\MantenanceProjetASPNET6\\Models\\InfoPersoModel.cs",
+              "RelativeToolTip": "Models\\InfoPersoModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T19:07:24.043Z",
+              "WhenOpened": "2025-01-07T19:27:05.23Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ModifierBac.cshtml",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\ModifierBac.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\ModifierBac.cshtml",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\ModifierBac.cshtml",
-              "RelativeToolTip": "Views\\Home\\ModifierBac.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAACoAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-07T19:07:07.469Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ModifierPersonnel.cshtml",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\ModifierPersonnel.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\ModifierPersonnel.cshtml",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\ModifierPersonnel.cshtml",
-              "RelativeToolTip": "Views\\Home\\ModifierPersonnel.cshtml",
-              "ViewState": "AgIAALQAAAAAAAAAAAAAAMYAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-07T16:37:27.991Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAhwE8AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T23:04:12.058Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AgIAAJ4AAAAAAAAAAAAhwMIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T16:38:59.382Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAAAJAAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-07T07:11:57.208Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Epreuve.cshtml",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\Epreuve.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Epreuve.cshtml",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Home\\Epreuve.cshtml",
-              "RelativeToolTip": "Views\\Home\\Epreuve.cshtml",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAAAD4AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-06T23:02:50.12Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Corbeil4.cshtml",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Admin\\Corbeil4.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\Corbeil4.cshtml",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Admin\\Corbeil4.cshtml",
-              "RelativeToolTip": "Views\\Admin\\Corbeil4.cshtml",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-07T07:09:26.373Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Corbeil3ServiceImp.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Services\\Corbeil3ServiceImp.cs",
-              "RelativeDocumentMoniker": "Services\\Corbeil3ServiceImp.cs",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Services\\Corbeil3ServiceImp.cs",
-              "RelativeToolTip": "Services\\Corbeil3ServiceImp.cs",
-              "ViewState": "AgIAAI4AAAAAAAAAAAAAABQAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T06:33:35.513Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Corbeil3.cshtml",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Admin\\Corbeil3.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\Corbeil3.cshtml",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Admin\\Corbeil3.cshtml",
-              "RelativeToolTip": "Views\\Admin\\Corbeil3.cshtml",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAAAGoAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-07T06:25:16.229Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ISearch3Service.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Services\\ISearch3Service.cs",
-              "RelativeDocumentMoniker": "Services\\ISearch3Service.cs",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Services\\ISearch3Service.cs",
-              "RelativeToolTip": "Services\\ISearch3Service.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T06:32:52.333Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Search3ServiceImp.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Services\\Search3ServiceImp.cs",
-              "RelativeDocumentMoniker": "Services\\Search3ServiceImp.cs",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Services\\Search3ServiceImp.cs",
-              "RelativeToolTip": "Services\\Search3ServiceImp.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAN0AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-07T06:30:07.628Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Epreuves.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Models\\Epreuves.cs",
-              "RelativeDocumentMoniker": "Models\\Epreuves.cs",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Models\\Epreuves.cs",
-              "RelativeToolTip": "Models\\Epreuves.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T22:52:14.216Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "UploadModel.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Models\\UploadModel.cs",
-              "RelativeDocumentMoniker": "Models\\UploadModel.cs",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Models\\UploadModel.cs",
-              "RelativeToolTip": "Models\\UploadModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T22:44:15.017Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "SelectionServiceImp.cs",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Services\\SelectionServiceImp.cs",
-              "RelativeDocumentMoniker": "Services\\SelectionServiceImp.cs",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Services\\SelectionServiceImp.cs",
-              "RelativeToolTip": "Services\\SelectionServiceImp.cs",
-              "ViewState": "AgIAAOsAAAAAAAAAAABBwMAAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-05T23:22:15.298Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ListFinale4.cshtml",
-              "DocumentMoniker": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Admin\\ListFinale4.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\ListFinale4.cshtml",
-              "ToolTip": "D:\\ProjetDotNet\\AspnetCoremvc_last\\MantenanceProjetASPNET6\\Views\\Admin\\ListFinale4.cshtml",
-              "RelativeToolTip": "Views\\Admin\\ListFinale4.cshtml",
-              "ViewState": "AgIAAIYAAAAAAAAAAABBwJIAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-05T23:16:15.986Z"
             }
           ]
         }
