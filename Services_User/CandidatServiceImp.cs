@@ -172,6 +172,7 @@ namespace MantenanceProjetASPNET6.Services_User
                             VilleObtention = d.VilleObtention,
                             NoteDiplome = d.NoteDiplome,
                             Specialite = d.Specialite,
+                            ExistingFileDiplomePath = d.PhotoDiplomePath,
                             Semestre1 = a.Semestre1,
                             Semestre2 = a.Semestre2,
                             Semestre3 = a.Semestre3,
@@ -190,14 +191,36 @@ namespace MantenanceProjetASPNET6.Services_User
             return data.First();
         }
 
+
         public void setDiplome(DiplomeModel saisi)
         {
             var diplome = db.Diplomes.Find(saisi.Cne);
-            diplome.Type = saisi.Type;
-            diplome.Etablissement = saisi.Etablissement;
-            diplome.VilleObtention = saisi.VilleObtention;
-            diplome.NoteDiplome = saisi.NoteDiplome;
-            diplome.Specialite = saisi.Specialite;
+            if (diplome != null)
+            {
+                diplome.Type = saisi.Type;
+                diplome.Etablissement = saisi.Etablissement;
+                diplome.VilleObtention = saisi.VilleObtention;
+                diplome.NoteDiplome = saisi.NoteDiplome;
+                diplome.Specialite = saisi.Specialite;
+
+                if (!string.IsNullOrEmpty(saisi.ExistingFileDiplomePath))
+                {
+                    // Supprimer l'ancien fichier si nécessaire
+                    if (!string.IsNullOrEmpty(diplome.PhotoDiplomePath) && diplome.PhotoDiplomePath != saisi.ExistingFileDiplomePath)
+                    {
+                        string oldFilePath = Path.Combine("wwwroot", diplome.PhotoDiplomePath);
+                        if (System.IO.File.Exists(oldFilePath))
+                        {
+                            System.IO.File.Delete(oldFilePath);
+                        }
+                    }
+                    diplome.PhotoDiplomePath = saisi.ExistingFileDiplomePath;
+                }
+
+                // Mise à jour de la base de données
+            }
+
+            db.Update(diplome);
             db.SaveChanges();
 
             var annee = db.AnneeUniversitaires.Find(saisi.Cne);
@@ -216,6 +239,7 @@ namespace MantenanceProjetASPNET6.Services_User
 
             db.SaveChanges();
         }
+
 
         public string checkConformity(string cne)
         {

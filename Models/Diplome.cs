@@ -17,6 +17,7 @@ namespace MantenanceProjetASPNET6.Models
         public string? VilleObtention { get; set; }
         public double NoteDiplome { get; set; }
         public string? Specialite { get; set; }
+        public string? PhotoDiplomePath { get; set; }
 
 
         public virtual Candidat Candidat { get; set; }

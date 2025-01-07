@@ -277,7 +277,6 @@ namespace MantenanceProjetASPNET6.Controllers
         }
 
         //##############################################  DIPLOME  ##################################################
-
         public IActionResult ModifierDiplome()
         {
             if (!isCandidat())
@@ -295,7 +294,7 @@ namespace MantenanceProjetASPNET6.Controllers
             ViewBag.niveau = HttpContext.Session.GetInt32("niveau");
             Debug.WriteLine("============================ " + HttpContext.Session.GetInt32("niveau"));
             DiplomeModel diplome = candidat_service.getDiplome(cne);
-            
+
             return View(diplome);
         }
 
@@ -304,12 +303,45 @@ namespace MantenanceProjetASPNET6.Controllers
         {
             if (ModelState.IsValid)
             {
+                string uploadsFolder = Path.Combine("wwwroot", "uploads", "diplome");
+                Directory.CreateDirectory(uploadsFolder); // Créer le dossier si nécessaire
+
+                if (diplome.diplomeFile != null)
+                {
+                    // Générer un nom unique pour le fichier
+                    string uniqueFileName = Guid.NewGuid().ToString() + "_" + diplome.diplomeFile.FileName;
+                    string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                    // Sauvegarder le fichier
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        diplome.diplomeFile.CopyTo(fileStream);
+                    }
+                    // Supprimer l ancien fichier si necessaire
+                    if (!string.IsNullOrEmpty(diplome.ExistingFileDiplomePath))
+                    {
+                        string oldFilePath = Path.Combine("wwwroot", diplome.ExistingFileDiplomePath);
+                        if (System.IO.File.Exists(oldFilePath))
+                        {
+                            System.IO.File.Delete(oldFilePath);
+                        }
+                    }
+
+
+                    // Mettre a jour le chemin du fichier dans la base
+                    diplome.ExistingFileDiplomePath = Path.Combine("uploads", "diplome", uniqueFileName);
+                }
+
+                // Appeler le service pour mettre a jour la base de donnees
                 candidat_service.setDiplome(diplome);
-                TempData["message"] = "Diplome Modified succefully";
-                return RedirectToAction("Index");
+
+                TempData["diplome"] = "Diplome Modified successfully";
+                return RedirectToAction("ModifierDiplome");
             }
+
             return View(diplome);
         }
+
 
         public IActionResult FichierScanne()
         {

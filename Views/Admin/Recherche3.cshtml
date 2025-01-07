@@ -68,6 +68,7 @@
     </div>
     <table class="table table-bordered table-responsive" id="maTable">
         <tr>
+            <th class="text-center">See Files</th>
             <th class="text-center">Delete</th>
             <th class="text-center">Conforme</th>
             <th class="text-center">Nom</th>
@@ -97,6 +98,7 @@
             {
                 var u = @x.Cne + ".png";
                 <tr>
+                    <td class="text-center"><button class="btn btn-primary seeFilesBtn" id="@x.Cne">see</button></td>
                     <td class="text-center"><button class="btn btn-danger deleteBtn" id="@x.Cne">Delete</button></td>
                     <td class="text-center"><button class="btn btn-info conformBtn" id="@x.Cne">Conforme</button></td>
                     <td class="text-center">@x.Nom</td>
@@ -176,6 +178,20 @@
 
             });
         });
+                   //see files button
+               $(document).on("click", ".seeFilesBtn", function () {
+           var cne = $(this).attr("id"); // Récupère l'identifiant (CNE)
+
+           // Appelle l'API pour afficher le fichier PDF fusionné
+              $.get("/Admin/GetStudentFiles", { cne: cne,Niveau: 3 }, function (url) {
+               if (url) {
+                   // Ouvre le fichier PDF dans un nouvel onglet
+                   window.open(url, "_blank");
+               } else {
+                   alert("Erreur : Impossible de trouver ou créer le fichier PDF.");
+               }
+           });
+       });
         //delete button
         $(document).on("click", ".deleteBtn", function () {
             var id = $(this).attr("id");

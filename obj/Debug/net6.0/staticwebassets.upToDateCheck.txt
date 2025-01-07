@@ -1,4 +1,5 @@
 wwwroot\candidatImages\1302.jpg
+wwwroot\candidatImages\1948.png
 wwwroot\candidatImages\3295.jpg
 wwwroot\candidatImages\4390.png
 wwwroot\candidatImages\5364.png
@@ -3802,6 +3803,7 @@ wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 wwwroot\Rotativa\help-wkhtmltopdf.txt
 wwwroot\Rotativa\wkhtmltopdf.exe
 wwwroot\uploads\baccalaureats\2518630c-29a4-46a5-bdd3-f56f059e2144_etapeProjet.pdf
+wwwroot\uploads\baccalaureats\26f904ac-5567-48f9-95f9-53a28b148afe_RLS-exercices (1).pdf
 wwwroot\uploads\baccalaureats\2fd67e23-9de9-40f1-b9dd-6e080b82b76a_CIN_Internet.pdf
 wwwroot\uploads\baccalaureats\3df8bfd5-2cd7-46ce-af3e-f1f8453fe867_etapeProjet.pdf
 wwwroot\uploads\baccalaureats\483351c6-f036-400a-821f-ad052ba44b3f_CC-0FEAC8202C.pdf
@@ -3815,6 +3817,8 @@ wwwroot\uploads\baccalaureats\f8ab466e-4e53-4103-92c3-e696501d4eb6_CIN_Internet.
 wwwroot\uploads\cin\439a2c36-04f4-4087-b080-9b46ca1fe04e_CIN_Internet.pdf
 wwwroot\uploads\cin\45897e68-1db9-4ce4-a0ae-a5e41cec9b84_CIN_Internet.pdf
 wwwroot\uploads\cin\529e532d-791d-4ea8-b7b0-0d5fa9569c25_CIN_Internet.pdf
+wwwroot\uploads\cin\659568d2-bb35-4bac-9a0c-1ef2e710b247_structure_dataset.pdf
+wwwroot\uploads\cin\87d25832-7bcd-4003-a793-0c3efdb4fb17_TestDocument.pdf
 wwwroot\uploads\cin\8f769b43-5fb7-46b5-a7b9-83c76f69b2c2_CIN_Internet.pdf
 wwwroot\uploads\cin\a4f012c1-5af2-4356-88b6-6224d66633a9_CIN_Internet.pdf
 wwwroot\uploads\cin\e5541cec-365d-4360-87de-145822199e81_CIN_Internet.pdf
@@ -3822,5 +3826,8 @@ wwwroot\uploads\cni\2b29f6c1-c45e-46e3-86b2-dee8c7c025ca_catgoMedicamrentas.pdf
 wwwroot\uploads\cni\344b441c-356b-4d14-a266-a1c50717aa01_otmane.pdf
 wwwroot\uploads\cni\3c865837-8cd8-45f5-bd96-d64ddd0e3da8_CIN_Internet.pdf
 wwwroot\uploads\cni\83c277d1-f43d-4156-9cb0-027b3dc1124c_export.php.pdf
+wwwroot\uploads\diplome\b3a54b74-ce4e-4d2d-b59d-5b6d6393fc7a_Descriptif_mini_projet_DS 2024-2025pdf.pdf
+wwwroot\uploads\dossiers\K1234_fichieretudiant.pdf
+wwwroot\uploads\dossiers\K123456_fichieretudiant.pdf
 wwwroot\uploads\Epreuves\ClassementGIIA.pdf
 wwwroot\uploads\Epreuves\Planning_Annuel_2024_2025.pdf
