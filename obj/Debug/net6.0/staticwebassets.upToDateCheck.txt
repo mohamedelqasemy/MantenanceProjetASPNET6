@@ -3816,3 +3816,4 @@ wwwroot\uploads\cni\cf1e8fe6-d7b3-4bf3-a378-41d97a380346_explication_cahiercharg
 wwwroot\uploads\diplome\8f3f4bbc-ee26-41e3-8267-9f1662d1f498_RLS-exercices (1).pdf
 wwwroot\uploads\diplome\c0565ac9-3405-49ed-806e-f6974a93fb13_structure_dataset.pdf
 wwwroot\uploads\dossiers\K123456_fichieretudiant.pdf
+wwwroot\uploads\dossiers\test5_fichieretudiant.pdf

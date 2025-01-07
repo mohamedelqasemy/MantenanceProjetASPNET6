@@ -15277,6 +15277,10 @@
       "PackagePath": "staticwebassets\\uploads\\dossiers\\K123456_fichieretudiant.pdf"
     },
     {
+      "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\dossiers\\test5_fichieretudiant.pdf",
+      "PackagePath": "staticwebassets\\uploads\\dossiers\\test5_fichieretudiant.pdf"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.MantenanceProjetASPNET6.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
