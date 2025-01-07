@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewData["Title"] = "Recherche4";
+    ViewData["Title"] = "Corbeille3";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -86,7 +86,7 @@
 
 </div>
 <!-- /.container-fluid -->
->
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
@@ -96,7 +96,17 @@
             $.get("/Admin/SearchCriteriaCorb", { Criteria: $("#criteria").val(), Key: $("#key").val(), Diplome: $("#diplome").val(), Filiere: $("#filiere").val(), Niveau: 3 }, function (data) {
                 $("#tbody").empty();
                 $.each(data, function (index, row) {
-                    $("#tbody").append("<tr><td class='text-center'><button class='btn btn-info restoreBtn' id=" + row.Cne + ">Restore</button></td><td>" + row.Cne + "</td><td>" + row.Cin + "</td><td>" + row.Nom + "</td><td>" + row.Prenom + "</td></tr>");
+                    $("#tbody").append(
+                            "<tr>" +
+                                "<td class='text-center'>" +
+                                    "<button class='btn btn-info restoreBtn' id='" + row.cne + "'>Restore</button>" +
+                                "</td>" +
+                                "<td>" + row.cne + "</td>" +
+                                "<td>" + row.cin + "</td>" +
+                                "<td>" + row.nom + "</td>" +
+                                "<td>" + row.prenom + "</td>" +
+                            "</tr>"
+                        );
                 });
             });
         });
@@ -106,7 +116,19 @@
             $.get("/Admin/restoreStudent", { cne: id, Niveau: 3 }, function (data) {
                 $("#tbody").empty();
                 $.each(data, function (index, row) {
-                    $("#tbody").append("<tr><td class='text-center'><button class='btn btn-info restoreBtn' id=" + row.Cne + ">Restore</button></td><td>" + row.Cne + "</td><td>" + row.Cin + "</td><td>" + row.Nom + "</td><td>" + row.Prenom + "</td></tr>");
+                    console.log(row);
+                        $("#tbody").append(
+                            "<tr>" +
+                                "<td class='text-center'>" +
+                                    "<button class='btn btn-info restoreBtn' id='" + row.cne + "'>Restore</button>" +
+                                "</td>" +
+                                "<td>" + row.cne + "</td>" +
+                                "<td>" + row.cin + "</td>" +
+                                "<td>" + row.nom + "</td>" +
+                                "<td>" + row.prenom + "</td>" +
+                            "</tr>"
+                        );
+
                 });
             });
         });

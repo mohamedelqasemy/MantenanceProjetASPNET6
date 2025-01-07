@@ -1534,7 +1534,6 @@ D:\NetProjet\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.AspNetCore.Crypt
 D:\NetProjet\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\NetProjet\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\NetProjet\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
-D:\NetProjet\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Host.dll
 D:\NetProjet\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 D:\NetProjet\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 D:\NetProjet\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -1558,7 +1557,6 @@ D:\NetProjet\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Extensions.Ident
 D:\NetProjet\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
 D:\NetProjet\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 D:\NetProjet\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
-D:\NetProjet\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Extensions.PlatformAbstractions.dll
 D:\NetProjet\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 D:\NetProjet\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 D:\NetProjet\MantenanceProjetASPNET6\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
@@ -2511,3 +2509,4 @@ D:\ProjetDotNet\AspnetCoremvc6_1.0\MantenanceProjetASPNET6\obj\Debug\net6.0\Mant
 D:\ProjetDotNet\AspnetCoremvc6_1.0\MantenanceProjetASPNET6\obj\Debug\net6.0\MantenanceProjetASPNET6.genruntimeconfig.cache
 D:\ProjetDotNet\AspnetCoremvc6_1.0\MantenanceProjetASPNET6\obj\Debug\net6.0\ref\MantenanceProjetASPNET6.dll
 D:\ProjetDotNet\AspnetCoremvc6_1.0\MantenanceProjetASPNET6\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+D:\NetProjet\MantenanceProjetASPNET6\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

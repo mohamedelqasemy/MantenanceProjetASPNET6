@@ -13290,11 +13290,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj",
+      "projectUniqueName": "D:\\NetProjet\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj",
       "projectName": "MantenanceProjetASPNET6",
-      "projectPath": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj",
+      "projectPath": "D:\\NetProjet\\MantenanceProjetASPNET6\\MantenanceProjetASPNET6.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "D:\\ProjetDotNet\\AspnetCoremvc6_1.0\\MantenanceProjetASPNET6\\obj\\",
+      "outputPath": "D:\\NetProjet\\MantenanceProjetASPNET6\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -13314,7 +13314,8 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.telerik.com/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {

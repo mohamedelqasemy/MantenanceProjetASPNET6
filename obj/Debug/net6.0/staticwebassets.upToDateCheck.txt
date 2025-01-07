@@ -3822,4 +3822,5 @@ wwwroot\uploads\cni\2b29f6c1-c45e-46e3-86b2-dee8c7c025ca_catgoMedicamrentas.pdf
 wwwroot\uploads\cni\344b441c-356b-4d14-a266-a1c50717aa01_otmane.pdf
 wwwroot\uploads\cni\3c865837-8cd8-45f5-bd96-d64ddd0e3da8_CIN_Internet.pdf
 wwwroot\uploads\cni\83c277d1-f43d-4156-9cb0-027b3dc1124c_export.php.pdf
+wwwroot\uploads\Epreuves\ClassementGIIA.pdf
 wwwroot\uploads\Epreuves\Planning_Annuel_2024_2025.pdf
