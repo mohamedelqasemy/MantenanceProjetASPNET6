@@ -64,6 +64,7 @@
                         @* <a asp-action="Selection3" class="collapse-item">Selection</a> *@
                         <a asp-action="SelectionFinale3" class="collapse-item">Selection Finale</a>
                         <a asp-action="ListeFinale3" class="collapse-item">Liste Finale</a>
+                        
                         @* <a asp-action="FichierScanne3" class="collapse-item">Fichier Diplôme</a> *@
                         @* <div class="collapse-divider"></div> *@
                         @* <h6 class="collapse-header">Correction :</h6> *@
@@ -137,6 +138,12 @@
                 <a class="nav-link" href='@Url.Action("UploadEpreuve", "Admin")'>
                     <i class="fas fa-file-upload mr-2"></i>
                     <span>Epreuves</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href='@Url.Action("criticaldates", "Admin")'>
+                    <i class="fas fa-calendar-alt mr-2"></i>
+                    <span>Dates Criticals</span>
                 </a>
             </li>
             <!-- Nav Item - LogOut -->

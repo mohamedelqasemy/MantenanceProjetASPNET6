@@ -8,6 +8,8 @@
     <div class="content-viewport">
                 
         <div class="container-fluid">
+            @if (ViewBag.IsBeforeCurrentDate == true)
+    {
             <!-- USER DATA-->
             <div class="user-data m-b-40 ">
 
@@ -43,7 +45,7 @@
                                 <div class="form-group">
                                     <label asp-for="DateObtentionBac" class="control-label col-md-12 text-gray font-weight-bold">Date d'obtention du Bac :</label>
                                     <div class="col-md-12">
-                                        <input asp-for="DateObtentionBac" type="date" class="form-control" placeholder="YYYY/YYYY" />
+                                        <input asp-for="DateObtentionBac" type="datetime" class="form-control" placeholder="YYYY/YYYY" />
                                         <span asp-validation-for="DateObtentionBac" class="text-danger"></span>
                                     </div>
                                 </div>
@@ -102,6 +104,15 @@
 
 
             </div>
+            }
+            else
+            {
+                <div class="form-group">
+                    <div class="alert alert-danger ml-3 mr-3">
+                        <span>Vous ne pouvez pas modifier vos donnes!</span>
+                    </div>
+                </div>
+            }
         </div>
 
     </div>
