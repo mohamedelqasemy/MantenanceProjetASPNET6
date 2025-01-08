@@ -161,6 +161,7 @@ namespace MantenanceProjetASPNET6.Controllers
                 ModelState.AddModelError("", "Le Candidat n'a pas été trouvé.");
                 return View(bac);
             }
+   
 
             // Gestion du fichier PDF
             if (BacPdfFile != null)
@@ -281,11 +282,53 @@ namespace MantenanceProjetASPNET6.Controllers
         }
 
         [HttpPost]
-        public ActionResult Step3(DiplomeNote diplome)
+        public ActionResult Step3(DiplomeNote diplome, IFormFile DiplomePdfFile)
         {
             string cne = HttpContext.Session.GetString("cne");
-            
-                var x = _db.Diplomes.Where(c => c.Cne == cne).SingleOrDefault();
+
+            // Gestion du fichier PDF
+            var x = _db.Diplomes.Where(c => c.Cne == cne).SingleOrDefault();
+
+            // Gestion du fichier PDF
+            if (DiplomePdfFile != null)
+            {
+                // Vérifier le type MIME
+                if (DiplomePdfFile.ContentType != "application/pdf")
+                {
+                    ModelState.AddModelError("", "Seuls les fichiers PDF sont autorisés.");
+                    return View();
+                }
+
+                // Chemin de destination
+                var uploadsFolder = Path.Combine("wwwroot", "uploads", "diplome");
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
+
+                // Nom unique pour éviter les conflits
+                var uniqueFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(DiplomePdfFile.FileName);
+                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                // Supprimer l'ancien fichier si nécessaire
+                if (!string.IsNullOrEmpty(x.PhotoDiplomePath))
+                {
+                    var oldFilePath = Path.Combine("wwwroot", x.PhotoDiplomePath.TrimStart('/').Replace("/", Path.DirectorySeparatorChar.ToString()));
+                    if (System.IO.File.Exists(oldFilePath))
+                    {
+                        System.IO.File.Delete(oldFilePath);
+                    }
+                }
+
+                // Enregistrer le fichier
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    DiplomePdfFile.CopyTo(stream);
+                }
+
+                // Enregistrer le chemin relatif dans le modèle avec des barres obliques (/)
+                x.PhotoDiplomePath = Path.Combine("uploads", "diplome", uniqueFileName).Replace("\\", "/");
+            }
                 x.Type = diplome.Type;
                 x.Etablissement = diplome.Etablissement;
                 x.VilleObtention = diplome.VilleObtention;
@@ -467,6 +510,10 @@ namespace MantenanceProjetASPNET6.Controllers
                     ModelState.AddModelError("selectNiveau", "Selectionner un niveau");
                 }
 
+                if (candidat.ID == 0)
+                {
+                    ModelState.AddModelError("selectFiliere", "Selectionner une filiere");
+                }
                 try
                 {
                     if (_db.Candidats.Any(c => c.Cne == candidat.Cne))
@@ -508,7 +555,6 @@ namespace MantenanceProjetASPNET6.Controllers
 
                         candidat.Verified = 0;
                         candidat.Photo = "icon.jpg";
-
                         _db.Candidats.Add(candidat);
                         _db.SaveChanges();
                     }

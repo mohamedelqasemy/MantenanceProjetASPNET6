@@ -139,21 +139,24 @@ namespace MantenanceProjetASPNET6.Services_User
 
         //#################################################  FILIERE  #########################################
 
-        public Filiere getFiliere(string cne)
+        public FiliereModel getFiliere(string cne)
         {          
             var candidat = db.Candidats.Find(cne);
             var filiere = db.Filieres.Find(candidat.ID);
-
-            string nom = filiere.Nom;
-            return filiere;
-        
+            FiliereModel filiereModel = new FiliereModel();
+            filiereModel.ID = filiere.ID;
+            filiereModel.niveau=candidat.Niveau;
+            return filiereModel;
         }
 
-        public void setFiliere(string cne, int ID)
+        public FiliereModel setFiliere(string cne, int ID)
         {
             var candidat = db.Candidats.Find(cne);
             candidat.ID = ID;
             db.SaveChanges();
+            FiliereModel model = new FiliereModel();
+            model.niveau = candidat.Niveau;
+            return model;
         }
 
 
@@ -161,6 +164,7 @@ namespace MantenanceProjetASPNET6.Services_User
 
         public DiplomeModel getDiplome(string cne)
         {
+            var candidat = db.Candidats.Find(cne);
             var data = (from d in db.Diplomes
                         join a in db.AnneeUniversitaires on d.Cne equals a.Cne
                         where d.Cne.Equals(cne)
@@ -184,10 +188,9 @@ namespace MantenanceProjetASPNET6.Services_User
                             Redoublant3 = a.Redoublant3,
                             AnneUni1 = a.AnneUni1,
                             AnneUni2 = a.AnneUni2,
-                            AnneUni3 = a.AnneUni3
-
+                            AnneUni3 = a.AnneUni3,
+                            niveau = candidat.Niveau
                         });
-
             return data.First();
         }
 
@@ -232,9 +235,11 @@ namespace MantenanceProjetASPNET6.Services_User
             annee.Semestre6 = saisi.Semestre6;
             annee.Redoublant1 = saisi.Redoublant1;
             annee.Redoublant2 = saisi.Redoublant2;
+            if(saisi.Redoublant3 != null) 
             annee.Redoublant3 = saisi.Redoublant3;
             annee.AnneUni1 = saisi.AnneUni1;
             annee.AnneUni2 = saisi.AnneUni2;
+            if(saisi.AnneUni1 != null)
             annee.AnneUni3 = saisi.AnneUni3;
 
             db.SaveChanges();

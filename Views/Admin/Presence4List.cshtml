@@ -30,14 +30,16 @@
         })
         .Filterable()
         .Sortable()
-        .Css("table table-striped table-bordered")
+        .Css("table table-striped table-bordered my-grid")
         )
 </div>
 
 <!-- Bouton pour exporter en Excel -->
+<!--
 <div class="text-center mt-3">
     <button class="btn btn-success" onclick="exportTableToExcel('my-grid')">Exporter en Excel</button>
 </div>
+-->
 
 <script src="~/js/mvc-grid/mvc-grid.js"></script>
 <script>
@@ -45,39 +47,49 @@
     document.querySelectorAll(".mvc-grid").forEach(element => new MvcGrid(element));
 
     // Fonction pour exporter la grille en Excel
-    function exportTableToExcel(tableID) {
-        var downloadLink;
-        var dataType = 'application/vnd.ms-excel';
-        var tableSelect = document.getElementById(tableID);
+    function exportTableToExcel(className) {
+        var dataType = 'application/vnd.ms-excel;charset=utf-8'; // Encodage UTF-8 pour les caractères spéciaux
+        var table = document.querySelector(`.${className}`);
 
-        // Créer une copie de la table pour exclure les lignes non désirées
-        var tableClone = tableSelect.cloneNode(true);
+        if (!table) {
+            alert("Table non trouvée !");
+            return;
+        }
 
-        // Supprimer les lignes contenant les champs de filtres
-        var filterRows = tableClone.querySelectorAll('.mvc-grid-row-filter');
-        filterRows.forEach(row => row.parentNode.removeChild(row));
+        // Cloner la table pour modification sans affecter l'originale
+        var tableClone = table.cloneNode(true);
 
-        // Convertir la table en HTML
+        // Supprimer les lignes contenant les filtres
+        tableClone.querySelectorAll('.mvc-grid-row-filter').forEach(row => row.remove());
+
+        // Convertir la table en une chaîne HTML
         var tableHTML = tableClone.outerHTML.replace(/ /g, '%20');
 
         // Nom du fichier Excel
-        var filename = "ListeCandidats_Recherche_3A.xls";
+        var filename = "ListeCandidats_Recherche_4A.xls";
 
-        // Création d'un élément de lien de téléchargement
-        downloadLink = document.createElement("a");
+        // Création d'un lien de téléchargement
+        var downloadLink = document.createElement("a");
         document.body.appendChild(downloadLink);
 
-        if (navigator.msSaveOrOpenBlob) {
-            // Pour IE
+        // Blob pour les navigateurs modernes
+        if (window.Blob) {
             var blob = new Blob(['\ufeff', tableHTML], { type: dataType });
-            navigator.msSaveOrOpenBlob(blob, filename);
+            var url = URL.createObjectURL(blob);
+            downloadLink.href = url;
+            downloadLink.download = filename;
+            downloadLink.click();
+
+            // Libérer l'URL après téléchargement
+            URL.revokeObjectURL(url);
         } else {
-            // Autres navigateurs
+            // Pour les anciens navigateurs (ex : IE)
             downloadLink.href = 'data:' + dataType + ', ' + tableHTML;
             downloadLink.download = filename;
             downloadLink.click();
         }
+
+        // Supprimer le lien après utilisation
+        document.body.removeChild(downloadLink);
     }
-
-
 </script>

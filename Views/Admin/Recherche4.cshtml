@@ -87,7 +87,7 @@
             @foreach (var x in Model)
             {
                 <tr>
-                    <td class="text-center"><button class="btn btn-primary seeFilesBtn" id="@x.Cne">see</button></td>
+                    <td class="text-center"><button class="btn btn-primary seeFilesBtn" id="@x.Cne">See</button></td>
                     <td class="text-center"><button class="btn btn-danger deleteBtn" id="@x.Cne">Delete</button></td>
                     <td class="text-center"><button class="btn btn-info conformBtn" id="@x.Cne">Conforme</button></td>
                     <td class="text-center">@x.Nom</td>
@@ -147,7 +147,7 @@
             $.get("/Admin/deleteStudent", { cne: id, Niveau: 4 }, function (data) {
                 $("#tbody").empty();
                 $.each(data, function (index, row) {
-                    $("#tbody").append("<tr><td><button class='btn btn-danger deleteBtn' id=" + row.cne + ">Delete</button></td><td><button class='btn btn-info conformBtn' id=" + row.cne + ">Conforme</button></td><td>" + row.nom + "</td><td>" + row.prenom + "</td><td>" + row.sexe + "</td><td>" + row.noteBac + "</td><td>" + row.type_dip + "</td><td><a href=\"../../DiplomeScanné/" + row.diplome1 + "\" download>" + row.diplome1 + "</a></td><td><a href=\"../../DiplomeScanné/" + row.diplome2 + "\" download>" + row.diplome2 + "</a></td><td><a href=\"../../DiplomeScanné/" + row.diplome3 + "\" download>" + row.diplome3 + "</a></td><td>" + row.note1 + "</td><td>" + row.note2 + "</td><td>" + row.note3 + "</td><td>" + row.note4 + "</td><td>" + row.dossier + "</td><td>" + row.convoque + "</td><td>" + row.filiere + "</td><td>" + row.admis + "</td><td>" + row.nonConforme + "</td></tr>");
+                    $("#tbody").append("<tr><td><button class='btn btn-primary seeFilesBtn' id=" + row.cne + ">See</button></td><td><button class='btn btn-danger deleteBtn' id=" + row.cne + ">Delete</button></td><td><button class='btn btn-info conformBtn' id=" + row.cne + ">Conforme</button></td><td>" + row.nom + "</td><td>" + row.prenom + "</td><td>" + row.sexe + "</td><td>" + row.noteBac + "</td><td>" + row.type_dip + "</td><td><a href=\"../../DiplomeScanné/" + row.diplome1 + "\" download>" + row.diplome1 + "</a></td><td><a href=\"../../DiplomeScanné/" + row.diplome2 + "\" download>" + row.diplome2 + "</a></td><td><a href=\"../../DiplomeScanné/" + row.diplome3 + "\" download>" + row.diplome3 + "</a></td><td>" + row.note1 + "</td><td>" + row.note2 + "</td><td>" + row.note3 + "</td><td>" + row.note4 + "</td><td>" + row.dossier + "</td><td>" + row.convoque + "</td><td>" + row.filiere + "</td><td>" + row.admis + "</td><td>" + row.nonConforme + "</td></tr>");
                 });
             });
         });
@@ -157,7 +157,7 @@
             $.get("/Admin/conformeStudent", { cne: id, Niveau: 4 }, function (data) {
                 $("#tbody").empty();
                 $.each(data, function (index, row) {
-                    $("#tbody").append("<tr><td><button class='btn btn-danger deleteBtn' id=" + row.cne + ">Delete</button></td><td><button class='btn btn-info conformBtn' id=" + row.cne + ">Conforme</button></td><td>" + row.nom + "</td><td>" + row.prenom + "</td><td>" + row.sexe + "</td><td>" + row.noteBac + "</td><td>" + row.type_dip + "</td><td><a href=\"../../DiplomeScanné/" + row.diplome1 + "\" download>" + row.diplome1 + "</a></td><td><a href=\"../../DiplomeScanné/" + row.diplome2 + "\" download>" + row.diplome2 + "</a></td><td><a href=\"../../DiplomeScanné/" + row.diplome3 + "\" download>" + row.diplome3 + "</a></td><td>" + row.note1 + "</td><td>" + row.note2 + "</td><td>" + row.note3 + "</td><td>" + row.note4 + "</td><td>" + row.dossier + "</td><td>" + row.convoque + "</td><td>" + row.filiere + "</td><td>" + row.admis + "</td><td>" + row.nonConforme + "</td></tr>");
+                    $("#tbody").append("<tr><td><button class='btn btn-primary seeFilesBtn' id=" + row.cne + ">See</button></td><td><button class='btn btn-danger deleteBtn' id=" + row.cne + ">Delete</button></td><td><button class='btn btn-info conformBtn' id=" + row.cne + ">Conforme</button></td><td>" + row.nom + "</td><td>" + row.prenom + "</td><td>" + row.sexe + "</td><td>" + row.noteBac + "</td><td>" + row.type_dip + "</td><td><a href=\"../../DiplomeScanné/" + row.diplome1 + "\" download>" + row.diplome1 + "</a></td><td><a href=\"../../DiplomeScanné/" + row.diplome2 + "\" download>" + row.diplome2 + "</a></td><td><a href=\"../../DiplomeScanné/" + row.diplome3 + "\" download>" + row.diplome3 + "</a></td><td>" + row.note1 + "</td><td>" + row.note2 + "</td><td>" + row.note3 + "</td><td>" + row.note4 + "</td><td>" + row.dossier + "</td><td>" + row.convoque + "</td><td>" + row.filiere + "</td><td>" + row.admis + "</td><td>" + row.nonConforme + "</td></tr>");
                 });
             });
         });

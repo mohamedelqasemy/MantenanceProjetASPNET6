@@ -9,6 +9,7 @@ namespace MantenanceProjetASPNET6.ViewModels
     public class DiplomeModel
     {
         public string Cne { get; set; }
+        public int niveau { get; set; }
         
         public string Type { get; set; }
         [Required]
@@ -16,6 +17,7 @@ namespace MantenanceProjetASPNET6.ViewModels
         [Required]
         public string VilleObtention { get; set; }
         [Required]
+        [Range(10, 20, ErrorMessage = "La note du diplôme doit être comprise entre 10 et 20.")]
         public double NoteDiplome { get; set; }
         [Required]
         public string Specialite { get; set; }
@@ -25,16 +27,18 @@ namespace MantenanceProjetASPNET6.ViewModels
         public string? ExistingFileDiplomePath { get; set; }
 
         [Required]
+        [Range(10, 20, ErrorMessage = "La note du semestre doit être comprise entre 10 et 20.")]
         public double Semestre1 { get; set; }
         [Required]
+        [Range(10, 20, ErrorMessage = "La note du semestre doit être comprise entre 10 et 20.")]
         public double Semestre2 { get; set; }
         [Required]
+        [Range(10, 20, ErrorMessage = "La note du semestre doit être comprise entre 10 et 20.")]
         public double Semestre3 { get; set; }
         [Required]
+        [Range(10, 20, ErrorMessage = "La note du semestre doit être comprise entre 10 et 20.")]
         public double Semestre4 { get; set; }
-        [Required]
         public string Redoublant1 { get; set; }
-        [Required]
         public string Redoublant2 { get; set; }
         [Required]
         public string AnneUni1 { get; set; }

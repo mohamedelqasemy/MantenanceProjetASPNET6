@@ -21,8 +21,8 @@ namespace MantenanceProjetASPNET6.Services_User
         DiplomeModel getDiplome(string cne);
         void setDiplome(DiplomeModel saisi);
 
-        Filiere getFiliere(string cne);
-        void setFiliere(string cne, int ID);
+        FiliereModel getFiliere(string cne);
+        FiliereModel setFiliere(string cne, int ID);
 
         string checkConformity(string cne);
 

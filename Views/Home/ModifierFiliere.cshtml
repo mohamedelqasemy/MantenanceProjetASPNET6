@@ -1,7 +1,6 @@
-﻿@model MantenanceProjetASPNET6.Models.Filiere
+﻿@model MantenanceProjetASPNET6.ViewModels.FiliereModel
 @{
     ViewData["Title"] = "ModifierFiliere";
-
     Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
 
@@ -24,34 +23,30 @@
                         <div class="col-md-11">
                             <div class="form-horizontal">
                                 <div class="alert alert-success">
-                                    <span>Vous avez choisi de postuler à @ViewData["filiere"] </span>
+                                    <span>Vous êtes en @Model.niveau ème année. Filière actuelle : <span id="filiereNom"></span> </span>
                                 </div>
                             </div>
+
+                            @if (TempData["filiere"] != null)
+                            {
+                                <div class="form-group">
+                                    <div class="alert alert-success">
+                                        <span>@TempData["filiere"]</span>
+                                    </div>
+                                </div>
+                            }
+
                             <div class="form-horizontal">
                                 <div class="form-group offset-4">
                                     <br />
 
-                                    <div class="custom-control custom-radio mt-2">
-                                        <input type="radio" asp-for="ID" class="custom-control-input" id="defaultGroupExample1" name="ID" value="1">
-                                        <label class="custom-control-label" for="defaultGroupExample1">Génie Informatique</label>
+                                    <div class="form-group" id="filiereOptions">
+                                        <!-- Les options seront insérées dynamiquement ici -->
                                     </div>
-                                    <div class="custom-control custom-radio mt-2">
-                                        <input type="radio" asp-for="ID" class="custom-control-input" id="defaultGroupExample2" name="ID" value="2">
-                                        <label class="custom-control-label" for="defaultGroupExample2">Génie Réseau et Télécom</label>
-                                    </div>
-                                    <div class="custom-control custom-radio mt-2">
-                                        <input type="radio" asp-for="ID" class="custom-control-input" id="defaultGroupExample3" name="ID" value="3">
-                                        <label class="custom-control-label" for="defaultGroupExample3">Génie Industriel</label>
-                                    </div>
-                                    <div class="custom-control custom-radio mt-2">
-                                        <input type="radio" asp-for="ID" class="custom-control-input" id="defaultGroupExample4" name="ID" value="4">
-                                        <label class="custom-control-label" for="defaultGroupExample4">Génie Procedès et M.C</label>
-                                    </div>
-
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-offset-2 col-md-10 d-flex justify-content-center">
-                                        <input type="submit" value=" Modifier la filière " class="btn btn-primary btn-rounded px-4 mt-5 mx-2"  />
+                                        <input type="submit" value="Modifier la filière" class="btn btn-primary btn-rounded px-4 mt-5 mx-2" />
                                     </div>
                                 </div>
                             </div>
@@ -64,3 +59,86 @@
     </div>
 </div>
 
+<script>
+    // La fonction qui met à jour les options de filière
+    function updateFiliereOptions(niveau, filiereId) {
+        var filiereOptionsDiv = document.getElementById("filiereOptions");
+        filiereOptionsDiv.innerHTML = ''; // Vider les options précédentes
+
+        var filieres = [];
+        if (niveau == "3") {
+            filieres = [
+                { value: 9, label: "Génie mécatronique et systèmes intelligents" },
+                { value: 7, label: "Génie réseaux et télécommunications" },
+                { value: 12, label: "Génie informatique et intelligence artificielle" },
+                { value: 8, label: "Génie aéronautique et technologie de l'espace" },
+                { value: 6, label: "Génie industriel" },
+                { value: 5, label: "Génie des procédés et matériaux avancés" }
+            ];
+        } else if (niveau == "4") {
+            filieres = [
+                { value: 7, label: "Génie réseaux et télécommunications" },
+                { value: 11, label: "Génie informatique" },
+                { value: 10, label: "Ingénierie des données et intelligence artificielle" },
+                { value: 6, label: "Génie industriel" },
+                { value: 8, label: "Génie aéronautique et technologie de l'espace" },
+                { value: 5, label: "Génie des procédés et matériaux avancés" }
+            ];
+        }
+
+        // Ajouter les options de filière dynamiquement
+        filieres.forEach(function(filiere) {
+            var radioDiv = document.createElement("div");
+            radioDiv.classList.add("custom-control", "custom-radio", "mt-2");
+
+            var input = document.createElement("input");
+            input.type = "radio";
+            input.classList.add("custom-control-input");
+            input.id = "filiere" + filiere.value;
+            input.name = "ID";
+            input.value = filiere.value;
+            if (filiere.value === filiereId) {
+                input.checked = true; // Coche l'option de la filière sélectionnée par défaut
+            }
+
+            var label = document.createElement("label");
+            label.classList.add("custom-control-label");
+            label.setAttribute("for", "filiere" + filiere.value);
+            label.textContent = filiere.label;
+
+            radioDiv.appendChild(input);
+            radioDiv.appendChild(label);
+
+            filiereOptionsDiv.appendChild(radioDiv);
+        });
+    }
+
+    // La fonction pour récupérer le nom de la filière selon l'ID
+    function getFiliereNameById(id) {
+        var filieres = {
+            9: "Génie mécatronique et systèmes intelligents",
+            7: "Génie réseaux et télécommunications",
+            12: "Génie informatique et intelligence artificielle",
+            8: "Génie aéronautique et technologie de l'espace",
+            6: "Génie industriel",
+            5: "Génie des procédés et matériaux avancés",
+            11: "Génie informatique",
+            10: "Ingénierie des données et intelligence artificielle"
+        };
+
+        return filieres[id] || "Filière non trouvée"; // Retourner un nom ou un message si l'ID est invalide
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Passer le niveau et l'ID de la filière du modèle à la fonction
+        var filiereId = @Model.ID; // ID de la filière sélectionnée
+        var niveau = @Model.niveau; // Niveau de la filière
+
+        // Afficher le nom de la filière
+        var filiereNom = getFiliereNameById(filiereId);
+        document.getElementById("filiereNom").textContent = filiereNom;
+
+        // Mettre à jour les options de filière en fonction du niveau et de l'ID de la filière
+        updateFiliereOptions(niveau, filiereId);
+    });
+</script>

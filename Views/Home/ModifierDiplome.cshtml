@@ -79,7 +79,7 @@
 
                                         </div>
                                         <div class="form-group">
-
+                                           
                                             @Html.DropDownListFor(model => model.Etablissement,
                                                 new List<SelectListItem>
                                                 {
@@ -124,41 +124,45 @@
                                 <div class="row">
                                     <div class="col-sm-3 offset-sm-1 mt-3">
 
-                                        @Html.DropDownListFor(model => model.AnneUni1,
-                                                new List<SelectListItem>
-                                                {
-                                                   new SelectListItem{Text="2014/2015", Value="2014/2015"},
-                                                   new SelectListItem{Text="2015/2016", Value="2015/2016"},
-                                                   new SelectListItem{Text="2016/2017", Value="2016/2017"},
-                                                   new SelectListItem{Text="2017/2018", Value="2017/2018"},
-                                                   new SelectListItem{Text="2018/2019", Value="2018/2019"}
-                                                }
-                                                , "Année universitaire 1", htmlAttributes: new { @class = "form-control " })
-                                        @Html.ValidationMessageFor(model => model.AnneUni1, "", new { @class = "text-danger" })
+                                        <!-- Dropdown pour Année Universitaire 1 -->
+                                        <div>
+                                            @Html.DropDownListFor(model => model.AnneUni1,
+                                                     new List<SelectListItem>
+                                        {
+                                        new SelectListItem{Text="2020/2021", Value="2020/2021"},
+                                        new SelectListItem{Text="2021/2022", Value="2021/2022"},
+                                        new SelectListItem{Text="2022/2023", Value="2022/2023"},
+                                        new SelectListItem{Text="2023/2024", Value="2023/2024"},
+                                        new SelectListItem{Text="2024/2025", Value="2024/2025"}
+                                        },
+                                                     "Année universitaire 1",
+                                                     htmlAttributes: new { @class = "form-control", id = "AnneUni1" })
+                                            @Html.ValidationMessageFor(model => model.AnneUni1, "", new { @class = "text-danger" })
+                                        </div>
+
                                         <br />
-                                        @Html.DropDownListFor(model => model.AnneUni2,
-                                                new List<SelectListItem>
-                                                {
-                                                   new SelectListItem{Text="2015/2016", Value="2015/2016"},
-                                                   new SelectListItem{Text="2016/2017", Value="2016/2017"},
-                                                   new SelectListItem{Text="2017/2018", Value="2017/2018"},
-                                                   new SelectListItem{Text="2018/2019", Value="2018/2019"},
-                                                   new SelectListItem{Text="2019/2020", Value="2019/2020"}
-                                                }
-                                                , "Année universitaire 2", htmlAttributes: new { @class = "form-control " })
-                                        @Html.ValidationMessageFor(model => model.AnneUni2, "", new { @class = "text-danger" })
+
+                                        <!-- Dropdown pour Année Universitaire 2 -->
+                                        <div>
+                                            @Html.DropDownListFor(model => model.AnneUni2,
+                                                     new List<SelectListItem>(),
+                                                     "Année universitaire 2",
+                                                     htmlAttributes: new { @class = "form-control", id = "AnneUni2" })
+                                            @Html.ValidationMessageFor(model => model.AnneUni2, "", new { @class = "text-danger" })
+                                        </div>
+
                                         <br />
-                                        @Html.DropDownListFor(model => model.AnneUni3,
-                                                new List<SelectListItem>
-                                                {
-                                                   new SelectListItem{Text="2015/2016", Value="2015/2016"},
-                                                   new SelectListItem{Text="2016/2017", Value="2016/2017"},
-                                                   new SelectListItem{Text="2017/2018", Value="2017/2018"},
-                                                   new SelectListItem{Text="2018/2019", Value="2018/2019"},
-                                                   new SelectListItem{Text="2019/2020", Value="2019/2020"}
-                                                }
-                                                , "Année universitaire 3", htmlAttributes: new { @class = "form-control " })
-                                        @Html.ValidationMessageFor(model => model.AnneUni3, "", new { @class = "text-danger" })
+
+                                        @if (Model.niveau == 4)
+                                        {
+                                            <div>
+                                                @Html.DropDownListFor(model => model.AnneUni3,
+                                                         new List<SelectListItem>(),
+                                                         "Année universitaire 3",
+                                                         htmlAttributes: new { @class = "form-control", id = "AnneUni3" })
+                                                @Html.ValidationMessageFor(model => model.AnneUni3, "", new { @class = "text-danger" })
+                                            </div>
+                                        }
 
                                         <br />
 
@@ -186,7 +190,8 @@
                                                 , "Redoublant", htmlAttributes: new { @class = "form-control " })
                                         @Html.ValidationMessageFor(model => model.Redoublant2, "", new { @class = "text-danger" })
                                         <br />
-
+                                        @if (Model.niveau == 4)
+                                        {
                                         @Html.DropDownListFor(model => model.Redoublant3,
                                                 new List<SelectListItem>
                                                 {
@@ -195,7 +200,7 @@
                                                 }
                                                 , "Redoublant", htmlAttributes: new { @class = "form-control " })
                                         @Html.ValidationMessageFor(model => model.Redoublant3, "", new { @class = "text-danger" })
-
+                                        }
 
                                     </div>
 
@@ -211,12 +216,13 @@
                                             @Html.ValidationMessageFor(model => model.Semestre3, "", new { @class = "text-danger" })
                                         </div>
                                         <br />
-
+                                        @if (Model.niveau == 4)
+                                        {
                                         <div>
                                             @Html.EditorFor(model => model.Semestre5, new { htmlAttributes = new { @class = "form-control", @placeholder = "Note S5" } })
                                             @Html.ValidationMessageFor(model => model.Semestre5, "", new { @class = "text-danger" })
                                         </div>
-
+                                        }
                                     </div>
 
                                     <div class="col-sm-2 mt-3">
@@ -231,11 +237,13 @@
                                             @Html.ValidationMessageFor(model => model.Semestre4, "", new { @class = "text-danger" })
                                         </div>
                                         <br />
-
+                                        @if (Model.niveau == 4)
+                                        {
                                         <div>
                                             @Html.EditorFor(model => model.Semestre6, new { htmlAttributes = new { @class = "form-control", @placeholder = "Note S6" } })
                                             @Html.ValidationMessageFor(model => model.Semestre6, "", new { @class = "text-danger" })
                                         </div>
+                                        }
                                     </div>
                                 </div>
 
@@ -260,6 +268,43 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
+        // Fonction pour ajouter les options des années suivantes
+    function populateDropdown(nextDropdownId, startYear) {
+        const years = ["2020/2021", "2021/2022", "2022/2023", "2023/2024", "2024/2025"];
+        const startIndex = years.indexOf(startYear);
+
+        // Vérifie si l'année sélectionnée est valide
+        if (startIndex >= 0) {
+            // Récupère les années suivantes à partir de l'année sélectionnée
+            const nextYears = years.slice(startIndex + 1);
+
+            // Met à jour les options du dropdown suivant
+            const $nextDropdown = $("#" + nextDropdownId);
+            $nextDropdown.empty(); // Supprime les options existantes
+            $nextDropdown.append('<option>Année universitaire</option>'); // Placeholder
+
+            nextYears.forEach((year) => {
+                $nextDropdown.append(new Option(year, year));
+            });
+
+            // Active le dropdown suivant
+            $nextDropdown.prop("disabled", nextYears.length === 0);
+        }
+    }
+
+    // Écouteur pour Année Universitaire 1
+    $("#AnneUni1").on("change", function () {
+        const selectedYear = $(this).val();
+        populateDropdown("AnneUni2", selectedYear);
+        $("#AnneUni3").empty(); // Réinitialise AnneUni3 si AnneUni1 change
+    });
+
+    // Écouteur pour Année Universitaire 2
+    $("#AnneUni2").on("change", function () {
+        const selectedYear = $(this).val();
+        populateDropdown("AnneUni3", selectedYear);
+    });
+
     $(document).ready(function () {
 
 

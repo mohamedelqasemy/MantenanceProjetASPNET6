@@ -140,10 +140,12 @@ namespace MantenanceProjetASPNET6.Controllers
                 if (Niveau == 3)
                 {
                     TempData["fichier3"] = " aucun fichier trouver pour cet étudiant";
+                    RedirectToAction("Rechreche3");
                 }
                 else
                 {
                     TempData["fichier4"] = " aucun fichier trouver pour cet étudiant";
+                    RedirectToAction("Rechreche4");
                 }
             }
 

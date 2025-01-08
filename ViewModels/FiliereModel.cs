@@ -11,6 +11,7 @@ namespace MantenanceProjetASPNET6.ViewModels
         
         public int ID { get; set; }
         public string Nom { get; set; }
+        public int niveau { get; set; }
         public bool isChecked { get; set; }
 
     }

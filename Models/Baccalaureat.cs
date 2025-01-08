@@ -10,6 +10,7 @@ namespace MantenanceProjetASPNET6.Models
     public class Baccalaureat
     {
         [Key, ForeignKey("Candidat")]
+
         public string Cne { get; set; }
         public string? TypeBac { get; set; }
         public string? DateObtentionBac { get; set; }

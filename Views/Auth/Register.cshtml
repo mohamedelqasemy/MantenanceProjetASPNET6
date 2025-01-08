@@ -62,41 +62,23 @@
                                         @Html.ValidationMessage("Email", new { @class = "text-danger" })
                                         @Html.ValidationMessage("UniqueEmail", new { @class = "text-danger" })
                                     </div>
-                                    <div class="form-group">
-                                        <select name="niveau" class="form-control">
-                                            <option selected value="0">Choix de niveau</option>
-                                            <option value="3">3 ème année</option>
-                                            <option value="4">4 ème année</option>
-                                        </select>
-                                        @Html.ValidationMessage("selectNiveau", new { @class = "text-danger" })
-                                    </div>
+                                    <select id="niveauSelect" name="niveau" class="form-control" onchange="updateFiliereOptions()">
+                                        <option selected value="0">Choix de niveau</option>
+                                        <option value="3">3 ème année</option>
+                                        <option value="4">4 ème année</option>
+                                    </select>
                                     <div class="form-group mt-3">
                                         <h4>Choix de Filière</h4>
                                     </div>
 
+                                    @Html.ValidationMessage("selectNiveau", new { @class = "text-danger" })
 
 
-                                    <div class="form-group">
-
-                                        <div class="custom-control custom-radio mt-2">
-                                            <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="ID" value="1" checked>
-                                            <label class="custom-control-label" for="defaultGroupExample1">Génie Informatique</label>
-                                        </div>
-                                        <div class="custom-control custom-radio mt-2">
-                                            <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="ID" value="2">
-                                            <label class="custom-control-label" for="defaultGroupExample2">Génie Réseau et Télécom</label>
-                                        </div>
-                                        <div class="custom-control custom-radio mt-2">
-                                            <input type="radio" class="custom-control-input" id="defaultGroupExample3" name="ID" value="3">
-                                            <label class="custom-control-label" for="defaultGroupExample3">Génie Industriel</label>
-                                        </div>
-                                        <div class="custom-control custom-radio mt-2">
-                                            <input type="radio" class="custom-control-input" id="defaultGroupExample4" name="ID" value="4">
-                                            <label class="custom-control-label" for="defaultGroupExample4">Génie Procedès et M.C</label>
-                                        </div>
-
+                                    <div class="form-group" id="filiereOptions">
+                                        <!-- Les options seront insérées dynamiquement ici -->
                                     </div>
-
+                                    @Html.ValidationMessage("selectFiliere", new { @class = "text-danger" })
+                                    
                                     <div class="form-group">
                                         <input type="submit" class="btnRegister" value="Register" />
                                     </div>
@@ -111,4 +93,60 @@
 
     </div>
 </body>
+<script>
+    function updateFiliereOptions() {
+        var niveauSelect = document.getElementById("niveauSelect");
+        var filiereOptionsDiv = document.getElementById("filiereOptions");
+        filiereOptionsDiv.innerHTML = ''; // Vider les options précédentes
+
+        var niveau = niveauSelect.value;
+
+        // Définir les filières en fonction du niveau sélectionné
+        var filieres = [];
+        if (niveau == "3") {
+            // 3ème année : GMSI, GTR, GIIA, GATE, GIND, GPMA
+            filieres = [
+                { value: 9, label: "Génie mécatronique et systèmes intelligents" },
+                { value: 7, label: "Génie réseux et télécommunications" },
+                { value: 12, label: "Génie informatique et intelligence artifiielle" },
+                { value: 8, label: "Génie aéronautique et technologie de l'espace" },
+                { value: 6, label: "Génie industriel" },
+                { value: 5, label: "Génie des procédés et matériaux avancées" }
+            ];
+        } else if (niveau == "4") {
+            // 4ème année : GTR, GINF, IDIA, GIND, GATE, GPMA
+            filieres = [
+                { value: 7, label: "Génie réseux et télécommunications" },
+                { value: 11, label: "Génie informatique" },
+                { value: 10, label: " Ingénieurie des données et intelligence artifiielle" },
+                { value: 6, label: "Génie industriel" },
+                { value: 8, label: "Génie aéronautique et technologie de l'espace" },
+                { value: 5, label: "Génie des procédés et matériaux avancées" }
+            ];
+        }
+
+        // Ajouter les options de filière dynamiquement
+        filieres.forEach(function(filiere) {
+            var radioDiv = document.createElement("div");
+            radioDiv.classList.add("custom-control", "custom-radio", "mt-2");
+
+            var input = document.createElement("input");
+            input.type = "radio";
+            input.classList.add("custom-control-input");
+            input.id = "filiere" + filiere.value;
+            input.name = "ID";
+            input.value = filiere.value;
+
+            var label = document.createElement("label");
+            label.classList.add("custom-control-label");
+            label.setAttribute("for", "filiere" + filiere.value);
+            label.textContent = filiere.label;
+
+            radioDiv.appendChild(input);
+            radioDiv.appendChild(label);
+
+            filiereOptionsDiv.appendChild(radioDiv);
+        });
+    }
+</script>
 </html>

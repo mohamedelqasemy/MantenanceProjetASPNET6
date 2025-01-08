@@ -15229,6 +15229,10 @@
       "PackagePath": "staticwebassets\\uploads\\Epreuves\\Planning_Annuel_2024_2025.pdf"
     },
     {
+      "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\baccalaureats\\0f480f21-8460-4560-ab49-3f82e6e7bcf9_TestDocument.pdf",
+      "PackagePath": "staticwebassets\\uploads\\baccalaureats\\0f480f21-8460-4560-ab49-3f82e6e7bcf9_TestDocument.pdf"
+    },
+    {
       "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\baccalaureats\\2518630c-29a4-46a5-bdd3-f56f059e2144_etapeProjet.pdf",
       "PackagePath": "staticwebassets\\uploads\\baccalaureats\\2518630c-29a4-46a5-bdd3-f56f059e2144_etapeProjet.pdf"
     },
@@ -15237,12 +15241,28 @@
       "PackagePath": "staticwebassets\\uploads\\baccalaureats\\26f904ac-5567-48f9-95f9-53a28b148afe_RLS-exercices (1).pdf"
     },
     {
+      "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\baccalaureats\\2e4822b5-995d-4b3b-b371-b58995365fe7_TestDocument.pdf",
+      "PackagePath": "staticwebassets\\uploads\\baccalaureats\\2e4822b5-995d-4b3b-b371-b58995365fe7_TestDocument.pdf"
+    },
+    {
       "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\baccalaureats\\2fd67e23-9de9-40f1-b9dd-6e080b82b76a_CIN_Internet.pdf",
       "PackagePath": "staticwebassets\\uploads\\baccalaureats\\2fd67e23-9de9-40f1-b9dd-6e080b82b76a_CIN_Internet.pdf"
     },
     {
+      "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\baccalaureats\\31ba11a0-31bc-4d60-8415-a7ee73c9e0f9_TestDocument.pdf",
+      "PackagePath": "staticwebassets\\uploads\\baccalaureats\\31ba11a0-31bc-4d60-8415-a7ee73c9e0f9_TestDocument.pdf"
+    },
+    {
+      "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\baccalaureats\\3360cd62-bfa0-498b-912e-541e062b8e8a_TestDocument.pdf",
+      "PackagePath": "staticwebassets\\uploads\\baccalaureats\\3360cd62-bfa0-498b-912e-541e062b8e8a_TestDocument.pdf"
+    },
+    {
       "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\baccalaureats\\3df8bfd5-2cd7-46ce-af3e-f1f8453fe867_etapeProjet.pdf",
       "PackagePath": "staticwebassets\\uploads\\baccalaureats\\3df8bfd5-2cd7-46ce-af3e-f1f8453fe867_etapeProjet.pdf"
+    },
+    {
+      "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\baccalaureats\\4625070e-37dd-424a-b72e-6693ee027831_Document 18.pdf",
+      "PackagePath": "staticwebassets\\uploads\\baccalaureats\\4625070e-37dd-424a-b72e-6693ee027831_Document 18.pdf"
     },
     {
       "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\baccalaureats\\483351c6-f036-400a-821f-ad052ba44b3f_CC-0FEAC8202C.pdf",
@@ -15273,6 +15293,14 @@
       "PackagePath": "staticwebassets\\uploads\\baccalaureats\\a7aad0d0-871c-4322-a56b-8d59bb1ad53f_ismail.pdf"
     },
     {
+      "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\baccalaureats\\da34fb4d-cc7d-444b-a2fb-aa72eefc76e9_TestDocument.pdf",
+      "PackagePath": "staticwebassets\\uploads\\baccalaureats\\da34fb4d-cc7d-444b-a2fb-aa72eefc76e9_TestDocument.pdf"
+    },
+    {
+      "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\baccalaureats\\f6f6e2f4-eddc-4251-a938-dc8e6445132c_TestDocument.pdf",
+      "PackagePath": "staticwebassets\\uploads\\baccalaureats\\f6f6e2f4-eddc-4251-a938-dc8e6445132c_TestDocument.pdf"
+    },
+    {
       "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\baccalaureats\\f8ab466e-4e53-4103-92c3-e696501d4eb6_CIN_Internet.pdf",
       "PackagePath": "staticwebassets\\uploads\\baccalaureats\\f8ab466e-4e53-4103-92c3-e696501d4eb6_CIN_Internet.pdf"
     },
@@ -15291,6 +15319,10 @@
     {
       "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\cin\\659568d2-bb35-4bac-9a0c-1ef2e710b247_structure_dataset.pdf",
       "PackagePath": "staticwebassets\\uploads\\cin\\659568d2-bb35-4bac-9a0c-1ef2e710b247_structure_dataset.pdf"
+    },
+    {
+      "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\cin\\6e767b62-2f39-4806-ae70-12cb4d679cb7_TestDocument.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cin\\6e767b62-2f39-4806-ae70-12cb4d679cb7_TestDocument.pdf"
     },
     {
       "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\cin\\87d25832-7bcd-4003-a793-0c3efdb4fb17_TestDocument.pdf",
@@ -15313,6 +15345,10 @@
       "PackagePath": "staticwebassets\\uploads\\cni\\2b29f6c1-c45e-46e3-86b2-dee8c7c025ca_catgoMedicamrentas.pdf"
     },
     {
+      "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\cni\\30f2aba1-fd0b-4eb6-ac4b-494eb9a40acc_TestDocument.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cni\\30f2aba1-fd0b-4eb6-ac4b-494eb9a40acc_TestDocument.pdf"
+    },
+    {
       "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\cni\\344b441c-356b-4d14-a266-a1c50717aa01_otmane.pdf",
       "PackagePath": "staticwebassets\\uploads\\cni\\344b441c-356b-4d14-a266-a1c50717aa01_otmane.pdf"
     },
@@ -15321,20 +15357,32 @@
       "PackagePath": "staticwebassets\\uploads\\cni\\3c865837-8cd8-45f5-bd96-d64ddd0e3da8_CIN_Internet.pdf"
     },
     {
+      "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\cni\\63525dde-b892-4823-a4bf-4fc46092c625_MergedDocument.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cni\\63525dde-b892-4823-a4bf-4fc46092c625_MergedDocument.pdf"
+    },
+    {
+      "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\cni\\65dc5087-b92c-46f7-95c0-cc9fca57dcab_TestDocument.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cni\\65dc5087-b92c-46f7-95c0-cc9fca57dcab_TestDocument.pdf"
+    },
+    {
       "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\cni\\83c277d1-f43d-4156-9cb0-027b3dc1124c_export.php.pdf",
       "PackagePath": "staticwebassets\\uploads\\cni\\83c277d1-f43d-4156-9cb0-027b3dc1124c_export.php.pdf"
     },
     {
-      "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\diplome\\b3a54b74-ce4e-4d2d-b59d-5b6d6393fc7a_Descriptif_mini_projet_DS 2024-2025pdf.pdf",
-      "PackagePath": "staticwebassets\\uploads\\diplome\\b3a54b74-ce4e-4d2d-b59d-5b6d6393fc7a_Descriptif_mini_projet_DS 2024-2025pdf.pdf"
+      "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\cni\\be2f3671-e3db-42ce-8351-e3591898e9a9_TestDocument.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cni\\be2f3671-e3db-42ce-8351-e3591898e9a9_TestDocument.pdf"
+    },
+    {
+      "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\diplome\\87473e38-b3c3-4095-a6f3-4a83afa793b5_TestDocument.pdf",
+      "PackagePath": "staticwebassets\\uploads\\diplome\\87473e38-b3c3-4095-a6f3-4a83afa793b5_TestDocument.pdf"
+    },
+    {
+      "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\diplome\\8d81da26-5dc1-4743-9e98-dea7d43879b2_Document 18.pdf",
+      "PackagePath": "staticwebassets\\uploads\\diplome\\8d81da26-5dc1-4743-9e98-dea7d43879b2_Document 18.pdf"
     },
     {
       "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\dossiers\\K123456_fichieretudiant.pdf",
       "PackagePath": "staticwebassets\\uploads\\dossiers\\K123456_fichieretudiant.pdf"
-    },
-    {
-      "Id": "C:\\Users\\h\\source\\repos\\MantenanceProjetASPNET6\\wwwroot\\uploads\\dossiers\\K1234_fichieretudiant.pdf",
-      "PackagePath": "staticwebassets\\uploads\\dossiers\\K1234_fichieretudiant.pdf"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.MantenanceProjetASPNET6.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

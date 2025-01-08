@@ -98,7 +98,7 @@
             {
                 var u = @x.Cne + ".png";
                 <tr>
-                    <td class="text-center"><button class="btn btn-primary seeFilesBtn" id="@x.Cne">see</button></td>
+                    <td class="text-center"><button class="btn btn-primary seeFilesBtn" id="@x.Cne">See</button></td>
                     <td class="text-center"><button class="btn btn-danger deleteBtn" id="@x.Cne">Delete</button></td>
                     <td class="text-center"><button class="btn btn-info conformBtn" id="@x.Cne">Conforme</button></td>
                     <td class="text-center">@x.Nom</td>
@@ -200,7 +200,7 @@
                 $.each(data, function (index, row) {
                     var w=row.cne+".png";var u=row.photo;
                     var chemin="../../DiplomeScanne/+w";
-                    $("#tbody").append("<tr><td><button class='btn btn-danger deleteBtn' id=" + row.cne + ">Delete</button></td><td><button class='btn btn-info conformBtn' id=" + row.cne + ">Conforme</button></td><td>" + row.nom + "</td><td>" + row.prenom + "</td><td><img  style=\"border-radius: 50%; width:50px; height:50px\"  src=\"/candidatImages/" + row.photo + "\"></img></td><td>" + row.sexe + "</td><td>" + row.noteBac + "</td><td>"  + row.type_dip + "</td><td>"+ row.speciali_dip +"</td><td><a href=\"/DiplomeScanne/" + w + "\">" + row.cne + "</a></td><td>" + row.note1 + "</td><td>" + row.note2 + "</td><td>" + row.note3 + "</td><td>" + row.note4 + "</td><td>" + row.dossier + "</td><td>" + row.convoque + "</td><td>" + row.math + "</td><td>" + row.specialite + "</td><td>" + row.filiere + "</td><td>" + row.admis + "</td><td>" + row.nonConforme  + "</td></tr>");
+                          $("#tbody").append("<tr><td><button class='btn btn-primary seeFilesBtn' id=" + row.cne + ">See</button></td><td><button class='btn btn-danger deleteBtn' id=" + row.cne + ">Delete</button></td><td><button class='btn btn-info conformBtn' id=" + row.cne + ">Conforme</button></td><td>" + row.nom + "</td><td>" + row.prenom + "</td><td><img  style=\"border-radius: 50%; width:50px; height:50px\"  src=\"/candidatImages/" + row.photo + "\"></img></td><td>" + row.sexe + "</td><td>" + row.noteBac + "</td><td>"  + row.type_dip + "</td><td>"+ row.speciali_dip +"</td><td><a href=\"/DiplomeScanne/" + w + "\">" + row.cne + "</a></td><td>" + row.note1 + "</td><td>" + row.note2 + "</td><td>" + row.note3 + "</td><td>" + row.note4 + "</td><td>" + row.dossier + "</td><td>" + row.convoque + "</td><td>" + row.math + "</td><td>" + row.specialite + "</td><td>" + row.filiere + "</td><td>" + row.admis + "</td><td>" + row.nonConforme  + "</td></tr>");
                 });
 
             });
@@ -213,7 +213,7 @@
                 $.each(data, function (index, row) {
                     var w=row.cne+".png";var u=row.photo;
                     var chemin="../../DiplomeScanne/+w";
-                   $("#tbody").append("<tr><td><button class='btn btn-danger deleteBtn' id=" + row.cne + ">Delete</button></td><td><button class='btn btn-info conformBtn' id=" + row.cne + ">Conforme</button></td><td>" + row.nom + "</td><td>" + row.prenom + "</td><td><img  style=\"border-radius: 50%; width:50px; height:50px\"  src=\"/candidatImages/" + row.photo + "\"></img></td><td>" + row.sexe + "</td><td>" + row.noteBac + "</td><td>"  + row.type_dip + "</td><td>"+ row.speciali_dip +"</td><td><a href=\"/DiplomeScanne/" + w + "\">" + row.cne + "</a></td><td>" + row.note1 + "</td><td>" + row.note2 + "</td><td>" + row.note3 + "</td><td>" + row.note4 + "</td><td>" + row.dossier + "</td><td>" + row.convoque + "</td><td>" + row.math + "</td><td>" + row.specialite + "</td><td>" + row.filiere + "</td><td>" + row.admis + "</td><td>" + row.nonConforme  + "</td></tr>");
+                      $("#tbody").append("<tr><td><button class='btn btn-primary seeFilesBtn' id=" + row.cne + ">See</button></td><td><button class='btn btn-danger deleteBtn' id=" + row.cne + ">Delete</button></td><td><button class='btn btn-info conformBtn' id=" + row.cne + ">Conforme</button></td><td>" + row.nom + "</td><td>" + row.prenom + "</td><td><img  style=\"border-radius: 50%; width:50px; height:50px\"  src=\"/candidatImages/" + row.photo + "\"></img></td><td>" + row.sexe + "</td><td>" + row.noteBac + "</td><td>"  + row.type_dip + "</td><td>"+ row.speciali_dip +"</td><td><a href=\"/DiplomeScanne/" + w + "\">" + row.cne + "</a></td><td>" + row.note1 + "</td><td>" + row.note2 + "</td><td>" + row.note3 + "</td><td>" + row.note4 + "</td><td>" + row.dossier + "</td><td>" + row.convoque + "</td><td>" + row.math + "</td><td>" + row.specialite + "</td><td>" + row.filiere + "</td><td>" + row.admis + "</td><td>" + row.nonConforme  + "</td></tr>");
                 });
 
             });

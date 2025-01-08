@@ -264,15 +264,13 @@ namespace MantenanceProjetASPNET6.Controllers
        
 
         [HttpPost]
-        public IActionResult ModifierFiliere(Filiere model)
+        public IActionResult ModifierFiliere(FiliereModel model)
         {
-            if (ModelState.IsValid)
-            {
                 string cne = HttpContext.Session.GetString("cne");
-                candidat_service.setFiliere(cne,model.ID);
-                TempData["message"] = "Filiere Modified succefully";
-                return RedirectToAction("Index");
-            }
+                FiliereModel filiereModel=   candidat_service.setFiliere(cne,model.ID);
+                model.niveau = filiereModel.niveau;
+                TempData["filiere"] = "Filiere Modifiée avec succès";
+        
             return View(model);
         }
 
@@ -301,8 +299,7 @@ namespace MantenanceProjetASPNET6.Controllers
         [HttpPost]
         public IActionResult ModifierDiplome(DiplomeModel diplome)
         {
-            if (ModelState.IsValid)
-            {
+       
                 string uploadsFolder = Path.Combine("wwwroot", "uploads", "diplome");
                 Directory.CreateDirectory(uploadsFolder); // Créer le dossier si nécessaire
 
@@ -337,7 +334,6 @@ namespace MantenanceProjetASPNET6.Controllers
 
                 TempData["diplome"] = "Diplome Modified successfully";
                 return RedirectToAction("ModifierDiplome");
-            }
 
             return View(diplome);
         }
